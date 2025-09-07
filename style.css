@@ -1,0 +1,26 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.fun {
+  background-color: #fffbe6;
+}
+
+.dark {
+  background-color: #222;
+  color: #fff;
+}
+
+.light {
+  background-color: #f9f9f9;
+}

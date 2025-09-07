@@ -1,192 +1,79 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kuis Bahasa Jepang</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-<style>
-  body { font-family: 'Arial', sans-serif'; margin:0; padding:0; transition: background 0.5s; display:flex; justify-content:center; align-items:center; min-height:100vh;}
-  .container { max-width:400px; width:100%; text-align:center; padding:20px; box-sizing:border-box; }
-  h1,h2 { color:#ff4500; margin-bottom:20px; }
-  button, select { padding:15px 25px; margin:10px; font-size:18px; border:none; border-radius:12px; cursor:pointer; transition: transform 0.2s, background 0.3s; width:80%; max-width:300px; }
-  button:active { transform: scale(0.95); }
-  select { background:#fff; color:#333; }
-  .progress-bar { width:100%; background:#ddd; height:20px; border-radius:10px; margin:15px 0; }
-  .progress-fill { height:100%; width:0%; background:#4caf50; border-radius:10px; transition: width 0.3s; }
-  .hidden { display:none; }
-  .popup { position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); background:#fff; padding:20px; border-radius:15px; box-shadow:0 0 15px rgba(0,0,0,0.5); z-index:1000; font-size:18px; }
-  .ad-placeholder { height:60px; background:#eee; margin-top:15px; display:flex; align-items:center; justify-content:center; border-radius:10px; font-weight:bold; }
-  /* Themes */
-  body.light { background:#f5f5f5; color:#333; }
-  body.dark { background:#1e1e1e; color:#fff; }
-  body.fun { background:linear-gradient(45deg,#ff9a9e,#fad0c4); color:#000; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kuis Bahasa Jepang</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="fun">
+<body>
+  <div class="app-container">
+    <h1>Kuis Bahasa Jepang</h1>
+    <h2>Test kemampuan kamu!</h2>
 
-<div class="container" id="homepage">
-  <h1>Kuis Bahasa Jepang</h1>
-  <p>Test kemampuan kamu!</p>
-  <div>
-    <button id="startBtn">Mulai</button>
-    <button id="statusBtn">Status</button>
-    <select id="levelSelect">
-      <option value="Turis" selected>Level: Turis</option>
-      <option value="N5">Level: N5</option>
-      <option value="N4">Level: N4</option>
-    </select>
-    <button id="settingsBtn">Settings</button>
+    <!-- Main Menu -->
+    <div id="menu">
+      <button onclick="startQuiz()">Mulai</button>
+      <button onclick="showStatus()">Status</button>
+      <label for="level">Level:</label>
+      <select id="level" onchange="setLevel(this.value)">
+        <option value="turis" selected>Turis</option>
+        <option value="n5">N5</option>
+        <option value="n4">N4</option>
+      </select>
+      <button onclick="openSettings()">Settings</button>
+    </div>
+
+    <!-- Quiz Area -->
+    <div id="quiz" style="display:none;">
+      <p id="question-number"></p>
+      <p id="question-text"></p>
+      <div id="answers"></div>
+      <progress id="progress" value="0" max="10"></progress>
+      <button onclick="backToMenu()">Kembali ke Menu</button>
+    </div>
+
+    <!-- Results -->
+    <div id="results" style="display:none;">
+      <h2 id="score-text"></h2>
+      <p id="motivation"></p>
+      <button onclick="startQuiz()">Coba Lagi</button>
+      <button onclick="backToMenu()">Kembali ke Menu</button>
+    </div>
+
+    <!-- Status -->
+    <div id="status" style="display:none;">
+      <h2>Status Belajar</h2>
+      <p id="status-text">Belum ada data.</p>
+      <button onclick="backToMenu()">Kembali ke Menu</button>
+    </div>
+
+    <!-- Settings -->
+    <div id="settings" style="display:none;">
+      <h2>Pengaturan</h2>
+      <label>
+        Tema:
+        <select id="theme" onchange="setTheme(this.value)">
+          <option value="fun" selected>Fun</option>
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+      </label>
+      <br>
+      <label>
+        Suara:
+        <input type="checkbox" id="soundToggle" checked>
+      </label>
+      <br>
+      <button onclick="backToMenu()">Kembali ke Menu</button>
+    </div>
   </div>
-</div>
 
-<div class="container hidden" id="categoryPage">
-  <h2>Pilih Kategori</h2>
-  <button class="categoryBtn" data-type="Phrases">Phrases</button>
-  <button class="categoryBtn" data-type="Vocabulary">Vocabulary</button>
-  <button class="categoryBtn" data-type="Grammar">Grammar</button>
-  <button class="categoryBtn" data-type="Kanji">Kanji</button>
-  <button class="backMenuBtn">Kembali ke Menu</button>
-</div>
+  <!-- Optional sounds (won’t break if missing) -->
+  <audio id="clickSound" src="assets/click.mp3"></audio>
+  <audio id="correctSound" src="assets/correct.mp3"></audio>
+  <audio id="wrongSound" src="assets/wrong.mp3"></audio>
 
-<div class="container hidden" id="quizPage">
-  <h2 id="questionNumber">Question 1/10</h2>
-  <p id="questionText"></p>
-  <div id="answers">
-    <button class="answerBtn" data-answer="A">A</button>
-    <button class="answerBtn" data-answer="B">B</button>
-    <button class="answerBtn" data-answer="C">C</button>
-    <button class="answerBtn" data-answer="D">D</button>
-  </div>
-  <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
-  <div class="ad-placeholder">[Ads Here]</div>
-  <button class="backMenuBtn">Kembali ke Menu</button>
-</div>
-
-<div class="container hidden" id="resultsPage">
-  <h2 id="finalScore">X/10</h2>
-  <p id="motivationalMsg">Sugoi! You nailed it! 🚀</p>
-  <div>
-    <button id="retryBtn">Coba Lagi</button>
-    <button id="shareBtn">Share di Social Media</button>
-    <button class="backMenuBtn">Kembali ke Menu</button>
-  </div>
-</div>
-
-<div class="container hidden" id="statusPage">
-  <h2>Status Quiz</h2>
-  <p>Jumlah percobaan: <span id="attempts">0</span></p>
-  <p>Skor rata-rata: <span id="avgScore">0</span></p>
-  <div class="progress-bar"><div class="progress-fill" id="avgProgress"></div></div>
-  <button class="backMenuBtn">Kembali ke Menu</button>
-</div>
-
-<div class="container hidden" id="settingsPage">
-  <h2>Settings</h2>
-  <div>
-    <label>Theme:</label>
-    <select id="themeSelect">
-      <option value="fun" selected>Fun</option>
-      <option value="light">Light</option>
-      <option value="dark">Dark</option>
-    </select>
-  </div>
-  <div>
-    <label>Sounds:</label>
-    <select id="soundSelect">
-      <option value="on" selected>On</option>
-      <option value="off">Off</option>
-    </select>
-  </div>
-  <div>
-    <label>Notifications:</label>
-    <select id="notifySelect">
-      <option value="on">On</option>
-      <option value="off" selected>Off</option>
-    </select>
-  </div>
-  <button class="backMenuBtn">Kembali ke Menu</button>
-</div>
-
-<div id="popup" class="popup hidden"></div>
-
-<audio id="clickSound" src="assets/click.mp3"></audio>
-<audio id="correctSound" src="assets/correct.mp3"></audio>
-<audio id="wrongSound" src="assets/wrong.mp3"></audio>
-
-<script>
-// ----------------------------
-// PLACEHOLDER DATABASES
-// ----------------------------
-const quizData = {
-  "Turis": {
-    "Phrases": [{q:"Selamat pagi", a:["Good morning","Good night","Hello","Thanks"], correct:0, feedback:"Pagi = morning"}],
-    "Vocabulary": [],
-    "Grammar": [],
-    "Kanji": []
-  },
-  "N5": {"Phrases":[],"Vocabulary":[],"Grammar":[],"Kanji":[]},
-  "N4": {"Phrases":[],"Vocabulary":[],"Grammar":[],"Kanji":[]}
-};
-
-// ----------------------------
-// STATE
-// ----------------------------
-let currentLevel = "Turis";
-let currentCategory = "";
-let currentQuestionIndex = 0;
-let score = 0;
-let questionOrder = [];
-let attempts = JSON.parse(localStorage.getItem('attempts')) || [];
-let soundOn = true;
-
-// ----------------------------
-// ELEMENTS
-// ----------------------------
-const homepage = document.getElementById("homepage");
-const categoryPage = document.getElementById("categoryPage");
-const quizPage = document.getElementById("quizPage");
-const resultsPage = document.getElementById("resultsPage");
-const statusPage = document.getElementById("statusPage");
-const settingsPage = document.getElementById("settingsPage");
-const popup = document.getElementById("popup");
-
-const startBtn = document.getElementById("startBtn");
-const statusBtn = document.getElementById("statusBtn");
-const levelSelect = document.getElementById("levelSelect");
-const settingsBtn = document.getElementById("settingsBtn");
-const questionNumber = document.getElementById("questionNumber");
-const questionText = document.getElementById("questionText");
-const answers = document.querySelectorAll(".answerBtn");
-const progressFill = document.getElementById("progressFill");
-const finalScore = document.getElementById("finalScore");
-const motivationalMsg = document.getElementById("motivationalMsg");
-const retryBtn = document.getElementById("retryBtn");
-const shareBtn = document.getElementById("shareBtn");
-const attemptsSpan = document.getElementById("attempts");
-const avgScoreSpan = document.getElementById("avgScore");
-const avgProgress = document.getElementById("avgProgress");
-const themeSelect = document.getElementById("themeSelect");
-const soundSelect = document.getElementById("soundSelect");
-const notifySelect = document.getElementById("notifySelect");
-const clickSound = document.getElementById("clickSound");
-const correctSound = document.getElementById("correctSound");
-const wrongSound = document.getElementById("wrongSound");
-
-// ----------------------------
-// EVENTS
-// ----------------------------
-startBtn.addEventListener("click", ()=>{ playClick(); homepage.classList.add("hidden"); categoryPage.classList.remove("hidden"); });
-levelSelect.addEventListener("change", ()=>{ currentLevel = levelSelect.value; });
-settingsBtn.addEventListener("click", ()=>{ homepage.classList.add("hidden"); settingsPage.classList.remove("hidden"); });
-statusBtn.addEventListener("click", ()=>{ homepage.classList.add("hidden"); updateStatus(); statusPage.classList.remove("hidden"); });
-
-document.querySelectorAll(".categoryBtn").forEach(btn=>{
-  btn.addEventListener("click", ()=>{
-    playClick(); currentCategory = btn.dataset.type; categoryPage.classList.add("hidden"); startQuiz();
-  });
-});
-answers.forEach((btn,i)=>{ btn.addEventListener("click", ()=>{ checkAnswer(i); }); });
-retryBtn.addEventListener("click", ()=>{ resultsPage.classList.add("hidden"); categoryPage.classList.remove("hidden"); resetQuiz(); });
-shareBtn.addEventListener("click", ()=>{ alert("Share feature placeholder!"); });
-document.querySelectorAll(".backMenuBtn").forEach(btn=>{ btn
+  <script src="app.js"></script>
+</body>
+</html>
