@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kuis Bahasa Jepang</title>
+  <meta name="description" content="Kuis Bahasa Jepang - Test kemampuan kamu!" />
+  <style>
+    :root{
+      --bg:#fff; --fg:#222; --accent:#ff4da6; --muted:#666; --card:#fff;
+    }
+    [data-theme="dark"]{ --bg:#0f1222; --fg:#e7e9ee; --accent:#7ef2a8; --muted:#9aa0b2; --card:#111225 }
+    [data-theme="fun"]{ --bg:#fff6fb; --fg:#122; --accent:#ff6b00; --muted:#6b6b6b; --card:#fff }
+
+    *{box-sizing:border-box; font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial}
+    body{margin:0;background:var(--bg);color:var(--fg);min-height:100vh;display:flex;align-items:flex-start;justify-content:center;padding:28px}
+    .app{width:100%;max-width:960px}
+
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+    .title{font-size:28px;font-weight:800;letter-spacing:-0.5px}
+    .tag{font-size:14px;color:var(--muted)}
+
+    .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(0,0,0,0.06);}
+
+    /* home buttons */
+    .buttons{display:flex;gap:12px;margin-top:14px}
+    button.btn{padding:12px 18px;border-radius:10px;border:none;background:linear-gradient(180deg,var(--accent),#ff2d6f);color:white;font-weight:700;cursor:pointer;transform:translateY(0);transition:transform .12s ease,box-shadow .12s ease;box-shadow:0 6px 16px rgba(0,0,0,0.12)}
+    button.btn:active{transform:translateY(3px);box-shadow:0 2px 6px rgba(0,0,0,0.08)}
+
+    .small-btn{padding:8px 12px;background:transparent;color:var(--fg);box-shadow:none;border:2px solid rgba(0,0,0,0.06)}
+
+    /* popup level dropdown */
+    .levels{display:inline-flex;align-items:center;gap:8px}
+    .level-value{font-weight:700}
+    .popup{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);min-width:320px;z-index:60}
+
+    /* quiz */
+    .category-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:14px}
+    .cat{padding:18px;border-radius:12px;background:linear-gradient(180deg,#fff,#fff);border:2px dashed rgba(0,0,0,0.06);text-align:center;font-weight:800;cursor:pointer;transition:transform .15s cubic-bezier(.22,.9,.38,1)}
+    .cat:active{transform:scale(.98)}
+
+    .question-box{margin-top:12px}
+    .qnum{font-weight:700;margin-bottom:6px}
+    .qtext{font-size:20px;margin-bottom:18px}
+    .answers{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .answer{padding:12px;border-radius:10px;border:2px solid rgba(0,0,0,0.06);cursor:pointer;font-weight:700;transition:transform .08s,background .12s}
+    .answer:active{transform:translateY(3px)}
+
+    .progress-wrap{height:14px;background:linear-gradient(90deg,#eee,#eee);border-radius:999px;overflow:hidden;margin-top:14px}
+    .progress-bar{height:100%;width:0%;background:linear-gradient(90deg,var(--accent),#ffd200)}
+
+    /* feedback popup */
+    .feedback{position:fixed;left:50%;top:20%;transform:translateX(-50%);min-width:320px;background:var(--card);padding:16px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.2);z-index:80;opacity:0;pointer-events:none;transition:all .28s}
+    .feedback.show{opacity:1;pointer-events:auto;top:28%}
+
+    /* results */
+    .results{display:flex;flex-direction:column;align-items:center;gap:10px;padding:18px}
+    .confetti-canvas{position:fixed;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:90}
+    .overlay-gloom{position:fixed;left:0;top:0;width:100%;height:100%;background:rgba(12,12,30,0.65);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;z-index:90;opacity:0;pointer-events:none;transition:opacity .5s}
+    .overlay-gloom.show{opacity:1;pointer-events:auto}
+
+    /* status chart */
+    .status-grid{display:flex;gap:12px;align-items:center}
+    .chart{width:220px;height:120px}
+
+    /* settings */
+    .setting-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px dashed rgba(0,0,0,0.04)}
+
+    /* ad footer */
+    .ad{position:fixed;left:50%;transform:translateX(-50%);bottom:8px;width:calc(100% - 40px);max-width:940px;height:64px;background:#fff;border-radius:8px;box-shadow:0 6px 20px rgba(0,0,0,0.08);display:flex;align-items:center;justify-content:center;z-index:70}
+
+    /* responsive */
+    @media (max-width:600px){.buttons{flex-wrap:wrap}}
+
+  </style>
+</head>
+<body data-theme="fun">
+  <div class="app">
+    <header>
+      <div>
+        <div class="title">Kuis Bahasa Jepang</div>
+        <div class="tag">Test kemampuan kamu!</div>
+      </div>
+      <div class="levels">
+        <div style="font-size:12px;color:var(--muted)">Level</div>
+        <div id="levelDisplay" class="level-value">Turis</div>
+        <button id="openLevel" class="small-btn">Ubah</button>
+      </div>
+    </header>
+
+    <div class="card" id="mainCard">
+      <div class="buttons">
+        <button id="mulaiBtn" class="btn">Mulai</button>
+        <button id="statusBtn" class="btn" style="background:linear-gradient(180deg,#5a7eff,#2aa3ff)">Status</button>
+        <button id="levelBtn" class="btn" style="background:linear-gradient(180deg,#8a8aff,#c58dff)">Level: <span id="levelBtnValue">Turis</span></button>
+        <button id="settingsBtn" class="btn" style="background:linear-gradient(180deg,#00d2ff,#00ff94)">Settings</button>
+      </div>
+
+      <div id="contentArea" style="margin-top:18px">
+        <p>Selamat datang! Tekan <strong>Mulai</strong> untuk memilih kategori dan memulai kuis.</p>
+      </div>
+    </div>
+
+    <!-- feedback popup -->
+    <div id="feedback" class="feedback" role="alert" aria-live="polite"></div>
+
+    <!-- confetti canvas -->
+    <canvas id="confetti" class="confetti-canvas"></canvas>
+    <div id="gloom" class="overlay-gloom"><div style="color:white;font-size:20px;font-weight:800">Sayang sekali. Jangan menyerah!</div></div>
+
+  </div>
+
+  <!-- ad placeholder -->
+  <div id="adSlot" class="ad">-- Iklan (placeholder). Will reload after each question --</div>
+
+  <audio id="clickSnd"></audio>
+  <audio id="correctSnd"></audio>
+  <audio id="wrongSnd"></audio>
+
+<script>
+/* -----------------------------
+   Placeholder databases
+   Replace or expand these objects with your own JSON sets.
+   Each DB is an array of objects:
+   { q: 'question', options: ['A','B','C','D'], answer: 1, explanation: '...' }
+   -----------------------------*/
+const DATABASES = {
+  'Turis': {
+    'Phrases': [
+      {q:'Apa arti "Sumimasen"?', options:['Terima kasih','Maaf / Permisi','Sampai jumpa','Tolong'], answer:1, explanation:'"Sumimasen" biasa dipakai untuk minta perhatian atau minta maaf.'},
+      {q:'Bagaimana bilang "terima kasih"?', options:['Konnichiwa','Arigatou','Sayonara','Ohayo'], answer:1, explanation:'"Arigatou" artinya terima kasih.'}
+    ],
+    'Vocab': [
+      {q:'Apa arti kata "eki"?', options:['Stasiun','Bandara','Sekolah','Rumah'], answer:0, explanation:'"Eki" berarti stasiun.'}
+    ],
+    'Grammar':[ {q:'Partikel yang dipakai untuk objek langsung?', options:['wa','ga','o','ni'], answer:2, explanation:'Partikel "o" digunakan untuk objek langsung.'} ],
+    'Kanji':[ {q:'Kanji untuk "kami" (kertas)?', options:['紙','神','雨','川'], answer:0, explanation:'"紙" adalah kertas.'} ]
+  },
+  'N5': { 'Phrases':[], 'Vocab':[], 'Grammar':[], 'Kanji':[] },
+  'N4': { 'Phrases':[], 'Vocab':[], 'Grammar':[], 'Kanji':[] }
+};
+
+/* -----------------------------
+   App State
+   -----------------------------*/
+let state = {
+  level: localStorage.getItem('kbj_level') || 'Turis',
+  category: null,
+  questions: [],
+  currentIndex: 0,
+  score: 0,
+  runs: JSON.parse(localStorage.getItem('kbj_runs')||'[]'),
+  settings: JSON.parse(localStorage.getItem('kbj_settings')||JSON.stringify({theme:'fun',sounds:true,notifications:false}))
+};
+
+// setup DOM refs
+const levelDisplay = document.getElementById('levelDisplay');
+const levelBtnValue = document.getElementById('levelBtnValue');
+const mulaiBtn = document.getElementById('mulaiBtn');
+const statusBtn = document.getElementById('statusBtn');
+const settingsBtn = document.getElementById('settingsBtn');
+const contentArea = document.getElementById('contentArea');
+const feedbackEl = document.getElementById('feedback');
+const clickSnd = document.getElementById('clickSnd');
+const correctSnd = document.getElementById('correctSnd');
+const wrongSnd = document.getElementById('wrongSnd');
+const adSlot = document.getElementById('adSlot');
+
+// generate simple sounds (data URI) using small oscillator via WebAudio -> record? Simpler: use short base64 audio for click (tiny beep). We'll synthesize using WebAudio on demand.
+function playClick(){ if(!state.settings.sounds) return; playTone(0.02,800); }
+function playCorrect(){ if(!state.settings.sounds) return; playTone(0.18,880); }
+function playWrong(){ if(!state.settings.sounds) return; playTone(0.18,220); }
+function playTone(duration, freq){ try{ const ctx = new (window.AudioContext||window.webkitAudioContext)(); const o = ctx.createOscillator(); const g = ctx.createGain(); o.connect(g); g.connect(ctx.destination); o.type='sine'; o.frequency.value=freq; g.gain.value=0.0001; o.start(); g.gain.exponentialRampToValueAtTime(0.2, ctx.currentTime+0.01); g.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime+duration); setTimeout(()=>{ o.stop(); ctx.close(); }, (duration+0.05)*1000); }catch(e){}
+}
+
+// init
+function init(){
+  applySettings();
+  renderHome();
+  bindActions();
+}
+
+function applySettings(){
+  document.body.setAttribute('data-theme', state.settings.theme || 'fun');
+}
+
+function bindActions(){
+  document.getElementById('openLevel').addEventListener('click',openLevelSelector);
+  mulaiBtn.addEventListener('click',onMulai);
+  statusBtn.addEventListener('click',showStatus);
+  settingsBtn.addEventListener('click',openSettings);
+}
+
+function openLevelSelector(){
+  playClick();
+  const popup = document.createElement('div'); popup.className='popup card';
+  popup.innerHTML = `<div style="font-weight:800;margin-bottom:8px">Pilih Level</div>`;
+  ['Turis','N5','N4'].forEach(l=>{
+    const b = document.createElement('button'); b.className='small-btn'; b.style.margin='6px'; b.textContent = l; b.addEventListener('click',()=>{ state.level=l; levelDisplay.textContent=l; levelBtnValue.textContent=l; localStorage.setItem('kbj_level',l); document.body.removeChild(popup); playClick(); });
+    popup.appendChild(b);
+  });
+  const close = document.createElement('button'); close.className='small-btn'; close.style.margin='6px'; close.textContent='Batal'; close.addEventListener('click',()=>{ document.body.removeChild(popup); playClick(); }); popup.appendChild(close);
+  document.body.appendChild(popup);
+}
+
+function onMulai(){
+  playClick();
+  // show 4 category buttons
+  contentArea.innerHTML = `<div class="category-grid">
+    <div class="cat" data-cat="Phrases">Phrases</div>
+    <div class="cat" data-cat="Vocab">Vocabulary</div>
+    <div class="cat" data-cat="Grammar">Grammar</div>
+    <div class="cat" data-cat="Kanji">Kanji</div>
+  </div>`;
+  document.querySelectorAll('.cat').forEach(c=>c.addEventListener('click',(e)=>{
+    const cat = e.currentTarget.dataset.cat;
+    state.category = cat;
+    startQuiz();
+  }));
+}
+
+function showStatus(){
+  playClick();
+  // compute attempts and avg
+  const runs = state.runs || [];
+  const attempts = runs.length;
+  const avg = attempts ? Math.round((runs.reduce((s,r)=>s+r.score,0)/attempts)*10)/10 : 0;
+  contentArea.innerHTML = `<div style='display:flex;gap:12px;align-items:center;flex-wrap:wrap'>
+    <div class='card' style='padding:14px;min-width:200px'>
+      <div style='font-weight:800'>Attempts</div>
+      <div style='font-size:22px'>${attempts}</div>
+    </div>
+    <div class='card' style='padding:14px;min-width:220px'>
+      <div style='font-weight:800'>Average Score</div>
+      <div style='font-size:22px'>${avg}/10</div>
+    </div>
+    <div class='card' style='padding:14px;flex:1'>
+      <div style='font-weight:800;margin-bottom:8px'>Progress</div>
+      <div id='sparkChart' class='chart'></div>
+    </div>
+  </div>`;
+  renderSparkChart();
+}
+
+function renderSparkChart(){
+  const el = document.getElementById('sparkChart'); el.innerHTML='';
+  const runs = state.runs || [];
+  const svgNS = 'http://www.w3.org/2000/svg';
+  const w = 220, h = 120; const svg = document.createElementNS(svgNS,'svg'); svg.setAttribute('viewBox',`0 0 ${w} ${h}`); svg.setAttribute('width',w); svg.setAttribute('height',h);
+  if(runs.length===0){ svg.innerHTML = `<text x='50' y='60' fill='var(--muted)'>Belum ada data</text>`; el.appendChild(svg); return; }
+  const max = 10; const gap = w/(runs.length+1);
+  runs.slice(-10).forEach((r,i)=>{
+    const x = (i+1)*gap; const barH = (r.score/ max) * (h-20);
+    const rect = document.createElementNS(svgNS,'rect'); rect.setAttribute('x',x-8); rect.setAttribute('y',h-10-barH); rect.setAttribute('width',12); rect.setAttribute('height',barH); rect.setAttribute('fill','var(--accent)'); svg.appendChild(rect);
+  });
+  el.appendChild(svg);
+}
+
+function openSettings(){
+  playClick();
+  contentArea.innerHTML = `<div style='display:flex;flex-direction:column;gap:8px'>
+    <div class='setting-row'><div>Theme</div><div>
+      <select id='themeSel'><option>Light</option><option>Dark</option><option selected>Fun</option></select>
+    </div></div>
+    <div class='setting-row'><div>Sounds</div><div><select id='soundSel'><option>On</option><option>Off</option></select></div></div>
+    <div class='setting-row'><div>Notifications (Daily Quiz)</div><div><select id='notifSel'><option>Off</option><option>On</option></select></div></div>
+    <div style='margin-top:8px'><button id='saveSettings' class='btn'>Simpan</button></div>
+  </div>`;
+  document.getElementById('themeSel').value = capitalize(state.settings.theme);
+  document.getElementById('soundSel').value = state.settings.sounds ? 'On':'Off';
+  document.getElementById('notifSel').value = state.settings.notifications ? 'On':'Off';
+  document.getElementById('saveSettings').addEventListener('click',()=>{
+    state.settings.theme = document.getElementById('themeSel').value.toLowerCase();
+    state.settings.sounds = document.getElementById('soundSel').value === 'On';
+    state.settings.notifications = document.getElementById('notifSel').value === 'On';
+    localStorage.setItem('kbj_settings',JSON.stringify(state.settings));
+    applySettings();
+    playClick();
+    if(state.settings.notifications) requestNotificationPermission();
+    showTransient('Settings disimpan');
+  });
+}
+
+function capitalize(s){ return s.charAt(0).toUpperCase()+s.slice(1); }
+
+/* -----------------------------
+   Quiz flow
+   -----------------------------*/
+function startQuiz(){
+  // prepare questions from selected DB
+  const db = (DATABASES[state.level] && DATABASES[state.level][state.category]) || [];
+  if(!db || db.length===0){ contentArea.innerHTML = `<div class='card'><strong>Tidak ada soal</strong><p>Masukkan soal ke database untuk level=${state.level} category=${state.category}.</p></div>`; return; }
+  // randomize and pick 10
+  const shuffled = shuffleArray(db.slice());
+  state.questions = shuffled.slice(0,10).map((q,i)=>Object.assign({},q,{id:i}));
+  state.currentIndex=0; state.score=0;
+  renderQuestion();
+}
+
+function renderQuestion(){
+  const q = state.questions[state.currentIndex];
+  contentArea.innerHTML = `<div class='question-box card'>
+    <div class='qnum'>Pertanyaan ${state.currentIndex+1} dari 10</div>
+    <div class='qtext'>${q.q}</div>
+    <div class='answers' id='answersWrap'></div>
+    <div class='progress-wrap'><div class='progress-bar' id='progressBar' style='width:${(state.currentIndex/10)*100}%'></div></div>
+  </div>`;
+  const aw = document.getElementById('answersWrap');
+  q.options.forEach((opt,idx)=>{
+    const b = document.createElement('div'); b.className='answer'; b.textContent = String.fromCharCode(65+idx)+'. '+opt; b.addEventListener('click',()=>onAnswer(idx)); aw.appendChild(b);
+  });
+}
+
+function onAnswer(idx){
+  // animate and play sound
+  playClick();
+  // disable answers
+  document.querySelectorAll('.answer').forEach(a=>a.style.pointerEvents='none');
+  const q = state.questions[state.currentIndex];
+  const correct = (idx === q.answer);
+  if(correct){ state.score +=1; playCorrect(); showFeedback(true,q.explanation); } else { playWrong(); showFeedback(false,q.explanation); }
+  // reload ad
+  reloadAd();
+  // continue after delay
+  setTimeout(()=>{
+    state.currentIndex +=1;
+    if(state.currentIndex>=state.questions.length){ finishQuiz(); } else { renderQuestion(); }
+  }, 1000);
+}
+
+function showFeedback(isCorrect, explanation){
+  feedbackEl.className='feedback show';
+  feedbackEl.innerHTML = `<div style='font-weight:900;font-size:18px'>${isCorrect? 'Benar!':'Salah'}</div><div style='margin-top:8px'>${explanation||''}</div>`;
+  setTimeout(()=>{ feedbackEl.className='feedback'; },800);
+}
+
+function finishQuiz(){
+  // save run
+  const run = {date:new Date().toISOString(),score:state.score,level:state.level,category:state.category};
+  state.runs.push(run); localStorage.setItem('kbj_runs', JSON.stringify(state.runs));
+  renderResults(run);
+}
+
+function renderResults(run){
+  contentArea.innerHTML = `<div class='card results'>
+    <div style='font-size:28px;font-weight:900'>Skor: ${run.score}/10</div>
+    <div id='resultMsg' style='font-weight:800'></div>
+    <div style='display:flex;gap:8px;margin-top:12px'>
+      <button id='retry' class='btn small-btn'>Coba Lagi</button>
+      <button id='share' class='btn'>Share di Social Media</button>
+      <button id='menu' class='btn small-btn'>Kembali ke Menu</button>
+    </div>
+  </div>`;
+  document.getElementById('retry').addEventListener('click',()=>{ playClick(); startQuiz(); });
+  document.getElementById('menu').addEventListener('click',()=>{ playClick(); renderHome(); });
+  document.getElementById('share').addEventListener('click',()=>{ playClick(); shareResult(run); });
+  const resultMsg = document.getElementById('resultMsg');
+  if(run.score>6){ resultMsg.textContent='Wow! Kamu berhasil! 🚀'; fireConfetti(); playCorrect(); } else { resultMsg.textContent='Sayang sekali. Jangan menyerah!'; showGloom(); playWrong(); }
+}
+
+function shareResult(run){
+  const text = `Skor saya ${run.score}/10 di Kuis Bahasa Jepang (level ${run.level} ${run.category}). Coba kamu juga!`;
+  if(navigator.share){ navigator.share({title:'Kuis Bahasa Jepang', text}); } else { navigator.clipboard.writeText(text).then(()=> alert('Teks disalin. Paste di sosial media.')); }
+}
+
+/* -----------------------------
+   UI helpers
+   -----------------------------*/
+function renderHome(){
+  levelDisplay.textContent = state.level; levelBtnValue.textContent = state.level;
+  contentArea.innerHTML = `<div><p>Selamat datang di <strong>Kuis Bahasa Jepang</strong>. Pilih <strong>Mulai</strong> untuk memulai.</p></div>`;
+}
+
+function shuffleArray(a){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]] } return a }
+
+function showTransient(msg){ const el = document.createElement('div'); el.className='card'; el.style.position='fixed'; el.style.left='50%'; el.style.top='16px'; el.style.transform='translateX(-50%)'; el.style.zIndex='120'; el.textContent=msg; document.body.appendChild(el); setTimeout(()=>el.remove(),1200); }
+
+/* -----------------------------
+   Confetti (simple)
+   -----------------------------*/
+function fireConfetti(){ const c = document.getElementById('confetti'); c.width = innerWidth; c.height = innerHeight; const ctx = c.getContext('2d'); const pieces = []; for(let i=0;i<140;i++){ pieces.push({x:Math.random()*c.width,y:Math.random()*-c.height, vx:(Math.random()-0.5)*6, vy:Math.random()*6+2, size:Math.random()*8+4, color:['#ff3b6f','#ffd200','#7ef2a8','#6b8cff'][Math.floor(Math.random()*4)]}); }
+  let t=0; function loop(){ ctx.clearRect(0,0,c.width,c.height); for(const p of pieces){ p.x += p.vx; p.y += p.vy; p.vy += 0.12; ctx.fillStyle = p.color; ctx.fillRect(p.x,p.y,p.size, p.size*0.6); } t++; if(t<160) requestAnimationFrame(loop); else ctx.clearRect(0,0,c.width,c.height); } loop(); }
+
+function showGloom(){ const g = document.getElementById('gloom'); g.classList.add('show'); setTimeout(()=>{ g.classList.remove('show'); },1000); }
+
+/* -----------------------------
+   Ads reload (placeholder)
+   -----------------------------*/
+function reloadAd(){ // simulate ad reload
+  adSlot.textContent = '-- Iklan (placeholder) - content id: ' + Math.floor(Math.random()*100000);
+}
+
+/* -----------------------------
+   Notifications (PWA) - demo
+   Note: real push requires server. Here we request permission and schedule a local notification for demo.
+   -----------------------------*/
+function requestNotificationPermission(){ if(!('Notification' in window)) return; Notification.requestPermission().then(p=>{ if(p==='granted'){ // schedule next daily demo in 10s for demo only
+      setTimeout(()=> new Notification('Daily Quiz Reminder','Waktunya mengerjakan Kuis Bahasa Jepang!'),10000); } }); }
+
+/* -----------------------------
+   Utilities
+   -----------------------------*/
+init();
+</script>
+</body>
+</html>
