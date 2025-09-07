@@ -1,153 +1,141 @@
 <!doctype html>
 <html lang="id">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Uji Kesiapan ke Jepang</title>
-  <meta name="description" content="Uji Kesiapan ke Jepang - Bisakah kamu bertahan hidup di Jepang?" />
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#fff6fb; --fg:#222; --accent:#ff6b00; --muted:#666; --card:#fff;
-    }
-    [data-theme="dark"]{ --bg:#0f1222; --fg:#e7e9ee; --accent:#7ef2a8; --muted:#9aa0b2; --card:#111225 }
-    [data-theme="fun"]{ --bg:#ffe4f0; --fg:#122; --accent:#ff6b00; --muted:#6b6b6b; --card:#fff }
-
-    *{box-sizing:border-box; font-family:'Baloo 2', cursive, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial}
-    body{margin:0;background:var(--bg);color:var(--fg);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px;overflow-x:hidden;}
-    .app{width:100%;max-width:960px;text-align:center}
-
-    header{margin-bottom:24px;animation:fadeZoom 1s ease forwards;}
-    .title{font-size:48px;font-weight:800;letter-spacing:-1px}
-    .tag{font-size:22px;color:var(--muted);margin-top:6px;animation:fadeZoom 1.2s ease forwards;}
-
-    @keyframes fadeZoom {0%{opacity:0;transform:scale(0.9);}100%{opacity:1;transform:scale(1);}}
-
-    .card{background:var(--card);border-radius:16px;padding:24px;box-shadow:0 8px 24px rgba(0,0,0,0.08);margin-top:12px;}
-
-    .buttons{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin-top:24px}
-    button.btn{padding:16px 26px;border-radius:16px;border:none;background:linear-gradient(180deg,var(--accent),#ff2d6f);color:white;font-weight:700;font-size:18px;cursor:pointer;transform:translateY(0);transition:transform .12s ease,box-shadow .12s ease;box-shadow:0 8px 20px rgba(0,0,0,0.16)}
-    button.btn:active{transform:translateY(4px);box-shadow:0 2px 6px rgba(0,0,0,0.08)}
-
-    .category-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:18px;margin-top:24px}
-    .cat{padding:18px;border-radius:16px;background:linear-gradient(180deg,#fff,#ffe4f0);text-align:center;font-weight:800;font-size:16px;cursor:pointer;transition:transform .15s;}
-    .cat img{width:100%;height:100px;object-fit:cover;border-radius:12px;margin-bottom:8px;}
-    .cat:active{transform:scale(0.97)}
-
-    .question-box{margin-top:24px;text-align:center}
-    .qnum{font-weight:700;margin-bottom:6px;font-size:18px}
-    .qtext{font-size:22px;margin-bottom:18px}
-    .answers{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
-    .answer{padding:14px;border-radius:14px;border:2px solid rgba(0,0,0,0.06);cursor:pointer;font-weight:700;font-size:16px;transition:transform .08s;}
-    .answer:active{transform:translateY(3px)}
-
-    .progress-wrap{height:14px;background:#eee;border-radius:999px;overflow:hidden;margin-top:18px}
-    .progress-bar{height:100%;width:0%;background:linear-gradient(90deg,var(--accent),#ffd200)}
-
-    .feedback{position:fixed;left:50%;top:20%;transform:translateX(-50%);min-width:320px;background:var(--card);padding:18px;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,0.2);z-index:80;opacity:0;pointer-events:none;transition:all .28s;text-align:center;}
-    .feedback.show{opacity:1;pointer-events:auto;top:28%;}
-    .feedback img{max-width:100%;height:120px;object-fit:cover;border-radius:12px;margin-top:12px;}
-
-    .results{display:flex;flex-direction:column;align-items:center;gap:14px;padding:24px;}
-    .confetti-canvas{position:fixed;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:90}
-    .overlay-gloom{position:fixed;left:0;top:0;width:100%;height:100%;background:rgba(12,12,30,0.65);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;z-index:90;opacity:0;pointer-events:none;transition:opacity .5s}
-    .overlay-gloom.show{opacity:1;pointer-events:auto}
-
-    .status-grid{display:flex;gap:16px;align-items:center;flex-wrap:wrap;justify-content:center}
-    .chart{width:220px;height:140px}
-
-    .setting-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px dashed rgba(0,0,0,0.04)}
-
-    .homeBtn{margin-top:20px;}
-
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Uji Kesiapan ke Jepang</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff6fb;--fg:#222;--accent:#ff6b00;--muted:#666;--card:#fff}
+[data-theme="fun"]{--bg:#ffe4f0;--fg:#122;--accent:#ff6b00;--muted:#6b6b6b;--card:#fff}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:'Baloo 2',cursive;display:flex;align-items:center;justify-content:center;min-height:100vh;flex-direction:column;}
+.app{width:100%;max-width:960px;text-align:center}
+header{margin-bottom:24px;animation:fadeZoom 1s ease forwards;}
+.title{font-size:48px;font-weight:800;letter-spacing:-1px;}
+.tag{font-size:26px;color:var(--muted);margin-top:6px;animation:fadeZoom 1.2s ease forwards;}
+@keyframes fadeZoom{0%{opacity:0;transform:scale(0.9);}100%{opacity:1;transform:scale(1);}}
+.card{background:var(--card);border-radius:16px;padding:24px;box-shadow:0 8px 24px rgba(0,0,0,0.08);margin-top:12px;width:100%;}
+.buttons{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin-top:24px}
+button.btn{padding:16px 26px;border-radius:16px;border:none;background:linear-gradient(180deg,var(--accent),#ff2d6f);color:white;font-weight:700;font-size:18px;cursor:pointer;box-shadow:0 8px 20px rgba(0,0,0,0.16);transition:transform .12s ease,box-shadow .12s ease;}
+button.btn:active{transform:translateY(4px);box-shadow:0 2px 6px rgba(0,0,0,0.08);}
+.category-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:18px;margin-top:24px}
+.cat{padding:18px;border-radius:16px;background:linear-gradient(180deg,#fff,#ffe4f0);text-align:center;font-weight:800;font-size:16px;cursor:pointer;transition:transform .15s;}
+.cat img{width:100%;height:100px;object-fit:cover;border-radius:12px;margin-bottom:8px;}
+.cat:active{transform:scale(0.97);}
+.question-box{margin-top:24px;text-align:center}
+.qnum{font-weight:700;margin-bottom:6px;font-size:18px}
+.qtext{font-size:22px;margin-bottom:18px}
+.answers{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
+.answer{padding:14px;border-radius:14px;border:2px solid rgba(0,0,0,0.06);cursor:pointer;font-weight:700;font-size:16px;transition:transform .08s;}
+.answer:active{transform:translateY(3px);}
+.progress-wrap{height:14px;background:#eee;border-radius:999px;overflow:hidden;margin-top:18px}
+.progress-bar{height:100%;width:0%;background:linear-gradient(90deg,var(--accent),#ffd200)}
+.feedback{position:fixed;left:50%;top:20%;transform:translateX(-50%);min-width:320px;background:var(--card);padding:18px;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,0.2);z-index:80;opacity:0;pointer-events:none;transition:all .28s;text-align:center;}
+.feedback.show{opacity:1;pointer-events:auto;top:28%;}
+.feedback img{max-width:100%;height:120px;object-fit:cover;border-radius:12px;margin-top:12px;}
+.results{display:flex;flex-direction:column;align-items:center;gap:14px;padding:24px;}
+.confetti-canvas{position:fixed;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:90}
+.overlay-gloom{position:fixed;left:0;top:0;width:100%;height:100%;background:rgba(12,12,30,0.65);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;z-index:90;opacity:0;pointer-events:none;transition:opacity .5s}
+.overlay-gloom.show{opacity:1;pointer-events:auto}
+.homeBtn{margin-top:12px;padding:12px 20px;border-radius:16px;background:var(--accent);color:#fff;font-weight:700;font-size:16px;cursor:pointer;}
+</style>
 </head>
 <body data-theme="fun">
-  <audio id="bgm" loop autoplay><source src="assets/bgm.mp3" type="audio/mpeg"></audio>
-  <div class="app">
-    <header>
-      <div class="title">Uji Kesiapan ke Jepang</div>
-      <div class="tag">Bisakah kamu bertahan hidup di Jepang?</div>
-    </header>
-
-    <div class="card" id="mainCard">
-      <div class="buttons" id="mainButtons">
-        <button id="mulaiBtn" class="btn">Mulai</button>
-        <button id="statusBtn" class="btn">Status</button>
-        <button id="levelBtn" class="btn">Level: <span id="levelBtnValue">Belum pernah ke Jepang</span></button>
-        <button id="settingsBtn" class="btn">Settings</button>
-      </div>
-      <div id="contentArea" style="margin-top:24px"></div>
-    </div>
-
-    <div id="feedback" class="feedback" role="alert" aria-live="polite"></div>
-    <canvas id="confetti" class="confetti-canvas"></canvas>
-    <div id="gloom" class="overlay-gloom"><div style="color:white;font-size:20px;font-weight:800">Sayang sekali. Jangan menyerah!</div></div>
-  </div>
-  <div id="adSlot" class="ad">-- Iklan (placeholder) --</div>
-
+<div class="app">
+<header>
+<div class="title">Uji Kesiapan ke Jepang</div>
+<div class="tag">Bisakah kamu bertahan hidup di Jepang?</div>
+</header>
+<div class="card" id="mainCard">
+<div class="buttons" id="mainButtons">
+<button id="mulaiBtn" class="btn">Mulai</button>
+<button id="statusBtn" class="btn">Status</button>
+<button id="levelBtn" class="btn">Level: <span id="levelBtnValue">Belum pernah ke Jepang</span></button>
+<button id="settingsBtn" class="btn">Settings</button>
+</div>
+<div id="contentArea" style="margin-top:24px"></div>
+</div>
+<div id="feedback" class="feedback"></div>
+<canvas id="confetti" class="confetti-canvas"></canvas>
+<div id="gloom" class="overlay-gloom"><div style="color:white;font-size:20px;font-weight:800">Sayang sekali. Jangan menyerah!</div></div>
+</div>
+<div id="adSlot" class="ad">-- Iklan (placeholder) --</div>
 <script>
-const DATABASES = {
-  'Belum pernah ke Jepang': {
-    'Restoran':[ {q:'Apa arti “Itadakimasu”?', options:['Terima kasih','Selamat makan','Maaf'], answer:1, explanation:'“Itadakimasu” diucapkan sebelum makan.', pic:'assets/restaurant1.jpg'} ],
-    'Minimarket':[ {q:'Apa arti kata “Konbini”?', options:['Minimarket','Restoran','Stasiun'], answer:0, explanation:'“Konbini” adalah minimarket Jepang.', pic:'assets/minimarket1.jpg'} ],
-    'Rumah Sakit':[ {q:'Bagaimana bilang “Saya sakit kepala”?', options:['Atama ga itai','Onaka ga suita','Nemui'], answer:0, explanation:'“Atama ga itai” artinya kepala sakit.', pic:'assets/hospital1.jpg'} ],
-    'Kereta':[ {q:'Apa arti “Shinkansen”?', options:['Kereta Cepat','Bus','Pesawat'], answer:0, explanation:'“Shinkansen” adalah kereta cepat.', pic:'assets/train1.jpg'} ]
-  },
-  'Sekali ke Jepang': { 'Restoran':[], 'Minimarket':[], 'Rumah Sakit':[], 'Kereta':[] },
-  'Sering ke Jepang': { 'Restoran':[], 'Minimarket':[], 'Rumah Sakit':[], 'Kereta':[] }
+const DATABASES={
+'Belum pernah ke Jepang':{'Restoran':[ {q:'Apa arti “Itadakimasu”?', options:['Terima kasih','Selamat makan','Maaf','Halo'], answer:1, explanation:'“Itadakimasu” diucapkan sebelum makan.', pic:'assets/restaurant1.jpg'} ],
+'Minimarket':[ {q:'Apa arti kata “Konbini”?', options:['Minimarket','Restoran','Stasiun','Kereta'], answer:0, explanation:'“Konbini” adalah minimarket Jepang.', pic:'assets/minimarket1.jpg'} ],
+'Rumah Sakit':[ {q:'Bagaimana bilang “Saya sakit kepala”?', options:['Atama ga itai','Onaka ga suita','Nemui','Kawaii'], answer:0, explanation:'“Atama ga itai” artinya kepala sakit.', pic:'assets/hospital1.jpg'} ],
+'Kereta':[ {q:'Apa arti “Shinkansen”?', options:['Kereta Cepat','Bus','Pesawat','Mobil'], answer:0, explanation:'“Shinkansen” adalah kereta cepat.', pic:'assets/train1.jpg'} ]},
+'Sekali ke Jepang':{'Restoran':[],'Minimarket':[],'Rumah Sakit':[],'Kereta':[]},
+'Sering ke Jepang':{'Restoran':[],'Minimarket':[],'Rumah Sakit':[],'Kereta':[]}
 };
-
-let state = { level: localStorage.getItem('kbj_level') || 'Belum pernah ke Jepang', category: null, questions: [], currentIndex:0, score:0, runs: JSON.parse(localStorage.getItem('kbj_runs')||'[]'), settings:{theme:'fun',sounds:true,notifications:false} };
-
-const levelBtnValue = document.getElementById('levelBtnValue');
-const mulaiBtn = document.getElementById('mulaiBtn');
-const statusBtn = document.getElementById('statusBtn');
-const settingsBtn = document.getElementById('settingsBtn');
-const contentArea = document.getElementById('contentArea');
-const mainButtons = document.getElementById('mainButtons');
-const feedbackEl = document.getElementById('feedback');
-
+let state={level:localStorage.getItem('kbj_level')||'Belum pernah ke Jepang', category:null, questions:[], currentIndex:0, score:0, runs:JSON.parse(localStorage.getItem('kbj_runs')||'[]'), settings:{theme:'fun',sounds:true,notifications:false}};
+const levelBtnValue=document.getElementById('levelBtnValue');
+const mulaiBtn=document.getElementById('mulaiBtn');
+const statusBtn=document.getElementById('statusBtn');
+const settingsBtn=document.getElementById('settingsBtn');
+const contentArea=document.getElementById('contentArea');
+const mainButtons=document.getElementById('mainButtons');
+const feedbackEl=document.getElementById('feedback');
 function init(){
-  levelBtnValue.textContent=state.level;
-  bindActions();
+levelBtnValue.textContent=state.level;
+mainButtons.style.display='flex';
+contentArea.innerHTML='';
+feedbackEl.className='feedback';
 }
-
 function bindActions(){
-  levelBtn.addEventListener('click',()=>{
-    const opts=['Belum pernah ke Jepang','Sekali ke Jepang','Sering ke Jepang'];
-    const sel = prompt('Pilih level:\n'+opts.join('\n'),state.level);
-    if(sel && opts.includes(sel)){ state.level=sel; levelBtnValue.textContent=sel; localStorage.setItem('kbj_level',sel); }
-  });
-  mulaiBtn.addEventListener('click',onMulai);
-  statusBtn.addEventListener('click',showStatus);
-  settingsBtn.addEventListener('click',openSettings);
+levelBtn.addEventListener('click',()=>{
+const opts=['Belum pernah ke Jepang','Sekali ke Jepang','Sering ke Jepang'];
+const sel=prompt('Pilih level:\n'+opts.join('\n'),state.level);
+if(sel && opts.includes(sel)){state.level=sel; levelBtnValue.textContent=sel; localStorage.setItem('kbj_level',sel);}
+});
+mulaiBtn.addEventListener('click',onMulai);
+statusBtn.addEventListener('click',showStatus);
+settingsBtn.addEventListener('click',openSettings);
 }
-
 function onMulai(){
-  mainButtons.style.display='none';
-  const cats=['Restoran','Minimarket','Rumah Sakit','Kereta'];
-  const catPics=['assets/restaurant1.jpg','assets/minimarket1.jpg','assets/hospital1.jpg','assets/train1.jpg'];
-  contentArea.innerHTML = '<div class="category-grid">'+cats.map((c,i)=>`<div class="cat" data-cat="${c}"><img src="${catPics[i]}"><div>${c}</div></div>`).join('')+'</div>';
-  document.querySelectorAll('.cat').forEach(c=>c.addEventListener('click',(e)=>{ state.category=e.currentTarget.dataset.cat; startQuiz(); }));
+mainButtons.style.display='none';
+const cats=['Restoran','Minimarket','Rumah Sakit','Kereta'];
+const catPics=['assets/restaurant1.jpg','assets/minimarket1.jpg','assets/hospital1.jpg','assets/train1.jpg'];
+contentArea.innerHTML='<div class="category-grid">'+cats.map((c,i)=>`<div class="cat" data-cat="${c}"><img src="${catPics[i]}"><div>${c}</div></div>`).join('')+'</div>';
+document.querySelectorAll('.cat').forEach(c=>c.addEventListener('click',(e)=>{state.category=e.currentTarget.dataset.cat;startQuiz();}));
 }
-
-function showFeedback(isCorrect, explanation,pic){
-  feedbackEl.className='feedback show';
-  feedbackEl.innerHTML=`<div style='font-weight:900;font-size:18px'>${isCorrect?'Benar!':'Salah!'}</div>
-    <div style='margin-top:8px'>${explanation}</div>
-    ${pic?`<img src='${pic}'>`:''}
-    <button onclick='nextQuestion()' style='margin-top:12px;padding:8px 16px;font-weight:700;border-radius:10px;'>Next</button>`;
+function startQuiz(){
+state.questions=[...DATABASES[state.level][state.category]];
+if(state.questions.length===0){alert('Database kosong! Silakan tambahkan pertanyaan.');init(); return;}
+state.currentIndex=0;state.score=0;renderQuestion();}
+function renderQuestion(){
+const q=state.questions[state.currentIndex];
+contentArea.innerHTML=`<div class='question-box'><div class='qnum'>Pertanyaan ${state.currentIndex+1}/${state.questions.length}</div><div class='qtext'>${q.q}</div>${q.pic?`<img src='${q.pic}' style='width:200px;height:120px;object-fit:cover;border-radius:12px;margin-bottom:12px;'>`:''}<div class='answers'>${q.options.map((o,i)=>`<div class='answer' onclick='checkAnswer(${i})'>${o}</div>`).join('')}</div><div class='progress-wrap'><div class='progress-bar' style='width:${((state.currentIndex)/state.questions.length)*100}%'></div></div><button class='homeBtn' onclick='goHome()'>Kembali ke Home</button></div>`;
 }
-
+function checkAnswer(idx){
+const q=state.questions[state.currentIndex];
+const correct=idx===q.answer;
+if(correct) state.score++;
+showFeedback(correct,q.explanation,q.pic);
+}
+function showFeedback(correct,exp,pic){
+feedbackEl.className='feedback show';
+feedbackEl.innerHTML=`<div style='font-weight:900;font-size:18px'>${correct?'Benar!':'Salah!'}</div><div style='margin-top:8px'>${exp}</div>${pic?`<img src='${pic}'>`:''}<button onclick='nextQuestion()' style='margin-top:12px;padding:8px 16px;font-weight:700;border-radius:10px;'>Next</button><button onclick='goHome()' class='homeBtn'>Kembali ke Home</button>`;
+}
 function nextQuestion(){
-  feedbackEl.className='feedback';
-  state.currentIndex +=1;
-  if(state.currentIndex>=state.questions.length){ finishQuiz(); } else { renderQuestion(); }
+feedbackEl.className='feedback';
+state.currentIndex++;
+if(state.currentIndex>=state.questions.length){finishQuiz();}else{renderQuestion();}
 }
-
-// Remaining quiz logic, status, results, confetti, ads, assets integration can be adapted from the previous code
+function finishQuiz(){
+let msg='';
+if(state.score<=3) msg='Kamu belum siap ke Jepang... 😅\nBisa bahasa Jepang jadi lebih tenang. Ayo semangat!';
+else if(state.score<=6) msg='Perlu persiapan sedikit lagi! 😬\nJangan menyerah, ayo coba lagi!';
+else if(state.score<=9) msg='Kamu sudah siap ke Jepang! 😎\nTapi bisakah kamu dapat nilai sempurna?';
+else msg='Apakah kamu orang Jepang? 🤩\nSelamat! Nilai sempurna! Coba kategori lainnya!';
+contentArea.innerHTML=`<div class='results'><div style='font-size:24px;font-weight:800'>Skor ${state.score}/${state.questions.length}</div><div style='font-size:18px;margin-top:12px;white-space:pre-line'>${msg}</div><button class='btn' onclick='onMulai()'>Coba Lagi</button><button class='homeBtn' onclick='goHome()'>Kembali ke Home</button></div>`;
+}
+function showStatus(){alert('Fitur status belum diimplementasikan.');}
+function openSettings(){alert('Fitur settings belum diimplementasikan.');}
+function goHome(){init();}
 init();
+bindActions();
 </script>
 </body>
 </html>
