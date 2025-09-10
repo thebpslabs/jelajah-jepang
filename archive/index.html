@@ -1,0 +1,132 @@
+<!-- FILE: index.html -->
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Uji Kesiapan Kamu ke Jepang</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-fun">
+  <main id="app">
+    <header>
+      <h1>Uji Kesiapan Kamu ke Jepang</h1>
+      <p class="tagline">Bisakah kamu bertahan hidup di Jepang?</p>
+    </header>
+
+    <section id="main-menu" class="centered">
+      <div class="buttons big">
+        <button id="btnMulai" class="main-btn">Mulai</button>
+        <button id="btnStatus" class="main-btn">Status</button>
+        <button id="btnLevel" class="main-btn">Level <span id="currentLevelText">(Belum pernah ke Jepang)</span></button>
+        <button id="btnSettings" class="main-btn">Settings</button>
+      </div>
+    </section>
+
+    <!-- Category selection (appears after Mulai) -->
+    <section id="category-menu" class="centered hidden">
+      <div class="category-grid">
+        <button class="category-btn" data-cat="restoran">Restoran</button>
+        <button class="category-btn" data-cat="minimarket">Minimarket</button>
+        <button class="category-btn" data-cat="kereta">Kereta</button>
+        <button class="category-btn" data-cat="rumah-sakit">Rumah sakit</button>
+      </div>
+      <button id="btnKembaliHomeFromCategory" class="back-btn">Kembali ke Home</button>
+    </section>
+
+    <!-- Quiz page -->
+    <section id="quiz-page" class="centered hidden">
+      <div class="quiz-card">
+        <div class="top-row">
+          <div id="questionNumber">Soal 1 / 10</div>
+          <div id="progressWrap"><div id="progressBar"></div></div>
+        </div>
+        <h2 id="questionText">Pertanyaan akan muncul di sini</h2>
+        <div id="answers" class="answers-grid"></div>
+        <div class="feedback-area hidden" id="feedbackPopup">
+          <div id="feedbackText"></div>
+          <div id="feedbackExplanation"></div>
+          <button id="nextQ">Next</button>
+        </div>
+      </div>
+      <button id="btnKembaliHomeFromQuiz" class="back-btn">Kembali ke Home</button>
+    </section>
+
+    <!-- Results page -->
+    <section id="results-page" class="centered hidden">
+      <div class="results-card">
+        <h2 id="resultsTitle"></h2>
+        <p id="resultsSub"></p>
+        <div id="resultsEmote" class="emote"></div>
+        <div class="results-summary">Skor: <span id="resultsScore">0</span>/10</div>
+        <button id="btnSaveResult" class="main-btn">Simpan Hasil</button>
+        <button id="btnBackFromResults" class="back-btn">Kembali ke Home</button>
+      </div>
+    </section>
+
+    <!-- Status page -->
+    <section id="status-page" class="centered hidden">
+      <div class="status-card">
+        <h2>Status Kamu</h2>
+        <div>Jumlah percobaan: <span id="attemptCount">0</span></div>
+        <div>Skor rata-rata: <span id="averageScore">0</span></div>
+        <canvas id="statusChart" style="max-width:600px"></canvas>
+        <div class="status-actions">
+          <button id="btnDeleteResults" class="danger">Hapus Semua Hasil</button>
+          <button id="btnBackFromStatus" class="back-btn">Kembali</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Settings page -->
+    <section id="settings-page" class="centered hidden">
+      <div class="settings-card">
+        <h2>Settings</h2>
+        <label>Theme:</label>
+        <select id="themeSelect">
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+          <option value="fun" selected>Fun</option>
+        </select>
+        <label>Sounds:</label>
+        <select id="soundSelect">
+          <option value="on" selected>On</option>
+          <option value="off">Off</option>
+        </select>
+        <label>Notifications:</label>
+        <select id="notifSelect">
+          <option value="on">On</option>
+          <option value="off" selected>Off</option>
+        </select>
+
+        <div class="settings-actions">
+          <button id="btnSaveSettings" class="main-btn">Simpan</button>
+          <button id="btnBackFromSettings" class="back-btn">Kembali</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Overlay / Modals -->
+    <div id="overlay" class="overlay hidden"></div>
+
+    <div id="levelModal" class="modal hidden">
+      <h3>Pilih Level</h3>
+      <div class="modal-grid">
+        <button class="level-option" data-level="belum">Belum pernah ke Jepang</button>
+        <button class="level-option" data-level="pernah">Pernah ke Jepang</button>
+        <button class="level-option" data-level="sering">Sering ke Jepang</button>
+      </div>
+    </div>
+
+    <audio id="sfxClick" src="assets/sounds/click.mp3"></audio>
+    <audio id="sfxCorrect" src="assets/sounds/correct.mp3"></audio>
+    <audio id="sfxWrong" src="assets/sounds/wrong.mp3"></audio>
+
+    <!-- Ads placeholder -->
+    <div id="adBar">[Iklan] (letakkan ads di folder assets/ad-placeholder.png)</div>
+
+    <script src="script.js"></script>
+  </main>
+</body>
+</html>

@@ -1,0 +1,74 @@
+{
+  "level1": {
+    "Restoran": [
+      {
+        "question": "Bagaimana cara memesan air putih?",
+        "answers": ["お水をください (O-mizu o kudasai)", "ビールをください (Biiru o kudasai)", "トイレはどこですか (Toire wa doko desu ka)", "これは何ですか (Kore wa nan desu ka)"],
+        "correct": "お水をください (O-mizu o kudasai)",
+        "feedback": "'Mizu' berarti air. 'O kudasai' adalah cara sopan untuk meminta sesuatu.",
+        "image": "water.jpg"
+      },
+      {
+        "question": "Apa yang Anda katakan sebelum mulai makan?",
+        "answers": ["いただきます (Itadakimasu)", "ごちそうさまでした (Gochisousama deshita)", "おいしい (Oishii)", "お腹が空きました (Onaka ga sukimashita)"],
+        "correct": "いただきます (Itadakimasu)",
+        "feedback": "'Itadakimasu' adalah ungkapan terima kasih atas makanan yang akan disantap.",
+        "image": "eating.jpg"
+      }
+    ],
+    "Minimarket": [
+      {
+        "question": "Di mana Anda bisa membeli 'onigiri' (bola nasi)?",
+        "answers": ["コンビニ (Konbini)", "レストラン (Resutoran)", "えき (Eki)", "びょういん (Byouin)"],
+        "correct": "コンビニ (Konbini)",
+        "feedback": "'Konbini' adalah sebutan untuk minimarket di Jepang, tempat onigiri banyak dijual.",
+        "image": "onigiri.jpg"
+      },
+      {
+        "question": "Bagaimana cara menanyakan harga?",
+        "answers": ["これはいくらですか (Kore wa ikura desu ka)", "これは何ですか (Kore wa nan desu ka)", "袋は要りません (Fukuro wa irimasen)", "お箸をください (O-hashi o kudasai)"],
+        "correct": "これはいくらですか (Kore wa ikura desu ka)",
+        "feedback": "'Ikura desu ka' digunakan untuk menanyakan harga suatu barang.",
+        "image": "cash_register.jpg"
+      }
+    ],
+    "Kereta": [
+       {
+        "question": "Bagaimana Anda membeli tiket kereta?",
+        "answers": ["券売機 (Kenbaiki)", "レジ (Reji)", "受付 (Uketsuke)", "自販機 (Jihanki)"],
+        "correct": "券売機 (Kenbaiki)",
+        "feedback": "'Kenbaiki' adalah mesin penjual tiket yang biasa ditemukan di stasiun.",
+        "image": "ticket_machine.jpg"
+      },
+      {
+        "question": "Stasiun manakah yang ditunjukkan oleh papan ini: '新宿'?",
+        "answers": ["Shinjuku", "Shibuya", "Tokyo", "Ikebukuro"],
+        "correct": "Shinjuku",
+        "feedback": "Kanji '新宿' dibaca 'Shinjuku', salah satu stasiun tersibuk di dunia.",
+        "image": "shinjuku_station.jpg"
+      }
+    ],
+    "Rumah Sakit": [
+      {
+        "question": "Apa yang harus dikatakan jika Anda merasa sakit?",
+        "answers": ["気分が悪いです (Kibun ga warui desu)", "お腹が空きました (Onaka ga sukimashita)", "嬉しいです (Ureshii desu)", "疲れました (Tsukaremashita)"],
+        "correct": "気分が悪いです (Kibun ga warui desu)",
+        "feedback": "'Kibun ga warui desu' adalah frasa umum untuk menyatakan bahwa Anda merasa tidak enak badan.",
+        "image": "sick.jpg"
+      },
+      {
+        "question": "Di mana Anda mendapatkan obat setelah dari dokter?",
+        "answers": ["薬局 (Yakkyoku)", "コンビニ (Konbini)", "スーパー (Suupaa)", "銀行 (Ginkou)"],
+        "correct": "薬局 (Yakkyoku)",
+        "feedback": "'Yakkyoku' adalah apotek, tempat untuk menebus resep obat.",
+        "image": "pharmacy.jpg"
+      }
+    ]
+  },
+  "level2": {
+    "Restoran": [], "Minimarket": [], "Kereta": [], "Rumah Sakit": []
+  },
+  "level3": {
+    "Restoran": [], "Minimarket": [], "Kereta": [], "Rumah Sakit": []
+  }
+}

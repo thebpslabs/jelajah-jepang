@@ -1,0 +1,48 @@
+<!-- FILE: styles.css -->
+:root{
+  --bg:#fff;
+  --card:#fff;
+  --text:#111;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto}
+body.theme-fun{
+  background: linear-gradient(120deg,#ffedbc,#ffd1ff,#cbe7ff);
+  background-size:600% 600%;
+  animation: gradientBG 12s ease infinite;
+  color:#222;
+}
+@keyframes gradientBG{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.centered{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px}
+header{margin-top:8vh;text-align:center}
+h1{font-size:2rem;margin:0}
+.tagline{margin:6px 0 24px;color:#333}
+.buttons.big{display:flex;gap:12px;transform:scale(1.05)}
+.main-btn{padding:18px 26px;border-radius:16px;border:none;font-size:1.05rem;cursor:pointer;box-shadow:0 8px 20px rgba(0,0,0,0.12);transition:transform .12s ease}
+.main-btn:active{transform:scale(.98)}
+.hidden{display:none}
+button.back-btn{margin-top:18px;background:transparent;border:2px dashed rgba(0,0,0,0.08);padding:10px 18px;border-radius:12px}
+.category-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.category-btn{padding:20px;border-radius:12px;border:none;font-weight:600;cursor:pointer;transform:scale(1.1)}
+.quiz-card{width:min(760px,94%);background:rgba(255,255,255,0.85);backdrop-filter:blur(6px);padding:18px;border-radius:16px;box-shadow:0 12px 30px rgba(0,0,0,0.12)}
+.answers-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:14px}
+.answer-btn{padding:12px;border-radius:10px;border:2px solid rgba(0,0,0,0.06);cursor:pointer}
+.feedback-area{position:relative;margin-top:12px;padding:12px;border-radius:12px;background:rgba(0,0,0,0.05)}
+#progressWrap{width:40%;height:12px;background:rgba(0,0,0,0.06);border-radius:999px;overflow:hidden}
+#progressBar{height:12px;width:0;background:linear-gradient(90deg,#7ef2a1,#5ad0ff);}
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:40}
+.modal{position:fixed;left:50%;top:40%;transform:translate(-50%,-40%);background:white;padding:18px;border-radius:12px;z-index:50;min-width:320px}
+.level-option{display:block;width:100%;padding:12px;margin:8px 0;border-radius:10px}
+#adBar{position:fixed;bottom:0;left:0;right:0;height:64px;background:rgba(0,0,0,0.06);display:flex;align-items:center;justify-content:center}
+.status-card, .settings-card, .results-card{padding:16px;border-radius:12px;background:rgba(255,255,255,0.9);width:min(720px,95%)}
+.danger{background:#ffcccc;border:none;padding:10px;border-radius:10px}
+.emote{font-size:3rem;margin-top:8px}
+/* Buttons colours for fun theme */
+body.theme-fun .main-btn{background:linear-gradient(90deg,#ffb3c6,#ffd17a);}
+body.theme-fun .category-btn:nth-child(1){background:#ffd2e2}
+body.theme-fun .category-btn:nth-child(2){background:#d7f7d7}
+body.theme-fun .category-btn:nth-child(3){background:#d7ecff}
+body.theme-fun .category-btn:nth-child(4){background:#fff1d6}
+
+/* Adaptivity */
+@media (max-width:600px){h1{font-size:1.6rem}.buttons.big{flex-direction:column}}
