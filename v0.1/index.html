@@ -20,22 +20,6 @@
             <div class="page-content">
                 <h1 id="main-title" class="fade-in">Petualangan di Jepang</h1>
                 <p id="main-subtitle" class="fade-in">Dapatkah kamu bertahan hidup?</p>
-                
-                <!-- NEW: User Profile Section -->
-                <div class="user-profile-container">
-                    <p>Petualang:</p>
-                    <div id="user-display-mode">
-                        <span id="current-username-display"></span>
-                        <button id="change-user-btn" class="small-btn">Ganti</button>
-                    </div>
-                    <div id="user-edit-mode" style="display: none;">
-                         <select id="user-select"></select>
-                         <input type="text" id="new-username-input" placeholder="Nama Petualang Baru...">
-                         <button id="save-user-btn" class="small-btn">Simpan</button>
-                    </div>
-                </div>
-                <!-- End of User Profile Section -->
-                
                 <div class="button-container">
                     <button id="start-btn" class="main-menu-btn">Mulai</button>
                     <button id="adventure-log-btn" class="main-menu-btn">Jejak Petualangan</button>
@@ -54,13 +38,13 @@
                     <option value="level3" disabled>&#x1F512; Sering ke Jepang</option>
                 </select>
                 <h2>Pilih Kategori</h2>
-                <div class="category-container">
+                <div class="category-container">	
                     <button class="category-btn" data-category="Restoran">
                         <img src="assets/Restaurant1.jpg" alt="Restoran">
                         <span>Restoran</span>
                     </button>
                     <button class="category-btn" data-category="Minimarket">
-                        <img src="assets/Minimart1.jpg" alt="Minimarket">
+                        <img src="assets/konbini.jpg" alt="Minimarket">
                         <span>Minimarket</span>
                     </button>
                     <button class="category-btn" data-category="Kereta">
@@ -79,12 +63,9 @@
         <!-- Quiz Page -->
         <div id="quiz-page" class="page">
              <button id="exit-quiz-btn" class="exit-btn">&times;</button>
-             <!-- NEW: Container for floating score popups -->
-             <div id="score-popup-container"></div>
             <div class="page-content">
                 <h2 id="quiz-title"></h2>
                 <div id="quiz-content">
-                    <p id="current-score-display">Skor: 0</p>
                     <img id="quiz-image" src="" alt="Quiz Image">
                     <p id="question-text"></p>
                     <div id="answer-buttons">
@@ -92,13 +73,6 @@
                     </div>
                 </div>
                  <div class="ad-placeholder-bottom">Ads Placeholder</div>
-                 <!-- NEW: Timer Bar -->
-                 <div id="timer-container">
-                    <span>⏳</span>
-                    <div class="timer-bar-outer">
-                        <div id="timer-bar-inner"></div>
-                    </div>
-                 </div>
                  <div class="progress-container">
                     <div id="progress-bar"></div>
                 </div>
@@ -124,50 +98,19 @@
 
         <!-- Adventure Log Page -->
         <div id="jejak-petualangan-page" class="page">
-            <div class="page-content adventure-log-content">
+            <div class="page-content">
                 <h2>Jejak Petualangan</h2>
-
-                <!-- NEW: Tabs for Stats and Leaderboard -->
-                <div class="tabs">
-                    <button class="tab-btn active" data-tab="stats">Statistik</button>
-                    <button class="tab-btn" data-tab="leaderboard">Papan Skor</button>
+                <div id="pangkat-info">
+                    <img id="pangkat-image" src="assets/pangkat1.jpg" alt="Pangkat">
+                    <p id="pangkat-text">Pangkat 1</p>
                 </div>
-
-                <!-- Stats Content -->
-                <div id="stats" class="tab-content active">
-                    <div id="pangkat-info">
-                        <img id="pangkat-image" src="assets/pangkat1.jpg" alt="Pangkat">
-                        <p id="pangkat-text">Pangkat 1</p>
-                    </div>
-                    <div class="stats-container">
-                        <p>Total Petualangan: <span id="total-attempts">0</span></p>
-                        <p>Rata-rata Skor: <span id="average-score">0</span></p>
-                    </div>
-                    <div class="chart-container">
-                        <canvas id="adventure-chart"></canvas>
-                    </div>
+                <div class="stats-container">
+                    <p>Total Petualangan: <span id="total-attempts">0</span></p>
+                    <p>Rata-rata Skor: <span id="average-score">0</span>%</p>
                 </div>
-
-                <!-- Leaderboard Content -->
-                <div id="leaderboard" class="tab-content">
-                    <h3>Skor Tertinggi</h3>
-                    <div class="leaderboard-container">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Nama</th>
-                                    <th>Skor</th>
-                                    <th>Kategori</th>
-                                </tr>
-                            </thead>
-                            <tbody id="leaderboard-body">
-                                <!-- Leaderboard rows will be generated by JS -->
-                            </tbody>
-                        </table>
-                    </div>
+                <div class="chart-container">
+                    <canvas id="adventure-chart"></canvas>
                 </div>
-
                 <button id="back-to-home-from-log" class="back-btn">Kembali ke Home</button>
             </div>
         </div>
@@ -179,7 +122,7 @@
         <div class="overlay-content">
             <h2>Settings</h2>
             <button id="sound-toggle-btn">Sounds: ON</button>
-            <button id="reset-adventure-btn">Reset Petualangan (Petualang Saat Ini)</button>
+            <button id="reset-adventure-btn">Reset Petualangan</button>
             <button id="close-settings-btn">Kembali</button>
         </div>
     </div>
@@ -187,7 +130,7 @@
     <!-- Confirmation Dialog Overlay -->
     <div id="confirmation-overlay" class="overlay">
         <div class="overlay-content">
-            <p>Yakin ingin mereset petualangan untuk <strong id="confirm-reset-username"></strong>? Semua progres dan level akan hilang!</p>
+            <p>Apakah kamu yakin?</p>
             <button id="confirm-reset-btn">Ya</button>
             <button id="cancel-reset-btn">Tidak</button>
         </div>
@@ -211,4 +154,3 @@
     <script src="app.js"></script>
 </body>
 </html>
-
