@@ -3,238 +3,221 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>Petualangan di Jepang</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="manifest" href="manifest.json">
     <link rel="apple-touch-icon" href="assets/icons/icon-192x192.png">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta name="theme-color" content="#4a5568"/>
+    <style>
+        /* Critical CSS for initial load */
+        body {
+            overscroll-behavior-y: contain;
+        }
+        .page {
+            display: none;
+        }
+        .page.active {
+            display: flex;
+        }
+    </style>
 </head>
 <body>
-    <!-- Container for all pages -->
-    <div id="app-container">
 
-        <!-- Main Menu Page -->
-        <div id="main-menu" class="page active">
-            <div class="page-content">
-                <h1 id="main-title" class="fade-in">Petualangan di Jepang</h1>
-                <p id="main-subtitle" class="fade-in">Dapatkah kamu bertahan hidup?</p>
-                
-                <div class="user-profile-container">
-                    <p>Petualang:</p>
-                    <div id="user-display-mode">
-                        <span id="current-username-display"></span>
-                        <button id="change-user-btn" class="small-btn">Ganti</button>
-                    </div>
-                    <div id="user-edit-mode" style="display: none;">
-                         <select id="user-select"></select>
-                         <input type="text" id="new-username-input" placeholder="Nama Petualang Baru...">
-                         <button id="save-user-btn" class="small-btn">Simpan</button>
-                    </div>
-                </div>
-                
-                <div class="button-container">
-                    <button id="start-btn" class="main-menu-btn">Mulai</button>
-                    <button id="adventure-log-btn" class="main-menu-btn">Jejak Petualangan</button>
-                    <!-- NEW: Buku Panduan Button -->
-                    <button id="guidebook-btn" class="main-menu-btn">Buku Panduan</button>
-                    <button id="settings-btn" class="main-menu-btn">Settings</button>
-                </div>
-            </div>
+    <!-- Main Menu Page -->
+    <main id="main-menu" class="page active">
+        <div class="main-title">
+            <h1>Petualangan di Jepang</h1>
+            <p>Dapatkah kamu bertahan hidup?</p>
+        </div>
+        
+        <div class="user-profile-box">
+            <select id="user-select"></select>
+            <input type="text" id="username-input" placeholder="Masukkan nama...">
+            <button id="change-user-btn" class="btn btn-small">Ganti/Tambah Nama</button>
         </div>
 
-        <!-- Level Selection Page -->
-        <div id="level-page" class="page">
-            <div class="page-content">
-                <h2>Pilih Tingkat Kesulitan</h2>
-                <select id="difficulty-select">
-                    <option value="level1">Level 1: Turis Pemula</option>
-                    <option value="level2">Level 2: Petualang Mahir</option>
-                    <option value="level3">Level 3: Master Jepang</option>
+        <div class="menu-buttons">
+            <button id="start-btn" class="btn btn-mulai">Mulai</button>
+            <button id="adventure-log-btn" class="btn btn-menu">Jejak Petualangan</button>
+            <button id="guidebook-btn" class="btn btn-menu">Buku Panduan</button>
+        </div>
+
+        <button id="settings-btn" class="btn-settings-icon" aria-label="Pengaturan">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.8293 10.1707C19.9329 10.7839 20 11.3895 20 12C20 12.6105 19.9329 13.2161 19.8293 13.8293L21.8256 15.421C21.967 15.534 22.0001 15.7284 21.9039 15.889L19.9039 19.3301C19.8077 19.4907 19.6133 19.5604 19.4527 19.4642L17.0681 18.361C16.4256 18.8351 15.7145 19.2104 14.9319 19.4642L14.5473 22.059C14.5125 22.284 14.3079 22.4527 14.0722 22.4527H10.0722C9.8364 22.4527 9.63183 22.284 9.59702 22.059L9.21245 19.4642C8.42981 19.2104 7.71871 18.8351 7.07624 18.361L4.69167 19.4642C4.53109 19.5604 4.33671 19.4907 4.2405 19.3301L2.2405 15.889C2.1443 15.7284 2.1774 15.534 2.31883 15.421L4.3151 13.8293C4.21154 13.2161 4.14444 12.6105 4.14444 12C4.14444 11.3895 4.21154 10.7839 4.3151 10.1707L2.31883 8.57897C2.1774 8.46597 2.1443 8.27159 2.2405 8.11101L4.2405 4.66993C4.33671 4.50935 4.53109 4.43963 4.69167 4.53584L7.07624 5.63901C7.71871 5.16493 8.42981 4.78963 9.21245 4.53584L9.59702 1.94095C9.63183 1.71597 9.8364 1.54724 10.0722 1.54724H14.0722C14.3079 1.54724 14.5125 1.71597 14.5473 1.94095L14.9319 4.53584C15.7145 4.78963 16.4256 5.16493 17.0681 5.63901L19.4527 4.53584C19.6133 4.43963 19.8077 4.50935 19.9039 4.66993L21.9039 8.11101C22.0001 8.27159 21.967 8.46597 21.8256 8.57897L19.8293 10.1707ZM12.0722 15.5C14.015 15.5 15.5722 13.9428 15.5722 12C15.5722 10.0572 14.015 8.5 12.0722 8.5C10.1293 8.5 8.57218 10.0572 8.57218 12C8.57218 13.9428 10.1293 15.5 12.0722 15.5Z"/>
+            </svg>
+        </button>
+    </main>
+
+    <!-- Level Selection Page -->
+    <section id="level-page" class="page">
+        <h2 class="page-title">Pilih Petualangan</h2>
+        <div class="difficulty-selector">
+            <label for="difficulty-dropdown">Tingkat Kesulitan:</label>
+            <div class="select-wrapper">
+                <select id="difficulty-dropdown">
+                    <option value="level1">Belum Pernah ke Jepang</option>
+                    <option value="level2" disabled> Pernah ke Jepang</option>
+                    <option value="level3" disabled> Sering ke Jepang</option>
                 </select>
-                <h2>Pilih Kategori</h2>
-                <div class="category-container">
-                    <button class="category-btn" data-category="Restoran">
-                        <img src="assets/Restaurant1.jpg" alt="Restoran">
-                        <span>Restoran</span>
-                        <!-- NEW: Lock Icon -->
-                        <div class="lock-icon">&#x1F512;</div>
-                    </button>
-                    <button class="category-btn" data-category="Minimarket">
-                        <img src="assets/Minimart1.jpg" alt="Minimarket">
-                        <span>Minimarket</span>
-                        <div class="lock-icon">&#x1F512;</div>
-                    </button>
-                    <button class="category-btn" data-category="Kereta">
-                        <img src="assets/Train1.jpg" alt="Kereta">
-                        <span>Kereta</span>
-                        <div class="lock-icon">&#x1F512;</div>
-                    </button>
-                    <button class="category-btn" data-category="Rumah Sakit">
-                        <img src="assets/Hospital1.jpg" alt="Rumah Sakit">
-                        <span>Rumah Sakit</span>
-                        <div class="lock-icon">&#x1F512;</div>
-                    </button>
+                <span class="lock-icon" id="level2-lock"></span>
+                <span class="lock-icon" id="level3-lock"></span>
+            </div>
+        </div>
+        <div id="category-buttons" class="category-grid">
+            <button class="category-btn" data-category="Restoran">
+                <img src="assets/restoran.jpg" alt="Restoran" loading="lazy">
+                <span>Restoran</span>
+            </button>
+            <button class="category-btn" data-category="Minimarket">
+                <img src="assets/minimarket.jpg" alt="Minimarket" loading="lazy">
+                <span>Minimarket</span>
+            </button>
+            <button class="category-btn" data-category="Kereta">
+                <img src="assets/kereta.jpg" alt="Kereta" loading="lazy">
+                <span>Kereta</span>
+            </button>
+            <button class="category-btn" data-category="Rumah Sakit">
+                <img src="assets/rumahsakit.jpg" alt="Rumah Sakit" loading="lazy">
+                <span>Rumah Sakit</span>
+            </button>
+        </div>
+        <button id="home-from-level-btn" class="btn btn-back">Kembali ke Home</button>
+    </section>
+
+    <!-- Quiz Page -->
+    <section id="quiz-page" class="page">
+        <header class="quiz-header">
+            <h2 id="quiz-title" class="page-title"></h2>
+            <button id="close-quiz-btn" class="btn-close">&times;</button>
+        </header>
+        <div class="timer-container">
+            <span class="timer-icon">⏳</span>
+            <div class="timer-bar-wrapper">
+                <div id="timer-bar" class="timer-bar"></div>
+            </div>
+        </div>
+        <div class="quiz-content">
+            <p id="question-text"></p>
+            <div class="quiz-image-container">
+                <img id="quiz-image" src="" alt="Gambar Kuis" loading="lazy">
+            </div>
+        </div>
+        <div id="answer-buttons" class="answer-grid">
+            <!-- Answer buttons will be generated by JS -->
+        </div>
+        <div class="progress-bar-container">
+            <div id="progress-bar" class="progress-bar"></div>
+        </div>
+    </section>
+
+    <!-- Result Page -->
+    <section id="result-page" class="page">
+        <h2 class="page-title">Laporan Petualangan</h2>
+        <img id="result-image" src="" alt="Gambar Hasil" class="result-image" loading="lazy">
+        <p class="score-text">Skor Kamu:</p>
+        <p id="score" class="score-value"></p>
+        <p id="result-text" class="result-title"></p>
+        <p id="result-subtext" class="result-subtitle"></p>
+        <div class="result-buttons">
+            <button id="home-from-result-btn" class="btn">Home</button>
+            <button id="share-btn" class="btn">Share</button>
+            <button id="retry-btn" class="btn">Coba Lagi</button>
+        </div>
+    </section>
+
+    <!-- Adventure Log Page -->
+    <section id="adventure-log-page" class="page">
+        <h2 class="page-title">Jejak Petualangan</h2>
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="stats">Statistik</button>
+            <button class="tab-btn" data-tab="leaderboard">Papan Skor</button>
+        </div>
+
+        <div id="stats" class="tab-content active">
+            <div class="pangkat-info">
+                <img id="pangkat-image" src="assets/pangkat1.jpg" alt="Pangkat Petualang" loading="lazy">
+                <p id="pangkat-text">Pangkat: Petualang Pemula</p>
+            </div>
+            <div class="stats-container">
+                <canvas id="log-chart"></canvas>
+                <div class="stats-summary">
+                    <p>Total Percobaan: <span id="total-attempts">0</span></p>
+                    <p>Rata-rata Skor: <span id="average-score">0</span></p>
                 </div>
-                <button id="back-to-home-from-level" class="back-btn">Kembali ke Home</button>
             </div>
         </div>
 
-        <!-- Quiz Page -->
-        <div id="quiz-page" class="page">
-             <button id="exit-quiz-btn" class="exit-btn">&times;</button>
-             <div id="score-popup-container"></div>
-            <div class="page-content">
-                <h2 id="quiz-title"></h2>
-                <div id="quiz-content">
-                    <p id="current-score-display">Skor: 0</p>
-                    <img id="quiz-image" src="" alt="Quiz Image">
-                    <p id="question-text"></p>
-                    <div id="answer-buttons"></div>
-                </div>
-                 <div class="ad-placeholder-bottom">Ads Placeholder</div>
-                 <div id="timer-container">
-                    <span>⏳</span>
-                    <div class="timer-bar-outer">
-                        <div id="timer-bar-inner"></div>
-                    </div>
-                 </div>
-                 <div class="progress-container">
-                    <div id="progress-bar"></div>
-                </div>
-            </div>
+        <div id="leaderboard" class="tab-content">
+            <table class="leaderboard-table">
+                <thead>
+                    <tr>
+                        <th>Pkt.</th>
+                        <th>Nama</th>
+                        <th>Kategori</th>
+                        <th>Skor</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboard-body">
+                    <!-- Leaderboard rows will be generated by JS -->
+                </tbody>
+            </table>
         </div>
 
-        <!-- Result Page -->
-        <div id="hasil-page" class="page">
-            <div class="page-content">
-                <h2>Laporan Petualangan</h2>
-                <img id="result-image" src="" alt="Result Image">
-                <p id="score-text"></p>
-                <h3 id="result-text"></h3>
-                <p id="result-subtext"></p>
-                 <div class="ad-placeholder-center">Ads Placeholder</div>
-                <div class="button-container">
-                    <button id="home-btn" class="result-page-btn">Home</button>
-                    <button id="share-btn" class="result-page-btn">Share</button>
-                    <button id="retry-btn" class="result-page-btn">Coba Lagi</button>
-                </div>
-            </div>
-        </div>
+        <button id="home-from-log-btn" class="btn btn-back">Kembali ke Home</button>
+    </section>
 
-        <!-- Adventure Log Page -->
-        <div id="jejak-petualangan-page" class="page">
-            <div class="page-content adventure-log-content">
-                <h2>Jejak Petualangan</h2>
-                <div class="tabs">
-                    <button class="tab-btn active" data-tab="stats">Statistik</button>
-                    <button class="tab-btn" data-tab="leaderboard">Papan Skor</button>
-                </div>
-                <div id="stats" class="tab-content active">
-                    <div id="pangkat-info">
-                        <img id="pangkat-image" src="assets/pangkat1.jpg" alt="Pangkat">
-                        <p id="pangkat-text">Pangkat 1</p>
-                    </div>
-                    <div class="stats-container">
-                        <p>Total Petualangan: <span id="total-attempts">0</span></p>
-                        <p>Rata-rata Skor: <span id="average-score">0</span></p>
-                    </div>
-                    <div class="chart-container">
-                        <canvas id="adventure-chart"></canvas>
-                    </div>
-                </div>
-                <div id="leaderboard" class="tab-content">
-                    <h3>Skor Tertinggi</h3>
-                    <div class="leaderboard-container">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Nama</th>
-                                    <th>Skor</th>
-                                    <th>Kategori</th>
-                                </tr>
-                            </thead>
-                            <tbody id="leaderboard-body"></tbody>
-                        </table>
-                    </div>
-                </div>
-                <button id="back-to-home-from-log" class="back-btn">Kembali ke Home</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Settings Overlay -->
-    <div id="settings-overlay" class="overlay">
-        <div class="overlay-content">
-            <h2>Settings</h2>
-            <button id="sound-toggle-btn">Sounds: ON</button>
-            <button id="reset-adventure-btn">Reset Petualangan (Petualang Saat Ini)</button>
-            <button id="close-settings-btn">Kembali</button>
+    <!-- Overlays -->
+    <div id="feedback-overlay" class="overlay">
+        <div class="feedback-content">
+            <h3 id="feedback-title"></h3>
+            <p id="feedback-text"></p>
+            <button id="next-question-btn" class="btn">Berikutnya</button>
         </div>
     </div>
     
-    <!-- Confirmation Dialog Overlay -->
-    <div id="confirmation-overlay" class="overlay">
-        <div class="overlay-content">
-            <p>Yakin ingin mereset petualangan untuk <strong id="confirm-reset-username"></strong>? Semua progres dan level akan hilang!</p>
-            <button id="confirm-reset-btn">Ya</button>
-            <button id="cancel-reset-btn">Tidak</button>
+    <div id="settings-overlay" class="overlay">
+        <div class="settings-content">
+            <h3>Pengaturan</h3>
+            <button id="sound-toggle-btn" class="btn">Suara: ON</button>
+            <button id="reset-progress-btn" class="btn">Reset Petualangan</button>
+            <button id="close-settings-btn" class="btn">Kembali</button>
         </div>
     </div>
 
-    <!-- Feedback Overlay for Quiz -->
-    <div id="feedback-overlay" class="overlay">
-        <div class="overlay-content">
-            <h2 id="feedback-title"></h2>
-            <p id="feedback-text"></p>
-            <button id="next-question-btn">Berikutnya</button>
+    <div id="confirm-reset-overlay" class="overlay">
+        <div class="confirm-reset-content">
+            <h3>Yakin?</h3>
+            <p>Semua kemajuan dan skor akan dihapus selamanya.</p>
+            <div class="confirm-buttons">
+                <button id="confirm-reset-yes" class="btn">Ya, Hapus</button>
+                <button id="confirm-reset-no" class="btn">Tidak</button>
+            </div>
         </div>
     </div>
 
-    <!-- NEW: Guidebook Overlay -->
     <div id="guidebook-overlay" class="overlay">
-        <div class="overlay-content guidebook-content">
-            <h2>Buku Panduan Petualang</h2>
-            <div class="tabs">
-                <button class="tab-btn active" data-tab="how-to-play">Cara Bermain</button>
-                <button class="tab-btn" data-tab="about-us">Tentang Kami</button>
+        <div class="guidebook-content">
+            <div class="guidebook-tabs">
+                <button class="guidebook-tab-btn active" data-tab="guide-game">Cara Main</button>
+                <button class="guidebook-tab-btn" data-tab="guide-about">Tentang Saya</button>
             </div>
-            <div id="how-to-play" class="tab-content active">
-                <h4>Cara Naik Level:</h4>
-                <p>Untuk membuka level berikutnya (misal, dari Level 1 ke Level 2) di sebuah kategori, kamu harus menjadi master di level sebelumnya. Caranya? Dapatkan <strong>skor sempurna 10/10</strong> di kategori tersebut! Kuasai restoran level 1 untuk membuka restoran level 2, dan seterusnya!</p>
-                
-                <h4>Cara Jadi Juara Skor:</h4>
-                <p>Setiap jawaban benar memberimu <strong>+100 poin</strong>. Tapi, petualang sejati tahu cara mengumpulkan bonus!</p>
-                <ul>
-                    <li><strong>Bonus Waktu ⏳:</strong> Jawab secepat kilat! Sisa waktu di bar akan diubah menjadi poin bonus. Makin cepat, makin besar bonusnya!</li>
-                    <li><strong>Bonus Combo 🔥:</strong> Jawab benar berturut-turut untuk mendapatkan bonus combo yang makin besar. Kalau bisa 10x berturut-turut, kamu akan dapat bonus <strong>SEMPURNA +50!</strong></li>
-                </ul>
-
-                <h4>Petualangan Baru Menanti:</h4>
-                <p>Dunia Jepang sangat luas! Kami akan terus menambahkan kategori dan pertanyaan baru secara berkala. Jadi, teruslah berlatih, petualang!</p>
+            <div id="guide-game" class="guidebook-tab-content active">
+                <h4>Selamat Datang, Petualang!</h4>
+                <p><strong>Naik Level:</strong> Untuk membuka tingkat kesulitan selanjutnya, kamu harus meraih nilai sempurna (100%) di satu kategori pada level sebelumnya. Kuasai satu bidang, dan pintu petualangan baru akan terbuka!</p>
+                <p><strong>Meraih Skor Tinggi:</strong> Setiap jawaban benar memberimu <strong>100 poin</strong>. Jawab lebih cepat untuk bonus waktu! Dapatkan juga <strong>[Combo]</strong> untuk jawaban benar berturut-turut, dan raih <strong>Perfect!</strong> untuk 10 jawaban sempurna demi bonus skor masif!</p>
+                <p><strong>Update:</strong> Kategori dan pertanyaan baru akan terus ditambahkan secara berkala. Nantikan petualangan barunya!</p>
             </div>
-            <div id="about-us" class="tab-content">
-                <h4>Halo, Petualang!</h4>
-                <p>Terima kasih sudah bermain! Game ini dibuat oleh [Nama Anda/Nama Studio Anda] dengan harapan bisa membuat belajar bahasa Jepang jadi lebih seru dan praktis, terutama buat kamu yang mau jalan-jalan ke Jepang.</p>
-                <p>Kami percaya, sedikit demi sedikit menguasai percakapan sehari-hari bisa membuat perbedaan besar dalam petualanganmu.</p>
-                
-                <h4>Punya Ide atau Masukan?</h4>
-                <p>Kami senang sekali mendengar darimu! Apakah ada kategori yang kamu inginkan? Atau menemukan soal yang aneh? Kirimkan masukanmu ke:</p>
-                <p><strong>kontak@emailanda.com</strong></p>
-                <p>Selamat bertualang!</p>
+            <div id="guide-about" class="guidebook-tab-content">
+                <h4>Halo!</h4>
+                <p>Terima kasih sudah memainkan "Petualangan di Jepang"! Game ini dibuat dengan harapan bisa menjadi cara yang seru dan asyik untuk belajar frasa-frasa praktis bahasa Jepang.</p>
+                <p>Punya masukan, kritik, atau menemukan bug? Jangan ragu untuk menghubungi saya melalui email di <strong>[emailanda@contoh.com]</strong>. Setiap feedback sangat berharga!</p>
             </div>
-            <button id="close-guidebook-btn">Mengerti!</button>
+            <button id="close-guidebook-btn" class="btn">Tutup</button>
         </div>
     </div>
-
-
-    <!-- Audio files -->
-    <audio id="click-sound" src="assets/sounds/click.mp3"></audio>
-    <audio id="correct-sound" src="assets/sounds/correct.mp3"></audio>
-    <audio id="wrong-sound" src="assets/sounds/wrong.mp3"></audio>
-
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
