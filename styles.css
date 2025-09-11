@@ -250,10 +250,10 @@ h2 {
 .score-popup {
     position: absolute;
     left: 50%;
-    bottom: 20%; /* Lower the starting point of the bubble */
+    bottom: 15%; /* Lower the starting point of the bubble */
     transform: translateX(-50%);
     color: #FFD700;
-    font-size: 2em;
+    font-size: 1.1em;
     font-weight: bold;
     text-shadow: 2px 2px 5px #000;
     animation: floatUp 1.5s ease-out forwards;
