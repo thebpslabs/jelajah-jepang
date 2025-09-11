@@ -67,12 +67,15 @@ html, body {
 
 /* --- Buttons --- */
 .btn {
+    padding: 15px;
     border: none;
     border-radius: 15px;
+    font-size: 1.2em;
     color: var(--light-text);
     cursor: pointer;
     font-family: inherit;
     font-weight: 700;
+    width: 100%;
     text-align: center;
     text-decoration: none;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -85,21 +88,24 @@ html, body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
+.btn-small {
+    padding: 10px;
+    font-size: 1em;
+}
+
 .btn-back {
     margin-top: auto;
-    width: 100%;
     max-width: 400px;
-    padding: 15px;
-    font-size: 1.2em;
 }
 
 /* --- Main Menu --- */
 #main-menu {
-    justify-content: center;
-    gap: 25px;
+    gap: 20px;
 }
 
 .main-title {
+    text-align: center;
+    margin-bottom: 20px;
     animation: fadeInDown 1s ease-out, pulse 2.5s infinite 1s;
 }
 
@@ -142,55 +148,13 @@ html, body {
 .menu-buttons {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
     width: 100%;
     max-width: 400px;
     animation: fadeInUp 1s ease-out;
     animation-delay: 0.8s;
     opacity: 0;
     animation-fill-mode: forwards;
-}
-
-.btn-mulai {
-    padding: 20px;
-    font-size: 2em;
-    font-weight: 800;
-}
-
-.btn-menu {
-    padding: 15px;
-    font-size: 1.3em;
-    background: linear-gradient(145deg, #5f6c7a, #3c4a5a);
-}
-
-.btn-settings-icon {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-.btn-settings-icon svg {
-    width: 30px;
-    height: 30px;
-    fill: var(--light-text);
-}
-
-.btn-settings-icon:active {
-    background: rgba(255, 255, 255, 0.3);
-    transform: scale(0.95);
 }
 
 @keyframes fadeInDown {
@@ -463,7 +427,7 @@ html, body {
     z-index: 1002;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
-/* MODIFIED: Animation is now more subtle and lower on the screen */
+
 @keyframes floatUp {
     0% {
         transform: translate(-50%, 0);
