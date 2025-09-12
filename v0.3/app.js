@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         score: 0,
         comboStreak: 0,
         // NEW: Counter for correct answers in a round
-        correctAnswersCount: 0,
+        correctAnswersCount: 0, 
         questionTimer: null,
         timeLeft: 0,
         allUsersData: {},
@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
             saveUserBtn: document.getElementById('save-user-btn'),
             startBtn: document.getElementById('start-btn'),
             adventureLogBtn: document.getElementById('adventure-log-btn'),
+            // NEW: Guidebook button
             guidebookBtn: document.getElementById('guidebook-btn'),
             settingsBtn: document.getElementById('settings-btn')
         },
@@ -75,11 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
             chart: document.getElementById('adventure-chart'),
             backBtn: document.getElementById('back-to-home-from-log')
         },
-        // NEW: Guidebook Page selectors
-        guidebookPage: {
-            tabs: document.querySelectorAll('#guidebook-page .tab-btn'),
-            backBtn: document.getElementById('back-to-home-from-guide')
-        },
         settingsOverlay: {
             overlay: document.getElementById('settings-overlay'),
             soundToggleBtn: document.getElementById('sound-toggle-btn'),
@@ -98,17 +94,23 @@ document.addEventListener('DOMContentLoaded', () => {
              confirmBtn: document.getElementById('confirm-reset-btn'),
              cancelBtn: document.getElementById('cancel-reset-btn')
         },
+        // NEW: Guidebook overlay elements
+        guidebookOverlay: {
+            overlay: document.getElementById('guidebook-overlay'),
+            tabs: document.querySelectorAll('#guidebook-overlay .tab-btn'),
+            closeBtn: document.getElementById('close-guidebook-btn')
+        },
         sounds: {
             click: document.getElementById('click-sound'),
             correct: document.getElementById('correct-sound'),
             wrong: document.getElementById('wrong-sound')
         }
     };
-
+    
     let adventureChartInstance = null;
 
     // --- DATA HANDLING & USER PROFILES --- //
-
+    
     /**
      * NEW: Creates a default user profile object with category-specific level tracking.
      * @returns {object} A new user data object.
@@ -121,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Restoran': 1,
                 'Minimarket': 1,
                 'Kereta': 1,
-                'Apotek': 1
+                'Rumah Sakit': 1
             }
         };
     }
@@ -133,20 +135,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const savedUsers = localStorage.getItem('jepangAdventureUsers');
         if (savedUsers) {
             gameState.allUsersData = JSON.parse(savedUsers);
-            // NEW: Data migration for category rename (Rumah Sakit -> Apotek) for existing users
-            Object.values(gameState.allUsersData).forEach(userData => {
-                if (userData.unlockedLevels && userData.unlockedLevels['Rumah Sakit']) {
-                    userData.unlockedLevels['Apotek'] = userData.unlockedLevels['Rumah Sakit'];
-                    delete userData.unlockedLevels['Rumah Sakit'];
-                }
-            });
         }
 
         const savedScores = localStorage.getItem('jepangAdventureLeaderboard');
         if (savedScores) {
             gameState.allTimeScores = JSON.parse(savedScores);
         }
-
+        
         const lastUser = localStorage.getItem('jepangAdventureLastUser');
         if (lastUser && gameState.allUsersData[lastUser]) {
             gameState.currentUser = lastUser;
@@ -165,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
                  currentUserData.unlockedLevels = newUnlockedLevels;
             }
         }
-
+        
         const savedSoundSetting = localStorage.getItem('jepangAdventureSound');
         if (savedSoundSetting !== null) {
             gameState.soundEnabled = JSON.parse(savedSoundSetting);
@@ -179,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('jepangAdventureLastUser', gameState.currentUser);
         localStorage.setItem('jepangAdventureLeaderboard', JSON.stringify(gameState.allTimeScores));
     }
-
+    
     function resetCurrentUserData() {
         gameState.allUsersData[gameState.currentUser] = createNewUserData();
         saveGameData();
@@ -197,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
         saveGameData();
         updateUserUI();
     }
-
+    
     function updateUserUI() {
         UIElements.mainMenu.currentUserDisplay.textContent = gameState.currentUser;
         const userSelect = UIElements.mainMenu.userSelect;
@@ -225,16 +220,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const targetPage = document.getElementById(pageId);
         if (targetPage) targetPage.classList.add('active');
         setRandomBackground();
-
+        
         if (pageId === 'jejak-petualangan-page') {
             displayAdventureLog();
             displayLeaderboard();
         } else if (pageId === 'level-page') {
             // Update locks based on currently selected difficulty
-            updateLevelUnlocks();
+            updateLevelUnlocks(); 
         }
     }
-
+    
     function toggleOverlay(overlayId, show) {
         const overlay = document.getElementById(overlayId);
         if (overlay) {
@@ -247,7 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const bgIndex = Math.floor(Math.random() * 10) + 1;
         UIElements.appContainer.style.backgroundImage = `url('assets/Background${bgIndex}.jpg')`;
     }
-
+    
     function updateSoundButtonUI() {
         UIElements.settingsOverlay.soundToggleBtn.textContent = `Sounds: ${gameState.soundEnabled ? 'ON' : 'OFF'}`;
     }
@@ -259,7 +254,7 @@ document.addEventListener('DOMContentLoaded', () => {
             soundElement.play();
         }
     }
-
+    
     // --- QUIZ LOGIC --- //
     async function startQuiz(level, category) {
         gameState.currentLevel = level;
@@ -270,27 +265,13 @@ document.addEventListener('DOMContentLoaded', () => {
         gameState.correctAnswersCount = 0; // Reset correct answer count
 
         try {
-            // Map category names to their respective database files
-            const categoryToFileMap = {
-                'Restoran': 'database_restoran.json',
-                'Minimarket': 'database_minimarket.json',
-                'Kereta': 'database_kereta.json',
-                'Apotek': 'database_apotek.json'
-            };
-
-            const fileName = categoryToFileMap[category];
-            if (!fileName) {
-                alert(`Database untuk kategori "${category}" tidak ditemukan.`);
-                return;
-            }
-
-            const response = await fetch(fileName);
+            const response = await fetch('database.json');
             if (!response.ok) throw new Error(`Network response was not ok: ${response.statusText}`);
             const quizDatabase = await response.json();
             const questionPool = quizDatabase[level]?.[category];
 
             if (!questionPool || questionPool.length === 0) {
-                 alert('Soal untuk kategori atau level ini belum tersedia.');
+                 alert('Soal untuk kategori ini belum tersedia.');
                  return;
             }
             gameState.questions = shuffleArray([...questionPool]).slice(0, 10);
@@ -298,11 +279,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 navigateTo('quiz-page');
                 displayQuestion();
             } else {
-                alert('Tidak ada soal yang valid untuk memulai kuis.');
+                alert('Tidak ada soal yang tersedia untuk kategori ini.');
             }
         } catch (error) {
             console.error('Could not load or start quiz:', error);
-            alert(`Gagal memuat data kuis untuk ${category}. Pastikan file database yang benar ada dan coba lagi.`);
+            alert('Gagal memuat data kuis. Pastikan file database.json ada dan coba lagi.');
         }
     }
 
@@ -316,7 +297,7 @@ document.addEventListener('DOMContentLoaded', () => {
         UIElements.quizPage.questionText.textContent = question.question;
         UIElements.quizPage.image.src = `assets/${question.image}`;
         UIElements.quizPage.answerButtons.innerHTML = '';
-
+        
         const shuffledAnswers = shuffleArray([...question.answers]);
         shuffledAnswers.forEach(answer => {
             const button = document.createElement('button');
@@ -329,14 +310,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         startTimer();
     }
-
+    
     function startTimer() {
         clearInterval(gameState.questionTimer);
         gameState.timeLeft = 10;
         const timerBar = UIElements.quizPage.timerBar;
         timerBar.style.transition = 'none';
         timerBar.style.width = '100%';
-        void timerBar.offsetWidth;
+        void timerBar.offsetWidth; 
         timerBar.style.transition = 'width 10s linear';
         timerBar.style.width = '0%';
 
@@ -348,7 +329,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }, 100);
     }
-
+    
     function showScorePopup(text, type = '') {
         const popup = document.createElement('div');
         popup.textContent = text;
@@ -365,7 +346,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const question = gameState.questions[gameState.currentQuestionIndex];
         const isCorrect = selectedAnswer === question.correct;
-
+        
         let questionPoints = 0;
         let timerBonus = 0;
         let comboBonus = 0;
@@ -397,17 +378,17 @@ document.addEventListener('DOMContentLoaded', () => {
             UIElements.feedbackOverlay.title.textContent = 'Salah!';
             gameState.comboStreak = 0;
         }
-
+        
         const totalPoints = questionPoints + timerBonus + comboBonus;
         gameState.score += totalPoints;
-
+        
         setTimeout(() => { if (totalPoints > 0) showScorePopup('+' + totalPoints) }, 300);
 
         UIElements.quizPage.currentScoreDisplay.textContent = `Skor: ${gameState.score}`;
         UIElements.feedbackOverlay.text.textContent = question.feedback;
         toggleOverlay('feedback-overlay', true);
     }
-
+    
     function nextQuestion() {
         gameState.currentQuestionIndex++;
         if (gameState.currentQuestionIndex < gameState.questions.length) {
@@ -416,7 +397,7 @@ document.addEventListener('DOMContentLoaded', () => {
             endQuiz();
         }
     }
-
+    
     function endQuiz() {
         const currentUserData = gameState.allUsersData[gameState.currentUser];
         const attempt = {
@@ -427,7 +408,7 @@ document.addEventListener('DOMContentLoaded', () => {
             correctCount: gameState.correctAnswersCount
         };
         currentUserData.attempts.push(attempt);
-
+        
         gameState.allTimeScores.push({
             name: gameState.currentUser,
             score: gameState.score,
@@ -454,20 +435,20 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             result = { text: "Kamu belum siap ke Jepang...", subtext: "Bisa bahasa Jepang jadi lebih tenang. Ayo semangat!", image: "fail1.jpg" };
         }
-
+        
         UIElements.hasilPage.scoreText.textContent = `Skor Akhir: ${gameState.score} (${correctAnswers}/10 Benar)`;
         UIElements.hasilPage.resultText.textContent = result.text;
         UIElements.hasilPage.resultSubtext.textContent = result.subtext;
         UIElements.hasilPage.image.src = `assets/${result.image}`;
     }
-
+    
     function displayAdventureLog() {
         const currentUserData = gameState.allUsersData[gameState.currentUser];
         const attempts = currentUserData.attempts;
         const totalAttempts = attempts.length;
         const totalScore = attempts.reduce((sum, attempt) => sum + attempt.score, 0);
         const averageScore = totalAttempts > 0 ? Math.round(totalScore / totalAttempts) : 0;
-
+        
         if (totalAttempts >= 20) {
              UIElements.jejakPetualanganPage.pangkatImage.src = 'assets/pangkat3.jpg';
              UIElements.jejakPetualanganPage.pangkatText.textContent = 'Pangkat 3';
@@ -478,7 +459,7 @@ document.addEventListener('DOMContentLoaded', () => {
             UIElements.jejakPetualanganPage.pangkatImage.src = 'assets/pangkat1.jpg';
             UIElements.jejakPetualanganPage.pangkatText.textContent = 'Pangkat 1';
         }
-
+        
         UIElements.jejakPetualanganPage.totalAttempts.textContent = totalAttempts;
         UIElements.jejakPetualanganPage.averageScore.textContent = averageScore;
         const last7Days = getLast7Days();
@@ -529,7 +510,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log(`Unlocked Level 3 for ${currentCategory}!`);
         }
     }
-
+    
     /**
      * NEW: Updates the category buttons on the level page to show which are locked/unlocked
      * for the currently selected difficulty.
@@ -569,7 +550,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- EVENT LISTENERS --- //
-
+    
     // Main Menu User Profile
     UIElements.mainMenu.changeUserBtn.addEventListener('click', () => {
         UIElements.mainMenu.userDisplayMode.style.display = 'none';
@@ -590,14 +571,14 @@ document.addEventListener('DOMContentLoaded', () => {
         UIElements.mainMenu.userDisplayMode.style.display = 'block';
         UIElements.mainMenu.userEditMode.style.display = 'none';
     });
-
+    
     // Main Menu Navigation
     UIElements.mainMenu.startBtn.addEventListener('click', () => navigateTo('level-page'));
     UIElements.mainMenu.adventureLogBtn.addEventListener('click', () => navigateTo('jejak-petualangan-page'));
     UIElements.mainMenu.settingsBtn.addEventListener('click', () => toggleOverlay('settings-overlay', true));
-    // MODIFIED: Guidebook listener
-    UIElements.mainMenu.guidebookBtn.addEventListener('click', () => navigateTo('guidebook-page'));
-
+    // NEW: Guidebook listener
+    UIElements.mainMenu.guidebookBtn.addEventListener('click', () => toggleOverlay('guidebook-overlay', true));
+    
     // Level Page
     // NEW: Add listener to difficulty select to update locks on change
     UIElements.levelPage.difficultySelect.addEventListener('change', updateLevelUnlocks);
@@ -623,7 +604,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Hasil Page
-    UIElements.hasilPage.homeBtn.addEventListener('click', () => navigateTo('level-page'));
+    UIElements.hasilPage.homeBtn.addEventListener('click', () => navigateTo('main-menu'));
     UIElements.hasilPage.retryBtn.addEventListener('click', () => {
         playSound(UIElements.sounds.click);
         startQuiz(gameState.currentLevel, gameState.currentCategory);
@@ -639,17 +620,6 @@ document.addEventListener('DOMContentLoaded', () => {
             UIElements.jejakPetualanganPage.tabs.forEach(t => t.classList.remove('active'));
             tab.classList.add('active');
             document.querySelectorAll('#jejak-petualangan-page .tab-content').forEach(c => c.classList.remove('active'));
-            document.getElementById(tab.dataset.tab).classList.add('active');
-        });
-    });
-    
-    // NEW: Guidebook Page Listeners
-    UIElements.guidebookPage.backBtn.addEventListener('click', () => navigateTo('main-menu'));
-    UIElements.guidebookPage.tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            UIElements.guidebookPage.tabs.forEach(t => t.classList.remove('active'));
-            tab.classList.add('active');
-            document.querySelectorAll('#guidebook-page .tab-content').forEach(c => c.classList.remove('active'));
             document.getElementById(tab.dataset.tab).classList.add('active');
         });
     });
@@ -674,6 +644,17 @@ document.addEventListener('DOMContentLoaded', () => {
         toggleOverlay('confirmation-overlay', false);
     });
      UIElements.confirmationOverlay.cancelBtn.addEventListener('click', () => toggleOverlay('confirmation-overlay', false));
+
+    // NEW: Guidebook Overlay Listeners
+    UIElements.guidebookOverlay.closeBtn.addEventListener('click', () => toggleOverlay('guidebook-overlay', false));
+    UIElements.guidebookOverlay.tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            UIElements.guidebookOverlay.tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            document.querySelectorAll('#guidebook-overlay .tab-content').forEach(c => c.classList.remove('active'));
+            document.getElementById(tab.dataset.tab).classList.add('active');
+        });
+    });
 
     // --- INITIALIZATION --- //
     function init() {

@@ -1,0 +1,1814 @@
+{
+  "level1": {
+    "Restoran": [
+      {
+        "question": "Apa bahasa Jepang untuk 'air'?",
+        "answers": [
+          "お茶 (Ocha)",
+          "ビール (Biiru)",
+          "水 (Mizu)",
+          "肉 (Niku)"
+        ],
+        "correct": "水 (Mizu)",
+        "feedback": "'水 (Mizu)' berarti air. Untuk meminta secara sopan, Anda bisa mengatakan 'お水をください (O-mizu o kudasai)'. 'Ocha' adalah teh, 'Biiru' adalah bir, dan 'Niku' adalah daging.",
+        "image": "Restoran1-01.jpg"
+      },
+      {
+        "question": "Bagaimana Anda menyebut 'sumpit' dalam bahasa Jepang?",
+        "answers": [
+          "フォーク (Fooku)",
+          "スプーン (Supuun)",
+          "ナイフ (Naifu)",
+          "箸 (Hashi)"
+        ],
+        "correct": "箸 (Hashi)",
+        "feedback": "'箸 (Hashi)' adalah sumpit. 'Fooku' adalah garpu, 'Supuun' adalah sendok, dan 'Naifu' adalah pisau.",
+        "image": "Restoran1-02.jpg"
+      },
+      {
+        "question": "Kata untuk 'nasi' dalam bahasa Jepang adalah...",
+        "answers": [
+          "ご飯 (Gohan)",
+          "パン (Pan)",
+          "麺 (Men)",
+          "魚 (Sakana)"
+        ],
+        "correct": "ご飯 (Gohan)",
+        "feedback": "'ご飯 (Gohan)' berarti nasi atau makanan secara umum. 'Pan' adalah roti, 'Men' adalah mie, dan 'Sakana' adalah ikan.",
+        "image": "Restoran1-03.jpg"
+      },
+      {
+        "question": "Apa sebutan untuk 'pelayan' di restoran Jepang?",
+        "answers": [
+          "お客さん (Okyaku-san)",
+          "店員 (Ten'in)",
+          "料理人 (Ryourinin)",
+          "友達 (Tomodachi)"
+        ],
+        "correct": "店員 (Ten'in)",
+        "feedback": "'店員 (Ten'in)' adalah istilah umum untuk staf toko atau restoran. 'Okyaku-san' adalah pelanggan, 'Ryourinin' adalah koki, dan 'Tomodachi' adalah teman.",
+        "image": "Restoran1-04.jpg"
+      },
+      {
+        "question": "Bagaimana cara mengatakan 'enak' dalam bahasa Jepang?",
+        "answers": [
+          "辛い (Karai)",
+          "甘い (Amai)",
+          "美味しい (Oishii)",
+          "熱い (Atsui)"
+        ],
+        "correct": "美味しい (Oishii)",
+        "feedback": "'美味しい (Oishii)' adalah cara umum untuk mengatakan sesuatu itu enak. 'Karai' berarti pedas, 'Amai' berarti manis, dan 'Atsui' berarti panas.",
+        "image": "Restoran1-05.jpg"
+      },
+      {
+        "question": "Kata untuk 'menu' dalam bahasa Jepang adalah...",
+        "answers": [
+          "予約 (Yoyaku)",
+          "会計 (Kaikei)",
+          "注文 (Chuumon)",
+          "メニュー (Menyuu)"
+        ],
+        "correct": "メニュー (Menyuu)",
+        "feedback": "'メニュー (Menyuu)' adalah kata serapan dari bahasa Inggris 'menu'. 'Yoyaku' adalah reservasi, 'Kaikei' adalah tagihan, dan 'Chuumon' adalah pesanan.",
+        "image": "Restoran1-06.jpg"
+      },
+      {
+        "question": "Apa bahasa Jepang untuk 'daging'?",
+        "answers": [
+          "野菜 (Yasai)",
+          "果物 (Kudamono)",
+          "肉 (Niku)",
+          "卵 (Tamago)"
+        ],
+        "correct": "肉 (Niku)",
+        "feedback": "'肉 (Niku)' berarti daging. 'Yasai' adalah sayuran, 'Kudamono' adalah buah-buahan, dan 'Tamago' adalah telur.",
+        "image": "Restoran1-07.jpg"
+      },
+      {
+        "question": "Bagaimana Anda menyebut 'ikan' dalam bahasa Jepang?",
+        "answers": [
+          "鳥 (Tori)",
+          "豚 (Buta)",
+          "牛 (Ushi)",
+          "魚 (Sakana)"
+        ],
+        "correct": "魚 (Sakana)",
+        "feedback": "'魚 (Sakana)' adalah kata untuk ikan. 'Tori' adalah ayam/burung, 'Buta' adalah babi, dan 'Ushi' adalah sapi.",
+        "image": "Restoran1-08.jpg"
+      },
+      {
+        "question": "Kata untuk 'toilet' adalah...",
+        "answers": [
+          "入り口 (Iriguchi)",
+          "出口 (Deguchi)",
+          "トイレ (Toire)",
+          "台所 (Daidokoro)"
+        ],
+        "correct": "トイレ (Toire)",
+        "feedback": "'トイレ (Toire)' adalah kata yang paling umum untuk toilet, serapan dari bahasa Inggris. Bentuk sopannya adalah 'お手洗い (Otearai)'. 'Iriguchi' adalah pintu masuk, 'Deguchi' adalah pintu keluar.",
+        "image": "Restoran1-09.jpg"
+      },
+      {
+        "question": "Apa bahasa Jepang untuk 'tagihan' atau 'bon'?",
+        "answers": [
+          "お勘定 (Okanjou)",
+          "お金 (Okane)",
+          "領収書 (Ryoushuusho)",
+          "割引 (Waribiki)"
+        ],
+        "correct": "お勘定 (Okanjou)",
+        "feedback": "'お勘定 (Okanjou)' atau 'お会計 (Okaikei)' digunakan untuk meminta tagihan. 'Okane' adalah uang, 'Ryoushuusho' adalah kuitansi, dan 'Waribiki' adalah diskon.",
+        "image": "Restoran1-10.jpg"
+      },
+      {
+        "question": "Bagaimana cara mengatakan 'reservasi'?",
+        "answers": [
+          "約束 (Yakusoku)",
+          "予約 (Yoyaku)",
+          "予定 (Yotei)",
+          "用事 (Youji)"
+        ],
+        "correct": "予約 (Yoyaku)",
+        "feedback": "'予約 (Yoyaku)' adalah kata yang tepat untuk reservasi (restoran, hotel, dll). 'Yakusoku' berarti janji.",
+        "image": "Restoran1-11.jpg"
+      },
+      {
+        "question": "Kata untuk 'minuman' dalam bahasa Jepang adalah...",
+        "answers": [
+          "食べ物 (Tabemono)",
+          "飲み物 (Nomimono)",
+          "買い物 (Kaimono)",
+          "建物 (Tatemono)"
+        ],
+        "correct": "飲み物 (Nomimono)",
+        "feedback": "'飲み物 (Nomimono)' berarti minuman. Kata ini berasal dari kata kerja '飲む (nomu)' yang berarti minum. 'Tabemono' adalah makanan.",
+        "image": "Restoran1-12.jpg"
+      },
+      {
+        "question": "Apa sebutan untuk 'piring'?",
+        "answers": [
+          "コップ (Koppu)",
+          "茶碗 (Chawan)",
+          "皿 (Sara)",
+          "鍋 (Nabe)"
+        ],
+        "correct": "皿 (Sara)",
+        "feedback": "'皿 (Sara)' adalah piring. 'Koppu' adalah gelas, 'Chawan' adalah mangkuk nasi, dan 'Nabe' adalah panci.",
+        "image": "Restoran1-13.jpg"
+      },
+      {
+        "question": "Bagaimana Anda menyebut 'garpu' dalam bahasa Jepang?",
+        "answers": [
+          "フォーク (Fooku)",
+          "スプーン (Supuun)",
+          "ナイフ (Naifu)",
+          "箸 (Hashi)"
+        ],
+        "correct": "フォーク (Fooku)",
+        "feedback": "'フォーク (Fooku)' adalah kata serapan dari bahasa Inggris 'fork'.",
+        "image": "Restoran1-14.jpg"
+      },
+      {
+        "question": "Kata untuk 'kursi' dalam bahasa Jepang adalah...",
+        "answers": [
+          "机 (Tsukue)",
+          "テーブル (Teeburu)",
+          "椅子 (Isu)",
+          "ドア (Doa)"
+        ],
+        "correct": "椅子 (Isu)",
+        "feedback": "'椅子 (Isu)' adalah kata untuk kursi. 'Tsukue' dan 'Teeburu' berarti meja.",
+        "image": "Restoran1-15.jpg"
+      },
+      {
+        "question": "Apa bahasa Jepang untuk 'sayuran'?",
+        "answers": [
+          "野菜 (Yasai)",
+          "果物 (Kudamono)",
+          "きのこ (Kinoko)",
+          "芋 (Imo)"
+        ],
+        "correct": "野菜 (Yasai)",
+        "feedback": "'野菜 (Yasai)' adalah istilah umum untuk sayuran. 'Kudamono' adalah buah, 'Kinoko' adalah jamur, dan 'Imo' adalah ubi/kentang.",
+        "image": "Restoran1-16.jpg"
+      },
+      {
+        "question": "Bagaimana cara mengatakan 'pedas'?",
+        "answers": [
+          "甘い (Amai)",
+          "酸っぱい (Suppai)",
+          "苦い (Nigai)",
+          "辛い (Karai)"
+        ],
+        "correct": "辛い (Karai)",
+        "feedback": "'辛い (Karai)' berarti pedas. 'Amai' adalah manis, 'Suppai' adalah asam, dan 'Nigai' adalah pahit.",
+        "image": "Restoran1-17.jpg"
+      },
+      {
+        "question": "Kata untuk 'teh' adalah...",
+        "answers": [
+          "牛乳 (Gyuunyuu)",
+          "ジュース (Juusu)",
+          "お茶 (Ocha)",
+          "コーヒー (Koohii)"
+        ],
+        "correct": "お茶 (Ocha)",
+        "feedback": "'お茶 (Ocha)' adalah teh. 'Gyuunyuu' adalah susu sapi, 'Juusu' adalah jus, dan 'Koohii' adalah kopi.",
+        "image": "Restoran1-18.jpg"
+      },
+      {
+        "question": "Apa sebutan untuk 'pelanggan'?",
+        "answers": [
+          "店長 (Tenchou)",
+          "シェフ (Shefu)",
+          "お客さん (Okyaku-san)",
+          "家族 (Kazoku)"
+        ],
+        "correct": "お客さん (Okyaku-san)",
+        "feedback": "'お客さん (Okyaku-san)' berarti pelanggan atau tamu. 'Tenchou' adalah manajer toko dan 'Shefu' adalah koki.",
+        "image": "Restoran1-19.jpg"
+      },
+      {
+        "question": "Bagaimana Anda menyebut 'pintu masuk'?",
+        "answers": [
+          "出口 (Deguchi)",
+          "窓 (Mado)",
+          "入り口 (Iriguchi)",
+          "屋根 (Yane)"
+        ],
+        "correct": "入り口 (Iriguchi)",
+        "feedback": "'入り口 (Iriguchi)' adalah pintu masuk. Kebalikannya adalah '出口 (Deguchi)', yaitu pintu keluar.",
+        "image": "Restoran1-20.jpg"
+      },
+      {
+        "question": "Kata untuk 'garam' dalam bahasa Jepang adalah...",
+        "answers": [
+          "砂糖 (Satou)",
+          "塩 (Shio)",
+          "胡椒 (Koshou)",
+          "醤油 (Shouyu)"
+        ],
+        "correct": "塩 (Shio)",
+        "feedback": "'塩 (Shio)' berarti garam. 'Satou' adalah gula, 'Koshou' adalah lada, dan 'Shouyu' adalah kecap asin.",
+        "image": "Restoran1-21.jpg"
+      },
+      {
+        "question": "Apa bahasa Jepang untuk 'makan siang'?",
+        "answers": [
+          "朝食 (Choushoku)",
+          "昼食 (Chuushoku)",
+          "夕食 (Yuushoku)",
+          "夜食 (Yashoku)"
+        ],
+        "correct": "昼食 (Chuushoku)",
+        "feedback": "'昼食 (Chuushoku)' berarti makan siang. 'Choushoku' adalah sarapan, 'Yuushoku' adalah makan malam, dan 'Yashoku' adalah makan tengah malam.",
+        "image": "Restoran1-22.jpg"
+      },
+      {
+        "question": "Bagaimana cara mengatakan 'manis'?",
+        "answers": [
+          "塩辛い (Shiokarai)",
+          "苦い (Nigai)",
+          "甘い (Amai)",
+          "辛い (Karai)"
+        ],
+        "correct": "甘い (Amai)",
+        "feedback": "'甘い (Amai)' berarti manis. 'Shiokarai' adalah asin, 'Nigai' adalah pahit, dan 'Karai' adalah pedas.",
+        "image": "Restoran1-23.jpg"
+      },
+      {
+        "question": "Kata untuk 'bir' adalah...",
+        "answers": [
+          "ワイン (Wain)",
+          "日本酒 (Nihonshu)",
+          "ビール (Biiru)",
+          "水 (Mizu)"
+        ],
+        "correct": "ビール (Biiru)",
+        "feedback": "'ビール (Biiru)' adalah kata serapan dari bahasa Inggris 'beer'. 'Wain' adalah wine dan 'Nihonshu' adalah sake.",
+        "image": "Restoran1-24.jpg"
+      },
+      {
+        "question": "Apa sebutan untuk 'mangkuk'?",
+        "answers": [
+          "皿 (Sara)",
+          "箸 (Hashi)",
+          "茶碗 (Chawan)",
+          "コップ (Koppu)"
+        ],
+        "correct": "茶碗 (Chawan)",
+        "feedback": "'茶碗 (Chawan)' biasanya digunakan untuk mangkuk nasi. 'お椀 (Owan)' untuk mangkuk sup. 'Donburi' untuk mangkuk besar.",
+        "image": "Restoran1-25.jpg"
+      },
+      {
+        "question": "Bahasa Jepang untuk 'dingin' (untuk minuman/makanan) adalah...",
+        "answers": [
+          "寒い (Samui)",
+          "涼しい (Suzushii)",
+          "熱い (Atsui)",
+          "冷たい (Tsumetai)"
+        ],
+        "correct": "冷たい (Tsumetai)",
+        "feedback": "'冷たい (Tsumetai)' digunakan untuk menggambarkan sesuatu yang dingin saat disentuh, seperti minuman dingin. 'Samui' digunakan untuk cuaca dingin.",
+        "image": "Restoran1-26.jpg"
+      },
+      {
+        "question": "Apa kata untuk 'pesanan'?",
+        "answers": [
+          "注文 (Chuumon)",
+          "質問 (Shitsumon)",
+          "説明 (Setsumei)",
+          "勘定 (Kanjou)"
+        ],
+        "correct": "注文 (Chuumon)",
+        "feedback": "'注文 (Chuumon)' berarti pesanan. 'Shitsumon' adalah pertanyaan dan 'Setsumei' adalah penjelasan.",
+        "image": "Restoran1-27.jpg"
+      },
+      {
+        "question": "Bagaimana Anda menyebut 'koki' dalam bahasa Jepang?",
+        "answers": [
+          "医者 (Isha)",
+          "先生 (Sensei)",
+          "店員 (Ten'in)",
+          "料理人 (Ryourinin)"
+        ],
+        "correct": "料理人 (Ryourinin)",
+        "feedback": "'料理人 (Ryourinin)' adalah istilah formal untuk koki. 'シェフ (Shefu)' dari kata 'chef' juga umum digunakan.",
+        "image": "Restoran1-28.jpg"
+      },
+      {
+        "question": "Kata untuk 'uang' adalah...",
+        "answers": [
+          "カード (Kaado)",
+          "切符 (Kippu)",
+          "お金 (Okane)",
+          "手紙 (Tegami)"
+        ],
+        "correct": "お金 (Okane)",
+        "feedback": "'お金 (Okane)' adalah kata yang paling umum untuk uang.",
+        "image": "Restoran1-29.jpg"
+      },
+      {
+        "question": "Apa bahasa Jepang untuk 'makanan'?",
+        "answers": [
+          "飲み物 (Nomimono)",
+          "食べ物 (Tabemono)",
+          "果物 (Kudamono)",
+          "甘い物 (Amaimono)"
+        ],
+        "correct": "食べ物 (Tabemono)",
+        "feedback": "'食べ物 (Tabemono)' berarti makanan, berasal dari kata kerja '食べる (taberu)' yang berarti makan. 'Nomimono' adalah minuman.",
+        "image": "Restoran1-30.jpg"
+      },
+      {
+        "question": "'Kecap asin' dalam bahasa Jepang adalah...",
+        "answers": [
+          "酢 (Su)",
+          "味噌 (Miso)",
+          "醤油 (Shouyu)",
+          "みりん (Mirin)"
+        ],
+        "correct": "醤油 (Shouyu)",
+        "feedback": "'醤油 (Shouyu)' adalah kecap asin. 'Su' adalah cuka, 'Miso' adalah pasta kedelai, dan 'Mirin' adalah anggur beras manis untuk memasak.",
+        "image": "Restoran1-31.jpg"
+      },
+      {
+        "question": "Bagaimana cara mengatakan 'panas' (untuk makanan/minuman)?",
+        "answers": [
+          "暑い (Atsui)",
+          "暖かい (Atatakai)",
+          "熱い (Atsui)",
+          "冷たい (Tsumetai)"
+        ],
+        "correct": "熱い (Atsui)",
+        "feedback": "Kanji '熱い' digunakan untuk benda panas, seperti sup. Kanji '暑い' (pengucapan sama, atsui) digunakan untuk cuaca panas.",
+        "image": "Restoran1-32.jpg"
+      },
+      {
+        "question": "Apa sebutan untuk 'makanan penutup'?",
+        "answers": [
+          "前菜 (Zensai)",
+          "主食 (Shushoku)",
+          "デザート (Dezaato)",
+          "おやつ (Oyatsu)"
+        ],
+        "correct": "デザート (Dezaato)",
+        "feedback": "'デザート (Dezaato)' adalah kata serapan dari bahasa Inggris 'dessert'. 'Zensai' adalah hidangan pembuka dan 'Oyatsu' adalah camilan.",
+        "image": "Restoran1-33.jpg"
+      },
+      {
+        "question": "'Kartu kredit' dalam bahasa Jepang adalah...",
+        "answers": [
+          "会員カード (Kaiin kaado)",
+          "ポイントカード (Pointo kaado)",
+          "クレジットカード (Kurejitto kaado)",
+          "名刺 (Meishi)"
+        ],
+        "correct": "クレジットカード (Kurejitto kaado)",
+        "feedback": "Ini adalah kata serapan langsung dari bahasa Inggris 'credit card'.",
+        "image": "Restoran1-34.jpg"
+      },
+      {
+        "question": "Kata untuk 'toko' atau 'restoran' adalah...",
+        "answers": [
+          "家 (Ie)",
+          "会社 (Kaisha)",
+          "学校 (Gakkou)",
+          "店 (Mise)"
+        ],
+        "correct": "店 (Mise)",
+        "feedback": "'店 (Mise)' berarti toko, warung, atau restoran. 'Ie' adalah rumah, 'Kaisha' adalah perusahaan, dan 'Gakkou' adalah sekolah.",
+        "image": "Restoran1-35.jpg"
+      },
+      {
+        "question": "Bagaimana Anda menyebut 'kwitansi'?",
+        "answers": [
+          "請求書 (Seikyuusho)",
+          "領収書 (Ryoushuusho)",
+          "保証書 (Hoshousho)",
+          "紹介状 (Shoukaijou)"
+        ],
+        "correct": "領収書 (Ryoushuusho)",
+        "feedback": "'領収書 (Ryoushuusho)' adalah kuitansi resmi. Jangan tertukar dengan '請求書 (Seikyuusho)' yang berarti invoice atau tagihan.",
+        "image": "Restoran1-36.jpg"
+      },
+      {
+        "question": "Apa bahasa Jepang untuk 'gula'?",
+        "answers": [
+          "砂糖 (Satou)",
+          "塩 (Shio)",
+          "酢 (Su)",
+          "油 (Abura)"
+        ],
+        "correct": "砂糖 (Satou)",
+        "feedback": "'砂糖 (Satou)' berarti gula. 'Shio' adalah garam, 'Su' adalah cuka, dan 'Abura' adalah minyak.",
+        "image": "Restoran1-37.jpg"
+      },
+      {
+        "question": "Kata untuk 'sarapan' adalah...",
+        "answers": [
+          "昼ご飯 (Hirugohan)",
+          "晩ご飯 (Bangohan)",
+          "朝食 (Choushoku)",
+          "軽食 (Keishoku)"
+        ],
+        "correct": "朝食 (Choushoku)",
+        "feedback": "'朝食 (Choushoku)' adalah istilah formal untuk sarapan. Dalam percakapan sehari-hari, '朝ご飯 (Asagohan)' juga umum digunakan.",
+        "image": "Restoran1-38.jpg"
+      },
+      {
+        "question": "Bagaimana cara mengatakan 'asin'?",
+        "answers": [
+          "甘い (Amai)",
+          "塩辛い (Shiokarai)",
+          "酸っぱい (Suppai)",
+          "苦い (Nigai)"
+        ],
+        "correct": "塩辛い (Shiokarai)",
+        "feedback": "'塩辛い (Shiokarai)' berarti asin. Kata ini gabungan dari '塩 (shio)' yang berarti garam dan '辛い (karai)' yang berarti pedas/kuat.",
+        "image": "Restoran1-39.jpg"
+      },
+      {
+        "question": "'Makan malam' dalam bahasa Jepang adalah...",
+        "answers": [
+          "朝食 (Choushoku)",
+          "昼食 (Chuushoku)",
+          "夕食 (Yuushoku)",
+          "ブランチ (Buranchi)"
+        ],
+        "correct": "夕食 (Yuushoku)",
+        "feedback": "'夕食 (Yuushoku)' atau '晩ご飯 (Bangohan)' keduanya berarti makan malam.",
+        "image": "Restoran1-40.jpg"
+      },
+      {
+        "question": "Apa sebutan untuk 'sendok'?",
+        "answers": [
+          "箸 (Hashi)",
+          "ナイフ (Naifu)",
+          "スプーン (Supuun)",
+          "フォーク (Fooku)"
+        ],
+        "correct": "スプーン (Supuun)",
+        "feedback": "'スプーン (Supuun)' adalah kata serapan dari bahasa Inggris 'spoon'.",
+        "image": "Restoran1-41.jpg"
+      },
+      {
+        "question": "Bahasa Jepang untuk 'pahit' adalah...",
+        "answers": [
+          "苦い (Nigai)",
+          "甘い (Amai)",
+          "辛い (Karai)",
+          "美味しい (Oishii)"
+        ],
+        "correct": "苦い (Nigai)",
+        "feedback": "'苦い (Nigai)' berarti pahit, seperti rasa kopi hitam atau pare.",
+        "image": "Restoran1-42.jpg"
+      },
+      {
+        "question": "Kata untuk 'ayam' sebagai makanan adalah...",
+        "answers": [
+          "牛肉 (Gyuuniku)",
+          "豚肉 (Butaniku)",
+          "鶏肉 (Toriniku)",
+          "羊肉 (Youniku)"
+        ],
+        "correct": "鶏肉 (Toriniku)",
+        "feedback": "'鶏肉 (Toriniku)' adalah daging ayam. 'Gyuuniku' adalah daging sapi dan 'Butaniku' adalah daging babi.",
+        "image": "Restoran1-43.jpg"
+      },
+      {
+        "question": "Bagaimana cara menyebut 'pintu keluar'?",
+        "answers": [
+          "入り口 (Iriguchi)",
+          "出口 (Deguchi)",
+          "非常口 (Hijouguchi)",
+          "改札口 (Kaisatsuguchi)"
+        ],
+        "correct": "出口 (Deguchi)",
+        "feedback": "'出口 (Deguchi)' adalah pintu keluar biasa. 'Hijouguchi' adalah pintu darurat.",
+        "image": "Restoran1-44.jpg"
+      },
+      {
+        "question": "'Asam' dalam bahasa Jepang adalah...",
+        "answers": [
+          "甘い (Amai)",
+          "辛い (Karai)",
+          "酸っぱい (Suppai)",
+          "苦い (Nigai)"
+        ],
+        "correct": "酸っぱい (Suppai)",
+        "feedback": "'酸っぱい (Suppai)' berarti asam, seperti rasa lemon.",
+        "image": "Restoran1-45.jpg"
+      },
+      {
+        "question": "Apa kata untuk 'pisau'?",
+        "answers": [
+          "包丁 (Houchou)",
+          "ナイフ (Naifu)",
+          "はさみ (Hasami)",
+          "のこぎり (Nokogiri)"
+        ],
+        "correct": "ナイフ (Naifu)",
+        "feedback": "'ナイフ (Naifu)' digunakan untuk pisau makan (serapan dari 'knife'). '包丁 (Houchou)' adalah pisau dapur.",
+        "image": "Restoran1-46.jpg"
+      },
+      {
+        "question": "Bagaimana Anda menyebut 'gelas'?",
+        "answers": [
+          "コップ (Koppu)",
+          "瓶 (Bin)",
+          "缶 (Kan)",
+          "お椀 (Owan)"
+        ],
+        "correct": "コップ (Koppu)",
+        "feedback": "'コップ (Koppu)' (dari 'kop' bahasa Belanda) atau 'グラス (Gurasu)' (dari 'glass') keduanya berarti gelas. 'Bin' adalah botol dan 'Kan' adalah kaleng.",
+        "image": "Restoran1-47.jpg"
+      },
+      {
+        "question": "Kata untuk 'daging babi' adalah...",
+        "answers": [
+          "牛肉 (Gyuuniku)",
+          "鶏肉 (Toriniku)",
+          "豚肉 (Butaniku)",
+          "魚肉 (Gyoniku)"
+        ],
+        "correct": "豚肉 (Butaniku)",
+        "feedback": "'豚肉 (Butaniku)' adalah daging babi. Hati-hati karena banyak makanan Jepang yang menggunakannya.",
+        "image": "Restoran1-48.jpg"
+      },
+      {
+        "question": "Bahasa Jepang untuk 'lada' adalah...",
+        "answers": [
+          "唐辛子 (Tougarashi)",
+          "わさび (Wasabi)",
+          "生姜 (Shouga)",
+          "胡椒 (Koshou)"
+        ],
+        "correct": "胡椒 (Koshou)",
+        "feedback": "'胡椒 (Koshou)' adalah lada hitam/putih. 'Tougarashi' adalah cabai.",
+        "image": "Restoran1-49.jpg"
+      },
+      {
+        "question": "Apa sebutan untuk 'daging sapi'?",
+        "answers": [
+          "牛肉 (Gyuuniku)",
+          "豚肉 (Butaniku)",
+          "鶏肉 (Toriniku)",
+          "馬肉 (Baniku)"
+        ],
+        "correct": "牛肉 (Gyuuniku)",
+        "feedback": "'牛肉 (Gyuuniku)' adalah daging sapi. '馬肉 (Baniku)' adalah daging kuda.",
+        "image": "Restoran1-50.jpg"
+      }
+    ]
+  },
+  "level2": {
+    "Restoran": [
+      {
+        "question": "Bagaimana pelayan menyambut Anda saat masuk restoran?",
+        "answers": [
+          "こんにちは (Konnichiwa)",
+          "いらっしゃいませ (Irasshaimase)",
+          "ありがとうございます (Arigatou gozaimasu)",
+          "お疲れ様です (Otsukaresama desu)"
+        ],
+        "correct": "いらっしゃいませ (Irasshaimase)",
+        "feedback": "'いらっしゃいませ (Irasshaimase)' adalah ucapan selamat datang standar di toko dan restoran. Ini adalah bentuk sangat sopan dari 'selamat datang'.",
+        "image": "Restoran2-01.jpg"
+      },
+      {
+        "question": "Bagaimana cara menanyakan 'Berapa orang?'",
+        "answers": [
+          "何歳ですか (Nansai desu ka)",
+          "今何時ですか (Ima nanji desu ka)",
+          "何名様ですか (Nan-mei sama desu ka)",
+          "お名前は何ですか (O-namae wa nan desu ka)"
+        ],
+        "correct": "何名様ですか (Nan-mei sama desu ka)",
+        "feedback": "'何名様ですか (Nan-mei sama desu ka)' adalah cara sopan untuk menanyakan jumlah orang. '名 (mei)' adalah satuan hitung untuk orang dalam konteks formal.",
+        "image": "Restoran2-02.jpg"
+      },
+      {
+        "question": "Frasa untuk memanggil pelayan adalah...",
+        "answers": [
+          "もしもし (Moshi moshi)",
+          "あのう (Anou)",
+          "すみません (Sumimasen)",
+          "ごめんなさい (Gomen nasai)"
+        ],
+        "correct": "すみません (Sumimasen)",
+        "feedback": "'すみません (Sumimasen)' sangat serbaguna, bisa berarti 'permisi', 'maaf', atau 'terima kasih'. Di restoran, ini digunakan untuk menarik perhatian staf.",
+        "image": "Restoran2-03.jpg"
+      },
+      {
+        "question": "Bagaimana cara meminta menu?",
+        "answers": [
+          "メニューをください (Menyuu o kudasai)",
+          "メニューはどこですか (Menyuu wa doko desu ka)",
+          "メニューが欲しいです (Menyuu ga hoshii desu)",
+          "これはメニューです (Kore wa menyuu desu)"
+        ],
+        "correct": "メニューをください (Menyuu o kudasai)",
+        "feedback": "Pola '...をください (... o kudasai)' adalah cara standar dan sopan untuk meminta sesuatu.",
+        "image": "Restoran2-04.jpg"
+      },
+      {
+        "question": "Saat menunjuk menu, bagaimana Anda memesan 'yang ini'?",
+        "answers": [
+          "あれをお願いします (Are o onegai shimasu)",
+          "それをください (Sore o kudasai)",
+          "これをください (Kore o kudasai)",
+          "どれがいいですか (Dore ga ii desu ka)"
+        ],
+        "correct": "これをください (Kore o kudasai)",
+        "feedback": "'これ (Kore)' berarti 'ini' (dekat pembicara). 'Sore' berarti 'itu' (dekat lawan bicara), dan 'Are' berarti 'itu' (jauh dari keduanya).",
+        "image": "Restoran2-05.jpg"
+      },
+      {
+        "question": "Ucapan yang dikatakan sebelum mulai makan adalah...",
+        "answers": [
+          "ごちそうさまでした (Gochisousama deshita)",
+          "いただきます (Itadakimasu)",
+          "おやすみなさい (Oyasuminasai)",
+          "さようなら (Sayounara)"
+        ],
+        "correct": "いただきます (Itadakimasu)",
+        "feedback": "'いただきます (Itadakimasu)' adalah ungkapan terima kasih atas makanan yang akan diterima, ditujukan kepada semua yang terlibat dalam penyediaannya.",
+        "image": "Restoran2-06.jpg"
+      },
+      {
+        "question": "Setelah selesai makan, Anda mengucapkan...",
+        "answers": [
+          "お疲れ様でした (Otsukaresama deshita)",
+          "ただいま (Tadaima)",
+          "ごちそうさまでした (Gochisousama deshita)",
+          "いってきます (Ittekimasu)"
+        ],
+        "correct": "ごちそうさまでした (Gochisousama deshita)",
+        "feedback": "'ごちそうさまでした (Gochisousama deshita)' adalah ucapan terima kasih untuk hidangan yang telah dinikmati.",
+        "image": "Restoran2-07.jpg"
+      },
+      {
+        "question": "Bagaimana cara meminta tagihan/bon?",
+        "answers": [
+          "予約をお願いします (Yoyaku o onegai shimasu)",
+          "注文をお願いします (Chuumon o onegai shimasu)",
+          "お会計をお願いします (O-kaikei o onegai shimasu)",
+          "両替をお願いします (Ryougae o onegai shimasu)"
+        ],
+        "correct": "お会計をお願いします (O-kaikei o onegai shimasu)",
+        "feedback": "'お会計 (O-kaikei)' atau 'お勘定 (Okanjou)' keduanya berarti tagihan. '...をお願いします (...o onegai shimasu)' adalah cara sopan untuk memintanya.",
+        "image": "Restoran2-08.jpg"
+      },
+      {
+        "question": "Bagaimana cara menanyakan lokasi toilet?",
+        "answers": [
+          "トイレは何ですか (Toire wa nan desu ka)",
+          "トイレは誰ですか (Toire wa dare desu ka)",
+          "トイレはどこですか (Toire wa doko desu ka)",
+          "トイレはいつですか (Toire wa itsu desu ka)"
+        ],
+        "correct": "トイレはどこですか (Toire wa doko desu ka)",
+        "feedback": "'どこ (Doko)' adalah kata tanya untuk 'di mana'. Ini adalah frasa penting untuk dipelajari!",
+        "image": "Restoran2-09.jpg"
+      },
+      {
+        "question": "Jika Anda ingin memesan makanan untuk dibawa pulang, Anda mengatakan...",
+        "answers": [
+          "店内でお願いします (Tennai de onegai shimasu)",
+          "持ち帰りでお願いします (Mochikaeri de onegai shimasu)",
+          "出前をお願いします (Demae o onegai shimasu)",
+          "配達をお願いします (Haitatsu o onegai shimasu)"
+        ],
+        "correct": "持ち帰りでお願いします (Mochikaeri de onegai shimasu)",
+        "feedback": "'持ち帰り (Mochikaeri)' berarti 'take-away'. Lawan katanya adalah '店内 (Tennai)' yang berarti 'makan di tempat'.",
+        "image": "Restoran2-10.jpg"
+      },
+      {
+        "question": "Apa rekomendasi Anda? dalam bahasa Jepang adalah...",
+        "answers": [
+          "おすすめは何ですか (Osusume wa nan desu ka)",
+          "趣味は何ですか (Shumi wa nan desu ka)",
+          "名前は何ですか (Namae wa nan desu ka)",
+          "これは何ですか (Kore wa nan desu ka)"
+        ],
+        "correct": "おすすめは何ですか (Osusume wa nan desu ka)",
+        "feedback": "'おすすめ (Osusume)' berarti rekomendasi. Ini cara yang bagus untuk mencoba hidangan populer di restoran.",
+        "image": "Restoran2-11.jpg"
+      },
+      {
+        "question": "Bagaimana cara mengatakan 'Saya punya reservasi'?",
+        "answers": [
+          "予約が欲しいです (Yoyaku ga hoshii desu)",
+          "予約をしています (Yoyaku o shite imasu)",
+          "予約がありません (Yoyaku ga arimasen)",
+          "予約はどこですか (Yoyaku wa doko desu ka)"
+        ],
+        "correct": "予約をしています (Yoyaku o shite imasu)",
+        "feedback": "Frasa '～ています (...te imasu)' menunjukkan keadaan yang sedang berlangsung. Dalam hal ini, keadaan 'memiliki' reservasi.",
+        "image": "Restoran2-12.jpg"
+      },
+      {
+        "question": "Jika ingin membayar dengan kartu kredit, Anda mengatakan...",
+        "answers": [
+          "現金でお願いします (Genkin de onegai shimasu)",
+          "カードでお願いします (Kaado de onegai shimasu)",
+          "無料でお願いします (Muryou de onegai shimasu)",
+          "後でお願いします (Ato de onegai shimasu)"
+        ],
+        "correct": "カードでお願いします (Kaado de onegai shimasu)",
+        "feedback": "Partikel 'で (de)' di sini menunjukkan metode atau cara. Jadi, 'Kaado de' berarti 'dengan kartu'. 'Genkin de' berarti 'dengan uang tunai'.",
+        "image": "Restoran2-13.jpg"
+      },
+      {
+        "question": "Bagaimana cara meminta 'tanpa wasabi'?",
+        "answers": [
+          "わさびをたくさん (Wasabi o takusan)",
+          "わさび入りで (Wasabi iri de)",
+          "わさび抜きで (Wasabi nuki de)",
+          "わさびが好きです (Wasabi ga suki desu)"
+        ],
+        "correct": "わさび抜きで (Wasabi nuki de)",
+        "feedback": "Akhiran '抜きで (nuki de)' berarti 'tanpa' atau 'dihilangkan'. Anda bisa menggunakannya untuk bahan lain juga, misalnya '玉ねぎ抜きで (tamanegi nuki de)' untuk 'tanpa bawang bombay'.",
+        "image": "Restoran2-14.jpg"
+      },
+      {
+        "question": "Untuk mengatakan 'satu lagi, tolong', Anda menggunakan...",
+        "answers": [
+          "もう結構です (Mou kekkou desu)",
+          "もう一つお願いします (Mou hitotsu onegai shimasu)",
+          "これが最後です (Kore ga saigo desu)",
+          "初めてです (Hajimete desu)"
+        ],
+        "correct": "もう一つお願いします (Mou hitotsu onegai shimasu)",
+        "feedback": "'もう (Mou)' berarti 'lagi' dan '一つ (hitotsu)' adalah 'satu buah'. Untuk minuman, Anda bisa mengatakan 'もう一杯 (mou ippai)' yang berarti 'satu gelas lagi'.",
+        "image": "Restoran2-15.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Apakah ada menu bahasa Inggris?'",
+        "answers": [
+          "日本語のメニューはありますか (Nihongo no menyuu wa arimasu ka)",
+          "英語のメニューはありますか (Eigo no menyuu wa arimasu ka)",
+          "これは英語ですか (Kore wa eigo desu ka)",
+          "英語が話せますか (Eigo ga hanasemasu ka)"
+        ],
+        "correct": "英語のメニューはありますか (Eigo no menyuu wa arimasu ka)",
+        "feedback": "Pola '...はありますか (...wa arimasu ka)' adalah cara umum untuk menanyakan keberadaan sesuatu. 'Eigo' berarti bahasa Inggris.",
+        "image": "Restoran2-16.jpg"
+      },
+      {
+        "question": "Jika Anda kenyang, Anda bisa mengatakan...",
+        "answers": [
+          "お腹が空きました (Onaka ga sukimashita)",
+          "お腹がいっぱいです (Onaka ippai desu)",
+          "喉が渇きました (Nodo ga kawakimashita)",
+          "病気です (Byouki desu)"
+        ],
+        "correct": "お腹がいっぱいです (Onaka ippai desu)",
+        "feedback": "'お腹 (Onaka)' berarti perut dan 'いっぱい (ippai)' berarti penuh. Jadi secara harfiah berarti 'perut saya penuh'.",
+        "image": "Restoran2-17.jpg"
+      },
+      {
+        "question": "Bagaimana cara meminta 'bayar masing-masing'?",
+        "answers": [
+          "一緒にお願いします (Issho ni onegai shimasu)",
+          "割り勘でお願いします (Warikan de onegai shimasu)",
+          "全部でお願いします (Zenbu de onegai shimasu)",
+          "私が払います (Watashi ga haraimasu)"
+        ],
+        "correct": "割り勘でお願いします (Warikan de onegai shimasu)",
+        "feedback": "'割り勘 (Warikan)' adalah istilah umum untuk membagi tagihan secara merata. '別々で (Betsu betsu de)' juga bisa digunakan yang berarti 'terpisah'.",
+        "image": "Restoran2-18.jpg"
+      },
+      {
+        "question": "Untuk meminta kursi non-smoking, Anda mengatakan...",
+        "answers": [
+          "喫煙席をお願いします (Kitsuen seki o onegai shimasu)",
+          "禁煙席をお願いします (Kin'en seki o onegai shimasu)",
+          "窓側の席をお願いします (Madogawa no seki o onegai shimasu)",
+          "カウンター席をお願いします (Kauntaa seki o onegai shimasu)"
+        ],
+        "correct": "禁煙席をお願いします (Kin'en seki o onegai shimasu)",
+        "feedback": "'禁煙 (Kin'en)' berarti dilarang merokok ('kin' = larangan, 'en' = asap). Kebalikannya adalah '喫煙 (Kitsuen)' yang berarti area merokok.",
+        "image": "Restoran2-19.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Apakah ini mengandung daging babi?'",
+        "answers": [
+          "これは牛肉が入っていますか (Kore wa gyuuniku ga haitte imasu ka)",
+          "これは鶏肉が入っていますか (Kore wa toriniku ga haitte imasu ka)",
+          "これは豚肉が入っていますか (Kore wa butaniku ga haitte imasu ka)",
+          "これは肉なしですか (Kore wa niku nashi desu ka)"
+        ],
+        "correct": "これは豚肉が入っていますか (Kore wa butaniku ga haitte imasu ka)",
+        "feedback": "'豚肉 (Butaniku)' adalah daging babi. '...が入っていますか (...ga haitte imasu ka)' berarti 'apakah mengandung...?'. Ini adalah frasa penting bagi Muslim atau mereka yang tidak makan babi.",
+        "image": "Restoran2-20.jpg"
+      },
+      {
+        "question": "Frasa untuk mengatakan 'Saya lapar' adalah...",
+        "answers": [
+          "お腹がいっぱいです (Onaka ippai desu)",
+          "お腹が痛いです (Onaka ga itai desu)",
+          "お腹が空きました (Onaka ga sukimashita)",
+          "眠いです (Nemui desu)"
+        ],
+        "correct": "お腹が空きました (Onaka ga sukimashita)",
+        "feedback": "Secara harfiah, 'お腹が空きました (Onaka ga sukimashita)' berarti 'perut saya telah menjadi kosong'.",
+        "image": "Restoran2-21.jpg"
+      },
+      {
+        "question": "Bagaimana cara mengatakan 'Tunggu sebentar' dengan sopan?",
+        "answers": [
+          "ちょっと待って (Chotto matte)",
+          "早くしてください (Hayaku shite kudasai)",
+          "少々お待ちください (Shoushou o-machi kudasai)",
+          "すぐ行きます (Sugu ikimasu)"
+        ],
+        "correct": "少々お待ちください (Shoushou o-machi kudasai)",
+        "feedback": "Ini adalah bentuk yang sangat sopan yang sering digunakan oleh staf. 'Chotto matte' lebih kasual.",
+        "image": "Restoran2-22.jpg"
+      },
+      {
+        "question": "Untuk menanyakan 'Sampai jam berapa buka?', Anda bertanya...",
+        "answers": [
+          "何時に閉まりますか (Nanji ni shimarimasu ka)",
+          "何時に開きますか (Nanji ni akimasu ka)",
+          "何時までですか (Nanji made desu ka)",
+          "今何時ですか (Ima nanji desu ka)"
+        ],
+        "correct": "何時までですか (Nanji made desu ka)",
+        "feedback": "'何時まで (Nanji made)' secara harfiah berarti 'sampai jam berapa'. Ini adalah cara singkat dan umum untuk menanyakan jam tutup.",
+        "image": "Restoran2-23.jpg"
+      },
+      {
+        "question": "Bagaimana cara mengatakan 'Saya alergi terhadap telur'?",
+        "answers": [
+          "卵が大好きです (Tamago ga daisuki desu)",
+          "卵のアレルギーがあります (Tamago no arerugii ga arimasu)",
+          "卵を食べたいです (Tamago o tabetai desu)",
+          "卵は美味しいです (Tamago wa oishii desu)"
+        ],
+        "correct": "卵のアレルギーがあります (Tamago no arerugii ga arimasu)",
+        "feedback": "Ganti '卵 (tamago)' dengan alergen lain. Contoh: 'エビ (ebi)' untuk udang, '牛乳 (gyuunyuu)' untuk susu sapi.",
+        "image": "Restoran2-24.jpg"
+      },
+      {
+        "question": "Frasa 'Silakan lewat sini' yang diucapkan pelayan adalah...",
+        "answers": [
+          "あちらへどうぞ (Achira e douzo)",
+          "そちらへどうぞ (Sochira e douzo)",
+          "こちらへどうぞ (Kochira e douzo)",
+          "どちらへどうぞ (Dochira e douzo)"
+        ],
+        "correct": "こちらへどうぞ (Kochira e douzo)",
+        "feedback": "'こちら (Kochira)' adalah bentuk sopan dari 'sini'. 'どうぞ (Douzo)' berarti 'silakan'.",
+        "image": "Restoran2-25.jpg"
+      },
+      {
+        "question": "Bagaimana cara meminta 'sedikit lebih pedas'?",
+        "answers": [
+          "甘くしてください (Amaku shite kudasai)",
+          "辛くしないでください (Karaku shinaide kudasai)",
+          "もう少し辛くしてください (Mou sukoshi karaku shite kudasai)",
+          "全然辛くないです (Zenzen karakunai desu)"
+        ],
+        "correct": "もう少し辛くしてください (Mou sukoshi karaku shite kudasai)",
+        "feedback": "'もう少し (Mou sukoshi)' berarti 'sedikit lagi'. Pola '～くしてください (-ku shite kudasai)' digunakan untuk meminta penyesuaian rasa.",
+        "image": "Restoran2-26.jpg"
+      },
+      {
+        "question": "Saat menerima pesanan, pelayan mungkin akan mengkonfirmasi dengan mengatakan...",
+        "answers": [
+          "以上でよろしいでしょうか (Ijou de yoroshii deshou ka)",
+          "何か質問はありますか (Nani ka shitsumon wa arimasu ka)",
+          "ごゆっくりどうぞ (Go-yukkuri douzo)",
+          "ありがとうございました (Arigatou gozaimashita)"
+        ],
+        "correct": "以上でよろしいでしょうか (Ijou de yoroshii deshou ka)",
+        "feedback": "Frasa ini berarti 'Apakah itu saja pesanannya?'. Anda bisa menjawab 'はい、以上です (Hai, ijou desu)' yang berarti 'Ya, itu saja'.",
+        "image": "Restoran2-27.jpg"
+      },
+      {
+        "question": "Bagaimana cara menanyakan 'Apakah kursi ini kosong?'",
+        "answers": [
+          "この席は誰のですか (Kono seki wa dare no desu ka)",
+          "この席はいくらですか (Kono seki wa ikura desu ka)",
+          "この席は空いていますか (Kono seki wa aite imasu ka)",
+          "ここに座りたいです (Koko ni suwaritai desu)"
+        ],
+        "correct": "この席は空いていますか (Kono seki wa aite imasu ka)",
+        "feedback": "'空いていますか (Aite imasu ka)' berarti 'apakah kosong/tersedia?'. Bisa digunakan untuk kursi, kamar hotel, atau meja.",
+        "image": "Restoran2-28.jpg"
+      },
+      {
+        "question": "Jika pesanan Anda salah, Anda bisa mengatakan...",
+        "answers": [
+          "注文と同じです (Chuumon to onaji desu)",
+          "注文と違います (Chuumon to chigaimasu)",
+          "注文を忘れました (Chuumon o wasuremashita)",
+          "注文をお願いします (Chuumon o onegai shimasu)"
+        ],
+        "correct": "注文と違います (Chuumon to chigaimasu)",
+        "feedback": "'違います (Chigaimasu)' berarti 'berbeda' atau 'salah'. Ini cara sopan untuk menunjukkan ada kekeliruan.",
+        "image": "Restoran2-29.jpg"
+      },
+      {
+        "question": "Untuk mengatakan 'Semuanya sangat lezat', Anda bisa bilang...",
+        "answers": [
+          "全部まずかったです (Zenbu mazukatta desu)",
+          "全部美味しかったです (Zenbu oishikatta desu)",
+          "何も食べていません (Nani mo tabete imasen)",
+          "お腹が空きました (Onaka ga sukimashita)"
+        ],
+        "correct": "全部美味しかったです (Zenbu oishikatta desu)",
+        "feedback": "'全部 (Zenbu)' berarti 'semua'. Menggunakan bentuk lampau '美味しかったです (oishikatta desu)' karena Anda sudah selesai memakannya.",
+        "image": "Restoran2-30.jpg"
+      },
+      {
+        "question": "Bagaimana cara meminta tambah (nasi, sup, dll)?",
+        "answers": [
+          "お代わりをください (Okawari o kudasai)",
+          "大盛りでお願いします (Oomori de onegai shimasu)",
+          "少なめでお願いします (Sukuname de onegai shimasu)",
+          "もう結構です (Mou kekkou desu)"
+        ],
+        "correct": "お代わりをください (Okawari o kudasai)",
+        "feedback": "'お代わり (Okawari)' berarti 'tambah' atau 'refill'. Di banyak restoran Jepang, tambah nasi atau sup miso gratis.",
+        "image": "Restoran2-31.jpg"
+      },
+      {
+        "question": "Pelayan berkata 'Selamat menikmati hidangan Anda'. Frasa yang digunakan adalah...",
+        "answers": [
+          "お待たせいたしました (Omatase itashimashita)",
+          "ごゆっくりどうぞ (Go-yukkuri douzo)",
+          "いらっしゃいませ (Irasshaimase)",
+          "またお越しください (Mata o-koshi kudasai)"
+        ],
+        "correct": "ごゆっくりどうぞ (Go-yukkuri douzo)",
+        "feedback": "'ごゆっくりどうぞ (Go-yukkuri douzo)' secara harfiah berarti 'Silakan bersantai', yang menyiratkan agar Anda menikmati waktu dan makanan Anda.",
+        "image": "Restoran2-32.jpg"
+      },
+      {
+        "question": "Bagaimana cara mengatakan 'Saya belum memutuskan'?",
+        "answers": [
+          "もう決めました (Mou kimemashita)",
+          "まだ決まっていません (Mada kimatte imasen)",
+          "分かりません (Wakarimasen)",
+          "どうしようかな (Dou shiyou ka na)"
+        ],
+        "correct": "まだ決まっていません (Mada kimatte imasen)",
+        "feedback": "'まだ (Mada)' berarti 'belum'. Ini adalah cara yang sopan untuk meminta lebih banyak waktu untuk memilih menu.",
+        "image": "Restoran2-33.jpg"
+      },
+      {
+        "question": "Untuk meminta porsi besar, Anda mengatakan...",
+        "answers": [
+          "大盛りでお願いします (Oomori de onegai shimasu)",
+          "普通でお願いします (Futsuu de onegai shimasu)",
+          "少なめでお願いします (Sukuname de onegai shimasu)",
+          "半分でお願いします (Hanbun de onegai shimasu)"
+        ],
+        "correct": "大盛りでお願いします (Oomori de onegai shimasu)",
+        "feedback": "'大盛り (Oomori)' berarti porsi besar. 'Futsuu' adalah porsi normal, dan 'Sukuname' adalah porsi kecil.",
+        "image": "Restoran2-34.jpg"
+      },
+      {
+        "question": "Jika Anda ingin bertanya 'Berapa lama (waktunya)?'",
+        "answers": [
+          "いくらですか (Ikura desu ka)",
+          "どのくらいかかりますか (Dono kurai kakarimasu ka)",
+          "どうしてですか (Doushite desu ka)",
+          "どこですか (Doko desu ka)"
+        ],
+        "correct": "どのくらいかかりますか (Dono kurai kakarimasu ka)",
+        "feedback": "'どのくらい (Dono kurai)' berarti 'berapa banyak/lama', dan 'かかりますか (kakarimasu ka)' berarti 'membutuhkan (waktu/uang)'.",
+        "image": "Restoran2-35.jpg"
+      },
+      {
+        "question": "Saat pelayan mengantarkan pesanan, mereka akan berkata...",
+        "answers": [
+          "お待たせいたしました (Omatase itashimashita)",
+          "かしこまりました (Kashikomarimashita)",
+          "少々お待ちください (Shoushou o-machi kudasai)",
+          "こちらへどうぞ (Kochira e douzo)"
+        ],
+        "correct": "お待たせいたしました (Omatase itashimashita)",
+        "feedback": "Ini adalah cara yang sangat sopan untuk mengatakan 'Maaf telah membuat Anda menunggu'.",
+        "image": "Restoran2-36.jpg"
+      },
+      {
+        "question": "Bagaimana cara meminta air dingin (dengan es)?",
+        "answers": [
+          "お湯をください (Oyu o kudasai)",
+          "お茶をください (Ocha o kudasai)",
+          "氷なしでお願いします (Koori nashi de onegai shimasu)",
+          "氷入りの水をください (Koori-iri no mizu o kudasai)"
+        ],
+        "correct": "氷入りの水をください (Koori-iri no mizu o kudasai)",
+        "feedback": "'氷 (Koori)' berarti es, dan '入り (iri)' berarti 'berisi'. Jadi 'koori-iri' berarti 'dengan es'. 'Oyu' adalah air panas.",
+        "image": "Restoran2-37.jpg"
+      },
+      {
+        "question": "Saat memesan, pelayan akan mengatakan 'Baik, saya mengerti' dengan sangat sopan...",
+        "answers": [
+          "分かりました (Wakarimashita)",
+          "はい、そうです (Hai, sou desu)",
+          "かしこまりました (Kashikomarimashita)",
+          "どういたしまして (Dou itashimashite)"
+        ],
+        "correct": "かしこまりました (Kashikomarimashita)",
+        "feedback": "'かしこまりました (Kashikomarimashita)' adalah bentuk yang sangat sopan dari 'saya mengerti', khusus digunakan oleh staf layanan kepada pelanggan.",
+        "image": "Restoran2-38.jpg"
+      },
+      {
+        "question": "Untuk mengatakan 'Saya akan bayar', Anda bisa berkata...",
+        "answers": [
+          "私が払います (Watashi ga haraimasu)",
+          "お金がありません (Okane ga arimasen)",
+          "安いです (Yasui desu)",
+          "高いです (Takai desu)"
+        ],
+        "correct": "私が払います (Watashi ga haraimasu)",
+        "feedback": "Ini cara langsung untuk mengatakan Anda yang akan mentraktir. Partikel 'が (ga)' menekankan bahwa 'saya'-lah yang akan membayar.",
+        "image": "Restoran2-39.jpg"
+      },
+      {
+        "question": "Bagaimana cara menanyakan 'Apakah pajak sudah termasuk?'",
+        "answers": [
+          "税抜きですか (Zeinuki desu ka)",
+          "税込みですか (Zeikomi desu ka)",
+          "サービス料はかかりますか (Saabisu ryou wa kakarimasu ka)",
+          "これは無料ですか (Kore wa muryou desu ka)"
+        ],
+        "correct": "税込みですか (Zeikomi desu ka)",
+        "feedback": "'税込み (Zeikomi)' berarti pajak termasuk. '税抜き (Zeinuki)' berarti harga belum termasuk pajak. Sebagian besar harga di Jepang sudah 'zeikomi'.",
+        "image": "Restoran2-40.jpg"
+      },
+      {
+        "question": "Jika Anda ingin bertanya 'Bisa bungkus sisanya?'",
+        "answers": [
+          "持ち帰ってもいいですか (Mochikaette mo ii desu ka)",
+          "全部食べます (Zenbu tabemasu)",
+          "もう要りません (Mou irimasen)",
+          "これは何ですか (Kore wa nan desu ka)"
+        ],
+        "correct": "持ち帰ってもいいですか (Mochikaette mo ii desu ka)",
+        "feedback": "Pola '～てもいいですか (...te mo ii desu ka)' adalah cara sopan untuk meminta izin. 'Mochikaeru' berarti membawa pulang.",
+        "image": "Restoran2-41.jpg"
+      },
+      {
+        "question": "Bagaimana cara meminta piring kecil untuk berbagi makanan?",
+        "answers": [
+          "大皿をください (Oozara o kudasai)",
+          "取り皿をください (Torizara o kudasai)",
+          "お椀をください (Owan o kudasai)",
+          "箸をください (Hashi o kudasai)"
+        ],
+        "correct": "取り皿をください (Torizara o kudasai)",
+        "feedback": "'取り皿 (Torizara)' secara harfiah berarti 'piring untuk mengambil'. Ini sangat umum saat makan bersama di Jepang.",
+        "image": "Restoran2-42.jpg"
+      },
+      {
+        "question": "Jika pesanan Anda belum datang, Anda bisa mengatakan...",
+        "answers": [
+          "注文はまだですか (Chuumon wa mada desu ka)",
+          "注文はキャンセルします (Chuumon wa kyanseru shimasu)",
+          "注文は以上です (Chuumon wa ijou desu)",
+          "注文しました (Chuumon shimashita)"
+        ],
+        "correct": "注文はまだですか (Chuumon wa mada desu ka)",
+        "feedback": "'まだですか (Mada desu ka)' adalah cara sopan untuk menanyakan 'Apakah belum?'.",
+        "image": "Restoran2-43.jpg"
+      },
+      {
+        "question": "Untuk mengatakan 'Saya makan di sini', Anda menggunakan...",
+        "answers": [
+          "持ち帰りです (Mochikaeri desu)",
+          "店内で (Tennai de)",
+          "予約です (Yoyaku desu)",
+          "初めてです (Hajimete desu)"
+        ],
+        "correct": "店内で (Tennai de)",
+        "feedback": "'店内で (Tennai de)' secara harfiah berarti 'di dalam toko'. Ini adalah jawaban standar saat ditanya 'makan di sini atau bawa pulang?'.",
+        "image": "Restoran2-44.jpg"
+      },
+      {
+        "question": "Bagaimana cara mengatakan 'Saya haus'?",
+        "answers": [
+          "喉が渇きました (Nodo ga kawakimashita)",
+          "お腹が空きました (Onaka ga sukimashita)",
+          "疲れました (Tsukaremashita)",
+          "眠いです (Nemui desu)"
+        ],
+        "correct": "喉が渇きました (Nodo ga kawakimashita)",
+        "feedback": "'喉 (Nodo)' berarti tenggorokan, dan '渇きました (kawakimashita)' berarti menjadi kering.",
+        "image": "Restoran2-45.jpg"
+      },
+      {
+        "question": "Jika Anda ingin memesan lagi, Anda bisa berkata...",
+        "answers": [
+          "もう一度お願いします (Mou ichido onegai shimasu)",
+          "追加注文お願いします (Tsuika chuumon onegai shimasu)",
+          "これで全部です (Kore de zenbu desu)",
+          "お会計お願いします (Okaikei onegai shimasu)"
+        ],
+        "correct": "追加注文お願いします (Tsuika chuumon onegai shimasu)",
+        "feedback": "'追加 (Tsuika)' berarti tambahan. Jadi ini berarti 'tolong pesanan tambahan'.",
+        "image": "Restoran2-46.jpg"
+      },
+      {
+        "question": "Untuk mengatakan 'Maaf, sudah habis terjual', staf akan berkata...",
+        "answers": [
+          "おすすめです (Osusume desu)",
+          "売り切れです (Urikire desu)",
+          "ありますよ (Arimasu yo)",
+          "どうぞ (Douzo)"
+        ],
+        "correct": "売り切れです (Urikire desu)",
+        "feedback": "'売り切れ (Urikire)' berarti 'sold out' atau habis terjual. Anda akan sering melihat tulisan ini pada menu.",
+        "image": "Restoran2-47.jpg"
+      },
+      {
+        "question": "Bagaimana cara meminta 'air panas'?",
+        "answers": [
+          "お水をください (O-mizu o kudasai)",
+          "お茶をください (O-cha o kudasai)",
+          "お湯をください (O-yu o kudasai)",
+          "氷をください (Koori o kudasai)"
+        ],
+        "correct": "お湯をください (O-yu o kudasai)",
+        "feedback": "'お湯 (O-yu)' adalah air panas. Jangan bingung dengan 'お水 (O-mizu)' yang biasanya berarti air dingin/suhu ruangan.",
+        "image": "Restoran2-48.jpg"
+      },
+      {
+        "question": "Frasa perpisahan yang diucapkan staf adalah...",
+        "answers": [
+          "いらっしゃいませ (Irasshaimase)",
+          "ありがとうございました (Arigatou gozaimashita)",
+          "おやすみなさい (Oyasuminasai)",
+          "すみません (Sumimasen)"
+        ],
+        "correct": "ありがとうございました (Arigatou gozaimashita)",
+        "feedback": "Staf menggunakan bentuk lampau 'ありがとうございました (Arigatou gozaimashita)' karena transaksi telah selesai. Mereka sering menambahkan 'またお越しください (Mata o-koshi kudasai)' yang berarti 'Silakan datang lagi'.",
+        "image": "Restoran2-49.jpg"
+      },
+      {
+        "question": "Untuk bertanya 'Bolehkah saya mengambil foto?'",
+        "answers": [
+          "写真を撮ってもいいですか (Shashin o totte mo ii desu ka)",
+          "絵を描いてもいいですか (E o kaite mo ii desu ka)",
+          "電話をしてもいいですか (Denwa o shite mo ii desu ka)",
+          "タバコを吸ってもいいですか (Tabako o sutte mo ii desu ka)"
+        ],
+        "correct": "写真を撮ってもいいですか (Shashin o totte mo ii desu ka)",
+        "feedback": "Pola '...てもいいですか (...te mo ii desu ka)' digunakan untuk meminta izin. Selalu sopan untuk bertanya sebelum memotret di dalam restoran.",
+        "image": "Restoran2-50.jpg"
+      }
+    ]
+  },
+  "level3": {
+    "Restoran": [
+      {
+        "question": "Bagaimana cara menanyakan 'Apakah ada meja untuk dua orang?'",
+        "answers": [
+          "二人です、予約はありますか (Futari desu, yoyaku wa arimasu ka)",
+          "二人ですが、席は空いていますか (Futari desu ga, seki wa aite imasu ka)",
+          "二人で会計してください (Futari de kaikei shite kudasai)",
+          "二つのメニューをください (Futatsu no menyuu o kudasai)"
+        ],
+        "correct": "二人ですが、席は空いていますか (Futari desu ga, seki wa aite imasu ka)",
+        "feedback": "Ini adalah cara yang sopan dan lengkap untuk bertanya. '...ですが (...desu ga)' berarti '...tapi/dan', digunakan untuk menyambung kalimat dengan halus.",
+        "image": "Restoran3-01.jpg"
+      },
+      {
+        "question": "Kalimat 'Saya sudah reservasi jam 7 atas nama Tanaka' adalah...",
+        "answers": [
+          "田中は7時に予約が欲しいです (Tanaka wa shichiji ni yoyaku ga hoshii desu)",
+          "7時に予約した田中です (Shichiji ni yoyaku shita Tanaka desu)",
+          "田中は7時にレストランに行きます (Tanaka wa shichiji ni resutoran ni ikimasu)",
+          "7時に田中と予約します (Shichiji ni Tanaka to yoyaku shimasu)"
+        ],
+        "correct": "7時に予約した田中です (Shichiji ni yoyaku shita Tanaka desu)",
+        "feedback": "Ini adalah cara yang natural untuk memperkenalkan diri terkait reservasi. '予約した (yoyaku shita)' adalah bentuk lampau dari 'melakukan reservasi'.",
+        "image": "Restoran3-02.jpg"
+      },
+      {
+        "question": "Bagaimana cara meminta 'meja di dekat jendela'?",
+        "answers": [
+          "窓から遠い席をお願いします (Mado kara tooi seki o onegai shimasu)",
+          "窓側の席をお願いできますか (Madogawa no seki o onegai dekimasu ka)",
+          "窓のない席がいいです (Mado no nai seki ga ii desu)",
+          "こちらの席は窓ですか (Kochira no seki wa mado desu ka)"
+        ],
+        "correct": "窓側の席をお願いできますか (Madogawa no seki o onegai dekimasu ka)",
+        "feedback": "'窓側 (Madogawa)' berarti 'sisi jendela'. '...できますか (...dekimasu ka)' adalah bentuk pertanyaan yang lebih sopan daripada '...kudasai'.",
+        "image": "Restoran3-03.jpg"
+      },
+      {
+        "question": "Untuk memesan 'yang sama dengan meja itu', Anda mengatakan...",
+        "answers": [
+          "あのテーブルと違うものをください (Ano teeburu to chigau mono o kudasai)",
+          "あのテーブルの隣に座りたいです (Ano teeburu no tonari ni suwaritai desu)",
+          "あのテーブルと同じものをください (Ano teeburu to onaji mono o kudasai)",
+          "あのテーブルの会計は私です (Ano teeburu no kaikei wa watashi desu)"
+        ],
+        "correct": "あのテーブルと同じものをください (Ano teeburu to onaji mono o kudasai)",
+        "feedback": "'あの (Ano)' digunakan untuk menunjuk sesuatu yang jauh dari pembicara dan lawan bicara. '同じ (Onaji)' berarti 'sama'.",
+        "image": "Restoran3-04.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Minuman apa yang cocok dengan hidangan ini?'",
+        "answers": [
+          "この料理の値段はいくらですか (Kono ryouri no nedan wa ikura desu ka)",
+          "この料理に合う飲み物は何ですか (Kono ryouri ni au nomimono wa nan desu ka)",
+          "この料理に飲み物は入っていますか (Kono ryouri ni nomimono wa haitte imasu ka)",
+          "この飲み物は料理と別ですか (Kono nomimono wa ryouri to betsu desu ka)"
+        ],
+        "correct": "この料理に合う飲み物は何ですか (Kono ryouri ni au nomimono wa nan desu ka)",
+        "feedback": "Kata kerja '合う (au)' berarti 'cocok' atau 'pas'. Ini adalah pertanyaan yang bagus untuk mendapatkan rekomendasi pairing.",
+        "image": "Restoran3-05.jpg"
+      },
+      {
+        "question": "Kalimat 'Saya tidak bisa makan makanan laut karena alergi' adalah...",
+        "answers": [
+          "アレルギーですが、魚介類が大好きです (Arerugii desu ga, gyokairui ga daisuki desu)",
+          "アレルギーで魚介類が食べられません (Arerugii de gyokairui ga taberaremasen)",
+          "魚介類を食べると、アレルギーになります (Gyokairui o taberu to, arerugii ni narimasu)",
+          "魚介類はアレルギーに良いです (Gyokairui wa arerugii ni yoi desu)"
+        ],
+        "correct": "アレルギーで魚介類が食べられません (Arerugii de gyokairui ga taberaremasen)",
+        "feedback": "'食べられません (Taberaremasen)' adalah bentuk potensial negatif dari '食べる (taberu)', yang berarti 'tidak bisa makan'.",
+        "image": "Restoran3-06.jpg"
+      },
+      {
+        "question": "Bagaimana cara meminta 'Tolong jangan dibuat terlalu pedas'?",
+        "answers": [
+          "もっと辛くしてください (Motto karaku shite kudasai)",
+          "あまり辛くしないで もらえますか (Amari karaku shinai de moraemasu ka)",
+          "全然辛くありません (Zenzen karaku arimasen)",
+          "辛いものは食べられません (Karai mono wa taberaremasen)"
+        ],
+        "correct": "あまり辛くしないで もらえますか (Amari karaku shinai de moraemasu ka)",
+        "feedback": "Pola '～ないで もらえますか (...nai de moraemasu ka)' adalah cara yang sangat sopan untuk meminta seseorang untuk tidak melakukan sesuatu. 'あまり (Amari)' berarti 'tidak terlalu'.",
+        "image": "Restoran3-07.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Apakah kami bisa membayar secara terpisah?'",
+        "answers": [
+          "会計は一つにしてください (Kaikei wa hitotsu ni shite kudasai)",
+          "会計を別々にしていただきたいのですが、可能ですか (O-kaikei o betsu betsu ni shite itadakitai no desu ga, kanou desu ka)",
+          "私達は会計ができません (Watashitachi wa kaikei ga dekimasen)",
+          "会計は明日でもいいですか (Kaikei wa ashita demo ii desu ka)"
+        ],
+        "correct": "会計を別々にしていただきたいのですが、可能ですか (O-kaikei o betsu betsu ni shite itadakitai no desu ga, kanou desu ka)",
+        "feedback": "Ini adalah cara yang sangat sopan dan formal. '...していただきたいのですが (...shite itadakitai no desu ga)' adalah cara merendah untuk meminta sesuatu, diikuti dengan '可能ですか (kanou desu ka)' yang berarti 'apakah mungkin?'.",
+        "image": "Restoran3-08.jpg"
+      },
+      {
+        "question": "Kalimat 'Saya akan pesan minuman dulu sampai teman saya datang' adalah...",
+        "answers": [
+          "友達が来たら、飲み物を注文します (Tomodachi ga kitara, nomimono o chuumon shimasu)",
+          "友達が来るまで、先に飲み物を注文します (Tomodachi ga kuru made, saki ni nomimono o chuumon shimasu)",
+          "友達と飲み物を注文したいです (Tomodachi to nomimono o chuumon shitai desu)",
+          "友達は飲み物を注文しません (Tomodachi wa nomimono o chuumon shimasen)"
+        ],
+        "correct": "友達が来るまで、先に飲み物を注文します (Tomodachi ga kuru made, saki ni nomimono o chuumon shimasu)",
+        "feedback": "Tata bahasa '...まで (...made)' berarti 'sampai'. '先に (Saki ni)' berarti 'terlebih dahulu'.",
+        "image": "Restoran3-09.jpg"
+      },
+      {
+        "question": "Jika ada kesalahan pada tagihan, Anda mengatakan 'Sepertinya ada kesalahan pada tagihan ini.'",
+        "answers": [
+          "この会計は完璧です (Kono kaikei wa kanpeki desu)",
+          "この会計は正しいと思います (Kono kaikei wa tadashii to omoimasu)",
+          "すみません、この会計は間違っているようです (Sumimasen, kono kaikei wa machigatte iru you desu)",
+          "会計の仕方が分かりません (Kaikei no shikata ga wakarimasen)"
+        ],
+        "correct": "すみません、この会計は間違っているようです (Sumimasen, kono kaikei wa machigatte iru you desu)",
+        "feedback": "Menggunakan '...ようです (...you desu)' yang berarti 'sepertinya' membuat pernyataan Anda lebih halus dan tidak terkesan menuduh.",
+        "image": "Restoran3-10.jpg"
+      },
+      {
+        "question": "Bagaimana cara menanyakan 'Berapa lama kira-kira kami harus menunggu?'",
+        "answers": [
+          "待ち時間はどのくらいですか (Machi jikan wa dono kurai desu ka)",
+          "ここで待ってはいけません (Koko de matte wa ikemasen)",
+          "早く案内してください (Hayaku annai shite kudasai)",
+          "待つのが嫌いです (Matsu no ga kirai desu)"
+        ],
+        "correct": "待ち時間はどのくらいですか (Machi jikan wa dono kurai desu ka)",
+        "feedback": "'待ち時間 (Machi jikan)' secara harfiah berarti 'waktu tunggu'. Ini adalah frasa yang umum digunakan saat ada antrian.",
+        "image": "Restoran3-11.jpg"
+      },
+      {
+        "question": "'Maaf mengganggu saat Anda sibuk, bisakah kami memesan?'",
+        "answers": [
+          "お忙しいところすみません、注文いいですか (O-isogashii tokoro sumimasen, chuumon ii desu ka)",
+          "暇な時に来てください (Hima na toki ni kite kudasai)",
+          "あなたはとても忙しいですね (Anata wa totemo isogashii desu ne)",
+          "注文は後でします (Chuumon wa ato de shimasu)"
+        ],
+        "correct": "お忙しいところすみません、注文いいですか (O-isogashii tokoro sumimasen, chuumon ii desu ka)",
+        "feedback": "'お忙しいところすみません (O-isogashii tokoro sumimasen)' adalah frasa pembuka yang sangat sopan untuk menunjukkan bahwa Anda menghargai waktu mereka.",
+        "image": "Restoran3-12.jpg"
+      },
+      {
+        "question": "'Makanannya luar biasa, tolong sampaikan pada koki.'",
+        "answers": [
+          "料理は普通でした、シェフに伝えてください (Ryouri wa futsuu deshita, shefu ni tsutaete kudasai)",
+          "とても美味しかったです。シェフによろしくお伝えください (Totemo oishikatta desu. Shefu ni yoroshiku o-tsutae kudasai)",
+          "シェフは誰ですか、話したいです (Shefu wa dare desu ka, hanashitai desu)",
+          "この料理はシェフが作りましたか (Kono ryouri wa shefu ga tsukurimashita ka)"
+        ],
+        "correct": "とても美味しかったです。シェフによろしくお伝えください (Totemo oishikatta desu. Shefu ni yoroshiku o-tsutae kudasai)",
+        "feedback": "'よろしくお伝えください (Yoroshiku o-tsutae kudasai)' adalah cara yang sopan untuk mengatakan 'tolong sampaikan salam saya'.",
+        "image": "Restoran3-13.jpg"
+      },
+      {
+        "question": "'Karena saya vegetarian, apakah ada menu yang direkomendasikan?'",
+        "answers": [
+          "私はベジタリアンなので、肉料理をおすすめしてください (Watashi wa bejitarian na node, niku ryouri o osusume shite kudasai)",
+          "私はベジタリアンなのですが、おすすめのメニューはありますか (Watashi wa bejitarian na no desu ga, osusume no menyuu wa arimasu ka)",
+          "ベジタリアンのメニューは美味しくないです (Bejitarian no menyuu wa oishikunai desu)",
+          "ここはベジタリアン専門店ですか (Koko wa bejitarian senmonten desu ka)"
+        ],
+        "correct": "私はベジタリアンなのですが、おすすめのメニューはありますか (Watashi wa bejitarian na no desu ga, osusume no menyuu wa arimasu ka)",
+        "feedback": "Menggunakan '...なのですが (...na no desu ga)' adalah cara yang halus untuk memberikan informasi tentang diri Anda sebelum mengajukan pertanyaan.",
+        "image": "Restoran3-14.jpg"
+      },
+      {
+        "question": "'Ini pertama kalinya saya di sini, hidangan apa yang paling populer?'",
+        "answers": [
+          "ここは初めてなんですが、一番人気なのはどれですか (Koko wa hajimete nan desu ga, ichiban ninki na no wa dore desu ka)",
+          "いつもここに来ます、一番安いのはどれですか (Itsumo koko ni kimasu, ichiban yasui no wa dore desu ka)",
+          "初めてなので、全部ください (Hajimete na node, zenbu kudasai)",
+          "一番人気なのは美味しくないと思います (Ichiban ninki na no wa oishikunai to omoimasu)"
+        ],
+        "correct": "ここは初めてなんですが、一番人気なのはどれですか (Koko wa hajimete nan desu ga, ichiban ninki na no wa dore desu ka)",
+        "feedback": "'一番人気 (Ichiban ninki)' berarti 'paling populer'. Ini adalah cara yang bagus untuk memulai jika Anda tidak tahu harus memesan apa.",
+        "image": "Restoran3-15.jpg"
+      },
+      {
+        "question": "Bagaimana cara meminta 'Bisakah saya menukar kentang goreng dengan salad?'",
+        "answers": [
+          "フライドポテトとサラダ、両方ください (Furaido poteto to sarada, ryouhou kudasai)",
+          "フライドポテトをサラダに変えてもらうことはできますか (Furaido poteto o sarada ni kaete morau koto wa dekimasu ka)",
+          "サラダの代わりにフライドポテトがいいです (Sarada no kawari ni furaido poteto ga ii desu)",
+          "フライドポテトとサラダは同じ値段ですか (Furaido poteto to sarada wa onaji nedan desu ka)"
+        ],
+        "correct": "フライドポテトをサラダに変えてもらうことはできますか (Furaido poteto o sarada ni kaete morau koto wa dekimasu ka)",
+        "feedback": "Pola '...てもらうことはできますか (...te morau koto wa dekimasu ka)' adalah cara yang sangat sopan untuk meminta seseorang melakukan sesuatu untuk Anda. '変える (kaeru)' berarti 'mengubah' atau 'mengganti'.",
+        "image": "Restoran3-16.jpg"
+      },
+      {
+        "question": "'Kami sedang terburu-buru, bisakah makanannya disajikan secepat mungkin?'",
+        "answers": [
+          "時間があるので、ゆっくり料理してください (Jikan ga aru node, yukkuri ryouri shite kudasai)",
+          "急いでいるので、料理をできるだけ早く出してもらえますか (Isoide iru node, ryouri o dekiru dake hayaku dashite moraemasu ka)",
+          "急いでいますが、待ちます (Isoide imasu ga, machimasu)",
+          "早く食べないと、電車に遅れます (Hayaku tabenai to, densha ni okuremasu)"
+        ],
+        "correct": "急いでいるので、料理をできるだけ早く出してもらえますか (Isoide iru node, ryouri o dekiru dake hayaku dashite moraemasu ka)",
+        "feedback": "'急いでいるので (Isoide iru node)' berarti 'karena sedang terburu-buru'. 'できるだけ早く (dekiru dake hayaku)' berarti 'secepat mungkin'.",
+        "image": "Restoran3-17.jpg"
+      },
+      {
+        "question": "'Tolong jangan masukkan bawang bombay ke dalam salad saya.'",
+        "answers": [
+          "私のサラダに玉ねぎをもっと入れてください (Watashi no sarada ni tamanegi o motto irete kudasai)",
+          "私のサラダに玉ねぎを入れないでください (Watashi no sarada ni tamanegi o irenaide kudasai)",
+          "このサラダは玉ねぎだけですか (Kono sarada wa tamanegi dake desu ka)",
+          "玉ねぎのサラダを注文します (Tamanegi no sarada o chuumon shimasu)"
+        ],
+        "correct": "私のサラダに玉ねぎを入れないでください (Watashi no sarada ni tamanegi o irenaide kudasai)",
+        "feedback": "Pola bentuk negatif '...ないでください (...nai de kudasai)' digunakan untuk meminta seseorang untuk tidak melakukan sesuatu.",
+        "image": "Restoran3-18.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Hidangan ini porsinya untuk berapa orang?'",
+        "answers": [
+          "この料理は何人前ですか (Kono ryouri wa nan-nin mae desu ka)",
+          "この料理は何人作りましたか (Kono ryouri wa nan-nin tsukurimashita ka)",
+          "この料理は何人食べますか (Kono ryouri wa nan-nin tabemasu ka)",
+          "この料理は何円ですか (Kono ryouri wa nan-en desu ka)"
+        ],
+        "correct": "この料理は何人前ですか (Kono ryouri wa nan-nin mae desu ka)",
+        "feedback": "'何人前 (Nan-nin mae)' adalah frasa khusus untuk menanyakan porsi makanan. Contoh: '一人前 (ichi-nin mae)' adalah porsi untuk satu orang.",
+        "image": "Restoran3-19.jpg"
+      },
+      {
+        "question": "Jika restoran penuh, Anda bisa mengatakan 'Kalau begitu, saya akan datang lagi lain kali.'",
+        "answers": [
+          "満席ですが、待ちます (Manseki desu ga, machimasu)",
+          "じゃあ、また今度来ます (Jaa, mata kondo kimasu)",
+          "どうして満席なんですか (Doushite manseki nan desu ka)",
+          "予約すれば入れますか (Yoyaku sureba hairemasu ka)"
+        ],
+        "correct": "じゃあ、また今度来ます (Jaa, mata kondo kimasu)",
+        "feedback": "'じゃあ (Jaa)' berarti 'kalau begitu'. 'また今度 (Mata kondo)' berarti 'lain kali'.",
+        "image": "Restoran3-20.jpg"
+      },
+      {
+        "question": "Untuk bertanya apakah ada set menu untuk makan siang: 'Apakah ada set makan siang?'",
+        "answers": [
+          "ランチセットはありますか (Ranchi setto wa arimasu ka)",
+          "ディナーセットはありますか (Dinaa setto wa arimasu ka)",
+          "ランチは無料ですか (Ranchi wa muryou desu ka)",
+          "ランチはもう終わりましたか (Ranchi wa mou owarimashita ka)"
+        ],
+        "correct": "ランチセットはありますか (Ranchi setto wa arimasu ka)",
+        "feedback": "Banyak restoran di Jepang menawarkan 'ランチセット (lunch set)' dengan harga terjangkau yang biasanya sudah termasuk hidangan utama, sup, dan minuman.",
+        "image": "Restoran3-21.jpg"
+      },
+      {
+        "question": "'Maaf, kami sedikit terlambat dari waktu reservasi.'",
+        "answers": [
+          "予約の時間より早く着きました (Yoyaku no jikan yori hayaku tsukimashita)",
+          "すみません、予約の時間に少し遅れてしまいました (Sumimasen, yoyaku no jikan ni sukoshi okurete shimaimashita)",
+          "予約をキャンセルしたいのですが (Yoyaku o kyanseru shitai no desu ga)",
+          "予約の時間を変更できますか (Yoyaku no jikan o henkou dekimasu ka)"
+        ],
+        "correct": "すみません、予約の時間に少し遅れてしまいました (Sumimasen, yoyaku no jikan ni sukoshi okurete shimaimashita)",
+        "feedback": "Akhiran '...てしまいました (...te shimaimashita)' memberikan nuansa penyesalan atau bahwa sesuatu terjadi di luar keinginan.",
+        "image": "Restoran3-22.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Apakah hidangan ini bisa dibuat untuk dibawa pulang?'",
+        "answers": [
+          "この料理は持ち帰りできますか (Kono ryouri wa mochikaeri dekimasu ka)",
+          "この料理はここで食べないといけません (Kono ryouri wa koko de tabenai to ikemasen)",
+          "この料理は持ち帰り専用ですか (Kono ryouri wa mochikaeri sen'you desu ka)",
+          "この料理はもう持ち帰りました (Kono ryouri wa mou mochikaerimashita)"
+        ],
+        "correct": "この料理は持ち帰りできますか (Kono ryouri wa mochikaeri dekimasu ka)",
+        "feedback": "'...できますか (...dekimasu ka)' adalah cara umum untuk menanyakan 'apakah bisa ...?'. Tidak semua hidangan (misalnya sup) bisa dibawa pulang.",
+        "image": "Restoran3-23.jpg"
+      },
+      {
+        "question": "'Saya ingin mencoba sesuatu yang khas dari daerah ini.'",
+        "answers": [
+          "この辺りの名物料理を食べてみたいです (Kono atari no meibutsu ryouri o tabete mitai desu)",
+          "外国の料理が食べたいです (Gaikoku no ryouri ga tabetai desu)",
+          "簡単な料理をお願いします (Kantan na ryouri o onegai shimasu)",
+          "この店の歴史を教えてください (Kono mise no rekishi o oshiete kudasai)"
+        ],
+        "correct": "この辺りの名物料理を食べてみたいです (Kono atari no meibutsu ryouri o tabete mitai desu)",
+        "feedback": "'名物料理 (Meibutsu ryouri)' adalah hidangan khas atau spesial dari suatu daerah. Pola '...てみたいです (...te mitai desu)' berarti 'ingin mencoba melakukan...'.",
+        "image": "Restoran3-24.jpg"
+      },
+      {
+        "question": "Untuk menanyakan apakah ada biaya tambahan (cover charge): 'Apakah ada biaya meja?'",
+        "answers": [
+          "テーブルは無料ですか (Teeburu wa muryou desu ka)",
+          "チャージはかかりますか (Chaaji wa kakarimasu ka)",
+          "サービス料は含まれていますか (Saabisu ryou wa fukumarete imasu ka)",
+          "ここは高いですか (Koko wa takai desu ka)"
+        ],
+        "correct": "チャージはかかりますか (Chaaji wa kakarimasu ka)",
+        "feedback": "Beberapa bar atau izakaya (pub Jepang) memberlakukan 'table charge' atau 'お通し代 (otoushi dai)' yang sudah termasuk camilan kecil.",
+        "image": "Restoran3-25.jpg"
+      },
+      {
+        "question": "'Tolong pisahkan tagihan menjadi tiga bagian yang sama.'",
+        "answers": [
+          "会計は全部で一つにしてください (Kaikei wa zenbu de hitotsu ni shite kudasai)",
+          "会計を三等分にしてください (Kaikei o san-toubun ni shite kudasai)",
+          "三人ですが、会計は一人です (San-nin desu ga, kaikei wa hitori desu)",
+          "三つの会計をお願いします (Mittsu no kaikei o onegai shimasu)"
+        ],
+        "correct": "会計を三等分にしてください (Kaikei o san-toubun ni shite kudasai)",
+        "feedback": "'三等分 (San-toubun)' berarti 'dibagi tiga sama rata'. Ini adalah cara lain dari '割り勘 (warikan)'.",
+        "image": "Restoran3-26.jpg"
+      },
+      {
+        "question": "'Bisakah Anda memberitahu saya jika hidangan ini mengandung produk susu?'",
+        "answers": [
+          "この料理に乳製品が入っているか教えてください (Kono ryouri ni nyuuseihin ga haitte iru ka oshiete kudasai)",
+          "この料理に肉が入っていますか (Kono ryouri ni niku ga haitte imasu ka)",
+          "乳製品のアレルギーはありません (Nyuuseihin no arerugii wa arimasen)",
+          "この料理は牛乳で作りましたか (Kono ryouri wa gyuunyuu de tsukurimashita ka)"
+        ],
+        "correct": "この料理に乳製品が入っているか教えてください (Kono ryouri ni nyuuseihin ga haitte iru ka oshiete kudasai)",
+        "feedback": "'乳製品 (Nyuuseihin)' berarti produk susu. '...か教えてください (...ka oshiete kudasai)' adalah cara sopan untuk meminta informasi.",
+        "image": "Restoran3-27.jpg"
+      },
+      {
+        "question": "Bagaimana cara mengatakan 'Bolehkah kami duduk di sini sampai toko tutup?'",
+        "answers": [
+          "閉店時間なので、帰ります (Heiten jikan na node, kaerimasu)",
+          "閉店時間までここにいても大丈夫ですか (Heiten jikan made koko ni ite mo daijoubu desu ka)",
+          "開店時間は何時ですか (Kaiten jikan wa nanji desu ka)",
+          "もう閉店しましたか (Mou heiten shimashita ka)"
+        ],
+        "correct": "閉店時間までここにいても大丈夫ですか (Heiten jikan made koko ni ite mo daijoubu desu ka)",
+        "feedback": "'閉店時間 (Heiten jikan)' adalah waktu tutup. Pola '...ても大丈夫ですか (...te mo daijoubu desu ka)' berarti 'apakah tidak apa-apa jika...'.",
+        "image": "Restoran3-28.jpg"
+      },
+      {
+        "question": "'Apakah ada menu khusus untuk anak-anak?'",
+        "answers": [
+          "子供は入店できますか (Kodomo wa nyuuten dekimasu ka)",
+          "子供向けのメニューはありますか (Kodomo-muke no menyuu wa arimasu ka)",
+          "大人のメニューをください (Otona no menyuu o kudasai)",
+          "子供は無料ですか (Kodomo wa muryou desu ka)"
+        ],
+        "correct": "子供向けのメニューはありますか (Kodomo-muke no menyuu wa arimasu ka)",
+        "feedback": "Akhiran '...向け (...muke)' berarti 'ditujukan untuk...' atau 'untuk...'. Jadi '子供向け (Kodomo-muke)' berarti 'untuk anak-anak'.",
+        "image": "Restoran3-29.jpg"
+      },
+      {
+        "question": "'Bisakah saya mendapatkan rekomendasi sake yang tidak terlalu manis?'",
+        "answers": [
+          "一番甘い日本酒はどれですか (Ichiban amai nihonshu wa dore desu ka)",
+          "あまり甘くない日本酒でおすすめはありますか (Amari amakunai nihonshu de osusume wa arimasu ka)",
+          "日本酒は飲みません (Nihonshu wa nomimasen)",
+          "辛口の日本酒が好きです (Karakuchi no nihonshu ga suki desu)"
+        ],
+        "correct": "あまり甘くない日本酒でおすすめはありますか (Amari amakunai nihonshu de osusume wa arimasu ka)",
+        "feedback": "'あまり...ない (Amari...nai)' berarti 'tidak terlalu...'. Untuk sake, '甘口 (amakuchi)' berarti manis dan '辛口 (karakuchi)' berarti kering/tidak manis.",
+        "image": "Restoran3-30.jpg"
+      },
+      {
+        "question": "'Saya ingin memesan hidangan yang sama dengan yang ada di foto ini.'",
+        "answers": [
+          "この写真と違う料理をください (Kono shashin to chigau ryouri o kudasai)",
+          "この写真の料理をお願いします (Kono shashin no ryouri o onegai shimasu)",
+          "この写真はいくらですか (Kono shashin wa ikura desu ka)",
+          "料理の写真を撮ってもいいですか (Ryouri no shashin o totte mo ii desu ka)"
+        ],
+        "correct": "この写真の料理をお願いします (Kono shashin no ryouri o onegai shimasu)",
+        "feedback": "Ini adalah cara yang sangat praktis untuk memesan, terutama jika ada kendala bahasa. Cukup tunjukkan foto di menu.",
+        "image": "Restoran3-31.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Apakah wifi tersedia di sini?'",
+        "answers": [
+          "ここで充電できますか (Koko de juuden dekimasu ka)",
+          "ワイファイはありますか (Wai Fai wa arimasu ka)",
+          "電話を使ってもいいですか (Denwa o tsukatte mo ii desu ka)",
+          "コンピューターを持っています (Konpyuutaa o motte imasu)"
+        ],
+        "correct": "ワイファイはありますか (Wai Fai wa arimasu ka)",
+        "feedback": "Banyak restoran dan kafe di Jepang menyediakan Wi-Fi gratis untuk pelanggan.",
+        "image": "Restoran3-32.jpg"
+      },
+      {
+        "question": "'Apakah hidangan ini menggunakan bawang putih?'",
+        "answers": [
+          "この料理はニンニクを使っていますか (Kono ryouri wa ninniku o tsukatte imasu ka)",
+          "ニンニク抜きでお願いします (Ninniku nuki de onegai shimasu)",
+          "ニンニクを追加してください (Ninniku o tsuika shite kudasai)",
+          "ニンニクアレルギーです (Ninniku arerugii desu)"
+        ],
+        "correct": "この料理はニンニクを使っていますか (Kono ryouri wa ninniku o tsukatte imasu ka)",
+        "feedback": "'ニンニク (Ninniku)' adalah bawang putih. '...を使っていますか (...o tsukatte imasu ka)' berarti 'apakah menggunakan...?'.",
+        "image": "Restoran3-33.jpg"
+      },
+      {
+        "question": "'Kami ingin duduk di area yang tenang jika memungkinkan.'",
+        "answers": [
+          "賑やかな席がいいです (Nigiyaka na seki ga ii desu)",
+          "できれば、静かな席をお願いします (Dekireba, shizuka na seki o onegai shimasu)",
+          "どこでもいいです (Doko demo ii desu)",
+          "音楽が大きいですね (Ongaku ga ookii desu ne)"
+        ],
+        "correct": "できれば、静かな席をお願いします (Dekireba, shizuka na seki o onegai shimasu)",
+        "feedback": "'できれば (Dekireba)' berarti 'jika memungkinkan', membuat permintaan Anda terdengar lebih sopan. '静かな (Shizuka na)' berarti tenang.",
+        "image": "Restoran3-34.jpg"
+      },
+      {
+        "question": "'Apakah mungkin untuk mendapatkan porsi setengah dari hidangan ini?'",
+        "answers": [
+          "この料理を大盛りにできますか (Kono ryouri o oomori ni dekimasu ka)",
+          "この料理を半分にすることは可能ですか (Kono ryouri o hanbun ni suru koto wa kanou desu ka)",
+          "この料理を二つください (Kono ryouri o futatsu kudasai)",
+          "この料理は半分残します (Kono ryouri wa hanbun nokoshimasu)"
+        ],
+        "correct": "この料理を半分にすることは可能ですか (Kono ryouri o hanbun ni suru koto wa kanou desu ka)",
+        "feedback": "'半分 (Hanbun)' berarti setengah. Beberapa restoran mungkin menawarkan porsi setengah dengan harga lebih murah, tetapi tidak selalu.",
+        "image": "Restoran3-35.jpg"
+      },
+      {
+        "question": "'Untuk hidangan penutup, saya akan lihat menunya lagi nanti.'",
+        "answers": [
+          "デザートは要りません (Dezaato wa irimasen)",
+          "デザートは後でまたメニューを見ます (Dezaato wa ato de mata menyuu o mimasu)",
+          "先にデザートをください (Saki ni dezaato o kudasai)",
+          "デザートメニューはこれだけですか (Dezaato menyuu wa kore dake desu ka)"
+        ],
+        "correct": "デザートは後でまたメニューを見ます (Dezaato wa ato de mata menyuu o mimasu)",
+        "feedback": "'後で (Ato de)' berarti 'nanti', dan 'また (mata)' berarti 'lagi'. Ini cara yang baik untuk mengatakan Anda belum siap memesan hidangan penutup.",
+        "image": "Restoran3-36.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Apakah restoran ini ramah untuk pengguna kursi roda?'",
+        "answers": [
+          "このレストランは車椅子で入れますか (Kono resutoran wa kuruma-isu de hairemasu ka)",
+          "階段はありますか (Kaidan wa arimasu ka)",
+          "エレベーターはどこですか (Erebeetaa wa doko desu ka)",
+          "車椅子を貸してください (Kuruma-isu o kashite kudasai)"
+        ],
+        "correct": "このレストランは車椅子で入れますか (Kono resutoran wa kuruma-isu de hairemasu ka)",
+        "feedback": "'車椅子 (Kuruma-isu)' berarti kursi roda. '...で入れますか (...de hairemasu ka)' berarti 'apakah bisa masuk dengan...'.",
+        "image": "Restoran3-37.jpg"
+      },
+      {
+        "question": "'Karena alasan agama, saya tidak makan daging babi.'",
+        "answers": [
+          "宗教上の理由で、豚肉は食べられません (Shuukyou-jou no riyuu de, butaniku wa taberaremasen)",
+          "豚肉が大好きなので、たくさんください (Butaniku ga daisuki na node, takusan kudasai)",
+          "宗教は関係なく、何でも食べます (Shuukyou wa kankei naku, nandemo tabemasu)",
+          "豚肉は健康にいいですか (Butaniku wa kenkou ni ii desu ka)"
+        ],
+        "correct": "宗教上の理由で、豚肉は食べられません (Shuukyou-jou no riyuu de, butaniku wa taberaremasen)",
+        "feedback": "'宗教上の理由で (Shuukyou-jou no riyuu de)' adalah cara yang jelas dan sopan untuk menjelaskan batasan diet Anda karena alasan agama.",
+        "image": "Restoran3-38.jpg"
+      },
+      {
+        "question": "'Apa hidangan musiman yang Anda rekomendasikan saat ini?'",
+        "answers": [
+          "今、おすすめの季節の料理は何ですか (Ima, osusume no kisetsu no ryouri wa nan desu ka)",
+          "一年中同じメニューですか (Ichinenjuu onaji menyuu desu ka)",
+          "冬の料理が好きです (Fuyu no ryouri ga suki desu)",
+          "この料理はいつの季節のものですか (Kono ryouri wa itsu no kisetsu no mono desu ka)"
+        ],
+        "correct": "今、おすすめの季節の料理は何ですか (Ima, osusume no kisetsu no ryouri wa nan desu ka)",
+        "feedback": "Masakan Jepang sangat menghargai musim. '季節の料理 (Kisetsu no ryouri)' berarti 'hidangan musiman', menggunakan bahan-bahan segar yang terbaik pada musim itu.",
+        "image": "Restoran3-39.jpg"
+      },
+      {
+        "question": "'Apakah saya bisa mendapatkan garpu dan pisau, bukan sumpit?'",
+        "answers": [
+          "箸の代わりに、フォークとナイフをもらえますか (Hashi no kawari ni, fooku to naifu o moraemasu ka)",
+          "箸とフォークとナイフ、全部ください (Hashi to fooku to naifu, zenbu kudasai)",
+          "ここでは箸しか使えませんか (Koko de wa hashi shika tsukaemasen ka)",
+          "フォークとナイフの使い方が分かりません (Fooku to naifu no tsukaikata ga wakarimasen)"
+        ],
+        "correct": "箸の代わりに、フォークとナイフをもらえますか (Hashi no kawari ni, fooku to naifu o moraemasu ka)",
+        "feedback": "'...の代わりに (...no kawari ni)' berarti 'sebagai ganti dari...'. Sebagian besar restoran akan menyediakan peralatan makan barat jika diminta.",
+        "image": "Restoran3-40.jpg"
+      },
+      {
+        "question": "'Kami ingin memesan satu set hidangan lengkap dari pembuka hingga penutup.'",
+        "answers": [
+          "コース料理を一つお願いします (Koosu ryouri o hitotsu onegai shimasu)",
+          "アラカルトで注文します (Arakaruto de chuumon shimasu)",
+          "前菜とデザートだけください (Zensai to dezaato dake kudasai)",
+          "飲み放題はありますか (Nomihoudai wa arimasu ka)"
+        ],
+        "correct": "コース料理を一つお願いします (Koosu ryouri o hitotsu onegai shimasu)",
+        "feedback": "'コース料理 (Koosu ryouri)' atau 'set course' adalah menu lengkap dengan beberapa hidangan yang sudah ditentukan, seringkali dengan harga yang lebih baik daripada memesan 'a la carte'.",
+        "image": "Restoran3-41.jpg"
+      },
+      {
+        "question": "Bagaimana cara mengatakan 'Apakah ada tempat untuk mengisi daya ponsel saya?'",
+        "answers": [
+          "携帯電話を充電できる場所はありますか (Keitai denwa o juuden dekiru basho wa arimasu ka)",
+          "ここで携帯電話を使ってはいけません (Koko de keitai denwa o tsukatte wa ikemasen)",
+          "私の携帯電話は壊れました (Watashi no keitai denwa wa kowaremashita)",
+          "公衆電話はどこですか (Koushuu denwa wa doko desu ka)"
+        ],
+        "correct": "携帯電話を充電できる場所はありますか (Keitai denwa o juuden dekiru basho wa arimasu ka)",
+        "feedback": "'充電できる場所 (Juuden dekiru basho)' berarti 'tempat di mana bisa mengisi daya'. Beberapa kafe dan restoran menyediakan stopkontak untuk pelanggan.",
+        "image": "Restoran3-42.jpg"
+      },
+      {
+        "question": "'Meskipun saya tidak punya reservasi, apakah ada kemungkinan untuk mendapatkan tempat duduk?'",
+        "answers": [
+          "予約がないと入れませんか (Yoyaku ga nai to hairemasen ka)",
+          "予約していますが、入れますか (Yoyaku shite imasu ga, hairemasu ka)",
+          "これから予約したいのですが (Korekara yoyaku shitai no desu ga)",
+          "予約なしですが、席はありますでしょうか (Yoyaku nashi desu ga, seki wa arimasu deshou ka)"
+        ],
+        "correct": "予約なしですが、席はありますでしょうか (Yoyaku nashi desu ga, seki wa arimasu deshou ka)",
+        "feedback": "'予約なし (Yoyaku nashi)' berarti 'tanpa reservasi'. Menggunakan '...でしょうか (...deshou ka)' membuat pertanyaan menjadi sangat sopan dan tidak memaksa.",
+        "image": "Restoran3-43.jpg"
+      },
+      {
+        "question": "'Apakah ada paket minum sepuasnya?'",
+        "answers": [
+          "飲み放題プランはありますか (Nomihoudai puran wa arimasu ka)",
+          "食べ放題は好きではありません (Tabehoudai wa suki dewa arimasen)",
+          "飲み物は一杯だけでいいです (Nomimono wa ippai dake de ii desu)",
+          "お水は無料ですか (O-mizu wa muryou desu ka)"
+        ],
+        "correct": "飲み放題プランはありますか (Nomihoudai puran wa arimasu ka)",
+        "feedback": "'飲み放題 (Nomihoudai)' berarti 'minum sepuasnya' untuk jangka waktu tertentu. Ini sangat populer di izakaya. Pasangannya adalah '食べ放題 (tabehoudai)' atau 'makan sepuasnya'.",
+        "image": "Restoran3-44.jpg"
+      },
+      {
+        "question": "'Bisakah sausnya disajikan terpisah?'",
+        "answers": [
+          "ソースをたくさんかけてください (Soosu o takusan kakete kudasai)",
+          "ソースは別添えにできますか (Soosu wa betsuzoe ni dekimasu ka)",
+          "この料理にソースはありますか (Kono ryouri ni soosu wa arimasu ka)",
+          "ソースなしでお願いします (Soosu nashi de onegai shimasu)"
+        ],
+        "correct": "ソースは別添えにできますか (Soosu wa betsuzoe ni dekimasu ka)",
+        "feedback": "'別添え (Betsuzoe)' berarti 'disajikan terpisah'. Ini berguna jika Anda ingin mengontrol jumlah saus atau bumbu.",
+        "image": "Restoran3-45.jpg"
+      },
+      {
+        "question": "Bagaimana cara memuji 'Suasananya sangat bagus di restoran ini.'",
+        "answers": [
+          "この店は雰囲気がとてもいいですね (Kono mise wa fun'iki ga totemo ii desu ne)",
+          "この店はとてもうるさいですね (Kono mise wa totemo urusai desu ne)",
+          "この店の場所が分かりにくいです (Kono mise no basho ga wakarinikui desu)",
+          "この店はサービスが悪いですね (Kono mise wa saabisu ga warui desu ne)"
+        ],
+        "correct": "この店は雰囲気がとてもいいですね (Kono mise wa fun'iki ga totemo ii desu ne)",
+        "feedback": "'雰囲気 (Fun'iki)' berarti 'suasana' atau 'atmosfer'. Ini adalah pujian yang bagus untuk interior, musik, dan suasana umum restoran.",
+        "image": "Restoran3-46.jpg"
+      },
+      {
+        "question": "'Bisakah Anda memanggilkan taksi untuk kami setelah kami selesai?'",
+        "answers": [
+          "帰りにタクシーを呼んでいただけますか (Kaeri ni takushii o yonde itadakemasu ka)",
+          "ここから駅まで歩けますか (Koko kara eki made arukemasu ka)",
+          "タクシーでここに来ました (Takushii de koko ni kimashita)",
+          "タクシーの運転手は誰ですか (Takushii no untenshu wa dare desu ka)"
+        ],
+        "correct": "帰りにタクシーを呼んでいただけますか (Kaeri ni takushii o yonde itadakemasu ka)",
+        "feedback": "'呼んでいただけますか (Yonde itadakemasu ka)' adalah cara yang sangat sopan untuk meminta seseorang memanggilkan sesuatu untuk Anda. '帰り (Kaeri)' berarti 'saat pulang'.",
+        "image": "Restoran3-47.jpg"
+      },
+      {
+        "question": "'Saya akan membayar bagian saya sebesar 3000 yen.'",
+        "answers": [
+          "私は3000円払いたくないです (Watashi wa sanzen-en haraitakunai desu)",
+          "私の分は3000円払います (Watashi no bun wa sanzen-en haraimasu)",
+          "全部で3000円ですか (Zenbu de sanzen-en desu ka)",
+          "3000円貸してください (Sanzen-en kashite kudasai)"
+        ],
+        "correct": "私の分は3000円払います (Watashi no bun wa sanzen-en haraimasu)",
+        "feedback": "'私の分 (Watashi no bun)' berarti 'bagian saya'. Ini berguna saat membayar '別々 (betsu betsu)' tetapi dengan jumlah yang berbeda-beda.",
+        "image": "Restoran3-48.jpg"
+      },
+      {
+        "question": "'Apakah hidangan ini cukup untuk dibagikan berdua?'",
+        "answers": [
+          "この料理は二人でシェアするには十分ですか (Kono ryouri wa futari de shea suru ni wa juubun desu ka)",
+          "この料理は一人前です (Kono ryouri wa ichi-nin mae desu)",
+          "二人で全部食べられますか (Futari de zenbu taberaremasu ka)",
+          "この料理は分けられません (Kono ryouri wa wakeraremasen)"
+        ],
+        "correct": "この料理は二人でシェアするには十分ですか (Kono ryouri wa futari de shea suru ni wa juubun desu ka)",
+        "feedback": "'シェアする (Shea suru)' adalah kata serapan dari 'share'. '十分ですか (Juubun desu ka)' berarti 'apakah cukup?'.",
+        "image": "Restoran3-49.jpg"
+      },
+      {
+        "question": "'Terima kasih atas hidangan yang lezat. Kami pasti akan kembali lagi.'",
+        "answers": [
+          "ごちそうさまでした。たぶんもう来ません (Gochisousama deshita. Tabun mou kimasen)",
+          "美味しかったです。また必ず来ます (Oishikatta desu. Mata kanarazu kimasu)",
+          "お腹いっぱいです。もう何も食べられません (Onaka ippai desu. Mou nani mo taberaremasen)",
+          "会計はまだですか。急いでいます (Kaikei wa mada desu ka. Isoide imasu)"
+        ],
+        "correct": "美味しかったです。また必ず来ます (Oishikatta desu. Mata kanarazu kimasu)",
+        "feedback": "'また必ず来ます (Mata kanarazu kimasu)' berarti 'pasti akan datang lagi'. Ini adalah pujian tertinggi yang bisa Anda berikan kepada sebuah restoran.",
+        "image": "Restoran3-50.jpg"
+      }
+    ]
+  }
+}

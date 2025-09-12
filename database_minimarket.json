@@ -1,0 +1,1814 @@
+{
+  "level1": {
+    "Minimarket": [
+      {
+        "question": "Apa bahasa Jepang untuk 'bola nasi'?",
+        "answers": [
+          "弁当 (Bentou)",
+          "パン (Pan)",
+          "おにぎり (Onigiri)",
+          "寿司 (Sushi)"
+        ],
+        "correct": "おにぎり (Onigiri)",
+        "feedback": "'おにぎり (Onigiri)' adalah bola nasi, camilan klasik di konbini. 'Bentou' adalah kotak makan siang, 'Pan' adalah roti, dan 'Sushi' adalah sushi.",
+        "image": "Minimarket1-01.jpg"
+      },
+      {
+        "question": "Bagaimana Anda menyebut 'kotak makan siang'?",
+        "answers": [
+          "お弁当 (Obentou)",
+          "サンドイッチ (Sandoitchi)",
+          "飲み物 (Nomimono)",
+          "お菓子 (Okashi)"
+        ],
+        "correct": "お弁当 (Obentou)",
+        "feedback": "'お弁当 (Obentou)' adalah kotak makan siang lengkap yang sangat populer. 'Sandoitchi' adalah sandwich, 'Nomimono' adalah minuman, 'Okashi' adalah camilan.",
+        "image": "Minimarket1-02.jpg"
+      },
+      {
+        "question": "Kata untuk 'mesin kasir' dalam bahasa Jepang adalah...",
+        "answers": [
+          "レジ (Reji)",
+          "テーブル (Teeburu)",
+          "ドア (Doa)",
+          "椅子 (Isu)"
+        ],
+        "correct": "レジ (Reji)",
+        "feedback": "'レジ (Reji)' adalah kata serapan dari bahasa Inggris 'cash register'. Di sinilah Anda membayar belanjaan Anda.",
+        "image": "Minimarket1-03.jpg"
+      },
+      {
+        "question": "Apa sebutan untuk 'tas plastik'?",
+        "answers": [
+          "箸 (Hashi)",
+          "傘 (Kasa)",
+          "本 (Hon)",
+          "袋 (Fukuro)"
+        ],
+        "correct": "袋 (Fukuro)",
+        "feedback": "'袋 (Fukuro)' berarti tas atau kantong. Staf akan bertanya apakah Anda memerlukannya dengan mengatakan '袋はご利用ですか (Fukuro wa go-riyou desu ka)'.",
+        "image": "Minimarket1-04.jpg"
+      },
+      {
+        "question": "Bagaimana cara mengatakan 'panas' atau 'hangat' untuk makanan?",
+        "answers": [
+          "冷たい (Tsumetai)",
+          "温かい (Atatakai)",
+          "新しい (Atarashii)",
+          "古い (Furui)"
+        ],
+        "correct": "温かい (Atatakai)",
+        "feedback": "'温かい (Atatakai)' digunakan untuk makanan atau minuman hangat. Staf akan bertanya '温めますか (Atatamemasu ka?)' untuk memanaskan bento Anda.",
+        "image": "Minimarket1-05.jpg"
+      },
+      {
+        "question": "Kata untuk 'minuman' secara umum adalah...",
+        "answers": [
+          "食べ物 (Tabemono)",
+          "飲み物 (Nomimono)",
+          "おやつ (Oyatsu)",
+          "デザート (Dezaato)"
+        ],
+        "correct": "飲み物 (Nomimono)",
+        "feedback": "'飲み物 (Nomimono)' berarti minuman. Konbini memiliki berbagai macam minuman dingin dan panas.",
+        "image": "Minimarket1-06.jpg"
+      },
+      {
+        "question": "Apa bahasa Jepang untuk 'uang kembalian'?",
+        "answers": [
+          "お金 (Okane)",
+          "現金 (Genkin)",
+          "お釣り (Otsuri)",
+          "カード (Kaado)"
+        ],
+        "correct": "お釣り (Otsuri)",
+        "feedback": "'お釣り (Otsuri)' adalah uang kembalian yang Anda terima setelah membayar. 'Okane' adalah uang, dan 'Genkin' adalah uang tunai.",
+        "image": "Minimarket1-07.jpg"
+      },
+      {
+        "question": "Bagaimana Anda menyebut 'struk' atau 'bon'?",
+        "answers": [
+          "領収書 (Ryoushuusho)",
+          "雑誌 (Zasshi)",
+          "新聞 (Shinbun)",
+          "手紙 (Tegami)"
+        ],
+        "correct": "領収書 (Ryoushuusho)",
+        "feedback": "'領収書 (Ryoushuusho)' adalah struk resmi. Staf mungkin bertanya 'レシートはよろしいですか (Reshiito wa yoroshii desu ka?)', menggunakan kata serapan 'receipt'.",
+        "image": "Minimarket1-08.jpg"
+      },
+      {
+        "question": "Kata untuk 'staf toko' adalah...",
+        "answers": [
+          "お客さん (Okyaku-san)",
+          "店員 (Ten'in)",
+          "店長 (Tenchou)",
+          "友達 (Tomodachi)"
+        ],
+        "correct": "店員 (Ten'in)",
+        "feedback": "'店員 (Ten'in)' adalah staf atau pegawai toko. 'Tenchou' adalah manajer toko.",
+        "image": "Minimarket1-09.jpg"
+      },
+      {
+        "question": "Apa bahasa Jepang untuk 'ATM'?",
+        "answers": [
+          "コピー機 (Kopiiki)",
+          "トイレ (Toire)",
+          "ATM (Ee-tii-emu)",
+          "ポスト (Posuto)"
+        ],
+        "correct": "ATM (Ee-tii-emu)",
+        "feedback": "Sama seperti bahasa Indonesia, 'ATM' diucapkan dengan pelafalan Inggris. Banyak konbini memiliki ATM yang dapat digunakan 24 jam.",
+        "image": "Minimarket1-10.jpg"
+      },
+      {
+        "question": "Bagaimana cara mengatakan 'roti'?",
+        "answers": [
+          "ご飯 (Gohan)",
+          "麺 (Men)",
+          "パン (Pan)",
+          "肉 (Niku)"
+        ],
+        "correct": "パン (Pan)",
+        "feedback": "'パン (Pan)' berasal dari bahasa Portugis dan berarti roti. Konbini terkenal dengan berbagai macam roti manis dan gurih.",
+        "image": "Minimarket1-11.jpg"
+      },
+      {
+        "question": "Kata untuk 'air' dalam bahasa Jepang adalah...",
+        "answers": [
+          "お茶 (Ocha)",
+          "牛乳 (Gyuunyuu)",
+          "ジュース (Juusu)",
+          "水 (Mizu)"
+        ],
+        "correct": "水 (Mizu)",
+        "feedback": "'水 (Mizu)' berarti air. Anda dapat menemukan berbagai merek air mineral di bagian minuman.",
+        "image": "Minimarket1-12.jpg"
+      },
+      {
+        "question": "Apa sebutan untuk 'ayam goreng'?",
+        "answers": [
+          "唐揚げ (Karaage)",
+          "焼き鳥 (Yakitori)",
+          "天ぷら (Tenpura)",
+          "カツ (Katsu)"
+        ],
+        "correct": "唐揚げ (Karaage)",
+        "feedback": "'唐揚げ (Karaage)' adalah ayam goreng tanpa tulang yang populer dan dijual di etalase penghangat dekat kasir.",
+        "image": "Minimarket1-13.jpg"
+      },
+      {
+        "question": "Bagaimana Anda menyebut 'bakpao daging'?",
+        "answers": [
+          "あんまん (Anman)",
+          "肉まん (Nikuman)",
+          "ピザまん (Pizaman)",
+          "カレーまん (Kareeman)"
+        ],
+        "correct": "肉まん (Nikuman)",
+        "feedback": "'肉まん (Nikuman)' adalah bakpao isi daging. 'Anman' isi pasta kacang merah, 'Pizaman' isi pizza, dan 'Kareeman' isi kari.",
+        "image": "Minimarket1-14.jpg"
+      },
+      {
+        "question": "Kata untuk 'kartu poin' adalah...",
+        "answers": [
+          "クレジットカード (Kurejitto kaado)",
+          "ポイントカード (Pointo kaado)",
+          "会員カード (Kaiin kaado)",
+          "名刺 (Meishi)"
+        ],
+        "correct": "ポイントカード (Pointo kaado)",
+        "feedback": "'ポイントカード (Pointo kaado)' adalah kartu untuk mengumpulkan poin. Staf akan bertanya 'ポイントカードはお持ちですか (Pointo kaado wa o-mochi desu ka)'.",
+        "image": "Minimarket1-15.jpg"
+      },
+      {
+        "question": "Apa bahasa Jepang untuk 'majalah'?",
+        "answers": [
+          "雑誌 (Zasshi)",
+          "新聞 (Shinbun)",
+          "本 (Hon)",
+          "漫画 (Manga)"
+        ],
+        "correct": "雑誌 (Zasshi)",
+        "feedback": "'雑誌 (Zasshi)' adalah majalah. Konbini memiliki rak khusus untuk berbagai majalah dan manga.",
+        "image": "Minimarket1-16.jpg"
+      },
+      {
+        "question": "Bagaimana cara mengatakan 'dingin' (untuk minuman)?",
+        "answers": [
+          "熱い (Atsui)",
+          "温かい (Atatakai)",
+          "冷たい (Tsumetai)",
+          "寒い (Samui)"
+        ],
+        "correct": "冷たい (Tsumetai)",
+        "feedback": "'冷たい (Tsumetai)' berarti dingin. Anda akan melihat label ini di kulkas minuman.",
+        "image": "Minimarket1-17.jpg"
+      },
+      {
+        "question": "Kata untuk 'kopi' adalah...",
+        "answers": [
+          "紅茶 (Koucha)",
+          "緑茶 (Ryokucha)",
+          "コーヒー (Koohii)",
+          "牛乳 (Gyuunyuu)"
+        ],
+        "correct": "コーヒー (Koohii)",
+        "feedback": "'コーヒー (Koohii)' adalah kopi. Banyak konbini memiliki mesin kopi self-service yang menyajikan kopi segar.",
+        "image": "Minimarket1-18.jpg"
+      },
+      {
+        "question": "Apa sebutan untuk 'camilan' atau 'kue'?",
+        "answers": [
+          "飲み物 (Nomimono)",
+          "ご飯 (Gohan)",
+          "お菓子 (Okashi)",
+          "野菜 (Yasai)"
+        ],
+        "correct": "お菓子 (Okashi)",
+        "feedback": "'お菓子 (Okashi)' adalah istilah umum untuk camilan, permen, dan kue. Ada lorong khusus untuk ini.",
+        "image": "Minimarket1-19.jpg"
+      },
+      {
+        "question": "Bagaimana Anda menyebut 'pintu masuk'?",
+        "answers": [
+          "出口 (Deguchi)",
+          "入り口 (Iriguchi)",
+          "窓 (Mado)",
+          "レジ (Reji)"
+        ],
+        "correct": "入り口 (Iriguchi)",
+        "feedback": "'入り口 (Iriguchi)' adalah pintu masuk. Biasanya pintu otomatis.",
+        "image": "Minimarket1-20.jpg"
+      },
+      {
+        "question": "Kata untuk 'payung' dalam bahasa Jepang adalah...",
+        "answers": [
+          "傘 (Kasa)",
+          "靴 (Kutsu)",
+          "帽子 (Boushi)",
+          "鞄 (Kaban)"
+        ],
+        "correct": "傘 (Kasa)",
+        "feedback": "'傘 (Kasa)' berarti payung. Konbini selalu menjual payung plastik bening saat hujan.",
+        "image": "Minimarket1-21.jpg"
+      },
+      {
+        "question": "Apa bahasa Jepang untuk 'pembayaran'?",
+        "answers": [
+          "注文 (Chuumon)",
+          "予約 (Yoyaku)",
+          "会計 (Kaikei)",
+          "割引 (Waribiki)"
+        ],
+        "correct": "会計 (Kaikei)",
+        "feedback": "'会計 (Kaikei)' atau 'お会計 (Okaikei)' berarti pembayaran atau tagihan. Ini adalah proses terakhir di kasir.",
+        "image": "Minimarket1-22.jpg"
+      },
+      {
+        "question": "Bagaimana cara mengatakan 'diskon'?",
+        "answers": [
+          "値段 (Nedan)",
+          "無料 (Muryou)",
+          "高い (Takai)",
+          "割引 (Waribiki)"
+        ],
+        "correct": "割引 (Waribiki)",
+        "feedback": "'割引 (Waribiki)' berarti diskon. Cari stiker diskon pada produk yang mendekati tanggal kedaluwarsa.",
+        "image": "Minimarket1-23.jpg"
+      },
+      {
+        "question": "Kata untuk 'es krim' adalah...",
+        "answers": [
+          "氷 (Koori)",
+          "アイスクリーム (Aisukuriimu)",
+          "ケーキ (Keeki)",
+          "プリン (Purin)"
+        ],
+        "correct": "アイスクリーム (Aisukuriimu)",
+        "feedback": "'アイスクリーム (Aisukuriimu)' atau disingkat 'アイス (aisu)' adalah es krim. Ada freezer khusus yang penuh dengan berbagai jenis es krim.",
+        "image": "Minimarket1-24.jpg"
+      },
+      {
+        "question": "Apa sebutan untuk 'mie instan'?",
+        "answers": [
+          "ラーメン (Raamen)",
+          "うどん (Udon)",
+          "そば (Soba)",
+          "カップ麺 (Kappu men)"
+        ],
+        "correct": "カップ麺 (Kappu men)",
+        "feedback": "'カップ麺 (Kappu men)' atau 'cup noodles' adalah mie instan dalam mangkuk. Konbini menyediakan air panas untuk menyeduhnya.",
+        "image": "Minimarket1-25.jpg"
+      },
+      {
+        "question": "Bahasa Jepang untuk 'termasuk pajak' adalah...",
+        "answers": [
+          "税抜き (Zeinuki)",
+          "税込み (Zeikomi)",
+          "送料無料 (Souryou muryou)",
+          "手数料 (Tesuuryou)"
+        ],
+        "correct": "税込み (Zeikomi)",
+        "feedback": "'税込み (Zeikomi)' berarti harga sudah termasuk pajak. Sebagian besar harga yang tertera di konbini adalah harga 'zeikomi'.",
+        "image": "Minimarket1-26.jpg"
+      },
+      {
+        "question": "Apa kata untuk 'membeli'?",
+        "answers": [
+          "売る (Uru)",
+          "買う (Kau)",
+          "払う (Harau)",
+          "もらう (Morau)"
+        ],
+        "correct": "買う (Kau)",
+        "feedback": "'買う (Kau)' adalah kata kerja untuk membeli. 'Uru' adalah menjual.",
+        "image": "Minimarket1-27.jpg"
+      },
+      {
+        "question": "Bagaimana Anda menyebut 'mesin fotokopi'?",
+        "answers": [
+          "コピー機 (Kopiiki)",
+          "電話 (Denwa)",
+          "テレビ (Terebi)",
+          "パソコン (Pasokon)"
+        ],
+        "correct": "コピー機 (Kopiiki)",
+        "feedback": "'コピー機 (Kopiiki)' atau mesin fotokopi serbaguna tersedia di hampir semua konbini. Anda bisa fotokopi, print, scan, bahkan membeli tiket.",
+        "image": "Minimarket1-28.jpg"
+      },
+      {
+        "question": "Kata untuk 'susu' adalah...",
+        "answers": [
+          "牛乳 (Gyuunyuu)",
+          "豆乳 (Tounyuu)",
+          "水 (Mizu)",
+          "お茶 (Ocha)"
+        ],
+        "correct": "牛乳 (Gyuunyuu)",
+        "feedback": "'牛乳 (Gyuunyuu)' adalah susu sapi. 'Tounyuu' adalah susu kedelai.",
+        "image": "Minimarket1-29.jpg"
+      },
+      {
+        "question": "Apa bahasa Jepang untuk 'koran'?",
+        "answers": [
+          "雑誌 (Zasshi)",
+          "漫画 (Manga)",
+          "新聞 (Shinbun)",
+          "教科書 (Kyoukasho)"
+        ],
+        "correct": "新聞 (Shinbun)",
+        "feedback": "'新聞 (Shinbun)' berarti koran. Biasanya diletakkan di dekat pintu masuk.",
+        "image": "Minimarket1-30.jpg"
+      },
+      {
+        "question": "'Obat-obatan' sederhana dalam bahasa Jepang adalah...",
+        "answers": [
+          "薬 (Kusuri)",
+          "化粧品 (Keshouhin)",
+          "文房具 (Bunbougu)",
+          "飲み物 (Nomimono)"
+        ],
+        "correct": "薬 (Kusuri)",
+        "feedback": "'薬 (Kusuri)' adalah obat. Beberapa konbini menjual obat-obatan dasar seperti obat sakit kepala atau plester.",
+        "image": "Minimarket1-31.jpg"
+      },
+      {
+        "question": "Bagaimana cara mengatakan 'produk baru'?",
+        "answers": [
+          "人気商品 (Ninki shouhin)",
+          "限定商品 (Gentei shouhin)",
+          "新商品 (Shin shouhin)",
+          "中古品 (Chuukohin)"
+        ],
+        "correct": "新商品 (Shin shouhin)",
+        "feedback": "'新商品 (Shin shouhin)' atau '新発売 (Shin hatsubai)' berarti produk baru. Konbini selalu merilis produk baru setiap minggunya.",
+        "image": "Minimarket1-32.jpg"
+      },
+      {
+        "question": "Apa sebutan untuk 'area makan' di dalam toko?",
+        "answers": [
+          "イートイン (Iito-in)",
+          "テイクアウト (Teiku-auto)",
+          "キッチン (Kitchin)",
+          "カウンター (Kauntaa)"
+        ],
+        "correct": "イートイン (Iito-in)",
+        "feedback": "'イートイン (Iito-in)' adalah area makan di tempat, serapan dari 'eat-in'.",
+        "image": "Minimarket1-33.jpg"
+      },
+      {
+        "question": "'Uang tunai' dalam bahasa Jepang adalah...",
+        "answers": [
+          "カード (Kaado)",
+          "ポイント (Pointo)",
+          "現金 (Genkin)",
+          "小銭 (Kozeni)"
+        ],
+        "correct": "現金 (Genkin)",
+        "feedback": "'現金 (Genkin)' adalah uang tunai. 'Kozeni' adalah uang koin.",
+        "image": "Minimarket1-34.jpg"
+      },
+      {
+        "question": "Kata untuk 'toilet' adalah...",
+        "answers": [
+          "お風呂 (Ofuro)",
+          "台所 (Daidokoro)",
+          "寝室 (Shinshitsu)",
+          "トイレ (Toire)"
+        ],
+        "correct": "トイレ (Toire)",
+        "feedback": "'トイレ (Toire)' atau 'お手洗い (Otearai)' berarti toilet. Banyak konbini menyediakan toilet bersih untuk pelanggan.",
+        "image": "Minimarket1-35.jpg"
+      },
+      {
+        "question": "Bagaimana Anda menyebut 'kotak pos'?",
+        "answers": [
+          "ポスト (Posuto)",
+          "箱 (Hako)",
+          "ゴミ箱 (Gomibako)",
+          "封筒 (Fuutou)"
+        ],
+        "correct": "ポスト (Posuto)",
+        "feedback": "'ポスト (Posuto)' adalah kotak pos. Biasanya berwarna merah dan terletak di depan konbini.",
+        "image": "Minimarket1-36.jpg"
+      },
+      {
+        "question": "Apa bahasa Jepang untuk 'harga'?",
+        "answers": [
+          "値段 (Nedan)",
+          "合計 (Goukei)",
+          "税金 (Zeikin)",
+          "勘定 (Kanjou)"
+        ],
+        "correct": "値段 (Nedan)",
+        "feedback": "'値段 (Nedan)' adalah harga suatu barang. 'Goukei' adalah total.",
+        "image": "Minimarket1-37.jpg"
+      },
+      {
+        "question": "Kata untuk 'rokok' adalah...",
+        "answers": [
+          "お茶 (Ocha)",
+          "お酒 (Osake)",
+          "タバコ (Tabako)",
+          "ガム (Gamu)"
+        ],
+        "correct": "タバコ (Tabako)",
+        "feedback": "'タバコ (Tabako)' adalah rokok. Untuk membeli, Anda harus menunjukkan ID jika terlihat di bawah umur dan menyebutkan nomor merek rokok.",
+        "image": "Minimarket1-38.jpg"
+      },
+      {
+        "question": "Bagaimana cara mengatakan 'total'?",
+        "answers": [
+          "割引 (Waribiki)",
+          "お釣り (Otsuri)",
+          "合計 (Goukei)",
+          "一つ (Hitotsu)"
+        ],
+        "correct": "合計 (Goukei)",
+        "feedback": "'合計 (Goukei)' adalah jumlah total belanjaan Anda yang akan ditampilkan di layar kasir.",
+        "image": "Minimarket1-39.jpg"
+      },
+      {
+        "question": "'Alkohol' dalam bahasa Jepang adalah...",
+        "answers": [
+          "ジュース (Juusu)",
+          "お酒 (Osake)",
+          "薬 (Kusuri)",
+          "酢 (Su)"
+        ],
+        "correct": "お酒 (Osake)",
+        "feedback": "'お酒 (Osake)' adalah istilah umum untuk minuman beralkohol seperti bir, sake, dan chuhai.",
+        "image": "Minimarket1-40.jpg"
+      },
+      {
+        "question": "Apa sebutan untuk 'sedotan'?",
+        "answers": [
+          "箸 (Hashi)",
+          "フォーク (Fooku)",
+          "ストロー (Sutoroo)",
+          "スプーン (Supuun)"
+        ],
+        "correct": "ストロー (Sutoroo)",
+        "feedback": "'ストロー (Sutoroo)' adalah kata serapan dari 'straw'. Staf akan memberikannya saat Anda membeli minuman kemasan.",
+        "image": "Minimarket1-41.jpg"
+      },
+      {
+        "question": "Bahasa Jepang untuk 'baterai' adalah...",
+        "answers": [
+          "電池 (Denchi)",
+          "電気 (Denki)",
+          "電球 (Denkyuu)",
+          "電話 (Denwa)"
+        ],
+        "correct": "電池 (Denchi)",
+        "feedback": "'電池 (Denchi)' adalah baterai. 'Denki' adalah listrik.",
+        "image": "Minimarket1-42.jpg"
+      },
+      {
+        "question": "Kata untuk 'perangko' adalah...",
+        "answers": [
+          "切手 (Kitte)",
+          "はがき (Hagaki)",
+          "封筒 (Fuutou)",
+          "手紙 (Tegami)"
+        ],
+        "correct": "切手 (Kitte)",
+        "feedback": "'切手 (Kitte)' adalah perangko. Anda bisa membeli dan mengirim surat dari konbini.",
+        "image": "Minimarket1-43.jpg"
+      },
+      {
+        "question": "Bagaimana cara menyebut 'pintu keluar'?",
+        "answers": [
+          "入り口 (Iriguchi)",
+          "非常口 (Hijouguchi)",
+          "出口 (Deguchi)",
+          "改札口 (Kaisatsuguchi)"
+        ],
+        "correct": "出口 (Deguchi)",
+        "feedback": "'出口 (Deguchi)' adalah pintu keluar. Kebalikan dari '入り口 (Iriguchi)'.",
+        "image": "Minimarket1-44.jpg"
+      },
+      {
+        "question": "'Manajer toko' dalam bahasa Jepang adalah...",
+        "answers": [
+          "店員 (Ten'in)",
+          "社員 (Shain)",
+          "店長 (Tenchou)",
+          "社長 (Shachou)"
+        ],
+        "correct": "店長 (Tenchou)",
+        "feedback": "'店長 (Tenchou)' adalah manajer toko. 'Shachou' adalah direktur perusahaan.",
+        "image": "Minimarket1-45.jpg"
+      },
+      {
+        "question": "Apa kata untuk 'membayar'?",
+        "answers": [
+          "払う (Harau)",
+          "もらう (Morau)",
+          "買う (Kau)",
+          "開ける (Akeru)"
+        ],
+        "correct": "払う (Harau)",
+        "feedback": "'払う (Harau)' adalah kata kerja untuk membayar.",
+        "image": "Minimarket1-46.jpg"
+      },
+      {
+        "question": "Bagaimana Anda menyebut 'tempat sampah'?",
+        "answers": [
+          "箱 (Hako)",
+          "袋 (Fukuro)",
+          "ゴミ箱 (Gomibako)",
+          "ポスト (Posuto)"
+        ],
+        "correct": "ゴミ箱 (Gomibako)",
+        "feedback": "'ゴミ箱 (Gomibako)' adalah tempat sampah. Biasanya ada di dalam atau depan toko, dipisahkan berdasarkan jenis sampah.",
+        "image": "Minimarket1-47.jpg"
+      },
+      {
+        "question": "Kata untuk 'susu kedelai' adalah...",
+        "answers": [
+          "牛乳 (Gyuunyuu)",
+          "コーヒー牛乳 (Koohii gyuunyuu)",
+          "豆乳 (Tounyuu)",
+          "ヨーグルト (Yooguruto)"
+        ],
+        "correct": "豆乳 (Tounyuu)",
+        "feedback": "'豆乳 (Tounyuu)' adalah susu kedelai, alternatif populer dari susu sapi.",
+        "image": "Minimarket1-48.jpg"
+      },
+      {
+        "question": "Bahasa Jepang untuk 'kartu prabayar' (seperti Suica/Pasmo) adalah...",
+        "answers": [
+          "交通系ICカード (Koutsuu-kei IC kaado)",
+          "クレジットカード (Kurejitto kaado)",
+          "ポイントカード (Pointo kaado)",
+          "テレホンカード (Terehon kaado)"
+        ],
+        "correct": "交通系ICカード (Koutsuu-kei IC kaado)",
+        "feedback": "'交通系ICカード (Koutsuu-kei IC kaado)' adalah istilah umum untuk kartu transportasi elektronik, yang juga bisa digunakan untuk membayar di konbini.",
+        "image": "Minimarket1-49.jpg"
+      },
+      {
+        "question": "Apa sebutan untuk 'pemanas makanan' tempat karaage dan nikuman?",
+        "answers": [
+          "冷蔵庫 (Reizouko)",
+          "冷凍庫 (Reitouko)",
+          "保温器 (Hoonki)",
+          "電子レンジ (Denshi renji)"
+        ],
+        "correct": "保温器 (Hoonki)",
+        "feedback": "'保温器 (Hoonki)' adalah pemanas atau etalase penghangat. 'Denshi renji' adalah microwave.",
+        "image": "Minimarket1-50.jpg"
+      }
+    ]
+  },
+  "level2": {
+    "Minimarket": [
+      {
+        "question": "Staf menyapa Anda dengan ucapan...",
+        "answers": [
+          "さようなら (Sayounara)",
+          "いらっしゃいませ (Irasshaimase)",
+          "ただいま (Tadaima)",
+          "おはようございます (Ohayou gozaimasu)"
+        ],
+        "correct": "いらっしゃいませ (Irasshaimase)",
+        "feedback": "'いらっしゃいませ (Irasshaimase)' adalah ucapan selamat datang standar di semua toko di Jepang.",
+        "image": "Minimarket2-01.jpg"
+      },
+      {
+        "question": "Bagaimana cara meminta 'yang ini' sambil menunjuk?",
+        "answers": [
+          "これをください (Kore o kudasai)",
+          "あれはいいですか (Are wa ii desu ka)",
+          "それは何ですか (Sore wa nan desu ka)",
+          "どれも好きです (Dore mo suki desu)"
+        ],
+        "correct": "これをください (Kore o kudasai)",
+        "feedback": "'これ (Kore)' berarti 'ini'. Ini adalah cara paling mudah untuk membeli sesuatu. Cukup tunjuk dan katakan 'Kore o kudasai'.",
+        "image": "Minimarket2-02.jpg"
+      },
+      {
+        "question": "Staf akan bertanya 'Apakah perlu dipanaskan?' dengan kalimat...",
+        "answers": [
+          "お弁当は冷たいですか (Obentou wa tsumetai desu ka)",
+          "お弁当を温めますか (Obentou o atatamemasu ka)",
+          "お弁当は美味しいですか (Obentou wa oishii desu ka)",
+          "お弁当は大きいですか (Obentou wa ookii desu ka)"
+        ],
+        "correct": "お弁当を温めますか (Obentou o atatamemasu ka)",
+        "feedback": "Bentuk sopannya adalah 'お弁当、温めましょうか (Obentou, atatamemashou ka)'. Jawab 'はい、お願いします (Hai, onegai shimasu)' jika ya.",
+        "image": "Minimarket2-03.jpg"
+      },
+      {
+        "question": "Untuk menolak kantong plastik, Anda berkata...",
+        "answers": [
+          "袋をください (Fukuro o kudasai)",
+          "袋は結構です (Fukuro wa kekkou desu)",
+          "袋は大きいですか (Fukuro wa ookii desu ka)",
+          "袋は無料ですか (Fukuro wa muryou desu ka)"
+        ],
+        "correct": "袋は結構です (Fukuro wa kekkou desu)",
+        "feedback": "'結構です (Kekkou desu)' adalah cara sopan untuk menolak. Anda juga bisa mengatakan '袋は要りません (Fukuro wa irimasen)'.",
+        "image": "Minimarket2-04.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Berapa harganya?'",
+        "answers": [
+          "何時ですか (Nanji desu ka)",
+          "お名前は何ですか (Onamae wa nan desu ka)",
+          "いくつですか (Ikutsu desu ka)",
+          "いくらですか (Ikura desu ka)"
+        ],
+        "correct": "いくらですか (Ikura desu ka)",
+        "feedback": "'いくらですか (Ikura desu ka)' adalah cara standar untuk menanyakan harga.",
+        "image": "Minimarket2-05.jpg"
+      },
+      {
+        "question": "Staf akan bertanya 'Apakah Anda punya kartu poin?' dengan kalimat...",
+        "answers": [
+          "ポイントカードはお持ちですか (Pointo kaado wa omochi desu ka)",
+          "クレジットカードはありますか (Kurejitto kaado wa arimasu ka)",
+          "免許証はありますか (Menkyoshou wa arimasu ka)",
+          "お金はありますか (Okane wa arimasu ka)"
+        ],
+        "correct": "ポイントカードはお持ちですか (Pointo kaado wa omochi desu ka)",
+        "feedback": "'お持ちですか (Omochi desu ka)' adalah bentuk sopan dari '持っていますか (motte imasu ka)' yang berarti 'apakah Anda memiliki?'.",
+        "image": "Minimarket2-06.jpg"
+      },
+      {
+        "question": "Untuk membayar dengan kartu kredit, Anda mengatakan...",
+        "answers": [
+          "現金で払います (Genkin de haraimasu)",
+          "カードでお願いします (Kaado de onegai shimasu)",
+          "お釣りは要りません (Otsuri wa irimasen)",
+          "割り勘にしてください (Warikan ni shite kudasai)"
+        ],
+        "correct": "カードでお願いします (Kaado de onegai shimasu)",
+        "feedback": "Cukup katakan 'カードで (Kaado de)' untuk memberitahu staf Anda akan membayar dengan kartu.",
+        "image": "Minimarket2-07.jpg"
+      },
+      {
+        "question": "Bagaimana cara meminta sumpit?",
+        "answers": [
+          "お箸をください (Ohashi o kudasai)",
+          "スプーンをください (Supuun o kudasai)",
+          "フォークをください (Fooku o kudasai)",
+          "ストローをください (Sutoroo o kudasai)"
+        ],
+        "correct": "お箸をください (Ohashi o kudasai)",
+        "feedback": "Staf biasanya bertanya 'お箸はお付けしますか (Ohashi wa o-tsuke shimasu ka?)' yang berarti 'Apakah perlu disertakan sumpit?'.",
+        "image": "Minimarket2-08.jpg"
+      },
+      {
+        "question": "Bagaimana cara menanyakan lokasi toilet?",
+        "answers": [
+          "トイレはどこですか (Toire wa doko desu ka)",
+          "ATMはどこですか (ATM wa doko desu ka)",
+          "レジはどこですか (Reji wa doko desu ka)",
+          "出口はどこですか (Deguchi wa doko desu ka)"
+        ],
+        "correct": "トイレはどこですか (Toire wa doko desu ka)",
+        "feedback": "Anda juga bisa menggunakan bentuk yang lebih sopan: 'お手洗いはどこですか (Otearai wa doko desu ka)'.",
+        "image": "Minimarket2-09.jpg"
+      },
+      {
+        "question": "Untuk membeli rokok, Anda biasanya menyebutkan...",
+        "answers": [
+          "タバコをください (Tabako o kudasai)",
+          "一番安いタバコはどれですか (Ichiban yasui tabako wa dore desu ka)",
+          "番号でお願いします (Bangou de onegai shimasu)",
+          "ライターはありますか (Raitaa wa arimasu ka)"
+        ],
+        "correct": "番号でお願いします (Bangou de onegai shimasu)",
+        "feedback": "Rokok ditampilkan dengan nomor. Anda cukup sebutkan nomornya, misal: '15番をお願いします (Juu-go ban o onegai shimasu)'.",
+        "image": "Minimarket2-10.jpg"
+      },
+      {
+        "question": "Staf mengucapkan 'Terima kasih' setelah Anda membayar dengan...",
+        "answers": [
+          "いらっしゃいませ (Irasshaimase)",
+          "ありがとうございました (Arigatou gozaimashita)",
+          "すみません (Sumimasen)",
+          "どうぞ (Douzo)"
+        ],
+        "correct": "ありがとうございました (Arigatou gozaimashita)",
+        "feedback": "Bentuk lampau 'gozaimashita' digunakan karena transaksinya telah selesai.",
+        "image": "Minimarket2-11.jpg"
+      },
+      {
+        "question": "Bagaimana cara meminta struk?",
+        "answers": [
+          "レシートは要りません (Reshiito wa irimasen)",
+          "レシートをください (Reshiito o kudasai)",
+          "これはいくらですか (Kore wa ikura desu ka)",
+          "お釣りをください (Otsuri o kudasai)"
+        ],
+        "correct": "レシートをください (Reshiito o kudasai)",
+        "feedback": "Anda bisa menggunakan kata serapan 'レシート (reshiito)' atau kata Jepang '領収書 (ryoushuusho)'.",
+        "image": "Minimarket2-12.jpg"
+      },
+      {
+        "question": "Untuk mengatakan 'Saya ingin menggunakan ATM', Anda bilang...",
+        "answers": [
+          "ATMを使いたいです (ATM o tsukaitai desu)",
+          "ATMは壊れています (ATM wa kowarete imasu)",
+          "ATMでお金をおろします (ATM de okane o oroshimasu)",
+          "ATMはどこにありますか (ATM wa doko ni arimasu ka)"
+        ],
+        "correct": "ATMを使いたいです (ATM o tsukaitai desu)",
+        "feedback": "Pola '...たいです (...tai desu)' digunakan untuk menyatakan keinginan.",
+        "image": "Minimarket2-13.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Apakah Anda menjual prangko?'",
+        "answers": [
+          "切手を売っていますか (Kitte o utte imasu ka)",
+          "手紙を書きます (Tegami o kakimasu)",
+          "ポストはどこですか (Posuto wa doko desu ka)",
+          "はがきをください (Hagaki o kudasai)"
+        ],
+        "correct": "切手を売っていますか (Kitte o utte imasu ka)",
+        "feedback": "'...を売っていますか (...o utte imasu ka)' berarti 'apakah Anda menjual...?'.",
+        "image": "Minimarket2-14.jpg"
+      },
+      {
+        "question": "Jika ingin air panas untuk mie instan, Anda bisa bertanya...",
+        "answers": [
+          "お湯をいただけますか (Oyu o itadakemasu ka)",
+          "お水はありますか (Omizu wa arimasu ka)",
+          "これは熱いですか (Kore wa atsui desu ka)",
+          "電子レンジはどこですか (Denshi renji wa doko desu ka)"
+        ],
+        "correct": "お湯をいただけますか (Oyu o itadakemasu ka)",
+        "feedback": "'お湯 (Oyu)' adalah air panas. 'いただけますか (Itadakemasu ka)' adalah cara yang sopan untuk meminta sesuatu.",
+        "image": "Minimarket2-15.jpg"
+      },
+      {
+        "question": "Bagaimana cara meminta 'kantong terpisah'?",
+        "answers": [
+          "袋は一つでいいです (Fukuro wa hitotsu de ii desu)",
+          "袋を別々にしてください (Fukuro o betsu betsu ni shite kudasai)",
+          "袋は大きいのにしてください (Fukuro wa ookii no ni shite kudasai)",
+          "袋は要りません (Fukuro wa irimasen)"
+        ],
+        "correct": "袋を別々にしてください (Fukuro o betsu betsu ni shite kudasai)",
+        "feedback": "'別々 (Betsu betsu)' berarti 'terpisah'. Ini berguna untuk memisahkan barang panas dan dingin.",
+        "image": "Minimarket2-16.jpg"
+      },
+      {
+        "question": "Untuk membeli ayam goreng, Anda bisa berkata...",
+        "answers": [
+          "唐揚げを一つください (Karaage o hitotsu kudasai)",
+          "肉まんをください (Nikuman o kudasai)",
+          "これは何ですか (Kore wa nan desu ka)",
+          "温かいですか (Atatakai desu ka)"
+        ],
+        "correct": "唐揚げを一つください (Karaage o hitotsu kudasai)",
+        "feedback": "'一つ (Hitotsu)' adalah satuan hitung untuk 'satu buah'.",
+        "image": "Minimarket2-17.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Apakah saya bisa membayar tagihan di sini?'",
+        "answers": [
+          "ここで支払いができますか (Koko de shiharai ga dekimasu ka)",
+          "この請求書はいくらですか (Kono seikyuusho wa ikura desu ka)",
+          "支払いはいつですか (Shiharai wa itsu desu ka)",
+          "電気を消してください (Denki o keshite kudasai)"
+        ],
+        "correct": "ここで支払いができますか (Koko de shiharai ga dekimasu ka)",
+        "feedback": "'支払い (Shiharai)' berarti pembayaran. Konbini adalah tempat yang sangat umum untuk membayar berbagai tagihan.",
+        "image": "Minimarket2-18.jpg"
+      },
+      {
+        "question": "Jika Anda tidak butuh sumpit, Anda bisa bilang...",
+        "answers": [
+          "お箸をたくさんください (Ohashi o takusan kudasai)",
+          "お箸は要りません (Ohashi wa irimasen)",
+          "お箸はどこですか (Ohashi wa doko desu ka)",
+          "これは私のお箸です (Kore wa watashi no ohashi desu)"
+        ],
+        "correct": "お箸は要りません (Ohashi wa irimasen)",
+        "feedback": "'要りません (Irimasen)' adalah cara langsung untuk mengatakan 'tidak perlu'.",
+        "image": "Minimarket2-19.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Apakah ada Wi-Fi?'",
+        "answers": [
+          "ワイファイはありますか (Waifai wa arimasu ka)",
+          "電話を貸してください (Denwa o kashite kudasai)",
+          "充電できますか (Juuden dekimasu ka)",
+          "インターネットが遅いです (Intaanetto ga osoi desu)"
+        ],
+        "correct": "ワイファイはありますか (Waifai wa arimasu ka)",
+        "feedback": "Banyak konbini besar menawarkan Wi-Fi gratis, meskipun mungkin memerlukan registrasi.",
+        "image": "Minimarket2-20.jpg"
+      },
+      {
+        "question": "Untuk menanyakan 'Sampai jam berapa buka?', Anda bertanya...",
+        "answers": [
+          "何時に閉まりますか (Nanji ni shimarimasu ka)",
+          "何時に開きますか (Nanji ni akimasu ka)",
+          "24時間営業ですか (Nijuu-yo jikan eigyou desu ka)",
+          "今、休憩中ですか (Ima, kyuukeichuu desu ka)"
+        ],
+        "correct": "24時間営業ですか (Nijuu-yo jikan eigyou desu ka)",
+        "feedback": "Kebanyakan konbini buka 24 jam. '24時間営業 (Nijuu-yo jikan eigyou)' berarti 'buka 24 jam'.",
+        "image": "Minimarket2-21.jpg"
+      },
+      {
+        "question": "Jika ingin membayar dengan kartu transportasi seperti Suica...",
+        "answers": [
+          "スイカでお願いします (Suika de onegai shimasu)",
+          "電車に乗ります (Densha ni norimasu)",
+          "スイカをチャージします (Suika o chaaji shimasu)",
+          "切符をください (Kippu o kudasai)"
+        ],
+        "correct": "スイカでお願いします (Suika de onegai shimasu)",
+        "feedback": "Anda bisa menyebutkan nama kartunya (Suica, Pasmo, Icoca, dll) diikuti 'でお願いします (de onegai shimasu)'.",
+        "image": "Minimarket2-22.jpg"
+      },
+      {
+        "question": "Bagaimana cara mengatakan 'Bolehkah saya duduk di sini?' (di area eat-in)",
+        "answers": [
+          "ここで食べてもいいですか (Koko de tabete mo ii desu ka)",
+          "この席は予約済みです (Kono seki wa yoyakuzumi desu)",
+          "立って食べます (Tatte tabemasu)",
+          "ここは静かですね (Koko wa shizuka desu ne)"
+        ],
+        "correct": "ここで食べてもいいですか (Koko de tabete mo ii desu ka)",
+        "feedback": "Pola '...てもいいですか (...te mo ii desu ka)' digunakan untuk meminta izin.",
+        "image": "Minimarket2-23.jpg"
+      },
+      {
+        "question": "Untuk bertanya 'Apakah Anda punya charger ponsel?'",
+        "answers": [
+          "充電器はありますか (Juudenki wa arimasu ka)",
+          "携帯が壊れました (Keitai ga kowaremashita)",
+          "電話をかけたいです (Denwa o kaketai desu)",
+          "電池がありません (Denchi ga arimasen)"
+        ],
+        "correct": "充電器はありますか (Juudenki wa arimasu ka)",
+        "feedback": "Konbini menjual berbagai macam aksesoris ponsel, termasuk '充電器 (juudenki)' atau charger.",
+        "image": "Minimarket2-24.jpg"
+      },
+      {
+        "question": "Frasa untuk meminta sendok saat membeli yogurt atau puding.",
+        "answers": [
+          "スプーンをお願いします (Supuun o onegai shimasu)",
+          "フォークはいりません (Fooku wa irimasen)",
+          "これは甘いですか (Kore wa amai desu ka)",
+          "デザートが好きです (Dezaato ga suki desu)"
+        ],
+        "correct": "スプーンをお願いします (Supuun o onegai shimasu)",
+        "feedback": "Staf biasanya otomatis memberikan sendok kecil jika Anda membeli produk semacam itu.",
+        "image": "Minimarket2-25.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Di mana minuman beralkohol?'",
+        "answers": [
+          "お酒はどこですか (Osake wa doko desu ka)",
+          "ジュースはどこですか (Juusu wa doko desu ka)",
+          "お茶はどこですか (Ocha wa doko desu ka)",
+          "水はどこですか (Mizu wa doko desu ka)"
+        ],
+        "correct": "お酒はどこですか (Osake wa doko desu ka)",
+        "feedback": "'お酒 (Osake)' adalah minuman beralkohol. Biasanya diletakkan di rak terpisah.",
+        "image": "Minimarket2-26.jpg"
+      },
+      {
+        "question": "Saat staf memberikan kembalian, mereka berkata...",
+        "answers": [
+          "お釣りです (Otsuri desu)",
+          "合計です (Goukei desu)",
+          "カードです (Kaado desu)",
+          "どうぞ (Douzo)"
+        ],
+        "correct": "お釣りです (Otsuri desu)",
+        "feedback": "Biasanya diikuti dengan jumlahnya, misalnya '千円のお返しです (Sen-en no o-kaeshi desu)' yang berarti 'Ini kembalian dari 1000 yen'.",
+        "image": "Minimarket2-27.jpg"
+      },
+      {
+        "question": "Untuk meminta fotokopi satu lembar, Anda mengatakan...",
+        "answers": [
+          "コピーを一枚お願いします (Kopii o ichi-mai onegai shimasu)",
+          "これをスキャンしてください (Kore o sukyan shite kudasai)",
+          "プリントをお願いします (Purinto o onegai shimasu)",
+          "ファックスを送ります (Fakkusu o okurimasu)"
+        ],
+        "correct": "コピーを一枚お願いします (Kopii o ichi-mai onegai shimasu)",
+        "feedback": "'一枚 (Ichi-mai)' adalah satuan hitung untuk benda tipis dan datar seperti kertas.",
+        "image": "Minimarket2-28.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Apakah ini produk edisi terbatas?'",
+        "answers": [
+          "これは新商品ですか (Kore wa shin shouhin desu ka)",
+          "これは限定商品ですか (Kore wa gentei shouhin desu ka)",
+          "これは人気商品ですか (Kore wa ninki shouhin desu ka)",
+          "これは輸入品ですか (Kore wa yunyuuhin desu ka)"
+        ],
+        "correct": "これは限定商品ですか (Kore wa gentei shouhin desu ka)",
+        "feedback": "'限定商品 (Gentei shouhin)' adalah produk edisi terbatas. Konbini sering merilis produk seperti ini.",
+        "image": "Minimarket2-29.jpg"
+      },
+      {
+        "question": "Jika Anda ingin mengirim paket, Anda bisa mengatakan...",
+        "answers": [
+          "荷物を受け取りたいです (Nimotsu o uketoritai desu)",
+          "荷物を送りたいです (Nimotsu o okuritai desu)",
+          "この荷物は重いですか (Kono nimotsu wa omoi desu ka)",
+          "手紙を書きます (Tegami o kakimasu)"
+        ],
+        "correct": "荷物を送りたいです (Nimotsu o okuritai desu)",
+        "feedback": "'荷物 (Nimotsu)' berarti paket atau barang bawaan. Konbini bekerja sama dengan jasa kurir seperti Yamato (Kuroneko) atau Sagawa.",
+        "image": "Minimarket2-30.jpg"
+      },
+      {
+        "question": "Bagaimana cara meminta untuk membuang sampah?",
+        "answers": [
+          "ゴミを捨ててもいいですか (Gomi o sutete mo ii desu ka)",
+          "ここはきれいですね (Koko wa kirei desu ne)",
+          "ゴミ箱はどこですか (Gomibako wa doko desu ka)",
+          "ゴミを拾いました (Gomi o hiroimashita)"
+        ],
+        "correct": "ゴミを捨ててもいいですか (Gomi o sutete mo ii desu ka)",
+        "feedback": "Ini adalah cara sopan untuk meminta izin membuang sampah di tempat sampah toko, terutama jika sampah itu bukan dari produk yang dibeli di sana.",
+        "image": "Minimarket2-31.jpg"
+      },
+      {
+        "question": "Saat membeli barang yang memerlukan konfirmasi umur (alkohol/rokok), staf akan meminta Anda...",
+        "answers": [
+          "画面のタッチをお願いします (Gamen no tatchi o onegai shimasu)",
+          "お名前を教えてください (Onamae o oshiete kudasai)",
+          "サインをしてください (Sain o shite kudasai)",
+          "もう一度来てください (Mou ichido kite kudasai)"
+        ],
+        "correct": "画面のタッチをお願いします (Gamen no tatchi o onegai shimasu)",
+        "feedback": "Anda akan diminta untuk menekan tombol konfirmasi di layar yang menyatakan bahwa Anda berusia di atas 20 tahun.",
+        "image": "Minimarket2-32.jpg"
+      },
+      {
+        "question": "Untuk bertanya 'Di mana bagian roti?', Anda mengatakan...",
+        "answers": [
+          "パンのコーナーはどこですか (Pan no koonaa wa doko desu ka)",
+          "ご飯はどこですか (Gohan wa doko desu ka)",
+          "お菓子はどこですか (Okashi wa doko desu ka)",
+          "飲み物はどこですか (Nomimono wa doko desu ka)"
+        ],
+        "correct": "パンのコーナーはどこですか (Pan no koonaa wa doko desu ka)",
+        "feedback": "'コーナー (Koonaa)' dari kata 'corner' sering digunakan untuk menyebut 'bagian' atau 'area' di dalam toko.",
+        "image": "Minimarket2-33.jpg"
+      },
+      {
+        "question": "Jika Anda hanya membeli satu barang dan tidak butuh tas...",
+        "answers": [
+          "シールで大丈夫です (Shiiru de daijoubu desu)",
+          "袋に入れてください (Fukuro ni irete kudasai)",
+          "プレゼント用です (Purezento you desu)",
+          "これは何ですか (Kore wa nan desu ka)"
+        ],
+        "correct": "シールで大丈夫です (Shiiru de daijoubu desu)",
+        "feedback": "Staf akan menempelkan stiker kecil pada barang untuk menandakan bahwa barang itu sudah dibayar.",
+        "image": "Minimarket2-34.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Apakah saya bisa isi ulang kartu Suica di sini?'",
+        "answers": [
+          "ここでスイカをチャージできますか (Koko de Suika o chaaji dekimasu ka)",
+          "ここでスイカを買えますか (Koko de Suika o kaemasu ka)",
+          "スイカで払えますか (Suika de haraemasu ka)",
+          "スイカをなくしました (Suika o nakushimashita)"
+        ],
+        "correct": "ここでスイカをチャージできますか (Koko de Suika o chaaji dekimasu ka)",
+        "feedback": "'チャージ (Chaaji)' berarti 'isi ulang' atau 'top-up'. Anda bisa melakukannya di kasir.",
+        "image": "Minimarket2-35.jpg"
+      },
+      {
+        "question": "Untuk mengatakan 'Saya hanya melihat-lihat'.",
+        "answers": [
+          "何か買います (Nani ka kaimasu)",
+          "見ているだけです (Mite iru dake desu)",
+          "助けてください (Tasukete kudasai)",
+          "分かりません (Wakarimasen)"
+        ],
+        "correct": "見ているだけです (Mite iru dake desu)",
+        "feedback": "Ini adalah jawaban sopan jika staf bertanya '何かお探しですか (Nani ka o-sagashi desu ka?)' (Apakah Anda mencari sesuatu?).",
+        "image": "Minimarket2-36.jpg"
+      },
+      {
+        "question": "Bagaimana cara meminta garpu?",
+        "answers": [
+          "フォークをください (Fooku o kudasai)",
+          "箸をください (Hashi o kudasai)",
+          "スプーンをください (Supuun o kudasai)",
+          "ナイフをください (Naifu o kudasai)"
+        ],
+        "correct": "フォークをください (Fooku o kudasai)",
+        "feedback": "Berguna saat Anda membeli spageti atau salad pasta.",
+        "image": "Minimarket2-37.jpg"
+      },
+      {
+        "question": "Jika Anda ingin membayar dengan uang koin...",
+        "answers": [
+          "お札で払います (Osatsu de haraimasu)",
+          "小銭で払います (Kozeni de haraimasu)",
+          "カードがありません (Kaado ga arimasen)",
+          "ちょうどあります (Choudo arimasu)"
+        ],
+        "correct": "小銭で払います (Kozeni de haraimasu)",
+        "feedback": "'小銭 (Kozeni)' berarti uang koin. Beberapa kasir otomatis memiliki tempat untuk memasukkan koin.",
+        "image": "Minimarket2-38.jpg"
+      },
+      {
+        "question": "Untuk mengatakan 'Dua buah roti melon, tolong.'",
+        "answers": [
+          "メロンパンを二つください (Meron pan o futatsu kudasai)",
+          "メロンをください (Meron o kudasai)",
+          "パンは要りません (Pan wa irimasen)",
+          "甘いパンが好きです (Amai pan ga suki desu)"
+        ],
+        "correct": "メロンパンを二つください (Meron pan o futatsu kudasai)",
+        "feedback": "'メロンパン (Meron pan)' adalah roti manis khas Jepang. '二つ (Futatsu)' adalah satuan hitung untuk 'dua buah'.",
+        "image": "Minimarket2-39.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Apakah ada toilet untuk penyandang disabilitas?'",
+        "answers": [
+          "多目的トイレはありますか (Tamokuteki toire wa arimasu ka)",
+          "男子トイレはどこですか (Danshi toire wa doko desu ka)",
+          "女子トイレはどこですか (Joshi toire wa doko desu ka)",
+          "トイレはきれいですか (Toire wa kirei desu ka)"
+        ],
+        "correct": "多目的トイレはありますか (Tamokuteki toire wa arimasu ka)",
+        "feedback": "'多目的トイレ (Tamokuteki toire)' atau 'toilet serbaguna' biasanya lebih luas dan dapat diakses kursi roda.",
+        "image": "Minimarket2-40.jpg"
+      },
+      {
+        "question": "Jika Anda menjatuhkan sesuatu, Anda bisa berkata 'Maaf'.",
+        "answers": [
+          "すみません (Sumimasen)",
+          "ありがとう (Arigatou)",
+          "こんにちは (Konnichiwa)",
+          "どうぞ (Douzo)"
+        ],
+        "correct": "すみません (Sumimasen)",
+        "feedback": "'すみません (Sumimasen)' sangat serbaguna, bisa berarti 'permisi' atau 'maaf' dalam situasi ini.",
+        "image": "Minimarket2-41.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Kopi ukuran apa yang tersedia?'",
+        "answers": [
+          "コーヒーのサイズは何がありますか (Koohii no saizu wa nani ga arimasu ka)",
+          "ホットコーヒーをください (Hotto koohii o kudasai)",
+          "アイスコーヒーはありますか (Aisu koohii wa arimasu ka)",
+          "砂糖とミルクをください (Satou to miruku o kudasai)"
+        ],
+        "correct": "コーヒーのサイズは何がありますか (Koohii no saizu wa nani ga arimasu ka)",
+        "feedback": "Biasanya ada ukuran S (エス, esu), M (エム, emu), dan L (エル, eru).",
+        "image": "Minimarket2-42.jpg"
+      },
+      {
+        "question": "Untuk mengatakan 'Saya mau pesan tiket konser.'",
+        "answers": [
+          "コンサートのチケットを予約したいです (Konsaato no chiketto o yoyaku shitai desu)",
+          "映画を見に行きます (Eiga o mi ni ikimasu)",
+          "音楽を聴きます (Ongaku o kikimasu)",
+          "この機械は何ですか (Kono kikai wa nan desu ka)"
+        ],
+        "correct": "コンサートのチケットを予約したいです (Konsaato no chiketto o yoyaku shitai desu)",
+        "feedback": "Tiket berbagai acara bisa dibeli melalui mesin serbaguna seperti Loppi atau FamiPort di konbini.",
+        "image": "Minimarket2-43.jpg"
+      },
+      {
+        "question": "Staf mungkin akan bertanya 'Apakah tasnya digabung saja?'",
+        "answers": [
+          "袋はご一緒でよろしいですか (Fukuro wa go-issho de yoroshii desu ka)",
+          "袋は有料ですか (Fukuro wa yuuryou desu ka)",
+          "袋は大きいですか (Fukuro wa ookii desu ka)",
+          "袋は要りません (Fukuro wa irimasen)"
+        ],
+        "correct": "袋はご一緒でよろしいですか (Fukuro wa go-issho de yoroshii desu ka)",
+        "feedback": "'ご一緒 (Go-issho)' berarti 'bersama-sama'. Jawab 'はい (hai)' jika tidak masalah digabung.",
+        "image": "Minimarket2-44.jpg"
+      },
+      {
+        "question": "Bagaimana cara meminta 'tanpa es' untuk minuman?",
+        "answers": [
+          "氷をたくさん (Koori o takusan)",
+          "氷抜きで (Koori nuki de)",
+          "氷入りで (Koori iri de)",
+          "氷は美味しいです (Koori wa oishii desu)"
+        ],
+        "correct": "氷抜きで (Koori nuki de)",
+        "feedback": "Akhiran '抜きで (nuki de)' berarti 'tanpa'. Ini berlaku untuk minuman yang Anda pesan di konter kopi.",
+        "image": "Minimarket2-45.jpg"
+      },
+      {
+        "question": "Jika Anda ingin tahu apakah suatu produk mengandung alkohol...",
+        "answers": [
+          "これにはアルコールが入っていますか (Kore ni wa arukooru ga haitte imasu ka)",
+          "これはお酒ですか (Kore wa osake desu ka)",
+          "運転しますから (Unten shimasu kara)",
+          "子供でも食べられますか (Kodomo demo taberaremasu ka)"
+        ],
+        "correct": "これにはアルコールが入っていますか (Kore ni wa arukooru ga haitte imasu ka)",
+        "feedback": "Ini pertanyaan penting, karena beberapa makanan penutup atau cokelat di Jepang mengandung sedikit alkohol.",
+        "image": "Minimarket2-46.jpg"
+      },
+      {
+        "question": "Staf mengkonfirmasi total dengan mengatakan 'Totalnya ... yen.'",
+        "answers": [
+          "お会計は...円になります (Okaikei wa ... en ni narimasu)",
+          "お釣りは...円です (Otsuri wa ... en desu)",
+          "割引は...円です (Waribiki wa ... en desu)",
+          "これは...円です (Kore wa ... en desu)"
+        ],
+        "correct": "お会計は...円になります (Okaikei wa ... en ni narimasu)",
+        "feedback": "'...になります (...ni narimasu)' adalah cara sopan untuk menyatakan hasil atau total.",
+        "image": "Minimarket2-47.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Apakah ada tempat duduk di luar?'",
+        "answers": [
+          "外の席はありますか (Soto no seki wa arimasu ka)",
+          "中の席は空いていますか (Naka no seki wa aite imasu ka)",
+          "ここでタバコを吸えますか (Koko de tabako o suemasu ka)",
+          "天気はいいですね (Tenki wa ii desu ne)"
+        ],
+        "correct": "外の席はありますか (Soto no seki wa arimasu ka)",
+        "feedback": "'外 (Soto)' berarti 'luar'. Beberapa konbini memiliki bangku kecil di depan toko.",
+        "image": "Minimarket2-48.jpg"
+      },
+      {
+        "question": "Untuk mengatakan 'Saya akan ambil sendiri kopinya.'",
+        "answers": [
+          "コーヒーは自分で入れます (Koohii wa jibun de iremasu)",
+          "コーヒーを入れてください (Koohii o irete kudasai)",
+          "コーヒーは要りません (Koohii wa irimasen)",
+          "コーヒーは熱いですか (Koohii wa atsui desu ka)"
+        ],
+        "correct": "コーヒーは自分で入れます (Koohii wa jibun de iremasu)",
+        "feedback": "Untuk mesin kopi self-service, Anda membayar cangkirnya di kasir lalu mengisinya sendiri. '自分で (Jibun de)' berarti 'sendiri'.",
+        "image": "Minimarket2-49.jpg"
+      },
+      {
+        "question": "Frasa yang diucapkan staf saat mengembalikan kartu kredit Anda.",
+        "answers": [
+          "カードのお返しです (Kaado no o-kaeshi desu)",
+          "お釣りです (Otsuri desu)",
+          "レシートです (Reshiito desu)",
+          "ありがとうございました (Arigatou gozaimashita)"
+        ],
+        "correct": "カードのお返しです (Kaado no o-kaeshi desu)",
+        "feedback": "'お返し (O-kaeshi)' berarti 'pengembalian'. Mereka akan mengembalikannya dengan dua tangan sebagai tanda hormat.",
+        "image": "Minimarket2-50.jpg"
+      }
+    ]
+  },
+  "level3": {
+    "Minimarket": [
+      {
+        "question": "Bagaimana cara bertanya 'Apakah ATM ini bisa digunakan untuk menarik uang dengan kartu asing?'",
+        "answers": [
+          "このATMで海外のカードは使えますか (Kono ATM de kaigai no kaado wa tsukaemasu ka)",
+          "このATMはお金が入っていますか (Kono ATM wa okane ga haitte imasu ka)",
+          "日本のカードしか使えませんか (Nihon no kaado shika tsukaemasen ka)",
+          "ATMの手数料はいくらですか (ATM no tesuuryou wa ikura desu ka)"
+        ],
+        "correct": "このATMで海外のカードは使えますか (Kono ATM de kaigai no kaado wa tsukaemasu ka)",
+        "feedback": "'海外のカード (Kaigai no kaado)' berarti 'kartu luar negeri'. ATM di 7-Eleven (Seven Bank) biasanya yang paling ramah untuk kartu internasional.",
+        "image": "Minimarket3-01.jpg"
+      },
+      {
+        "question": "Kalimat 'Saya ingin membayar tagihan listrik ini, tolong tunjukkan caranya.'",
+        "answers": [
+          "この電気代を払いたいのですが、やり方を教えてください (Kono denkidaikin o haraitai no desu ga, yarikata o oshiete kudasai)",
+          "電気代は高いですね、払いたくないです (Denkidai wa takai desu ne, haraitakunai desu)",
+          "電気の使い方が分かりません (Denki no tsukaikata ga wakarimasen)",
+          "コンビニで払うと安いですか (Konbini de harau to yasui desu ka)"
+        ],
+        "correct": "この電気代を払いたいのですが、やり方を教えてください (Kono denkidaikin o haraitai no desu ga, yarikata o oshiete kudasai)",
+        "feedback": "'やり方 (Yarikata)' berarti 'cara melakukan'. Anda hanya perlu memberikan lembar tagihan ke kasir, mereka akan memindainya.",
+        "image": "Minimarket3-02.jpg"
+      },
+      {
+        "question": "Bagaimana cara meminta 'Tolong panaskan bento, tapi jangan terlalu panas'?",
+        "answers": [
+          "お弁当を熱くしてください (Obentou o atsuku shite kudasai)",
+          "お弁当は温めないでください (Obentou wa atatamenaide kudasai)",
+          "お弁当を少しだけ温めてもらえますか (Obentou o sukoshi dake atatamete moraemasu ka)",
+          "このお弁当は冷たいまま食べます (Kono obentou wa tsumetai mama tabemasu)"
+        ],
+        "correct": "お弁当を少しだけ温めてもらえますか (Obentou o sukoshi dake atatamete moraemasu ka)",
+        "feedback": "Anda juga bisa mengatakan '温めは弱めでお願いします (Atatame wa yowame de onegai shimasu)' yang berarti 'Tolong panaskan dengan suhu rendah'.",
+        "image": "Minimarket3-03.jpg"
+      },
+      {
+        "question": "Untuk bertanya 'Kapan tanggal kedaluwarsa produk ini?'",
+        "answers": [
+          "この商品の賞味期限はいつですか (Kono shouhin no shoumikigen wa itsu desu ka)",
+          "この商品はいつ作られましたか (Kono shouhin wa itsu tsukuraremashita ka)",
+          "この商品は美味しいですか (Kono shouhin wa oishii desu ka)",
+          "この商品はどこから来ましたか (Kono shouhin wa doko kara kimashita ka)"
+        ],
+        "correct": "この商品の賞味期限はいつですか (Kono shouhin no shoumikigen wa itsu desu ka)",
+        "feedback": "'賞味期限 (Shoumikigen)' adalah tanggal 'best before', sedangkan '消費期限 (shouhikigen)' adalah tanggal kedaluwarsa 'use by'.",
+        "image": "Minimarket3-04.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Apakah barang ini ada stoknya di gudang?'",
+        "answers": [
+          "この商品は棚にありますか (Kono shouhin wa tana ni arimasu ka)",
+          "すみません、この商品が棚にないのですが、在庫はありますか (Sumimasen, kono shouhin ga tana ni nai no desu ga, zaiko wa arimasu ka)",
+          "この商品はもう売り切れました (Kono shouhin wa mou urikiremashita)",
+          "他の店にありますか (Hoka no mise ni arimasu ka)"
+        ],
+        "correct": "すみません、この商品が棚にないのですが、在庫はありますか (Sumimasen, kono shouhin ga tana ni nai no desu ga, zaiko wa arimasu ka)",
+        "feedback": "'在庫 (Zaiko)' berarti 'stok'. Staf akan memeriksakannya untuk Anda.",
+        "image": "Minimarket3-05.jpg"
+      },
+      {
+        "question": "'Saya ingin mengirim paket ini dengan layananクール便 (cool bin), apakah bisa?'",
+        "answers": [
+          "この荷物をクール便で送れますか (Kono nimotsu o kuuru-bin de okuremasu ka)",
+          "この荷物は壊れやすいです (Kono nimotsu wa kowareyasui desu)",
+          "この荷物は明日届きますか (Kono nimotsu wa ashita todokimasu ka)",
+          "荷物の送料はいくらですか (Nimotsu no souryou wa ikura desu ka)"
+        ],
+        "correct": "この荷物をクール便で送れますか (Kono nimotsu o kuuru-bin de okuremasu ka)",
+        "feedback": "'クール便 (Kuuru-bin)' adalah layanan pengiriman berpendingin untuk makanan atau barang yang harus tetap dingin.",
+        "image": "Minimarket3-06.jpg"
+      },
+      {
+        "question": "'Tolong pisahkan tas untuk barang yang dibeli dan barang pribadi saya.'",
+        "answers": [
+          "買ったものと私物を一緒の袋に入れてください (Katta mono to shibutsu o issho no fukuro ni irete kudasai)",
+          "買ったものと私物の袋を分けていただけますか (Katta mono to shibutsu no fukuro o wakete itadakemasu ka)",
+          "私の私物は袋に入れません (Watashi no shibutsu wa fukuro ni iremasen)",
+          "これは買ったものではありません (Kore wa katta mono dewa arimasen)"
+        ],
+        "correct": "買ったものと私物の袋を分けていただけますか (Katta mono to shibutsu no fukuro o wakete itadakemasu ka)",
+        "feedback": "'買ったもの (Katta mono)' berarti barang yang dibeli. '私物 (Shibutsu)' berarti barang pribadi. Ini untuk menghindari kebingungan.",
+        "image": "Minimarket3-07.jpg"
+      },
+      {
+        "question": "'Maaf, sepertinya uang kembaliannya kurang.'",
+        "answers": [
+          "お釣りが足りないようです (Otsuri ga tarinai you desu)",
+          "お釣りは多いです、ありがとうございます (Otsuri wa ooi desu, arigatou gozaimasu)",
+          "お釣りは要りません (Otsuri wa irimasen)",
+          "お釣りでこれを買います (Otsuri de kore o kaimasu)"
+        ],
+        "correct": "お釣りが足りないようです (Otsuri ga tarinai you desu)",
+        "feedback": "Menggunakan '...ようです (...you desu)' yang berarti 'sepertinya' membuat komplain Anda lebih halus.",
+        "image": "Minimarket3-08.jpg"
+      },
+      {
+        "question": "'Saya ingin membeli dua tiket masuk museum Ghibli melalui mesin Loppi.'",
+        "answers": [
+          "ロッピーでジブリ美術館のチケットを二枚買いたいです (Roppi de Jiburi bijutsukan no chiketto o ni-mai kaitai desu)",
+          "ジブリの映画が見たいです (Jiburi no eiga ga mitai desu)",
+          "美術館はどこですか (Bijutsukan wa doko desu ka)",
+          "ロッピーの使い方が分かりません (Roppi no tsukaikata ga wakarimasen)"
+        ],
+        "correct": "ロッピーでジブリ美術館のチケットを二枚買いたいです (Roppi de Jiburi bijutsukan no chiketto o ni-mai kaitai desu)",
+        "feedback": "Loppi adalah mesin tiket di Lawson. Tiket Ghibli sangat populer dan harus dipesan jauh-jauh hari.",
+        "image": "Minimarket3-09.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Apakah produk ini mengandung bahan hewani?'",
+        "answers": [
+          "これは動物性原料を含んでいますか (Kore wa doubutsu-sei genryou o fukunde imasu ka)",
+          "これはベジタリアン向けですか (Kore wa bejitarian muke desu ka)",
+          "肉が入っていなければ大丈夫です (Niku ga haitte inakereba daijoubu desu)",
+          "これは野菜だけですか (Kore wa yasai dake desu ka)"
+        ],
+        "correct": "これは動物性原料を含んでいますか (Kore wa doubutsu-sei genryou o fukunde imasu ka)",
+        "feedback": "'動物性原料 (Doubutsu-sei genryou)' berarti 'bahan hewani'. Ini adalah pertanyaan penting bagi vegetarian atau vegan.",
+        "image": "Minimarket3-10.jpg"
+      },
+      {
+        "question": "'Bisakah saya menumpang ke toilet meskipun tidak membeli apa-apa?'",
+        "answers": [
+          "何も買いませんが、トイレをお借りしてもいいですか (Nani mo kaimasen ga, toire o o-kari shite mo ii desu ka)",
+          "トイレを掃除してください (Toire o souji shite kudasai)",
+          "トイレの後に何か買います (Toire no ato ni nani ka kaimasu)",
+          "ここのトイレはいつも混んでいますか (Koko no toire wa itsumo konde imasu ka)"
+        ],
+        "correct": "何も買いませんが、トイレをお借りしてもいいですか (Nani mo kaimasen ga, toire o o-kari shite mo ii desu ka)",
+        "feedback": "Sangat sopan untuk bertanya terlebih dahulu. 'お借りしてもいいですか (O-kari shite mo ii desu ka)' adalah cara merendah untuk 'bolehkah saya meminjam'.",
+        "image": "Minimarket3-11.jpg"
+      },
+      {
+        "question": "'Barang ini tidak bisa dipindai. Bisakah Anda memeriksanya?'",
+        "answers": [
+          "この商品はスキャンできません。確認してもらえますか (Kono shouhin wa sukyan dekimasen. Kakunin shite moraemasu ka)",
+          "この商品のバーコードはどこですか (Kono shouhin no baakoodo wa doko desu ka)",
+          "値段が分かりません (Nedan ga wakarimasen)",
+          "これは無料ですか (Kore wa muryou desu ka)"
+        ],
+        "correct": "この商品はスキャンできません。確認してもらえますか (Kono shouhin wa sukyan dekimasen. Kakunin shite moraemasu ka)",
+        "feedback": "'確認してもらえますか (Kakunin shite moraemasu ka)' adalah cara sopan untuk meminta seseorang memeriksa sesuatu untuk Anda.",
+        "image": "Minimarket3-12.jpg"
+      },
+      {
+        "question": "'Apakah ada jasa pengiriman barang ke hotel?'",
+        "answers": [
+          "ホテルまで荷物を送るサービスはありますか (Hoteru made nimotsu o okuru saabisu wa arimasu ka)",
+          "ホテルから荷物を送りたいです (Hoteru kara nimotsu o okuritai desu)",
+          "この近くにホテルはありますか (Kono chikaku ni hoteru wa arimasu ka)",
+          "ホテルの予約をお願いします (Hoteru no yoyaku o onegai shimasu)"
+        ],
+        "correct": "ホテルまで荷物を送るサービスはありますか (Hoteru made nimotsu o okuru saabisu wa arimasu ka)",
+        "feedback": "Beberapa layanan kurir di konbini memungkinkan pengiriman ke hotel atau bandara.",
+        "image": "Minimarket3-13.jpg"
+      },
+      {
+        "question": "'Saya ingin struk terpisah untuk barang ini karena ini untuk kantor.'",
+        "answers": [
+          "これは会社のものなので、領収書を別にしていただけますか (Kore wa kaisha no mono na node, ryoushuusho o betsu ni shite itadakemasu ka)",
+          "全部の領収書をください (Zenbu no ryoushuusho o kudasai)",
+          "領収書は要りません (Ryoushuusho wa irimasen)",
+          "会社の経費で落ちますか (Kaisha no keihi de ochimasu ka)"
+        ],
+        "correct": "これは会社のものなので、領収書を別にしていただけますか (Kore wa kaisha no mono na node, ryoushuusho o betsu ni shite itadakemasu ka)",
+        "feedback": "'会社のもの (Kaisha no mono)' berarti 'milik perusahaan'. '別にしていただけますか (Betsu ni shite itadakemasu ka)' adalah cara sangat sopan untuk meminta sesuatu dipisahkan.",
+        "image": "Minimarket3-14.jpg"
+      },
+      {
+        "question": "'Bisakah Anda merekomendasikan camilan yang cocok dengan bir?'",
+        "answers": [
+          "ビールに合うおつまみのおすすめはありますか (Biiru ni au o-tsumami no osusume wa arimasu ka)",
+          "甘いお菓子はどれですか (Amai okashi wa dore desu ka)",
+          "ビールはどこにありますか (Biiru wa doko ni arimasu ka)",
+          "おつまみは食べません (Otsumami wa tabemasen)"
+        ],
+        "correct": "ビールに合うおつまみのおすすめはありますか (Biiru ni au o-tsumami no osusume wa arimasu ka)",
+        "feedback": "'おつまみ (Otsumami)' adalah camilan pendamping minuman beralkohol. Staf konbini biasanya tahu mana yang paling populer.",
+        "image": "Minimarket3-15.jpg"
+      },
+      {
+        "question": "'Saya lupa kata sandi untuk Wi-Fi gratis, di mana saya bisa melihatnya?'",
+        "answers": [
+          "無料ワイファイのパスワードを忘れましたが、どこかに書いてありますか (Muryou waifai no pasuwaado o wasuremashita ga, dokoka ni kaite arimasu ka)",
+          "ワイファイが繋がりません (Waifai ga tsunagarimasen)",
+          "あなたの携帯を貸してください (Anata no keitai o kashite kudasai)",
+          "パスワードを教えてください (Pasuwaado o oshiete kudasai)"
+        ],
+        "correct": "無料ワイファイのパスワードを忘れましたが、どこかに書いてありますか (Muryou waifai no pasuwaado o wasuremashita ga, dokoka ni kaite arimasu ka)",
+        "feedback": "Informasi login Wi-Fi biasanya tertera di poster di dalam toko, seringkali di dekat area eat-in.",
+        "image": "Minimarket3-16.jpg"
+      },
+      {
+        "question": "'Saya ingin mencetak foto dari USB ini, apakah mungkin?'",
+        "answers": [
+          "このUSBから写真をプリントできますか (Kono USB kara shashin o purinto dekimasu ka)",
+          "このUSBは使えません (Kono USB wa tsukaemasen)",
+          "写真を撮ってください (Shashin o totte kudasai)",
+          "コピー機はどこですか (Kopiiki wa doko desu ka)"
+        ],
+        "correct": "このUSBから写真をプリントできますか (Kono USB kara shashin o purinto dekimasu ka)",
+        "feedback": "Mesin fotokopi serbaguna di konbini dapat mencetak dokumen atau foto dari berbagai media, termasuk USB atau smartphone.",
+        "image": "Minimarket3-17.jpg"
+      },
+      {
+        "question": "'Apakah ada batasan jumlah penarikan uang di ATM ini per hari?'",
+        "answers": [
+          "このATMは一日にいくらまでおろせますか (Kono ATM wa ichinichi ni ikura made orosemasu ka)",
+          "お金を全部おろしたいです (Okane o zenbu oroshitai desu)",
+          "手数料はかかりますか (Tesuuryou wa kakarimasu ka)",
+          "ATMは今使えますか (ATM wa ima tsukaemasu ka)"
+        ],
+        "correct": "このATMは一日にいくらまでおろせますか (Kono ATM wa ichinichi ni ikura made orosemasu ka)",
+        "feedback": "'いくらまで (Ikura made)' berarti 'sampai berapa banyak'. 'おろせますか (Orosemasu ka)' adalah bentuk potensial dari 'menarik uang'.",
+        "image": "Minimarket3-18.jpg"
+      },
+      {
+        "question": "'Saat memanaskan spageti, tolong jangan buka plastiknya.'",
+        "answers": [
+          "スパゲッティのフィルムは開けないで温めてください (Supagetti no firumu wa akenaide atatamete kudasai)",
+          "スパゲッティを熱くしてください (Supagetti o atsuku shite kudasai)",
+          "フォークを付けてください (Fooku o tsukete kudasai)",
+          "このスパゲッティは美味しいですか (Kono supagetti wa oishii desu ka)"
+        ],
+        "correct": "スパゲッティのフィルムは開けないで温めてください (Supagetti no firumu wa akenaide atatamete kudasai)",
+        "feedback": "Beberapa makanan kemasan dirancang untuk dipanaskan dengan bungkusnya. Ini adalah permintaan spesifik yang bisa Anda buat.",
+        "image": "Minimarket3-19.jpg"
+      },
+      {
+        "question": "'Maaf, apakah Anda punya kantong plastik yang lebih besar?'",
+        "answers": [
+          "もう少し大きい袋はありますか (Mou sukoshi ookii fukuro wa arimasu ka)",
+          "小さい袋をください (Chiisai fukuro o kudasai)",
+          "袋は二つください (Fukuro wa futatsu kudasai)",
+          "この袋は破れています (Kono fukuro wa yaburete imasu)"
+        ],
+        "correct": "もう少し大きい袋はありますか (Mou sukoshi ookii fukuro wa arimasu ka)",
+        "feedback": "'もう少し (Mou sukoshi)' berarti 'sedikit lagi'. Ini adalah cara sopan untuk meminta ukuran yang berbeda.",
+        "image": "Minimarket3-20.jpg"
+      },
+      {
+        "question": "'Apakah saya bisa menukar uang dolar di sini?'",
+        "answers": [
+          "ここでドルを両替できますか (Koko de doru o ryougae dekimasu ka)",
+          "ドルで払えますか (Doru de haraemasu ka)",
+          "日本円が欲しいです (Nihon-en ga hoshii desu)",
+          "銀行はどこですか (Ginkou wa doko desu ka)"
+        ],
+        "correct": "ここでドルを両替できますか (Koko de doru o ryougae dekimasu ka)",
+        "feedback": "Secara umum, konbini tidak melayani penukaran mata uang asing. Anda harus pergi ke bank atau money changer.",
+        "image": "Minimarket3-21.jpg"
+      },
+      {
+        "question": "'Saya ingin membeli kartu hadiah iTunes senilai 3000 yen.'",
+        "answers": [
+          "三千円分のiTunesカードをください (Sanzen-en bun no Aichuunzu kaado o kudasai)",
+          "グーグルプレイカードはありますか (Guuguru purei kaado wa arimasu ka)",
+          "このカードの使い方が分かりません (Kono kaado no tsukaikata ga wakarimasen)",
+          "これはプレゼントです (Kore wa purezento desu)"
+        ],
+        "correct": "三千円分のiTunesカードをください (Sanzen-en bun no Aichuunzu kaado o kudasai)",
+        "feedback": "Konbini menjual berbagai kartu prabayar dan kartu hadiah yang dipajang di dekat kasir.",
+        "image": "Minimarket3-22.jpg"
+      },
+      {
+        "question": "'Apakah Anda bisa memecah uang 10.000 yen ini menjadi lembaran 1.000 yen?'",
+        "answers": [
+          "この一万円札を千円札に両替してもらえますか (Kono ichiman-en satsu o sen-en satsu ni ryougae shite moraemasu ka)",
+          "一万円のお釣りはありますか (Ichiman-en no otsuri wa arimasu ka)",
+          "千円貸してください (Sen-en kashite kudasai)",
+          "これは偽札ですか (Kore wa nisesatsu desu ka)"
+        ],
+        "correct": "この一万円札を千円札に両替してもらえますか (Kono ichiman-en satsu o sen-en satsu ni ryougae shite moraemasu ka)",
+        "feedback": "Konbini biasanya tidak mau melakukan ini kecuali Anda membeli sesuatu, karena alasan keamanan.",
+        "image": "Minimarket3-23.jpg"
+      },
+      {
+        "question": "'Saya mencari minuman energi tanpa gula. Ada rekomendasi?'",
+        "answers": [
+          "砂糖の入っていないエナジードリンクでおすすめはありますか (Satou no haitte inai enajii dorinku de osusume wa arimasu ka)",
+          "一番甘い飲み物はどれですか (Ichiban amai nomimono wa dore desu ka)",
+          "カフェインは入っていますか (Kafein wa haitte imasu ka)",
+          "これは体にいいですか (Kore wa karada ni ii desu ka)"
+        ],
+        "correct": "砂糖の入っていないエナジードリンクでおすすめはありますか (Satou no haitte inai enajii dorinku de osusume wa arimasu ka)",
+        "feedback": "'...の入っていない (...no haitte inai)' berarti 'yang tidak mengandung...'.",
+        "image": "Minimarket3-24.jpg"
+      },
+      {
+        "question": "'Apakah mungkin untuk mengambil paket yang dikirim ke konbini ini?'",
+        "answers": [
+          "ここで荷物を受け取ることはできますか (Koko de nimotsu o uketoru koto wa dekimasu ka)",
+          "荷物を送ってください (Nimotsu o okutte kudasai)",
+          "私の荷物は届きましたか (Watashi no nimotsu wa todokimashita ka)",
+          "これは誰の荷物ですか (Kore wa dare no nimotsu desu ka)"
+        ],
+        "correct": "ここで荷物を受け取ることはできますか (Koko de nimotsu o uketoru koto wa dekimasu ka)",
+        "feedback": "Layanan 'コンビニ受け取り (konbini uketori)' memungkinkan Anda mengambil barang belanjaan online di konbini terdekat.",
+        "image": "Minimarket3-25.jpg"
+      },
+      {
+        "question": "'Tolong jangan masukkan sedotan, saya punya sendiri.'",
+        "answers": [
+          "ストローを二本ください (Sutoroo o ni-hon kudasai)",
+          "ストローは要りません、自分で持っていますから (Sutoroo wa irimasen, jibun de motte imasu kara)",
+          "このストローはプラスチックですか (Kono sutoroo wa purasuchikku desu ka)",
+          "ストローを忘れてしまいました (Sutoroo o wasurete shimaimashita)"
+        ],
+        "correct": "ストローは要りません、自分で持っていますから (Sutoroo wa irimasen, jibun de motte imasu kara)",
+        "feedback": "Menyebutkan alasan '自分で持っていますから (jibun de motte imasu kara)' yang berarti 'karena saya punya sendiri' membuatnya lebih jelas.",
+        "image": "Minimarket3-26.jpg"
+      },
+      {
+        "question": "'Saya ingin membeli kantong sampah yang ditentukan oleh kota ini.'",
+        "answers": [
+          "この市の指定ゴミ袋をください (Kono shi no shitei gomibukuro o kudasai)",
+          "ゴミの分別方法を教えてください (Gomi no bunbetsu houhou o oshiete kudasai)",
+          "ゴミ箱はどこですか (Gomibako wa doko desu ka)",
+          "この袋はいくらですか (Kono fukuro wa ikura desu ka)"
+        ],
+        "correct": "この市の指定ゴミ袋をください (Kono shi no shitei gomibukuro o kudasai)",
+        "feedback": "Di Jepang, Anda harus menggunakan '指定ゴミ袋 (shitei gomibukuro)' atau kantong sampah khusus yang dijual di konbini atau supermarket.",
+        "image": "Minimarket3-27.jpg"
+      },
+      {
+        "question": "'Saat staf salah memindai barang, Anda bisa berkata: 'Maaf, sepertinya Anda memindai dua kali.''",
+        "answers": [
+          "すみません、二回スキャンされたようです (Sumimasen, ni-kai sukyan sareta you desu)",
+          "もっとスキャンしてください (Motto sukyan shite kudasai)",
+          "一つはキャンセルします (Hitotsu wa kyanseru shimasu)",
+          "合計は合っていますか (Goukei wa atte imasu ka)"
+        ],
+        "correct": "すみません、二回スキャンされたようです (Sumimasen, ni-kai sukyan sareta you desu)",
+        "feedback": "Menggunakan bentuk pasif '...されたようです (...sareta you desu)' membuatnya terdengar tidak menuduh dan lebih sopan.",
+        "image": "Minimarket3-28.jpg"
+      },
+      {
+        "question": "'Apakah saya bisa mendapatkan bukti pembayaran untuk layanan takkyubin?'",
+        "answers": [
+          "宅急便の控えをいただけますか (Takkyuubin no hikae o itadakemasu ka)",
+          "宅急便はいつ届きますか (Takkyuubin wa itsu todokimasu ka)",
+          "宅急便の箱はありますか (Takkyuubin no hako wa arimasu ka)",
+          "これを宅急便で送りたいです (Kore o takkyuubin de okuritai desu)"
+        ],
+        "correct": "宅急便の控えをいただけますか (Takkyuubin no hikae o itadakemasu ka)",
+        "feedback": "'控え (Hikae)' adalah salinan atau bukti yang harus Anda simpan sampai paket tiba di tujuan.",
+        "image": "Minimarket3-29.jpg"
+      },
+      {
+        "question": "'Bisakah Anda memberi tahu saya bahan-bahan apa saja yang ada di dalam onigiri ini?'",
+        "answers": [
+          "このおにぎりの具材を教えてください (Kono onigiri no guzai o oshiete kudasai)",
+          "このおにぎりは手作りですか (Kono onigiri wa tezukuri desu ka)",
+          "おにぎりを温めてください (Onigiri o atatamete kudasai)",
+          "このおにぎりは人気ですか (Kono onigiri wa ninki desu ka)"
+        ],
+        "correct": "このおにぎりの具材を教えてください (Kono onigiri no guzai o oshiete kudasai)",
+        "feedback": "'具材 (Guzai)' berarti 'isi' atau 'bahan-bahan'. Ini berguna jika Anda memiliki pantangan makan.",
+        "image": "Minimarket3-30.jpg"
+      },
+      {
+        "question": "'Apakah ada tempat untuk memarkir sepeda?'",
+        "answers": [
+          "自転車を停める場所はありますか (Jitensha o tomeru basho wa arimasu ka)",
+          "ここに駐車してもいいですか (Koko ni chuusha shite mo ii desu ka)",
+          "自転車で来ました (Jitensha de kimashita)",
+          "バス停はどこですか (Basutei wa doko desu ka)"
+        ],
+        "correct": "自転車を停める場所はありますか (Jitensha o tomeru basho wa arimasu ka)",
+        "feedback": "'自転車を停める場所 (Jitensha o tomeru basho)' berarti tempat parkir sepeda. Beberapa konbini memilikinya.",
+        "image": "Minimarket3-31.jpg"
+      },
+      {
+        "question": "'Saya ingin membatalkan item terakhir yang baru saja Anda pindai.'",
+        "answers": [
+          "今スキャンした商品をキャンセルしてください (Ima sukyan shita shouhin o kyanseru shite kudasai)",
+          "全部キャンセルします (Zenbu kyanseru shimasu)",
+          "これも追加してください (Kore mo tsuika shite kudasai)",
+          "支払いは後でします (Shiharai wa ato de shimasu)"
+        ],
+        "correct": "今スキャンした商品をキャンセルしてください (Ima sukyan shita shouhin o kyanseru shite kudasai)",
+        "feedback": "Ini adalah cara yang jelas untuk meminta pembatalan item tertentu sebelum menyelesaikan pembayaran.",
+        "image": "Minimarket3-32.jpg"
+      },
+      {
+        "question": "'Apakah ada koran berbahasa Inggris yang tersedia?'",
+        "answers": [
+          "英字新聞は置いていますか (Eiji shinbun wa oite imasu ka)",
+          "日本語の新聞をください (Nihongo no shinbun o kudasai)",
+          "スポーツ新聞はどれですか (Supootsu shinbun wa dore desu ka)",
+          "今日の新聞ですか (Kyou no shinbun desu ka)"
+        ],
+        "correct": "英字新聞は置いていますか (Eiji shinbun wa oite imasu ka)",
+        "feedback": "'英字新聞 (Eiji shinbun)' adalah koran berbahasa Inggris. Ketersediaannya terbatas, biasanya hanya di area perkotaan besar.",
+        "image": "Minimarket3-33.jpg"
+      },
+      {
+        "question": "'Saya tidak sengaja menumpahkan minuman, maaf. Apakah Anda punya lap?'",
+        "answers": [
+          "すみません、飲み物をこぼしてしまいました。雑巾はありますか (Sumimasen, nomimono o koboshite shimaimashita. Zoukin wa arimasu ka)",
+          "床が濡れています (Yuka ga nurete imasu)",
+          "掃除してください (Souji shite kudasai)",
+          "この飲み物は美味しくないです (Kono nomimono wa oishikunai desu)"
+        ],
+        "correct": "すみません、飲み物をこぼしてしまいました。雑巾はありますか (Sumimasen, nomimono o koboshite shimaimashita. Zoukin wa arimasu ka)",
+        "feedback": "'こぼしてしまいました (Koboshite shimaimashita)' menunjukkan penyesalan. '雑巾 (Zoukin)' adalah kain lap.",
+        "image": "Minimarket3-34.jpg"
+      },
+      {
+        "question": "'Bisakah Anda merekomendasikan es krim yang sedang populer sekarang?'",
+        "answers": [
+          "今人気のアイスは何ですか (Ima ninki no aisu wa nan desu ka)",
+          "一番安いアイスはどれですか (Ichiban yasui aisu wa dore desu ka)",
+          "チョコレート味のアイスが食べたいです (Chokoreeto aji no aisu ga tabetai desu)",
+          "アイスは溶けています (Aisu wa tokete imasu)"
+        ],
+        "correct": "今人気のアイスは何ですか (Ima ninki no aisu wa nan desu ka)",
+        "feedback": "Konbini sering merilis es krim edisi terbatas atau musiman yang menjadi populer.",
+        "image": "Minimarket3-35.jpg"
+      },
+      {
+        "question": "'Apakah mungkin untuk membayar sebagian dengan uang tunai dan sisanya dengan kartu?'",
+        "answers": [
+          "現金とカードを併用して支払えますか (Genkin to kaado o heiyou shite shiharaemasu ka)",
+          "現金だけで払います (Genkin dake de haraimasu)",
+          "カードだけで払います (Kaado dake de haraimasu)",
+          "お金が足りません (Okane ga tarimasen)"
+        ],
+        "correct": "現金とカードを併用して支払えますか (Genkin to kaado o heiyou shite shiharaemasu ka)",
+        "feedback": "'併用して (Heiyou shite)' berarti 'menggunakan bersama-sama'. Ini mungkin tidak bisa dilakukan di semua toko.",
+        "image": "Minimarket3-36.jpg"
+      },
+      {
+        "question": "'Saya ingin membeli sekotak rokok Marlboro Merah.'",
+        "answers": [
+          "マルボロの赤をひと箱ください (Maruboro no aka o hito-hako kudasai)",
+          "タバコの番号は...です (Tabako no bangou wa ... desu)",
+          "タバコは吸いません (Tabako wa suimasen)",
+          "ライターもお願いします (Raitaa mo onegai shimasu)"
+        ],
+        "correct": "マルボロの赤をひと箱ください (Maruboro no aka o hito-hako kudasai)",
+        "feedback": "Selain menyebutkan nomor, Anda juga bisa menyebutkan nama mereknya jika Anda tahu. 'ひと箱 (Hito-hako)' berarti 'satu kotak/bungkus'.",
+        "image": "Minimarket3-37.jpg"
+      },
+      {
+        "question": "'Apakah ada diskon jika saya membeli dua onigiri?'",
+        "answers": [
+          "おにぎりを二つ買うと、割引はありますか (Onigiri o futatsu kau to, waribiki wa arimasu ka)",
+          "おにぎりは百円ですか (Onigiri wa hyaku-en desu ka)",
+          "おにぎりを一つだけ買います (Onigiri o hitotsu dake kaimasu)",
+          "このおにぎりはセール品ですか (Kono onigiri wa seeru hin desu ka)"
+        ],
+        "correct": "おにぎりを二つ買うと、割引はありますか (Onigiri o futatsu kau to, waribiki wa arimasu ka)",
+        "feedback": "Konbini sering mengadakan promosi seperti ini, misalnya 'diskon 30 yen jika membeli dua buah'.",
+        "image": "Minimarket3-38.jpg"
+      },
+      {
+        "question": "'Maaf, saya berubah pikiran. Saya tidak jadi membeli ini.'",
+        "answers": [
+          "すみません、やっぱりこれを買うのをやめます (Sumimasen, yappari kore o kau no o yamemasu)",
+          "これをください (Kore o kudasai)",
+          "これを交換してください (Kore o koukan shite kudasai)",
+          "これは返品できますか (Kore wa henpin dekimasu ka)"
+        ],
+        "correct": "すみません、やっぱりこれを買うのをやめます (Sumimasen, yappari kore o kau no o yamemasu)",
+        "feedback": "'やっぱり...やめます (Yappari...yamemasu)' adalah cara umum untuk mengatakan 'Setelah dipikir-pikir, saya tidak jadi...'.",
+        "image": "Minimarket3-39.jpg"
+      },
+      {
+        "question": "'Apakah Anda menjual amplop dan kertas surat set?'",
+        "answers": [
+          "封筒と便箋のセットは売っていますか (Fuutou to binsen no setto wa utte imasu ka)",
+          "ボールペンを一本ください (Boorupen o ippon kudasai)",
+          "切手をください (Kitte o kudasai)",
+          "手紙を書くのが好きです (Tegami o kaku no ga suki desu)"
+        ],
+        "correct": "封筒と便箋のセットは売っていますか (Fuutou to binsen no setto wa utte imasu ka)",
+        "feedback": "'封筒 (Fuutou)' adalah amplop dan '便箋 (Binsen)' adalah kertas surat. Konbini memiliki bagian alat tulis kecil.",
+        "image": "Minimarket3-40.jpg"
+      },
+      {
+        "question": "'Bisakah Anda memberikan saya struk dengan rincian barang?'",
+        "answers": [
+          "明細が載っているレシートをいただけますか (Meisai ga notte iru reshiito o itadakemasu ka)",
+          "簡単な領収書でいいです (Kantan na ryoushuusho de ii desu)",
+          "レシートは要りません (Reshiito wa irimasen)",
+          "このレシートは長いですね (Kono reshiito wa nagai desu ne)"
+        ],
+        "correct": "明細が載っているレシートをいただけますか (Meisai ga notte iru reshiito o itadakemasu ka)",
+        "feedback": "'明細 (Meisai)' berarti 'rincian'. Ini berguna untuk keperluan klaim atau pencatatan pengeluaran.",
+        "image": "Minimarket3-41.jpg"
+      },
+      {
+        "question": "'Apakah ada makanan panas selain yang ada di etalase ini?'",
+        "answers": [
+          "このケースの中にあるもの以外に、何か温かい食べ物はありますか (Kono keesu no naka ni aru mono igai ni, nani ka atatakai tabemono wa arimasu ka)",
+          "から揚げは揚げたてですか (Karaage wa agetate desu ka)",
+          "これは全部ください (Kore wa zenbu kudasai)",
+          "冷たい食べ物が欲しいです (Tsumetai tabemono ga hoshii desu)"
+        ],
+        "correct": "このケースの中にあるもの以外に、何か温かい食べ物はありますか (Kono keesu no naka ni aru mono igai ni, nani ka atatakai tabemono wa arimasu ka)",
+        "feedback": "'...以外に (...igai ni)' berarti 'selain...'. Terkadang mereka memiliki oden (rebusan Jepang) di musim dingin.",
+        "image": "Minimarket3-42.jpg"
+      },
+      {
+        "question": "'Saya ingin membeli tiket bus malam dari Tokyo ke Osaka.'",
+        "answers": [
+          "東京から大阪までの夜行バスのチケットを買いたいです (Toukyou kara Oosaka made no yakou basu no chiketto o kaitai desu)",
+          "新幹線で行きます (Shinkansen de ikimasu)",
+          "バス停はどこですか (Basutei wa doko desu ka)",
+          "大阪は遠いですか (Oosaka wa tooi desu ka)"
+        ],
+        "correct": "東京から大阪までの夜行バスのチケットを買いたいです (Toukyou kara Oosaka made no yakou basu no chiketto o kaitai desu)",
+        "feedback": "Tiket '夜行バス (yakou basu)' atau bus malam adalah cara bepergian yang ekonomis dan bisa dibeli di mesin tiket konbini.",
+        "image": "Minimarket3-43.jpg"
+      },
+      {
+        "question": "'Apakah minuman ini mengandung kafein?'",
+        "answers": [
+          "この飲み物にはカフェインが入っていますか (Kono nomimono ni wa kafein ga haitte imasu ka)",
+          "コーヒーは好きではありません (Koohii wa suki dewa arimasen)",
+          "デカフェはありますか (dekafe wa arimasu ka)",
+          "夜眠れなくなります (Yoru nemurenaku narimasu)"
+        ],
+        "correct": "この飲み物にはカフェインが入っていますか (Kono nomimono ni wa kafein ga haitte imasu ka)",
+        "feedback": "Ini adalah pertanyaan yang bagus jika Anda sensitif terhadap kafein, terutama saat membeli teh atau minuman energi.",
+        "image": "Minimarket3-44.jpg"
+      },
+      {
+        "question": "'Bisakah Anda memasukkan es ke dalam kantong terpisah?'",
+        "answers": [
+          "氷を袋に別々に入れてもらえますか (Koori o fukuro ni betsu betsu ni irete moraemasu ka)",
+          "氷は要りません (Koori wa irimasen)",
+          "この飲み物に氷を入れてください (Kono nomimono ni koori o irete kudasai)",
+          "氷は無料ですか (Koori wa muryou desu ka)"
+        ],
+        "correct": "氷を袋に別々に入れてもらえますか (Koori o fukuro ni betsu betsu ni irete moraemasu ka)",
+        "feedback": "Ini berguna jika Anda membeli es batu kemasan ('ロックアイス, rokku aisu') bersama dengan barang lain agar tidak basah.",
+        "image": "Minimarket3-45.jpg"
+      },
+      {
+        "question": "'Apakah saya bisa meminjam pulpen sebentar?'",
+        "answers": [
+          "ボールペンを少しお借りできますか (Boorupen o sukoshi o-kari dekimasu ka)",
+          "ボールペンを一本ください (Boorupen o ippon kudasai)",
+          "ここにサインをします (Koko ni sain o shimasu)",
+          "このペンは書きやすいです (Kono pen wa kakiyasui desu)"
+        ],
+        "correct": "ボールペンを少しお借りできますか (Boorupen o sukoshi o-kari dekimasu ka)",
+        "feedback": "Gunakan frasa 'お借りできますか (o-kari dekimasu ka)' yang sopan untuk meminjam sesuatu.",
+        "image": "Minimarket3-46.jpg"
+      },
+      {
+        "question": "'Saya ingin membeli payung yang kuat, bukan yang sekali pakai.'",
+        "answers": [
+          "使い捨てではない、丈夫な傘が欲しいです (Tsukaisute dewa nai, joubu na kasa ga hoshii desu)",
+          "ビニール傘をください (Biniiru gasa o kudasai)",
+          "傘はいくらですか (Kasa wa ikura desu ka)",
+          "雨が降っていますね (Ame ga futte imasu ne)"
+        ],
+        "correct": "使い捨てではない、丈夫な傘が欲しいです (Tsukaisute dewa nai, joubu na kasa ga hoshii desu)",
+        "feedback": "'使い捨て (Tsukaisute)' berarti sekali pakai, seperti payung plastik bening ('ビニール傘, biniiru gasa'). '丈夫な (Joubu na)' berarti kuat atau awet.",
+        "image": "Minimarket3-47.jpg"
+      },
+      {
+        "question": "'Apakah ada koran terbitan kemarin yang tersisa?'",
+        "answers": [
+          "昨日の新聞はまだ残っていますか (Kinou no shinbun wa mada nokotte imasu ka)",
+          "今日の新聞を一部ください (Kyou no shinbun o ichi-bu kudasai)",
+          "新聞は読みません (Shinbun wa yomimasen)",
+          "明日の新聞はいつ来ますか (Ashita no shinbun wa itsu kimasu ka)"
+        ],
+        "correct": "昨日の新聞はまだ残っていますか (Kinou no shinbun wa mada nokotte imasu ka)",
+        "feedback": "'残っていますか (Nokotte imasu ka)' berarti 'apakah masih tersisa?'. Biasanya koran lama sudah ditarik.",
+        "image": "Minimarket3-48.jpg"
+      },
+      {
+        "question": "'Untuk pembayaran tagihan ini, apakah saya perlu menunjukkan ID?'",
+        "answers": [
+          "この支払いに身分証明書は必要ですか (Kono shiharai ni mibun shoumeisho wa hitsuyou desu ka)",
+          "免許証を持っています (Menkyoshou o motte imasu)",
+          "これは私の請求書です (Kore wa watashi no seikyuusho desu)",
+          "名前は何ですか (Namae wa nan desu ka)"
+        ],
+        "correct": "この支払いに身分証明書は必要ですか (Kono shiharai ni mibun shoumeisho wa hitsuyou desu ka)",
+        "feedback": "'身分証明書 (Mibun shoumeisho)' adalah kartu identitas. Umumnya tidak diperlukan untuk membayar tagihan biasa.",
+        "image": "Minimarket3-49.jpg"
+      },
+      {
+        "question": "'Barang ini sepertinya sudah lewat tanggal kedaluwarsa, bisakah Anda memeriksanya?'",
+        "answers": [
+          "この商品は賞味期限が切れているようですが、確認していただけますか (Kono shouhin wa shoumikigen ga kirete iru you desu ga, kakunin shite itadakemasu ka)",
+          "この商品は新鮮ですか (Kono shouhin wa shinsen desu ka)",
+          "割引になりますか (Waribiki ni narimasu ka)",
+          "新しいものをください (Atarashii mono o kudasai)"
+        ],
+        "correct": "この商品は賞味期限が切れているようですが、確認していただけますか (Kono shouhin wa shoumikigen ga kirete iru you desu ga, kakunin shite itadakemasu ka)",
+        "feedback": "'期限が切れている (Kigen ga kirete iru)' berarti 'telah melewati tanggal kedaluwarsa'. Ini cara sopan untuk memberitahu staf.",
+        "image": "Minimarket3-50.jpg"
+      }
+    ]
+  }
+}

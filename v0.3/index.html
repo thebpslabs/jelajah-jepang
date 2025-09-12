@@ -71,9 +71,9 @@
                         <span>Kereta</span>
                         <div class="lock-icon">&#x1F512;</div>
                     </button>
-                    <button class="category-btn" data-category="Apotek">
-                        <img src="assets/Hospital1.jpg" alt="Apotek">
-                        <span>Apotek</span>
+                    <button class="category-btn" data-category="Rumah Sakit">
+                        <img src="assets/Hospital1.jpg" alt="Rumah Sakit">
+                        <span>Rumah Sakit</span>
                         <div class="lock-icon">&#x1F512;</div>
                     </button>
                 </div>
@@ -116,9 +116,9 @@
                 <p id="result-subtext"></p>
                  <div class="ad-placeholder-center">Ads Placeholder</div>
                 <div class="button-container">
+                    <button id="home-btn" class="result-page-btn">Home</button>
                     <button id="share-btn" class="result-page-btn">Share</button>
                     <button id="retry-btn" class="result-page-btn">Coba Lagi</button>
-                    <button id="home-btn" class="result-page-btn">Kategori Lain</button>
                 </div>
             </div>
         </div>
@@ -163,29 +163,6 @@
                 <button id="back-to-home-from-log" class="back-btn">Kembali ke Home</button>
             </div>
         </div>
-
-        <!-- MODIFIED: Guidebook Page -->
-        <div id="guidebook-page" class="page">
-            <div class="page-content guidebook-content">
-                <h2>Buku Panduan</h2>
-                <div class="tabs">
-                    <button class="tab-btn active" data-tab="guide-game">Cara Main</button>
-                    <button class="tab-btn" data-tab="guide-about">Tentang Saya</button>
-                </div>
-                <div id="guide-game" class="tab-content active">
-                    <h4>Selamat Datang, Petualang!</h4>
-                    <p><strong>Naik Level:</strong> Untuk membuka tingkat kesulitan selanjutnya, kamu harus meraih nilai sempurna (10/10 jawaban benar) di satu kategori pada level sebelumnya. Kuasai satu bidang, dan pintu petualangan baru akan terbuka!</p>
-                    <p><strong>Meraih Skor Tinggi:</strong> Setiap jawaban benar memberimu <strong>100 poin</strong>. Jawab lebih cepat untuk bonus waktu! Dapatkan juga <strong>[Combo]</strong> untuk jawaban benar berturut-turut, dan raih <strong>Sempurna!</strong> untuk 10 jawaban benar demi bonus skor masif!</p>
-                    <p><strong>Update:</strong> Kategori dan pertanyaan baru akan terus ditambahkan secara berkala. Nantikan petualangan barunya!</p>
-                </div>
-                <div id="guide-about" class="tab-content">
-                    <h4>Halo!</h4>
-                    <p>Terima kasih sudah memainkan "Petualangan di Jepang"! Game ini dibuat dengan harapan bisa menjadi cara yang seru dan asyik untuk belajar bahasa Jepang.</p>
-                    <p>Punya masukan, kritik, atau menemukan bug? Jangan ragu untuk menghubungi saya melalui email di <strong>[emailanda@contoh.com]</strong>. Setiap feedback sangat berharga!</p>
-                </div>
-                <button id="back-to-home-from-guide" class="back-btn">Kembali ke Home</button>
-            </div>
-        </div>
     </div>
 
     <!-- Settings Overlay -->
@@ -216,6 +193,43 @@
         </div>
     </div>
 
+    <!-- NEW: Guidebook Overlay -->
+    <div id="guidebook-overlay" class="overlay">
+        <div class="overlay-content guidebook-content">
+            <h2>Buku Panduan Petualang</h2>
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="how-to-play">Cara Bermain</button>
+                <button class="tab-btn" data-tab="about-us">Tentang Kami</button>
+            </div>
+            <div id="how-to-play" class="tab-content active">
+                <h4>Cara Naik Level:</h4>
+                <p>Untuk membuka level berikutnya (misal, dari Level 1 ke Level 2) di sebuah kategori, kamu harus menjadi master di level sebelumnya. Caranya? Dapatkan <strong>skor sempurna 10/10</strong> di kategori tersebut! Kuasai restoran level 1 untuk membuka restoran level 2, dan seterusnya!</p>
+                
+                <h4>Cara Jadi Juara Skor:</h4>
+                <p>Setiap jawaban benar memberimu <strong>+100 poin</strong>. Tapi, petualang sejati tahu cara mengumpulkan bonus!</p>
+                <ul>
+                    <li><strong>Bonus Waktu ⏳:</strong> Jawab secepat kilat! Sisa waktu di bar akan diubah menjadi poin bonus. Makin cepat, makin besar bonusnya!</li>
+                    <li><strong>Bonus Combo 🔥:</strong> Jawab benar berturut-turut untuk mendapatkan bonus combo yang makin besar. Kalau bisa 10x berturut-turut, kamu akan dapat bonus <strong>SEMPURNA +50!</strong></li>
+                </ul>
+
+                <h4>Petualangan Baru Menanti:</h4>
+                <p>Dunia Jepang sangat luas! Kami akan terus menambahkan kategori dan pertanyaan baru secara berkala. Jadi, teruslah berlatih, petualang!</p>
+            </div>
+            <div id="about-us" class="tab-content">
+                <h4>Halo, Petualang!</h4>
+                <p>Terima kasih sudah bermain! Game ini dibuat oleh [Nama Anda/Nama Studio Anda] dengan harapan bisa membuat belajar bahasa Jepang jadi lebih seru dan praktis, terutama buat kamu yang mau jalan-jalan ke Jepang.</p>
+                <p>Kami percaya, sedikit demi sedikit menguasai percakapan sehari-hari bisa membuat perbedaan besar dalam petualanganmu.</p>
+                
+                <h4>Punya Ide atau Masukan?</h4>
+                <p>Kami senang sekali mendengar darimu! Apakah ada kategori yang kamu inginkan? Atau menemukan soal yang aneh? Kirimkan masukanmu ke:</p>
+                <p><strong>kontak@emailanda.com</strong></p>
+                <p>Selamat bertualang!</p>
+            </div>
+            <button id="close-guidebook-btn">Mengerti!</button>
+        </div>
+    </div>
+
+
     <!-- Audio files -->
     <audio id="click-sound" src="assets/sounds/click.mp3"></audio>
     <audio id="correct-sound" src="assets/sounds/correct.mp3"></audio>
@@ -224,3 +238,4 @@
     <script src="app.js"></script>
 </body>
 </html>
+
