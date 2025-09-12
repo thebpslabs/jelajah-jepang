@@ -47,12 +47,15 @@
         <!-- Level Selection Page -->
         <div id="level-page" class="page">
             <div class="page-content">
-                <h2>Pilih Tingkat Kesulitan</h2>
-                <select id="difficulty-select">
-                    <option value="level1">Level 1: Turis Pemula</option>
-                    <option value="level2">Level 2: Petualang Mahir</option>
-                    <option value="level3">Level 3: Master Jepang</option>
-                </select>
+                <!-- MODIFIED: Centered difficulty section -->
+                <div class="difficulty-container">
+                    <h2>Pilih Tingkat Kesulitan</h2>
+                    <select id="difficulty-select">
+                        <option value="level1">Level 1: Turis Pemula</option>
+                        <option value="level2">Level 2: Petualang Mahir</option>
+                        <option value="level3">Level 3: Master Jepang</option>
+                    </select>
+                </div>
                 <h2>Pilih Kategori</h2>
                 <div class="category-container">
                     <button class="category-btn" data-category="Restoran">
@@ -109,12 +112,15 @@
         <!-- Result Page -->
         <div id="hasil-page" class="page">
             <div class="page-content">
-                <h2>Laporan Petualangan</h2>
-                <img id="result-image" src="" alt="Result Image">
-                <p id="score-text"></p>
-                <h3 id="result-text"></h3>
-                <p id="result-subtext"></p>
-                 <div class="ad-placeholder-center">Ads Placeholder</div>
+                <!-- MODIFIED: Restructured for new theme -->
+                <div class="result-report">
+                    <h2>Laporan Petualangan</h2>
+                    <img id="result-image" src="" alt="Result Image">
+                    <p id="score-text"></p>
+                    <h3 id="result-text"></h3>
+                    <p id="result-subtext"></p>
+                </div>
+                <div class="ad-placeholder-center">Ads Placeholder</div>
                 <div class="button-container">
                     <button id="share-btn" class="result-page-btn">Share</button>
                     <button id="retry-btn" class="result-page-btn">Coba Lagi</button>
@@ -131,33 +137,36 @@
                     <button class="tab-btn active" data-tab="stats">Statistik</button>
                     <button class="tab-btn" data-tab="leaderboard">Papan Skor</button>
                 </div>
-                <div id="stats" class="tab-content active">
-                    <div id="pangkat-info">
-                        <img id="pangkat-image" src="assets/pangkat1.jpg" alt="Pangkat">
-                        <p id="pangkat-text">Pangkat 1</p>
+                <!-- NEW: Tab Content Container -->
+                <div class="tab-content-container">
+                    <div id="stats" class="tab-content active">
+                        <div id="pangkat-info">
+                            <img id="pangkat-image" src="assets/pangkat1.jpg" alt="Pangkat">
+                            <p id="pangkat-text">Turis Amatir</p>
+                        </div>
+                        <div class="stats-container">
+                            <p>Total Petualangan: <span id="total-attempts">0</span></p>
+                            <p>Rata-rata Skor: <span id="average-score">0</span></p>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="adventure-chart"></canvas>
+                        </div>
                     </div>
-                    <div class="stats-container">
-                        <p>Total Petualangan: <span id="total-attempts">0</span></p>
-                        <p>Rata-rata Skor: <span id="average-score">0</span></p>
-                    </div>
-                    <div class="chart-container">
-                        <canvas id="adventure-chart"></canvas>
-                    </div>
-                </div>
-                <div id="leaderboard" class="tab-content">
-                    <h3>Skor Tertinggi</h3>
-                    <div class="leaderboard-container">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Nama</th>
-                                    <th>Skor</th>
-                                    <th>Kategori</th>
-                                </tr>
-                            </thead>
-                            <tbody id="leaderboard-body"></tbody>
-                        </table>
+                    <div id="leaderboard" class="tab-content">
+                        <h3>Skor Tertinggi</h3>
+                        <div class="leaderboard-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Nama</th>
+                                        <th>Skor</th>
+                                        <th>Kategori</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="leaderboard-body"></tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
                 <button id="back-to-home-from-log" class="back-btn">Kembali ke Home</button>
@@ -172,16 +181,19 @@
                     <button class="tab-btn active" data-tab="guide-game">Cara Main</button>
                     <button class="tab-btn" data-tab="guide-about">Tentang Saya</button>
                 </div>
-                <div id="guide-game" class="tab-content active">
-                    <h4>Selamat Datang, Petualang!</h4>
-                    <p><strong>Naik Level:</strong> Untuk membuka tingkat kesulitan selanjutnya, kamu harus meraih nilai sempurna (10/10 jawaban benar) di satu kategori pada level sebelumnya. Kuasai satu bidang, dan pintu petualangan baru akan terbuka!</p>
-                    <p><strong>Meraih Skor Tinggi:</strong> Setiap jawaban benar memberimu <strong>100 poin</strong>. Jawab lebih cepat untuk bonus waktu! Dapatkan juga <strong>[Combo]</strong> untuk jawaban benar berturut-turut, dan raih <strong>Sempurna!</strong> untuk 10 jawaban benar demi bonus skor masif!</p>
-                    <p><strong>Update:</strong> Kategori dan pertanyaan baru akan terus ditambahkan secara berkala. Nantikan petualangan barunya!</p>
-                </div>
-                <div id="guide-about" class="tab-content">
-                    <h4>Halo!</h4>
-                    <p>Terima kasih sudah memainkan "Petualangan di Jepang"! Game ini dibuat dengan harapan bisa menjadi cara yang seru dan asyik untuk belajar bahasa Jepang.</p>
-                    <p>Punya masukan, kritik, atau menemukan bug? Jangan ragu untuk menghubungi saya melalui email di <strong>[emailanda@contoh.com]</strong>. Setiap feedback sangat berharga!</p>
+                 <!-- NEW: Tab Content Container -->
+                <div class="tab-content-container">
+                    <div id="guide-game" class="tab-content active">
+                        <h4>Selamat Datang, Petualang!</h4>
+                        <p><strong>Naik Level:</strong> Untuk membuka tingkat kesulitan selanjutnya, kamu harus meraih nilai sempurna (10/10 jawaban benar) di satu kategori pada level sebelumnya. Kuasai satu bidang, dan pintu petualangan baru akan terbuka!</p>
+                        <p><strong>Meraih Skor Tinggi:</strong> Setiap jawaban benar memberimu <strong>100 poin</strong>. Jawab lebih cepat untuk bonus waktu! Dapatkan juga <strong>[Combo]</strong> untuk jawaban benar berturut-turut, dan raih <strong>Sempurna!</strong> untuk 10 jawaban benar demi bonus skor masif!</p>
+                        <p><strong>Update:</strong> Kategori dan pertanyaan baru akan terus ditambahkan secara berkala. Nantikan petualangan barunya!</p>
+                    </div>
+                    <div id="guide-about" class="tab-content">
+                        <h4>Halo!</h4>
+                        <p>Terima kasih sudah memainkan "Petualangan di Jepang"! Game ini dibuat dengan harapan bisa menjadi cara yang seru dan asyik untuk belajar bahasa Jepang.</p>
+                        <p>Punya masukan, kritik, atau menemukan bug? Jangan ragu untuk menghubungi saya melalui email di <strong>[emailanda@contoh.com]</strong>. Setiap feedback sangat berharga!</p>
+                    </div>
                 </div>
                 <button id="back-to-home-from-guide" class="back-btn">Kembali ke Home</button>
             </div>
@@ -224,3 +236,4 @@
     <script src="app.js"></script>
 </body>
 </html>
+

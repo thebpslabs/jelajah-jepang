@@ -455,7 +455,7 @@ document.addEventListener('DOMContentLoaded', () => {
             result = { text: "Kamu belum siap ke Jepang...", subtext: "Bisa bahasa Jepang jadi lebih tenang. Ayo semangat!", image: "fail1.jpg" };
         }
 
-        UIElements.hasilPage.scoreText.textContent = `Skor Akhir: ${gameState.score} (${correctAnswers}/10 Benar)`;
+        UIElements.hasilPage.scoreText.textContent = `Skor: ${gameState.score} (${correctAnswers}/10)`;
         UIElements.hasilPage.resultText.textContent = result.text;
         UIElements.hasilPage.resultSubtext.textContent = result.subtext;
         UIElements.hasilPage.image.src = `assets/${result.image}`;
@@ -470,13 +470,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (totalAttempts >= 20) {
              UIElements.jejakPetualanganPage.pangkatImage.src = 'assets/pangkat3.jpg';
-             UIElements.jejakPetualanganPage.pangkatText.textContent = 'Pangkat 3';
+             UIElements.jejakPetualanganPage.pangkatText.textContent = 'Pemimpin Tur';
         } else if (totalAttempts >= 10) {
             UIElements.jejakPetualanganPage.pangkatImage.src = 'assets/pangkat2.jpg';
-            UIElements.jejakPetualanganPage.pangkatText.textContent = 'Pangkat 2';
+            UIElements.jejakPetualanganPage.pangkatText.textContent = 'Turis Mahir';
         } else {
             UIElements.jejakPetualanganPage.pangkatImage.src = 'assets/pangkat1.jpg';
-            UIElements.jejakPetualanganPage.pangkatText.textContent = 'Pangkat 1';
+            UIElements.jejakPetualanganPage.pangkatText.textContent = 'Turis Amatir';
         }
 
         UIElements.jejakPetualanganPage.totalAttempts.textContent = totalAttempts;
