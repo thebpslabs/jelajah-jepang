@@ -10,8 +10,8 @@ const DOWNLOAD_FOLDER = "Unsplash_JS_Download";
 const FILENAME_PREFIX = "restoran1";
 
 // --- 2. CHANGE THESE FOR EACH RUN ---
-const PAGE_NUMBER = 1;
-const STARTING_FILE_NUMBER = 1;
+const PAGE_NUMBER = 2;
+const STARTING_FILE_NUMBER = 31;
 
 // --- 3. THE SCRIPT ---
 
