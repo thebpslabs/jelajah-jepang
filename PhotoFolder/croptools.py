@@ -2,10 +2,10 @@ from PIL import Image
 import os
 
 # --- 1. YOUR CONFIGURATION ---
-SOURCE_FOLDER = "Unsplash_JS_Download"       # The folder with your original images
+SOURCE_FOLDER = "forcropping"       # The folder with your original images
 DESTINATION_FOLDER = "cropped_images"      # Where the new cropped images will be saved
-TARGET_WIDTH = 640                        # <-- Set your desired width
-TARGET_HEIGHT = 360                       # <-- Set your desired height
+TARGET_WIDTH = 600                        # <-- Set your desired width
+TARGET_HEIGHT = 600                       # <-- Set your desired height
 
 # --- 2. THE SCRIPT (No changes needed below) ---
 

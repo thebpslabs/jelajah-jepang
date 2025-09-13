@@ -12,8 +12,10 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+    <!-- Container for all pages -->
     <div id="app-container">
 
+        <!-- Main Menu Page -->
         <div id="main-menu" class="page active">
             <div class="page-content">
                 <h1 id="main-title" class="fade-in">Petualangan di Jepang</h1>
@@ -35,14 +37,17 @@
                 <div class="button-container">
                     <button id="start-btn" class="main-menu-btn">Mulai</button>
                     <button id="adventure-log-btn" class="main-menu-btn">Jejak Petualangan</button>
+                    <!-- NEW: Buku Panduan Button -->
                     <button id="guidebook-btn" class="main-menu-btn">Buku Panduan</button>
                     <button id="settings-btn" class="main-menu-btn">Settings</button>
                 </div>
             </div>
         </div>
 
+        <!-- Level Selection Page -->
         <div id="level-page" class="page">
             <div class="page-content">
+                <!-- MODIFIED: Centered difficulty section -->
                 <div class="difficulty-container">
                     <h2>Pilih Tingkat Kesulitan</h2>
                     <select id="difficulty-select">
@@ -56,6 +61,7 @@
                     <button class="category-btn" data-category="Restoran">
                         <img src="assets/Restaurant1.jpg" alt="Restoran">
                         <span>Restoran</span>
+                        <!-- NEW: Lock Icon -->
                         <div class="lock-icon">&#x1F512;</div>
                     </button>
                     <button class="category-btn" data-category="Minimarket">
@@ -78,6 +84,7 @@
             </div>
         </div>
 
+        <!-- Quiz Page -->
         <div id="quiz-page" class="page">
              <button id="exit-quiz-btn" class="exit-btn">&times;</button>
              <div id="score-popup-container"></div>
@@ -85,12 +92,7 @@
                 <h2 id="quiz-title"></h2>
                 <div id="quiz-content">
                     <p id="current-score-display">Skor: 0</p>
-                    <div id="quiz-image-container">
-                        <a id="quiz-image-link" href="#" target="_blank" rel="noopener noreferrer">
-                            <img id="quiz-image" src="" alt="Quiz Image">
-                        </a>
-                        <div id="image-attribution"></div>
-                    </div>
+                    <img id="quiz-image" src="" alt="Quiz Image">
                     <p id="question-text"></p>
                     <div id="answer-buttons"></div>
                 </div>
@@ -107,8 +109,10 @@
             </div>
         </div>
 
+        <!-- Result Page -->
         <div id="hasil-page" class="page">
             <div class="page-content">
+                <!-- MODIFIED: Restructured for new theme -->
                 <div class="result-report">
                     <h2>Laporan Petualangan</h2>
                     <img id="result-image" src="" alt="Result Image">
@@ -125,6 +129,7 @@
             </div>
         </div>
 
+        <!-- Adventure Log Page -->
         <div id="jejak-petualangan-page" class="page">
             <div class="page-content adventure-log-content">
                 <h2>Jejak Petualangan</h2>
@@ -132,6 +137,7 @@
                     <button class="tab-btn active" data-tab="stats">Statistik</button>
                     <button class="tab-btn" data-tab="leaderboard">Papan Skor</button>
                 </div>
+                <!-- NEW: Tab Content Container -->
                 <div class="tab-content-container">
                     <div id="stats" class="tab-content active">
                         <div id="pangkat-info">
@@ -167,6 +173,7 @@
             </div>
         </div>
 
+        <!-- MODIFIED: Guidebook Page -->
         <div id="guidebook-page" class="page">
             <div class="page-content guidebook-content">
                 <h2>Buku Panduan</h2>
@@ -174,11 +181,12 @@
                     <button class="tab-btn active" data-tab="guide-game">Cara Main</button>
                     <button class="tab-btn" data-tab="guide-about">Tentang Saya</button>
                 </div>
+                 <!-- NEW: Tab Content Container -->
                 <div class="tab-content-container">
                     <div id="guide-game" class="tab-content active">
                         <h4>Selamat Datang, Petualang!</h4>
                         <p><strong>Naik Level:</strong> Untuk membuka tingkat kesulitan selanjutnya, kamu harus meraih nilai sempurna (10/10 jawaban benar) di satu kategori pada level sebelumnya. Kuasai satu bidang, dan pintu petualangan baru akan terbuka!</p>
-                        <p><strong>Meraih Skor Tinggi:</strong> Setiap jawaban benar memberimu poin berdasarkan level: <strong>Level 1 (100 poin)</strong>, <strong>Level 2 (125 poin)</strong>, <strong>Level 3 (150 poin)</strong>. Jawab lebih cepat untuk bonus waktu! Dapatkan juga bonus <strong>[Combo]</strong> untuk jawaban benar berturut-turut, mulai dari 10 poin untuk 2 combo, 20 poin untuk 3 combo, dan seterusnya!</p>
+                        <p><strong>Meraih Skor Tinggi:</strong> Setiap jawaban benar memberimu <strong>100 poin</strong>. Jawab lebih cepat untuk bonus waktu! Dapatkan juga <strong>[Combo]</strong> untuk jawaban benar berturut-turut, dan raih <strong>Sempurna!</strong> untuk 10 jawaban benar demi bonus skor masif!</p>
                         <p><strong>Update:</strong> Kategori dan pertanyaan baru akan terus ditambahkan secara berkala. Nantikan petualangan barunya!</p>
                     </div>
                     <div id="guide-about" class="tab-content">
@@ -192,6 +200,7 @@
         </div>
     </div>
 
+    <!-- Settings Overlay -->
     <div id="settings-overlay" class="overlay">
         <div class="overlay-content">
             <h2>Settings</h2>
@@ -201,6 +210,7 @@
         </div>
     </div>
     
+    <!-- Confirmation Dialog Overlay -->
     <div id="confirmation-overlay" class="overlay">
         <div class="overlay-content">
             <p>Yakin ingin mereset petualangan untuk <strong id="confirm-reset-username"></strong>? Semua progres dan level akan hilang!</p>
@@ -209,6 +219,7 @@
         </div>
     </div>
 
+    <!-- Feedback Overlay for Quiz -->
     <div id="feedback-overlay" class="overlay">
         <div class="overlay-content">
             <h2 id="feedback-title"></h2>
@@ -217,6 +228,7 @@
         </div>
     </div>
 
+    <!-- Audio files -->
     <audio id="click-sound" src="assets/sounds/click.mp3"></audio>
     <audio id="correct-sound" src="assets/sounds/correct.mp3"></audio>
     <audio id="wrong-sound" src="assets/sounds/wrong.mp3"></audio>
@@ -224,3 +236,4 @@
     <script src="app.js"></script>
 </body>
 </html>
+

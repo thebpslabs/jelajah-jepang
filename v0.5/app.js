@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         currentQuestionIndex: 0,
         score: 0,
         comboStreak: 0,
+        // NEW: Counter for correct answers in a round
         correctAnswersCount: 0,
         questionTimer: null,
         timeLeft: 0,
@@ -45,11 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         quizPage: {
             exitBtn: document.getElementById('exit-quiz-btn'),
             title: document.getElementById('quiz-title'),
-            // MODIFIED: Added selectors for image link and attribution
-            imageContainer: document.getElementById('quiz-image-container'),
-            imageLink: document.getElementById('quiz-image-link'),
             image: document.getElementById('quiz-image'),
-            attribution: document.getElementById('image-attribution'),
             questionText: document.getElementById('question-text'),
             answerButtons: document.getElementById('answer-buttons'),
             progressBar: document.getElementById('progress-bar'),
@@ -78,6 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
             chart: document.getElementById('adventure-chart'),
             backBtn: document.getElementById('back-to-home-from-log')
         },
+        // NEW: Guidebook Page selectors
         guidebookPage: {
             tabs: document.querySelectorAll('#guidebook-page .tab-btn'),
             backBtn: document.getElementById('back-to-home-from-guide')
@@ -111,9 +109,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- DATA HANDLING & USER PROFILES --- //
 
+    /**
+     * NEW: Creates a default user profile object with category-specific level tracking.
+     * @returns {object} A new user data object.
+     */
     function createNewUserData() {
         return {
             attempts: [],
+            // NEW: Tracks unlocked level per category. Value is the max level unlocked.
             unlockedLevels: {
                 'Restoran': 1,
                 'Minimarket': 1,
@@ -123,10 +126,14 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     }
 
+    /**
+     * MODIFIED: Loads all game data and ensures user data structure is up-to-date.
+     */
     function loadGameData() {
         const savedUsers = localStorage.getItem('jepangAdventureUsers');
         if (savedUsers) {
             gameState.allUsersData = JSON.parse(savedUsers);
+            // NEW: Data migration for category rename (Rumah Sakit -> Apotek) for existing users
             Object.values(gameState.allUsersData).forEach(userData => {
                 if (userData.unlockedLevels && userData.unlockedLevels['Rumah Sakit']) {
                     userData.unlockedLevels['Apotek'] = userData.unlockedLevels['Rumah Sakit'];
@@ -150,9 +157,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!gameState.allUsersData[gameState.currentUser]) {
             gameState.allUsersData[gameState.currentUser] = createNewUserData();
         } else {
+            // Data migration for old users: if unlockedLevels is an array, convert it.
             const currentUserData = gameState.allUsersData[gameState.currentUser];
             if (Array.isArray(currentUserData.unlockedLevels)) {
                  const newUnlockedLevels = createNewUserData().unlockedLevels;
+                 // Can add more complex migration if needed, but for now this is fine
                  currentUserData.unlockedLevels = newUnlockedLevels;
             }
         }
@@ -221,6 +230,7 @@ document.addEventListener('DOMContentLoaded', () => {
             displayAdventureLog();
             displayLeaderboard();
         } else if (pageId === 'level-page') {
+            // Update locks based on currently selected difficulty
             updateLevelUnlocks();
         }
     }
@@ -257,9 +267,10 @@ document.addEventListener('DOMContentLoaded', () => {
         gameState.currentQuestionIndex = 0;
         gameState.score = 0;
         gameState.comboStreak = 0;
-        gameState.correctAnswersCount = 0;
+        gameState.correctAnswersCount = 0; // Reset correct answer count
 
         try {
+            // Map category names to their respective database files
             const categoryToFileMap = {
                 'Restoran': 'database_restoran.json',
                 'Minimarket': 'database_minimarket.json',
@@ -303,39 +314,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const question = gameState.questions[gameState.currentQuestionIndex];
         UIElements.quizPage.title.textContent = `Petualangan di ${gameState.currentCategory}`;
         UIElements.quizPage.questionText.textContent = question.question;
-        
-        // Image and Attribution Logic
         UIElements.quizPage.image.src = `assets/${question.image}`;
-        const attributionPath = `assets/${question.image}`.replace(/\.(jpg|jpeg|png|gif)$/, '.txt');
-
-        fetch(attributionPath)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Attribution file not found.');
-                }
-                return response.text();
-            })
-            .then(text => {
-                const [attributionText, url] = text.split('\n');
-                UIElements.quizPage.attribution.textContent = attributionText || '';
-                UIElements.quizPage.attribution.style.display = 'block';
-                if (url && url.trim()) {
-                    UIElements.quizPage.imageLink.href = url.trim();
-                    UIElements.quizPage.imageLink.style.cursor = 'pointer';
-                } else {
-                    UIElements.quizPage.imageLink.href = '#';
-                    UIElements.quizPage.imageLink.style.cursor = 'default';
-                }
-            })
-            .catch(error => {
-                console.warn('Could not fetch attribution file:', error.message);
-                UIElements.quizPage.attribution.style.display = 'none';
-                UIElements.quizPage.imageLink.href = '#';
-                UIElements.quizPage.imageLink.style.cursor = 'default';
-            });
-
-
         UIElements.quizPage.answerButtons.innerHTML = '';
+
         const shuffledAnswers = shuffleArray([...question.answers]);
         shuffledAnswers.forEach(answer => {
             const button = document.createElement('button');
@@ -393,27 +374,24 @@ document.addEventListener('DOMContentLoaded', () => {
             playSound(UIElements.sounds.correct);
             UIElements.feedbackOverlay.title.textContent = 'Benar!';
             gameState.comboStreak++;
-            gameState.correctAnswersCount++;
-
-            // MODIFIED: Scoring based on level
-            if (gameState.currentLevel === 'level1') {
-                questionPoints = 100;
-            } else if (gameState.currentLevel === 'level2') {
-                questionPoints = 125;
-            } else if (gameState.currentLevel === 'level3') {
-                questionPoints = 150;
-            }
-            
+            gameState.correctAnswersCount++; // Increment correct answer counter
+            questionPoints = 100;
             if (gameState.timeLeft > 0) {
                 timerBonus = Math.floor(gameState.timeLeft * 10);
             }
-            
-            // MODIFIED: Linear combo bonus calculation
-            if (gameState.comboStreak >= 2) {
-                comboBonus = (gameState.comboStreak - 1) * 10;
+            if (gameState.comboStreak === 10) {
+                comboBonus = 50;
+                showScorePopup('Sempurna! +' + comboBonus, 'perfect');
+            } else if (gameState.comboStreak >= 8) {
+                comboBonus = 30;
+                 showScorePopup(`Combo ${gameState.comboStreak}x! +${comboBonus}`);
+            } else if (gameState.comboStreak >= 5) {
+                comboBonus = 20;
+                 showScorePopup(`Combo ${gameState.comboStreak}x! +${comboBonus}`);
+            } else if (gameState.comboStreak >= 2) {
+                comboBonus = 10;
                  showScorePopup(`Combo ${gameState.comboStreak}x! +${comboBonus}`);
             }
-
         } else {
             playSound(UIElements.sounds.wrong);
             UIElements.feedbackOverlay.title.textContent = 'Salah!';
@@ -457,7 +435,7 @@ document.addEventListener('DOMContentLoaded', () => {
             date: new Date().toISOString()
         });
 
-        checkAndUnlockLevels();
+        checkAndUnlockLevels(); // Check for level up
         saveGameData();
         displayResults();
         navigateTo('hasil-page');
@@ -531,7 +509,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- LEVEL UNLOCKING --- //
+
+    /**
+     * NEW: Checks if the user got a perfect score to unlock the next level for that category.
+     */
     function checkAndUnlockLevels() {
+        // Must get 10 correct answers to level up
         if (gameState.correctAnswersCount !== 10) return;
 
         const currentUserData = gameState.allUsersData[gameState.currentUser];
@@ -547,6 +530,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    /**
+     * NEW: Updates the category buttons on the level page to show which are locked/unlocked
+     * for the currently selected difficulty.
+     */
     function updateLevelUnlocks() {
         const selectedLevelNum = parseInt(UIElements.levelPage.difficultySelect.value.replace('level', ''));
         const unlockedLevels = gameState.allUsersData[gameState.currentUser].unlockedLevels;
@@ -555,6 +542,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const category = btn.dataset.category;
             const maxUnlockedForCategory = unlockedLevels[category];
 
+            // A category is playable if its max unlocked level is >= the selected level
             if (maxUnlockedForCategory >= selectedLevelNum) {
                 btn.disabled = false;
             } else {
@@ -607,9 +595,11 @@ document.addEventListener('DOMContentLoaded', () => {
     UIElements.mainMenu.startBtn.addEventListener('click', () => navigateTo('level-page'));
     UIElements.mainMenu.adventureLogBtn.addEventListener('click', () => navigateTo('jejak-petualangan-page'));
     UIElements.mainMenu.settingsBtn.addEventListener('click', () => toggleOverlay('settings-overlay', true));
+    // MODIFIED: Guidebook listener
     UIElements.mainMenu.guidebookBtn.addEventListener('click', () => navigateTo('guidebook-page'));
 
     // Level Page
+    // NEW: Add listener to difficulty select to update locks on change
     UIElements.levelPage.difficultySelect.addEventListener('change', updateLevelUnlocks);
     UIElements.levelPage.categoryBtns.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -653,7 +643,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // Guidebook Page Listeners
+    // NEW: Guidebook Page Listeners
     UIElements.guidebookPage.backBtn.addEventListener('click', () => navigateTo('main-menu'));
     UIElements.guidebookPage.tabs.forEach(tab => {
         tab.addEventListener('click', () => {
@@ -694,3 +684,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     init();
 });
+
