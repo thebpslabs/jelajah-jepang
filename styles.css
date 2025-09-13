@@ -287,7 +287,6 @@ h2 {
     z-index: 10;
 }
 
-/* NEW: Styles for image container and attribution */
 #quiz-image-container {
     position: relative;
     margin-bottom: 15px;
@@ -410,20 +409,16 @@ h2 {
 }
 
 /* Result Page Styles */
+/* MODIFIED: Removed background, border, padding, and shadow for better responsiveness */
 .result-report {
-    background-color: #fdf5e6; /* Old paper color */
-    color: #4a2c0c; /* Dark brown text */
-    padding: 20px;
-    border-radius: 5px;
     width: 100%;
     max-width: 350px;
     margin-bottom: 20px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.5);
-    /* MODIFIED: Removed border-image and replaced with simple border */
-    border: 3px solid #d3c0a5;
 }
+
+/* MODIFIED: Removed rule that sets a light text shadow */
 .result-report h2, .result-report h3, .result-report p {
-    text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    /* text-shadow rule removed to inherit default */
 }
 .result-report h2 {
     font-size: 1.5em;
@@ -446,7 +441,7 @@ h2 {
 #result-text {
     font-size: 1.5em;
     margin-bottom: 5px;
-    color: #8B4513; /* SaddleBrown */
+    /* MODIFIED: Removed color to inherit default white */
 }
 
 #result-subtext {
@@ -487,7 +482,6 @@ h2 {
     display: block;
 }
 
-/* MODIFIED: Removed min-height to allow natural flow and scrolling */
 .tab-content-container {
     /* min-height property removed */
 }
@@ -496,7 +490,6 @@ h2 {
     margin-bottom: 10px;
 }
 .leaderboard-container {
-    /* MODIFIED: Removed fixed height, max-height can be used if desired */
     max-height: 380px;
     overflow-y: auto;
     border: 1px solid #555;

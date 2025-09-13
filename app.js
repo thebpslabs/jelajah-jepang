@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
         quizPage: {
             exitBtn: document.getElementById('exit-quiz-btn'),
             title: document.getElementById('quiz-title'),
-            // MODIFIED: Added selectors for image link and attribution
             imageContainer: document.getElementById('quiz-image-container'),
             imageLink: document.getElementById('quiz-image-link'),
             image: document.getElementById('quiz-image'),
@@ -316,11 +315,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 return response.text();
             })
             .then(text => {
-                const [attributionText, url] = text.split('\n');
+                const [attributionText, rawUrl] = text.split('\n');
+                // MODIFIED: Clean the URL before using it
+                const url = rawUrl ? rawUrl.replace(/^Profile:\s*/, '').trim() : '';
+
                 UIElements.quizPage.attribution.textContent = attributionText || '';
                 UIElements.quizPage.attribution.style.display = 'block';
-                if (url && url.trim()) {
-                    UIElements.quizPage.imageLink.href = url.trim();
+
+                if (url) {
+                    UIElements.quizPage.imageLink.href = url;
                     UIElements.quizPage.imageLink.style.cursor = 'pointer';
                 } else {
                     UIElements.quizPage.imageLink.href = '#';
@@ -395,7 +398,6 @@ document.addEventListener('DOMContentLoaded', () => {
             gameState.comboStreak++;
             gameState.correctAnswersCount++;
 
-            // MODIFIED: Scoring based on level
             if (gameState.currentLevel === 'level1') {
                 questionPoints = 100;
             } else if (gameState.currentLevel === 'level2') {
@@ -408,7 +410,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 timerBonus = Math.floor(gameState.timeLeft * 10);
             }
             
-            // MODIFIED: Linear combo bonus calculation
             if (gameState.comboStreak >= 2) {
                 comboBonus = (gameState.comboStreak - 1) * 10;
                  showScorePopup(`Combo ${gameState.comboStreak}x! +${comboBonus}`);
