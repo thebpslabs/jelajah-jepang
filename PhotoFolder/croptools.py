@@ -4,8 +4,8 @@ import os
 # --- 1. YOUR CONFIGURATION ---
 SOURCE_FOLDER = "Unsplash_JS_Download"       # The folder with your original images
 DESTINATION_FOLDER = "cropped_images"      # Where the new cropped images will be saved
-TARGET_WIDTH = 1280                        # <-- Set your desired width
-TARGET_HEIGHT = 720                       # <-- Set your desired height
+TARGET_WIDTH = 640                        # <-- Set your desired width
+TARGET_HEIGHT = 360                       # <-- Set your desired height
 
 # --- 2. THE SCRIPT (No changes needed below) ---
 
