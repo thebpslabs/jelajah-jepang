@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const gameState = {
         currentPage: 'main-menu',
         soundEnabled: true,
+        audioInitialized: false, // NEW: Track if audio has been unlocked
         currentLevel: 'level1',
         currentCategory: null,
         questions: [],
@@ -242,10 +243,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- SOUND --- //
-    function playSound(soundElement) {
-        if (gameState.soundEnabled && soundElement) {
-            soundElement.currentTime = 0;
-            soundElement.play();
+    // NEW: Function to unlock audio on first user interaction
+    function initAudio() {
+        if (gameState.audioInitialized) return;
+        Object.values(UIElements.sounds).forEach(sound => {
+            sound.play().then(() => sound.pause()).catch(() => {});
+        });
+        gameState.audioInitialized = true;
+    }
+
+    // MODIFIED: Improved playSound function to handle errors
+    async function playSound(soundElement) {
+        if (gameState.soundEnabled && gameState.audioInitialized && soundElement) {
+            try {
+                soundElement.currentTime = 0;
+                await soundElement.play();
+            } catch (error) {
+                console.error("Error playing sound:", error);
+            }
         }
     }
 
@@ -603,7 +618,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Main Menu Navigation
-    UIElements.mainMenu.startBtn.addEventListener('click', () => navigateTo('level-page'));
+    // MODIFIED: Added call to initAudio() on first user interaction
+    UIElements.mainMenu.startBtn.addEventListener('click', () => {
+        initAudio();
+        navigateTo('level-page');
+    });
     UIElements.mainMenu.adventureLogBtn.addEventListener('click', () => navigateTo('jejak-petualangan-page'));
     UIElements.mainMenu.settingsBtn.addEventListener('click', () => toggleOverlay('settings-overlay', true));
     UIElements.mainMenu.guidebookBtn.addEventListener('click', () => navigateTo('guidebook-page'));
@@ -637,7 +656,6 @@ document.addEventListener('DOMContentLoaded', () => {
         playSound(UIElements.sounds.click);
         startQuiz(gameState.currentLevel, gameState.currentCategory);
     });
-    // MODIFIED: Added share button functionality
     UIElements.hasilPage.shareBtn.addEventListener('click', async () => {
         const shareText = `I just scored ${gameState.score} in Petualangan di Jepang! Can you beat my score?`;
         const shareUrl = 'https://kuis-bahasa-jepang.pages.dev/';

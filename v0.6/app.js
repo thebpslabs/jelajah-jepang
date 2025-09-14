@@ -303,7 +303,6 @@ document.addEventListener('DOMContentLoaded', () => {
         UIElements.quizPage.title.textContent = `Petualangan di ${gameState.currentCategory}`;
         UIElements.quizPage.questionText.textContent = question.question;
         
-        // Image and Attribution Logic
         UIElements.quizPage.image.src = `assets/${question.image}`;
         const attributionPath = `assets/${question.image}`.replace(/\.(jpg|jpeg|png|gif)$/, '.txt');
 
@@ -316,7 +315,6 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .then(text => {
                 const [attributionText, rawUrl] = text.split('\n');
-                // MODIFIED: Clean the URL before using it
                 const url = rawUrl ? rawUrl.replace(/^Profile:\s*/, '').trim() : '';
 
                 UIElements.quizPage.attribution.textContent = attributionText || '';
@@ -639,8 +637,33 @@ document.addEventListener('DOMContentLoaded', () => {
         playSound(UIElements.sounds.click);
         startQuiz(gameState.currentLevel, gameState.currentCategory);
     });
+    // MODIFIED: Added share button functionality
     UIElements.hasilPage.shareBtn.addEventListener('click', async () => {
-        // Share logic remains the same
+        const shareText = `I just scored ${gameState.score} in Petualangan di Jepang! Can you beat my score?`;
+        const shareUrl = 'https://kuis-bahasa-jepang.pages.dev/';
+
+        // Use the modern Web Share API if available
+        if (navigator.share) {
+            try {
+                await navigator.share({
+                    title: 'Petualangan di Jepang - Kuis Bahasa Jepang',
+                    text: shareText,
+                    url: shareUrl,
+                });
+                console.log('Content shared successfully!');
+            } catch (error) {
+                console.error('Error sharing content:', error);
+            }
+        } else {
+            // Fallback for browsers that do not support the Web Share API
+            try {
+                await navigator.clipboard.writeText(`${shareText}\n\n${shareUrl}`);
+                alert('Hasil & link game telah disalin ke clipboard!');
+            } catch (err) {
+                console.error('Failed to copy text: ', err);
+                alert('Gagal menyalin. Coba lagi.');
+            }
+        }
     });
 
     // Jejak Petualangan Page
