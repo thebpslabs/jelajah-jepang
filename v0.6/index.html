@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Petualangan di Jepang</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="assets/icons/icon-192x192.png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div id="app-container">
+
+        <div id="main-menu" class="page active">
+            <div class="page-content">
+                <h1 id="main-title" class="fade-in">Petualangan di Jepang</h1>
+                <p id="main-subtitle" class="fade-in">Dapatkah kamu bertahan hidup?</p>
+                
+                <div class="user-profile-container">
+                    <p>Petualang:</p>
+                    <div id="user-display-mode">
+                        <span id="current-username-display"></span>
+                        <button id="change-user-btn" class="small-btn">Ganti</button>
+                    </div>
+                    <div id="user-edit-mode" style="display: none;">
+                         <select id="user-select"></select>
+                         <input type="text" id="new-username-input" placeholder="Nama Petualang Baru...">
+                         <button id="save-user-btn" class="small-btn">Simpan</button>
+                    </div>
+                </div>
+                
+                <div class="button-container">
+                    <button id="start-btn" class="main-menu-btn">Mulai</button>
+                    <button id="adventure-log-btn" class="main-menu-btn">Jejak Petualangan</button>
+                    <button id="guidebook-btn" class="main-menu-btn">Buku Panduan</button>
+                    <button id="settings-btn" class="main-menu-btn">Settings</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="level-page" class="page">
+            <div class="page-content">
+                <div class="difficulty-container">
+                    <h2>Pilih Tingkat Kesulitan</h2>
+                    <select id="difficulty-select">
+                        <option value="level1">Level 1: Turis Pemula</option>
+                        <option value="level2">Level 2: Petualang Mahir</option>
+                        <option value="level3">Level 3: Master Jepang</option>
+                    </select>
+                </div>
+                <h2>Pilih Kategori</h2>
+                <div class="category-container">
+                    <button class="category-btn" data-category="Restoran">
+                        <img src="assets/Restaurant1.jpg" alt="Restoran">
+                        <span>Restoran</span>
+                        <div class="lock-icon">&#x1F512;</div>
+                    </button>
+                    <button class="category-btn" data-category="Minimarket">
+                        <img src="assets/Minimart1.jpg" alt="Minimarket">
+                        <span>Minimarket</span>
+                        <div class="lock-icon">&#x1F512;</div>
+                    </button>
+                    <button class="category-btn" data-category="Kereta">
+                        <img src="assets/Train1.jpg" alt="Kereta">
+                        <span>Kereta</span>
+                        <div class="lock-icon">&#x1F512;</div>
+                    </button>
+                    <button class="category-btn" data-category="Apotek">
+                        <img src="assets/Hospital1.jpg" alt="Apotek">
+                        <span>Apotek</span>
+                        <div class="lock-icon">&#x1F512;</div>
+                    </button>
+                </div>
+                <button id="back-to-home-from-level" class="back-btn">Kembali ke Home</button>
+            </div>
+        </div>
+
+        <div id="quiz-page" class="page">
+             <button id="exit-quiz-btn" class="exit-btn">&times;</button>
+             <div id="score-popup-container"></div>
+            <div class="page-content">
+                <h2 id="quiz-title"></h2>
+                <div id="quiz-content">
+                    <p id="current-score-display">Skor: 0</p>
+                    <div id="quiz-image-container">
+                        <a id="quiz-image-link" href="#" target="_blank" rel="noopener noreferrer">
+                            <img id="quiz-image" src="" alt="Quiz Image">
+                        </a>
+                        <div id="image-attribution"></div>
+                    </div>
+                    <p id="question-text"></p>
+                    <div id="answer-buttons"></div>
+                </div>
+                 <div class="ad-placeholder-bottom">Ads Placeholder</div>
+                 <div id="timer-container">
+                    <span>⏳</span>
+                    <div class="timer-bar-outer">
+                        <div id="timer-bar-inner"></div>
+                    </div>
+                 </div>
+                 <div class="progress-container">
+                    <div id="progress-bar"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="hasil-page" class="page">
+            <div class="page-content">
+                <div class="result-report">
+                    <h2>Laporan Petualangan</h2>
+                    <img id="result-image" src="" alt="Result Image">
+                    <p id="score-text"></p>
+                    <h3 id="result-text"></h3>
+                    <p id="result-subtext"></p>
+                </div>
+                <div class="ad-placeholder-center">Ads Placeholder</div>
+                <div class="button-container">
+                    <button id="share-btn" class="result-page-btn">Share</button>
+                    <button id="retry-btn" class="result-page-btn">Coba Lagi</button>
+                    <button id="home-btn" class="result-page-btn">Kategori Lain</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="jejak-petualangan-page" class="page">
+            <div class="page-content adventure-log-content">
+                <h2>Jejak Petualangan</h2>
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="stats">Statistik</button>
+                    <button class="tab-btn" data-tab="leaderboard">Papan Skor</button>
+                </div>
+                <div class="tab-content-container">
+                    <div id="stats" class="tab-content active">
+                        <div id="pangkat-info">
+                            <img id="pangkat-image" src="assets/pangkat1.jpg" alt="Pangkat">
+                            <p id="pangkat-text">Turis Amatir</p>
+                        </div>
+                        <div class="stats-container">
+                            <p>Total Petualangan: <span id="total-attempts">0</span></p>
+                            <p>Rata-rata Skor: <span id="average-score">0</span></p>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="adventure-chart"></canvas>
+                        </div>
+                    </div>
+                    <div id="leaderboard" class="tab-content">
+                        <h3>Skor Tertinggi</h3>
+                        <div class="leaderboard-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Nama</th>
+                                        <th>Skor</th>
+                                        <th>Kategori</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="leaderboard-body"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <button id="back-to-home-from-log" class="back-btn">Kembali ke Home</button>
+            </div>
+        </div>
+
+        <div id="guidebook-page" class="page">
+            <div class="page-content guidebook-content">
+                <h2>Buku Panduan</h2>
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="guide-game">Cara Main</button>
+                    <button class="tab-btn" data-tab="guide-about">Tentang Saya</button>
+                </div>
+                <div class="tab-content-container">
+                    <div id="guide-game" class="tab-content active">
+                        <h4>Selamat Datang, Petualang!</h4>
+                        <p><strong>Naik Level:</strong> Untuk membuka tingkat kesulitan selanjutnya, kamu harus meraih nilai sempurna (10/10 jawaban benar) di satu kategori pada level sebelumnya. Kuasai satu bidang, dan pintu petualangan baru akan terbuka!</p>
+                        <p><strong>Meraih Skor Tinggi:</strong> Setiap jawaban benar memberimu poin berdasarkan level: <strong>Level 1 (100 poin)</strong>, <strong>Level 2 (125 poin)</strong>, <strong>Level 3 (150 poin)</strong>. Jawab lebih cepat untuk bonus waktu! Dapatkan juga bonus <strong>[Combo]</strong> untuk jawaban benar berturut-turut, mulai dari 10 poin untuk 2 combo, 20 poin untuk 3 combo, dan seterusnya!</p>
+                        <p><strong>Update:</strong> Kategori dan pertanyaan baru akan terus ditambahkan secara berkala. Nantikan petualangan barunya!</p>
+                    </div>
+                    <div id="guide-about" class="tab-content">
+                        <h4>Halo!</h4>
+                        <p>Terima kasih sudah memainkan "Petualangan di Jepang"! Game ini dibuat dengan harapan bisa menjadi cara yang seru dan asyik untuk belajar bahasa Jepang.</p>
+                        <p>Punya masukan, kritik, atau menemukan bug? Jangan ragu untuk menghubungi saya melalui email di <strong>[emailanda@contoh.com]</strong>. Setiap feedback sangat berharga!</p>
+                    </div>
+                </div>
+                <button id="back-to-home-from-guide" class="back-btn">Kembali ke Home</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="settings-overlay" class="overlay">
+        <div class="overlay-content">
+            <h2>Settings</h2>
+            <button id="sound-toggle-btn">Sounds: ON</button>
+            <button id="reset-adventure-btn">Reset Petualangan (Petualang Saat Ini)</button>
+            <button id="close-settings-btn">Kembali</button>
+        </div>
+    </div>
+    
+    <div id="confirmation-overlay" class="overlay">
+        <div class="overlay-content">
+            <p>Yakin ingin mereset petualangan untuk <strong id="confirm-reset-username"></strong>? Semua progres dan level akan hilang!</p>
+            <button id="confirm-reset-btn">Ya</button>
+            <button id="cancel-reset-btn">Tidak</button>
+        </div>
+    </div>
+
+    <div id="feedback-overlay" class="overlay">
+        <div class="overlay-content">
+            <h2 id="feedback-title"></h2>
+            <p id="feedback-text"></p>
+            <button id="next-question-btn">Berikutnya</button>
+        </div>
+    </div>
+
+    <audio id="click-sound" src="assets/sounds/click.mp3"></audio>
+    <audio id="correct-sound" src="assets/sounds/correct.mp3"></audio>
+    <audio id="wrong-sound" src="assets/sounds/wrong.mp3"></audio>
+
+    <script src="app.js"></script>
+</body>
+</html>
