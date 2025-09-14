@@ -1,0 +1,1814 @@
+{
+  "level1": {
+    "Kereta": [
+      {
+        "question": "Apa bahasa Jepang untuk 'stasiun kereta'?",
+        "answers": [
+          "空港 (Kuukou)",
+          "駅 (Eki)",
+          "港 (Minato)",
+          "バス停 (Basutei)"
+        ],
+        "correct": "駅 (Eki)",
+        "feedback": "'駅 (Eki)' adalah kata untuk stasiun kereta. 'Kuukou' adalah bandara, 'Minato' adalah pelabuhan, dan 'Basutei' adalah halte bus.",
+        "image": "kereta1-01.jpg"
+      },
+      {
+        "question": "Bagaimana Anda menyebut 'tiket'?",
+        "answers": [
+          "切符 (Kippu)",
+          "手紙 (Tegami)",
+          "地図 (Chizu)",
+          "お金 (Okane)"
+        ],
+        "correct": "切符 (Kippu)",
+        "feedback": "'切符 (Kippu)' adalah tiket fisik. Untuk tiket elektronik, biasanya menggunakan kartu IC.",
+        "image": "kereta1-02.jpg"
+      },
+      {
+        "question": "Kata untuk 'peron' dalam bahasa Jepang adalah...",
+        "answers": [
+          "階段 (Kaidan)",
+          "出口 (Deguchi)",
+          "ホーム (Hoomu)",
+          "入り口 (Iriguchi)"
+        ],
+        "correct": "ホーム (Hoomu)",
+        "feedback": "'ホーム (Hoomu)' adalah kata serapan dari 'platform' (peron), tempat Anda menunggu kereta.",
+        "image": "kereta1-03.jpg"
+      },
+      {
+        "question": "Apa sebutan untuk 'kereta' secara umum?",
+        "answers": [
+          "車 (Kuruma)",
+          "自転車 (Jitensha)",
+          "飛行機 (Hikouki)",
+          "電車 (Densha)"
+        ],
+        "correct": "電車 (Densha)",
+        "feedback": "'電車 (Densha)' adalah istilah umum untuk kereta listrik. 'Kuruma' adalah mobil.",
+        "image": "kereta1-04.jpg"
+      },
+      {
+        "question": "Bagaimana cara mengatakan 'pintu'?",
+        "answers": [
+          "窓 (Mado)",
+          "ドア (Doa)",
+          "壁 (Kabe)",
+          "床 (Yuka)"
+        ],
+        "correct": "ドア (Doa)",
+        "feedback": "'ドア (Doa)' adalah kata serapan dari 'door'. Perhatikan pengumuman 'ドアが閉まります (Doa ga shimarimasu)' yang berarti 'Pintu akan ditutup'.",
+        "image": "kereta1-05.jpg"
+      },
+      {
+        "question": "Kata untuk 'gerbang tiket' adalah...",
+        "answers": [
+          "改札口 (Kaisatsuguchi)",
+          "非常口 (Hijouguchi)",
+          "中央口 (Chuuouguchi)",
+          "東口 (Higashiguchi)"
+        ],
+        "correct": "改札口 (Kaisatsuguchi)",
+        "feedback": "'改札口 (Kaisatsuguchi)' adalah gerbang tempat Anda melakukan tap kartu IC atau memasukkan tiket.",
+        "image": "kereta1-06.jpg"
+      },
+      {
+        "question": "Apa bahasa Jepang untuk 'kereta peluru'?",
+        "answers": [
+          "新幹線 (Shinkansen)",
+          "地下鉄 (Chikatetsu)",
+          "普通電車 (Futsuu densha)",
+          "特急 (Tokkyuu)"
+        ],
+        "correct": "新幹線 (Shinkansen)",
+        "feedback": "'新幹線 (Shinkansen)' adalah kereta super cepat yang menghubungkan kota-kota besar di Jepang.",
+        "image": "kereta1-07.jpg"
+      },
+      {
+        "question": "Bagaimana Anda menyebut 'kursi'?",
+        "answers": [
+          "席 (Seki)",
+          "網棚 (Amidana)",
+          "つり革 (Tsurikawa)",
+          "床 (Yuka)"
+        ],
+        "correct": "席 (Seki)",
+        "feedback": "'席 (Seki)' berarti kursi. '空席 (kuuseki)' berarti kursi kosong.",
+        "image": "kereta1-08.jpg"
+      },
+      {
+        "question": "Kata untuk 'peta rute' adalah...",
+        "answers": [
+          "時刻表 (Jikokuhyou)",
+          "運賃表 (Unchinhyou)",
+          "路線図 (Rosenzu)",
+          "案内図 (Annaizu)"
+        ],
+        "correct": "路線図 (Rosenzu)",
+        "feedback": "'路線図 (Rosenzu)' adalah peta yang menunjukkan semua jalur dan stasiun kereta.",
+        "image": "kereta1-09.jpg"
+      },
+      {
+        "question": "Apa bahasa Jepang untuk 'kereta bawah tanah'?",
+        "answers": [
+          "地下鉄 (Chikatetsu)",
+          "モノレール (Monoreeru)",
+          "路面電車 (Romen densha)",
+          "バス (Basu)"
+        ],
+        "correct": "地下鉄 (Chikatetsu)",
+        "feedback": "'地下鉄 (Chikatetsu)' secara harfiah berarti 'kereta besi bawah tanah', atau subway.",
+        "image": "kereta1-10.jpg"
+      },
+      {
+        "question": "Bagaimana cara mengatakan 'pintu keluar'?",
+        "answers": [
+          "出口 (Deguchi)",
+          "入り口 (Iriguchi)",
+          "乗り換え (Norikae)",
+          "改札 (Kaisatsu)"
+        ],
+        "correct": "出口 (Deguchi)",
+        "feedback": "'出口 (Deguchi)' adalah pintu keluar. Cari tanda ini untuk keluar dari stasiun.",
+        "image": "kereta1-11.jpg"
+      },
+      {
+        "question": "Kata untuk 'transfer' atau 'pindah kereta' adalah...",
+        "answers": [
+          "到着 (Touchaku)",
+          "出発 (Shuppatsu)",
+          "乗り換え (Norikae)",
+          "遅延 (Chien)"
+        ],
+        "correct": "乗り換え (Norikae)",
+        "feedback": "'乗り換え (Norikae)' berarti berganti dari satu jalur kereta ke jalur lainnya.",
+        "image": "kereta1-12.jpg"
+      },
+      {
+        "question": "Apa sebutan untuk 'tarif' atau 'ongkos'?",
+        "answers": [
+          "運賃 (Unchin)",
+          "料金 (Ryoukin)",
+          "値段 (Nedan)",
+          "会計 (Kaikei)"
+        ],
+        "correct": "運賃 (Unchin)",
+        "feedback": "'運賃 (Unchin)' adalah tarif perjalanan. Anda bisa melihatnya di '運賃表 (Unchinhyou)' atau papan tarif.",
+        "image": "kereta1-13.jpg"
+      },
+      {
+        "question": "Bagaimana Anda menyebut 'mesin tiket'?",
+        "answers": [
+          "券売機 (Kenbaiki)",
+          "精算機 (Seisanki)",
+          "改札機 (Kaisatsuki)",
+          "ATM (Ee-tii-emu)"
+        ],
+        "correct": "券売機 (Kenbaiki)",
+        "feedback": "'券売機 (Kenbaiki)' adalah mesin tempat Anda membeli tiket kereta.",
+        "image": "kereta1-14.jpg"
+      },
+      {
+        "question": "Kata untuk 'kartu IC' (kartu prabayar) adalah...",
+        "answers": [
+          "ICカード (IC Kaado)",
+          "クレジットカード (Kurejitto kaado)",
+          "ポイントカード (Pointo kaado)",
+          "定期券 (Teikiken)"
+        ],
+        "correct": "ICカード (IC Kaado)",
+        "feedback": "'ICカード (IC Kaado)' adalah istilah umum untuk kartu seperti Suica, Pasmo, atau Icoca.",
+        "image": "kereta1-15.jpg"
+      },
+      {
+        "question": "Apa bahasa Jepang untuk 'kereta lokal'?",
+        "answers": [
+          "特急 (Tokkyuu)",
+          "急行 (Kyuukou)",
+          "快速 (Kaisoku)",
+          "普通 (Futsuu)"
+        ],
+        "correct": "普通 (Futsuu)",
+        "feedback": "'普通 (Futsuu)' atau '各駅停車 (kakueki teisha)' adalah kereta lokal yang berhenti di setiap stasiun.",
+        "image": "kereta1-16.jpg"
+      },
+      {
+        "question": "Bagaimana cara mengatakan 'jadwal waktu'?",
+        "answers": [
+          "時刻表 (Jikokuhyou)",
+          "カレンダー (Karendaa)",
+          "時間 (Jikan)",
+          "予定 (Yotei)"
+        ],
+        "correct": "時刻表 (Jikokuhyou)",
+        "feedback": "'時刻表 (Jikokuhyou)' adalah jadwal keberangkatan dan kedatangan kereta.",
+        "image": "kereta1-17.jpg"
+      },
+      {
+        "question": "Kata untuk 'keberangkatan' adalah...",
+        "answers": [
+          "到着 (Touchaku)",
+          "出発 (Shuppatsu)",
+          "通過 (Tsuuka)",
+          "停車 (Teisha)"
+        ],
+        "correct": "出発 (Shuppatsu)",
+        "feedback": "'出発 (Shuppatsu)' berarti keberangkatan. Anda akan melihatnya di papan informasi.",
+        "image": "kereta1-18.jpg"
+      },
+      {
+        "question": "Apa sebutan untuk 'kedatangan'?",
+        "answers": [
+          "到着 (Touchaku)",
+          "出発 (Shuppatsu)",
+          "遅延 (Chien)",
+          "運休 (Unkyuu)"
+        ],
+        "correct": "到着 (Touchaku)",
+        "feedback": "'到着 (Touchaku)' berarti kedatangan. Kebalikan dari '出発 (Shuppatsu)'.",
+        "image": "kereta1-19.jpg"
+      },
+      {
+        "question": "Bagaimana Anda menyebut 'mesin penyesuaian tarif'?",
+        "answers": [
+          "券売機 (Kenbaiki)",
+          "精算機 (Seisanki)",
+          "両替機 (Ryougaeki)",
+          "チャージ機 (Chaajiki)"
+        ],
+        "correct": "精算機 (Seisanki)",
+        "feedback": "'精算機 (Seisanki)' digunakan jika saldo kartu IC atau harga tiket Anda kurang saat tiba di tujuan.",
+        "image": "kereta1-20.jpg"
+      },
+      {
+        "question": "Kata untuk 'keterlambatan' kereta adalah...",
+        "answers": [
+          "遅延 (Chien)",
+          "運休 (Unkyuu)",
+          "満員 (Man'in)",
+          "安全 (Anzen)"
+        ],
+        "correct": "遅延 (Chien)",
+        "feedback": "'遅延 (Chien)' berarti tertunda atau terlambat. Jika terjadi, akan ada pengumuman di stasiun.",
+        "image": "kereta1-21.jpg"
+      },
+      {
+        "question": "Apa bahasa Jepang untuk 'kursi prioritas'?",
+        "answers": [
+          "指定席 (Shiteiseki)",
+          "自由席 (Jiyuuseki)",
+          "優先席 (Yuusenseki)",
+          "グリーン車 (Guriinsha)"
+        ],
+        "correct": "優先席 (Yuusenseki)",
+        "feedback": "'優先席 (Yuusenseki)' adalah kursi yang diperuntukkan bagi lansia, penyandang disabilitas, ibu hamil, dan penumpang dengan anak kecil.",
+        "image": "kereta1-22.jpg"
+      },
+      {
+        "question": "Bagaimana cara mengatakan 'stasiun berikutnya'?",
+        "answers": [
+          "前の駅 (Mae no eki)",
+          "終点 (Shuuten)",
+          "次の駅 (Tsugi no eki)",
+          "この駅 (Kono eki)"
+        ],
+        "correct": "次の駅 (Tsugi no eki)",
+        "feedback": "'次 (Tsugi)' berarti 'berikutnya'. Anda akan selalu mendengar '次は... (Tsugi wa...)' dalam pengumuman di kereta.",
+        "image": "kereta1-23.jpg"
+      },
+      {
+        "question": "Kata untuk 'stasiun terakhir' adalah...",
+        "answers": [
+          "始発 (Shihatsu)",
+          "終電 (Shuuden)",
+          "終点 (Shuuten)",
+          "途中 (Tochuu)"
+        ],
+        "correct": "終点 (Shuuten)",
+        "feedback": "'終点 (Shuuten)' adalah stasiun pemberhentian terakhir dari sebuah rute.",
+        "image": "kereta1-24.jpg"
+      },
+      {
+        "question": "Apa sebutan untuk 'kereta ekspres'?",
+        "answers": [
+          "普通 (Futsuu)",
+          "各駅停車 (Kakueki teisha)",
+          "急行 (Kyuukou)",
+          "回送 (Kaisou)"
+        ],
+        "correct": "急行 (Kyuukou)",
+        "feedback": "'急行 (Kyuukou)' adalah kereta ekspres yang hanya berhenti di stasiun-stasiun besar.",
+        "image": "kereta1-25.jpg"
+      },
+      {
+        "question": "Bahasa Jepang untuk 'isi ulang' kartu IC adalah...",
+        "answers": [
+          "チャージ (Chaaji)",
+          "支払い (Shiharai)",
+          "購入 (Kounyuu)",
+          "予約 (Yoyaku)"
+        ],
+        "correct": "チャージ (Chaaji)",
+        "feedback": "'チャージ (Chaaji)' adalah kata serapan dari 'charge', yang berarti mengisi saldo kartu IC Anda.",
+        "image": "kereta1-26.jpg"
+      },
+      {
+        "question": "Apa kata untuk 'Jalur Yamanote'?",
+        "answers": [
+          "山手線 (Yamanote-sen)",
+          "中央線 (Chuuou-sen)",
+          "総武線 (Soubu-sen)",
+          "京浜東北線 (Keihin-touhoku-sen)"
+        ],
+        "correct": "山手線 (Yamanote-sen)",
+        "feedback": "'...線 (...sen)' berarti 'jalur'. Jalur Yamanote adalah jalur kereta lingkar yang sangat penting di Tokyo.",
+        "image": "kereta1-27.jpg"
+      },
+      {
+        "question": "Bagaimana Anda menyebut 'kursi yang dipesan'?",
+        "answers": [
+          "指定席 (Shiteiseki)",
+          "自由席 (Jiyuuseki)",
+          "優先席 (Yuusenseki)",
+          "空席 (Kuuseki)"
+        ],
+        "correct": "指定席 (Shiteiseki)",
+        "feedback": "'指定席 (Shiteiseki)' adalah kursi yang nomornya sudah ditentukan, biasanya di Shinkansen atau kereta ekspres terbatas.",
+        "image": "kereta1-28.jpg"
+      },
+      {
+        "question": "Kata untuk 'kursi bebas' (tanpa reservasi) adalah...",
+        "answers": [
+          "指定席 (Shiteiseki)",
+          "自由席 (Jiyuuseki)",
+          "満席 (Manseki)",
+          "窓側 (Madogawa)"
+        ],
+        "correct": "自由席 (Jiyuuseki)",
+        "feedback": "'自由席 (Jiyuuseki)' adalah kursi di gerbong non-reservasi, siapa cepat dia dapat.",
+        "image": "kereta1-29.jpg"
+      },
+      {
+        "question": "Apa bahasa Jepang untuk 'kereta terakhir' di malam hari?",
+        "answers": [
+          "始発 (Shihatsu)",
+          "終電 (Shuuden)",
+          "夜行列車 (Yakou ressha)",
+          "臨時列車 (Rinji ressha)"
+        ],
+        "correct": "終電 (Shuuden)",
+        "feedback": "'終電 (Shuuden)' adalah kereta terakhir. Jangan sampai ketinggalan, karena taksi di Jepang sangat mahal!",
+        "image": "kereta1-30.jpg"
+      },
+      {
+        "question": "'Kereta pertama' di pagi hari adalah...",
+        "answers": [
+          "始発 (Shihatsu)",
+          "終電 (Shuuden)",
+          "朝ごはん (Asagohan)",
+          "ラッシュ (Rasshu)"
+        ],
+        "correct": "始発 (Shihatsu)",
+        "feedback": "'始発 (Shihatsu)' adalah kereta pertama yang beroperasi, biasanya sangat pagi.",
+        "image": "kereta1-31.jpg"
+      },
+      {
+        "question": "Bagaimana cara mengatakan 'tiket pulang-pergi'?",
+        "answers": [
+          "片道切符 (Katamichi kippu)",
+          "往復切符 (Oufuku kippu)",
+          "回数券 (Kaisuuken)",
+          "一日乗車券 (Ichinichi joushaken)"
+        ],
+        "correct": "往復切符 (Oufuku kippu)",
+        "feedback": "'往復 (Oufuku)' berarti pulang-pergi. '片道 (Katamichi)' berarti sekali jalan.",
+        "image": "kereta1-32.jpg"
+      },
+      {
+        "question": "Apa sebutan untuk 'loker koin'?",
+        "answers": [
+          "コインロッカー (Koin rokkaa)",
+          "ゴミ箱 (Gomibako)",
+          "券売機 (Kenbaiki)",
+          "郵便ポスト (Yuubin posuto)"
+        ],
+        "correct": "コインロッカー (Koin rokkaa)",
+        "feedback": "'コインロッカー (Koin rokkaa)' sangat berguna untuk menyimpan barang bawaan saat Anda menjelajahi kota.",
+        "image": "kereta1-33.jpg"
+      },
+      {
+        "question": "'Pusat informasi' dalam bahasa Jepang adalah...",
+        "answers": [
+          "案内所 (Annaisho)",
+          "交番 (Kouban)",
+          "事務所 (Jimusho)",
+          "受付 (Uketsuke)"
+        ],
+        "correct": "案内所 (Annaisho)",
+        "feedback": "'案内所 (Annaisho)' adalah pusat informasi turis. Cari tanda '?' (tanda tanya).",
+        "image": "kereta1-34.jpg"
+      },
+      {
+        "question": "Kata untuk 'eskalator' adalah...",
+        "answers": [
+          "エレベーター (Erebeetaa)",
+          "階段 (Kaidan)",
+          "エスカレーター (Esukareetaa)",
+          "坂 (Saka)"
+        ],
+        "correct": "エスカレーター (Esukareetaa)",
+        "feedback": "Ingat untuk berdiri di sisi kiri (di Tokyo) atau kanan (di Osaka) saat menggunakan eskalator.",
+        "image": "kereta1-35.jpg"
+      },
+      {
+        "question": "Bagaimana Anda menyebut 'lift'?",
+        "answers": [
+          "エスカレーター (Esukareetaa)",
+          "階段 (Kaidan)",
+          "エレベーター (Erebeetaa)",
+          "通路 (Tsuuro)"
+        ],
+        "correct": "エレベーター (Erebeetaa)",
+        "feedback": "'エレベーター (Erebeetaa)' adalah lift. Gunakan jika membawa barang berat atau bersama penyandang disabilitas.",
+        "image": "kereta1-36.jpg"
+      },
+      {
+        "question": "Apa bahasa Jepang untuk 'masinis'?",
+        "answers": [
+          "運転手 (Untenshu)",
+          "駅員 (Ekiin)",
+          "車掌 (Shashou)",
+          "パイロット (Pairotto)"
+        ],
+        "correct": "運転手 (Untenshu)",
+        "feedback": "'運転手 (Untenshu)' atau '運転士 (untenshi)' adalah masinis. 'Ekiin' adalah staf stasiun, dan 'Shashou' adalah kondektur.",
+        "image": "kereta1-37.jpg"
+      },
+      {
+        "question": "Kata untuk 'jam sibuk' adalah...",
+        "answers": [
+          "ラッシュ (Rasshu)",
+          "休日 (Kyuujitsu)",
+          "夜 (Yoru)",
+          "週末 (Shuumatsu)"
+        ],
+        "correct": "ラッシュ (Rasshu)",
+        "feedback": "'ラッシュ (Rasshu)' atau 'ラッシュアワー (rasshu awaa)' adalah jam sibuk pagi dan sore hari saat kereta sangat padat.",
+        "image": "kereta1-38.jpg"
+      },
+      {
+        "question": "Bagaimana cara mengatakan 'arah' (tujuan)?",
+        "answers": [
+          "方面 (Houmen)",
+          "場所 (Basho)",
+          "地図 (Chizu)",
+          "住所 (Juusho)"
+        ],
+        "correct": "方面 (Houmen)",
+        "feedback": "Anda akan melihat tanda seperti '渋谷方面 (Shibuya-houmen)' yang berarti 'ke arah Shibuya'.",
+        "image": "kereta1-39.jpg"
+      },
+      {
+        "question": "'Barang tertinggal' dalam bahasa Jepang adalah...",
+        "answers": [
+          "忘れ物 (Wasuremono)",
+          "贈り物 (Okurimono)",
+          "荷物 (Nimotsu)",
+          "買い物 (Kaimono)"
+        ],
+        "correct": "忘れ物 (Wasuremono)",
+        "feedback": "Jika Anda kehilangan sesuatu, tanyakan di '忘れ物取扱所 (wasuremono toriatsukaijo)' atau pusat barang tertinggal.",
+        "image": "kereta1-40.jpg"
+      },
+      {
+        "question": "Apa sebutan untuk 'staf stasiun'?",
+        "answers": [
+          "駅員 (Ekiin)",
+          "警察官 (Keisatsukan)",
+          "店員 (Ten'in)",
+          "会社員 (Kaishain)"
+        ],
+        "correct": "駅員 (Ekiin)",
+        "feedback": "'駅員 (Ekiin)' adalah staf stasiun yang bisa Anda tanyai jika butuh bantuan.",
+        "image": "kereta1-41.jpg"
+      },
+      {
+        "question": "Bahasa Jepang untuk 'sisi jendela' (kursi) adalah...",
+        "answers": [
+          "窓側 (Madogawa)",
+          "通路側 (Tsuurogawa)",
+          "入口側 (Iriguchigawa)",
+          "出口側 (Deguchigawa)"
+        ],
+        "correct": "窓側 (Madogawa)",
+        "feedback": "'窓側 (Madogawa)' adalah kursi di samping jendela. 'Tsuurogawa' adalah kursi di samping lorong.",
+        "image": "kereta1-42.jpg"
+      },
+      {
+        "question": "Kata untuk 'sisi lorong' (kursi) adalah...",
+        "answers": [
+          "窓側 (Madogawa)",
+          "通路側 (Tsuurogawa)",
+          "真ん中 (Mannaka)",
+          "隣 (Tonari)"
+        ],
+        "correct": "通路側 (Tsuurogawa)",
+        "feedback": "'通路側 (Tsuurogawa)' adalah kursi di samping lorong. 'Madogawa' adalah kursi di samping jendela.",
+        "image": "kereta1-43.jpg"
+      },
+      {
+        "question": "Bagaimana cara menyebut 'gerbong' kereta?",
+        "answers": [
+          "車両 (Sharyou)",
+          "電車 (Densha)",
+          "列車 (Ressha)",
+          "機関車 (Kikansha)"
+        ],
+        "correct": "車両 (Sharyou)",
+        "feedback": "'車両 (Sharyou)' berarti gerbong. Anda juga akan mendengar '...号車 (...gousha)', misalnya '1号車 (ichi-gousha)' yang berarti 'gerbong nomor 1'.",
+        "image": "kereta1-44.jpg"
+      },
+      {
+        "question": "'Tiket terusan satu hari' dalam bahasa Jepang adalah...",
+        "answers": [
+          "一日乗車券 (Ichinichi joushaken)",
+          "定期券 (Teikiken)",
+          "回数券 (Kaisuuken)",
+          "往復切符 (Oufuku kippu)"
+        ],
+        "correct": "一日乗車券 (Ichinichi joushaken)",
+        "feedback": "'一日乗車券 (Ichinichi joushaken)' adalah tiket yang memungkinkan Anda naik kereta sepuasnya dalam satu hari di area tertentu.",
+        "image": "kereta1-45.jpg"
+      },
+      {
+        "question": "Apa kata untuk 'pembatalan' (layanan kereta)?",
+        "answers": [
+          "運休 (Unkyuu)",
+          "遅延 (Chien)",
+          "満員 (Man'in)",
+          "故障 (Koshou)"
+        ],
+        "correct": "運休 (Unkyuu)",
+        "feedback": "'運休 (Unkyuu)' berarti layanan kereta dibatalkan, biasanya karena cuaca buruk atau masalah teknis.",
+        "image": "kereta1-46.jpg"
+      },
+      {
+        "question": "Bagaimana Anda menyebut 'pegangan gantung' di dalam kereta?",
+        "answers": [
+          "網棚 (Amidana)",
+          "つり革 (Tsurikawa)",
+          "手すり (Tesuri)",
+          "ポール (Pooru)"
+        ],
+        "correct": "つり革 (Tsurikawa)",
+        "feedback": "'つり革 (Tsurikawa)' adalah pegangan yang menggantung dari langit-langit kereta.",
+        "image": "kereta1-47.jpg"
+      },
+      {
+        "question": "Kata untuk 'rak bagasi' di atas kursi adalah...",
+        "answers": [
+          "網棚 (Amidana)",
+          "荷物置き場 (Nimotsu okiba)",
+          "ロッカー (Rokkaa)",
+          "棚 (Tana)"
+        ],
+        "correct": "網棚 (Amidana)",
+        "feedback": "'網棚 (Amidana)' adalah rak di atas tempat duduk untuk menaruh tas atau barang bawaan kecil.",
+        "image": "kereta1-48.jpg"
+      },
+      {
+        "question": "Bahasa Jepang untuk 'tiket langganan' (misal: bulanan) adalah...",
+        "answers": [
+          "定期券 (Teikiken)",
+          "会員券 (Kaiinken)",
+          "一日券 (Ichinichiken)",
+          "学生証 (Gakuseishou)"
+        ],
+        "correct": "定期券 (Teikiken)",
+        "feedback": "'定期券 (Teikiken)' adalah tiket pass komuter untuk periode tertentu (1, 3, atau 6 bulan) antara dua stasiun.",
+        "image": "kereta1-49.jpg"
+      },
+      {
+        "question": "Apa sebutan untuk 'pintu keluar timur'?",
+        "answers": [
+          "東口 (Higashiguchi)",
+          "西口 (Nishiguchi)",
+          "南口 (Minamiguchi)",
+          "北口 (Kitaguchi)"
+        ],
+        "correct": "東口 (Higashiguchi)",
+        "feedback": "Stasiun besar memiliki banyak pintu keluar yang dinamai berdasarkan arah mata angin: Timur (東), Barat (西), Selatan (南), Utara (北).",
+        "image": "kereta1-50.jpg"
+      }
+    ]
+  },
+  "level2": {
+    "Kereta": [
+      {
+        "question": "Bagaimana cara bertanya 'Di mana stasiun Shinjuku?'",
+        "answers": [
+          "新宿駅はどこですか (Shinjuku-eki wa doko desu ka)",
+          "新宿駅はこれですか (Shinjuku-eki wa kore desu ka)",
+          "新宿駅に行きたいです (Shinjuku-eki ni ikitai desu)",
+          "新宿駅は有名ですか (Shinjuku-eki wa yuumei desu ka)"
+        ],
+        "correct": "新宿駅はどこですか (Shinjuku-eki wa doko desu ka)",
+        "feedback": "'...はどこですか (...wa doko desu ka)' adalah pola kalimat standar untuk menanyakan 'Di mana ...?'.",
+        "image": "kereta2-01.jpg"
+      },
+      {
+        "question": "Untuk membeli 'Satu tiket ke Shibuya', Anda mengatakan...",
+        "answers": [
+          "渋谷まで一枚お願いします (Shibuya made ichi-mai onegai shimasu)",
+          "渋谷から一枚ください (Shibuya kara ichi-mai kudasai)",
+          "渋谷は一枚ですか (Shibuya wa ichi-mai desu ka)",
+          "渋谷で一枚買います (Shibuya de ichi-mai kaimasu)"
+        ],
+        "correct": "渋谷まで一枚お願いします (Shibuya made ichi-mai onegai shimasu)",
+        "feedback": "'...まで (...made)' berarti 'sampai/ke...'. '一枚 (Ichi-mai)' adalah satuan hitung untuk tiket (satu lembar).",
+        "image": "kereta2-02.jpg"
+      },
+      {
+        "question": "Bagaimana cara menanyakan 'Peron nomor berapa?'",
+        "answers": [
+          "何番線ですか (Nan-ban sen desu ka)",
+          "何番ホームですか (Nan-ban hoomu desu ka)",
+          "何階ですか (Nan-gai desu ka)",
+          "何番出口ですか (Nan-ban deguchi desu ka)"
+        ],
+        "correct": "何番線ですか (Nan-ban sen desu ka)",
+        "feedback": "'...番線 (...ban sen)' adalah cara standar untuk menyebut nomor peron/jalur.",
+        "image": "kereta2-03.jpg"
+      },
+      {
+        "question": "Untuk memastikan, 'Apakah kereta ini menuju ke Ikebukuro?'",
+        "answers": [
+          "この電車は池袋行きですか (Kono densha wa Ikebukuro-yuki desu ka)",
+          "池袋から来ましたか (Ikebukuro kara kimashita ka)",
+          "池袋で止まりますか (Ikebukuro de tomarimasu ka)",
+          "池袋は次の駅ですか (Ikebukuro wa tsugi no eki desu ka)"
+        ],
+        "correct": "この電車は池袋行きですか (Kono densha wa Ikebukuro-yuki desu ka)",
+        "feedback": "Akhiran '...行き (...yuki)' berarti 'tujuan/menuju ke...'.",
+        "image": "kereta2-04.jpg"
+      },
+      {
+        "question": "Bagaimana cara mengatakan 'Permisi, saya mau lewat'?",
+        "answers": [
+          "すみません、通ります (Sumimasen, toorimasu)",
+          "すみません、降ります (Sumimasen, orimasu)",
+          "すみません、乗ります (Sumimasen, norimasu)",
+          "すみません、待ちます (Sumimasen, machimasu)"
+        ],
+        "correct": "すみません、通ります (Sumimasen, toorimasu)",
+        "feedback": "'通ります (Toorimasu)' berarti 'akan lewat'. Gunakan ini untuk melewati orang di kereta yang padat.",
+        "image": "kereta2-05.jpg"
+      },
+      {
+        "question": "Untuk bertanya 'Apakah kursi ini kosong?'",
+        "answers": [
+          "この席は空いていますか (Kono seki wa aite imasu ka)",
+          "ここに座ってもいいですか (Koko ni suwatte mo ii desu ka)",
+          "誰かの席ですか (Dareka no seki desu ka)",
+          "あなたの席ですか (Anata no seki desu ka)"
+        ],
+        "correct": "この席は空いていますか (Kono seki wa aite imasu ka)",
+        "feedback": "Keduanya, baik A maupun B, dapat digunakan. '空いていますか (aite imasu ka)' lebih umum untuk menanyakan status kursi itu sendiri.",
+        "image": "kereta2-06.jpg"
+      },
+      {
+        "question": "Saat Anda akan turun dari kereta, Anda berkata...",
+        "answers": [
+          "降ります (Orimasu)",
+          "乗ります (Norimasu)",
+          "待ちます (Machimasu)",
+          "通ります (Toorimasu)"
+        ],
+        "correct": "降ります (Orimasu)",
+        "feedback": "Katakan 'すみません、降ります (Sumimasen, orimasu)' kepada orang yang menghalangi jalan Anda ke pintu.",
+        "image": "kereta2-07.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Berapa tarifnya sampai ke Ueno?'",
+        "answers": [
+          "上野までいくらですか (Ueno made ikura desu ka)",
+          "上野までどのくらいですか (Ueno made dono kurai desu ka)",
+          "上野はどこですか (Ueno wa doko desu ka)",
+          "上野に行きますか (Ueno ni ikimasu ka)"
+        ],
+        "correct": "上野までいくらですか (Ueno made ikura desu ka)",
+        "feedback": "'いくらですか (Ikura desu ka)' adalah cara bertanya 'berapa harganya?'.",
+        "image": "kereta2-08.jpg"
+      },
+      {
+        "question": "Untuk mengatakan 'Saya kehilangan tiket saya.'",
+        "answers": [
+          "切符をなくしました (Kippu o nakushimashita)",
+          "切符を買いました (Kippu o kaimashita)",
+          "切符は要りません (Kippu wa irimasen)",
+          "切符を見せてください (Kippu o misete kudasai)"
+        ],
+        "correct": "切符をなくしました (Kippu o nakushimashita)",
+        "feedback": "Jika ini terjadi, segera laporkan kepada staf stasiun (駅員, ekiin).",
+        "image": "kereta2-09.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Di mana saya bisa mengisi ulang kartu Suica?'",
+        "answers": [
+          "どこでスイカをチャージできますか (Doko de Suika o chaaji dekimasu ka)",
+          "どこでスイカを買えますか (Doko de Suika o kaemasu ka)",
+          "スイカはいくらですか (Suika wa ikura desu ka)",
+          "スイカで払えますか (Suika de haraemasu ka)"
+        ],
+        "correct": "どこでスイカをチャージできますか (Doko de Suika o chaaji dekimasu ka)",
+        "feedback": "Anda bisa mengisi ulang di mesin tiket (券売機, kenbaiki) atau mesin penyesuaian tarif (精算機, seisanki).",
+        "image": "kereta2-10.jpg"
+      },
+      {
+        "question": "Stasiun berikutnya adalah Harajuku. dalam bahasa Jepang adalah...",
+        "answers": [
+          "次は原宿です (Tsugi wa Harajuku desu)",
+          "原宿に着きました (Harajuku ni tsukimashita)",
+          "原宿はここですか (Harajuku wa koko desu ka)",
+          "原宿に行きたいです (Harajuku ni ikitai desu)"
+        ],
+        "correct": "次は原宿です (Tsugi wa Harajuku desu)",
+        "feedback": "Ini adalah frasa standar yang akan Anda dengar sebagai pengumuman di dalam kereta.",
+        "image": "kereta2-11.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Apakah kereta ini berhenti di Akihabara?'",
+        "answers": [
+          "この電車は秋葉原に止まりますか (Kono densha wa Akihabara ni tomarimasu ka)",
+          "この電車は秋葉原行きですか (Kono densha wa Akihabara-yuki desu ka)",
+          "秋葉原は終点ですか (Akihabara wa shuuten desu ka)",
+          "秋葉原で降ります (Akihabara de orimasu)"
+        ],
+        "correct": "この電車は秋葉原に止まりますか (Kono densha wa Akihabara ni tomarimasu ka)",
+        "feedback": "'止まりますか (Tomarimasu ka)' berarti 'apakah berhenti?'. Ini penting untuk ditanyakan jika Anda naik kereta ekspres.",
+        "image": "kereta2-12.jpg"
+      },
+      {
+        "question": "Jika saldo kartu IC kurang, Anda akan melihat tulisan...",
+        "answers": [
+          "残高不足です (Zandaka fusoku desu)",
+          "ありがとうございます (Arigatou gozaimasu)",
+          "どうぞお通りください (Douzo o-toori kudasai)",
+          "エラーです (Eraa desu)"
+        ],
+        "correct": "残高不足です (Zandaka fusoku desu)",
+        "feedback": "'残高不足 (Zandaka fusoku)' berarti 'saldo tidak mencukupi'. Gerbang tiket tidak akan terbuka dan Anda harus pergi ke mesin penyesuaian tarif.",
+        "image": "kereta2-13.jpg"
+      },
+      {
+        "question": "Bagaimana cara meminta 'Dua tiket dewasa'?",
+        "answers": [
+          "大人二枚お願いします (Otona ni-mai onegai shimasu)",
+          "子供二枚お願いします (Kodomo ni-mai onegai shimasu)",
+          "二人です (Futari desu)",
+          "二枚だけです (Ni-mai dake desu)"
+        ],
+        "correct": "大人二枚お願いします (Otona ni-mai onegai shimasu)",
+        "feedback": "'大人 (Otona)' berarti dewasa, dan '子供 (Kodomo)' berarti anak-anak.",
+        "image": "kereta2-14.jpg"
+      },
+      {
+        "question": "Untuk mengatakan 'Tolong tunggu pintunya terbuka.'",
+        "answers": [
+          "ドアが開くまでお待ちください (Doa ga aku made o-machi kudasai)",
+          "ドアが閉まります、ご注意ください (Doa ga shimarimasu, go-chuui kudasai)",
+          "ドアに触らないでください (Doa ni sawaranaide kudasai)",
+          "ドアは自動です (Doa wa jidou desu)"
+        ],
+        "correct": "ドアが開くまでお待ちください (Doa ga aku made o-machi kudasai)",
+        "feedback": "Ini adalah pengumuman umum di stasiun untuk keselamatan penumpang.",
+        "image": "kereta2-15.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Di mana pintu keluar selatan?'",
+        "answers": [
+          "南口はどこですか (Minamiguchi wa doko desu ka)",
+          "東口はどこですか (Higashiguchi wa doko desu ka)",
+          "西口はどこですか (Nishiguchi wa doko desu ka)",
+          "北口はどこですか (Kitaguchi wa doko desu ka)"
+        ],
+        "correct": "南口はどこですか (Minamiguchi wa doko desu ka)",
+        "feedback": "Stasiun besar memiliki banyak pintu keluar. Mengetahui nama pintu keluar akan sangat membantu.",
+        "image": "kereta2-16.jpg"
+      },
+      {
+        "question": "Jika Anda salah naik kereta, Anda bisa berkata 'Saya salah naik kereta.'",
+        "answers": [
+          "電車を間違えました (Densha o machigaemashita)",
+          "電車に乗りました (Densha ni norimashita)",
+          "電車は遅れています (Densha wa okurete imasu)",
+          "電車は速いです (Densha wa hayai desu)"
+        ],
+        "correct": "電車を間違えました (Densha o machigaemashita)",
+        "feedback": "Jika ini terjadi, turunlah di stasiun berikutnya dan tanyakan arah kepada staf stasiun.",
+        "image": "kereta2-17.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Kereta terakhir jam berapa?'",
+        "answers": [
+          "終電は何時ですか (Shuuden wa nanji desu ka)",
+          "始発は何時ですか (Shihatsu wa nanji desu ka)",
+          "今何時ですか (Ima nanji desu ka)",
+          "予約は何時ですか (Yoyaku wa nanji desu ka)"
+        ],
+        "correct": "終電は何時ですか (Shuuden wa nanji desu ka)",
+        "feedback": "'終電 (Shuuden)' adalah kereta terakhir. Sangat penting untuk mengetahui jadwalnya agar tidak ketinggalan.",
+        "image": "kereta2-18.jpg"
+      },
+      {
+        "question": "Untuk mengatakan 'Tolong jangan gunakan ponsel untuk menelepon.'",
+        "answers": [
+          "携帯電話の通話はご遠慮ください (Keitai denwa no tsuuwa wa go-enryo kudasai)",
+          "携帯電話の電源をお切りください (Keitai denwa no dengen o o-kiri kudasai)",
+          "マナーモードに設定してください (Manaa moodo ni settei shite kudasai)",
+          "ここで電話してもいいですか (Koko de denwa shite mo ii desu ka)"
+        ],
+        "correct": "携帯電話の通話はご遠慮ください (Keitai denwa no tsuuwa wa go-enryo kudasai)",
+        "feedback": "Ini adalah etiket umum di kereta Jepang. Menelepon dianggap mengganggu penumpang lain.",
+        "image": "kereta2-19.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Berapa lama perjalanan ke Osaka?'",
+        "answers": [
+          "大阪までどのくらいかかりますか (Oosaka made dono kurai kakarimasu ka)",
+          "大阪までいくらですか (Oosaka made ikura desu ka)",
+          "大阪は遠いですか (Oosaka wa tooi desu ka)",
+          "大阪行きの新幹線はどれですか (Oosaka-yuki no shinkansen wa dore desu ka)"
+        ],
+        "correct": "大阪までどのくらいかかりますか (Oosaka made dono kurai kakarimasu ka)",
+        "feedback": "'どのくらいかかりますか (Dono kurai kakarimasu ka)' digunakan untuk menanyakan durasi waktu.",
+        "image": "kereta2-20.jpg"
+      },
+      {
+        "question": "Frasa 'Hati-hati saat melangkah' yang sering terdengar di peron adalah...",
+        "answers": [
+          "足元にご注意ください (Ashimoto ni go-chuui kudasai)",
+          "頭上にご注意ください (Zujou ni go-chuui kudasai)",
+          "ドアにご注意ください (Doa ni go-chuui kudasai)",
+          "忘れ物にご注意ください (Wasuremono ni go-chuui kudasai)"
+        ],
+        "correct": "足元にご注意ください (Ashimoto ni go-chuui kudasai)",
+        "feedback": "'足元 (Ashimoto)' berarti 'area sekitar kaki'. Ini adalah peringatan untuk memperhatikan celah antara peron dan kereta.",
+        "image": "kereta2-21.jpg"
+      },
+      {
+        "question": "Untuk meminta 'tiket satu arah', Anda mengatakan...",
+        "answers": [
+          "片道切符をください (Katamichi kippu o kudasai)",
+          "往復切符をください (Oufuku kippu o kudasai)",
+          "子供の切符をください (Kodomo no kippu o kudasai)",
+          "安い切符をください (Yasui kippu o kudasai)"
+        ],
+        "correct": "片道切符をください (Katamichi kippu o kudasai)",
+        "feedback": "'片道 (Katamichi)' berarti sekali jalan. Kebalikannya adalah '往復 (oufuku)' atau pulang-pergi.",
+        "image": "kereta2-22.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Apakah saya perlu transfer?'",
+        "answers": [
+          "乗り換えは必要ですか (Norikae wa hitsuyou desu ka)",
+          "乗り換えはどこですか (Norikae wa doko desu ka)",
+          "これは直通ですか (Kore wa chokutsuu desu ka)",
+          "乗り換えが難しいです (Norikae ga muzukashii desu)"
+        ],
+        "correct": "乗り換えは必要ですか (Norikae wa hitsuyou desu ka)",
+        "feedback": "'必要ですか (Hitsuyou desu ka)' berarti 'apakah perlu?'. '直通 (Chokutsuu)' berarti langsung.",
+        "image": "kereta2-23.jpg"
+      },
+      {
+        "question": "Untuk mengatakan 'Saya ingin kursi dekat jendela.'",
+        "answers": [
+          "窓側の席がいいです (Madogawa no seki ga ii desu)",
+          "通路側の席がいいです (Tsuurogawa no seki ga ii desu)",
+          "どこでもいいです (Doko demo ii desu)",
+          "この席は予約されていますか (Kono seki wa yoyaku sarete imasu ka)"
+        ],
+        "correct": "窓側の席がいいです (Madogawa no seki ga ii desu)",
+        "feedback": "Gunakan frasa ini saat memesan tiket Shinkansen atau kereta dengan kursi reservasi.",
+        "image": "kereta2-24.jpg"
+      },
+      {
+        "question": "Frasa 'Harap antre di belakang garis kuning.'",
+        "answers": [
+          "黄色い線の内側でお待ちください (Kiiroi sen no uchigawa de o-machi kudasai)",
+          "黄色い線を踏まないでください (Kiiroi sen o fumanaide kudasai)",
+          "黄色い線から出ないでください (Kiiroi sen kara denaide kudasai)",
+          "黄色い線はどこですか (Kiiroi sen wa doko desu ka)"
+        ],
+        "correct": "黄色い線の内側でお待ちください (Kiiroi sen no uchigawa de o-machi kudasai)",
+        "feedback": "'黄色い線 (Kiiroi sen)' adalah garis kuning pengaman di peron.",
+        "image": "kereta2-25.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Apakah ada gerbong khusus wanita?'",
+        "answers": [
+          "女性専用車両はありますか (Josei sen'you sharyou wa arimasu ka)",
+          "男性は乗れますか (Dansei wa noremasu ka)",
+          "この車両は安全ですか (Kono sharyou wa anzen desu ka)",
+          "優先席はどこですか (Yuusenseki wa doko desu ka)"
+        ],
+        "correct": "女性専用車両はありますか (Josei sen'you sharyou wa arimasu ka)",
+        "feedback": "'女性専用車両 (Josei sen'you sharyou)' atau gerbong khusus wanita biasanya beroperasi pada jam-jam sibuk.",
+        "image": "kereta2-26.jpg"
+      },
+      {
+        "question": "Saat kereta penuh, Anda akan mendengar 'Kereta ini penuh sesak.'",
+        "answers": [
+          "電車は混雑しています (Densha wa konzatsu shite imasu)",
+          "電車は空いています (Densha wa suite imasu)",
+          "電車はもうすぐ来ます (Densha wa mousugu kimasu)",
+          "電車は遅れています (Densha wa okurete imasu)"
+        ],
+        "correct": "電車は混雑しています (Densha wa konzatsu shite imasu)",
+        "feedback": "'混雑しています (Konzatsu shite imasu)' berarti ramai atau padat.",
+        "image": "kereta2-27.jpg"
+      },
+      {
+        "question": "Untuk meminta bantuan, 'Bisakah Anda membantu saya?'",
+        "answers": [
+          "手伝ってもらえますか (Tetsudatte moraemasu ka)",
+          "分かりません (Wakarimasen)",
+          "大丈夫です (Daijoubu desu)",
+          "自分でできます (Jibun de dekimasu)"
+        ],
+        "correct": "手伝ってもらえますか (Tetsudatte moraemasu ka)",
+        "feedback": "Ini adalah cara sopan untuk meminta bantuan, misalnya saat kesulitan menggunakan mesin tiket.",
+        "image": "kereta2-28.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Di mana saya bisa menemukan loker koin?'",
+        "answers": [
+          "コインロッカーはどこですか (Koin rokkaa wa doko desu ka)",
+          "トイレはどこですか (Toire wa doko desu ka)",
+          "出口はどこですか (Deguchi wa doko desu ka)",
+          "案内所はどこですか (Annaisho wa doko desu ka)"
+        ],
+        "correct": "コインロッカーはどこですか (Koin rokkaa wa doko desu ka)",
+        "feedback": "Cari tanda bergambar kunci dan koper.",
+        "image": "kereta2-29.jpg"
+      },
+      {
+        "question": "Jika gerbang tiket tidak terbuka, Anda bisa berkata kepada staf 'Tidak bisa lewat.'",
+        "answers": [
+          "通れません (Tooremasen)",
+          "開いています (Aite imasu)",
+          "閉まっています (Shimatte imasu)",
+          "壊れています (Kowarete imasu)"
+        ],
+        "correct": "通れません (Tooremasen)",
+        "feedback": "Katakan 'すみません、通れません (Sumimasen, tooremasen)' sambil menunjukkan kartu atau tiket Anda kepada staf.",
+        "image": "kereta2-30.jpg"
+      },
+      {
+        "question": "Bagaimana cara mengatakan 'Saya ingin pergi ke Tokyo Tower.'",
+        "answers": [
+          "東京タワーへ行きたいです (Toukyou Tawaa e ikitai desu)",
+          "東京タワーはきれいですか (Toukyou Tawaa wa kirei desu ka)",
+          "東京タワーはどこにありますか (Toukyou Tawaa wa doko ni arimasu ka)",
+          "東京タワーのチケットをください (Toukyou Tawaa no chiketto o kudasai)"
+        ],
+        "correct": "東京タワーへ行きたいです (Toukyou Tawaa e ikitai desu)",
+        "feedback": "Gunakan ini saat bertanya di pusat informasi atau kepada staf stasiun.",
+        "image": "kereta2-31.jpg"
+      },
+      {
+        "question": "Untuk bertanya 'Apakah kereta ini tipe cepat?'",
+        "answers": [
+          "これは快速ですか (Kore wa kaisoku desu ka)",
+          "これは普通ですか (Kore wa futsuu desu ka)",
+          "これは特急ですか (Kore wa tokkyuu desu ka)",
+          "これは各駅ですか (Kore wa kakueki desu ka)"
+        ],
+        "correct": "これは快速ですか (Kore wa kaisoku desu ka)",
+        "feedback": "'快速 (Kaisoku)' adalah kereta cepat, lebih cepat dari '急行 (kyuukou)' tapi di bawah '特急 (tokkyuu)'.",
+        "image": "kereta2-32.jpg"
+      },
+      {
+        "question": "Frasa 'Harap dahulukan penumpang yang turun.'",
+        "answers": [
+          "降りる人が先です (Oriru hito ga saki desu)",
+          "乗る人が先です (Noru hito ga saki desu)",
+          "ドアの近くに立たないでください (Doa no chikaku ni tatanaide kudasai)",
+          "順番に並んでください (Junban ni narande kudasai)"
+        ],
+        "correct": "降りる人が先です (Oriru hito ga saki desu)",
+        "feedback": "Ini adalah etiket dasar saat naik kereta di Jepang. Tunggu semua penumpang turun sebelum Anda naik.",
+        "image": "kereta2-33.jpg"
+      },
+      {
+        "question": "Bagaimana cara mengatakan 'Kartu saya tidak berfungsi.'",
+        "answers": [
+          "カードが使えません (Kaado ga tsukaemasen)",
+          "カードを忘れました (Kaado o wasuremashita)",
+          "カードをなくしました (Kaado o nakushimashita)",
+          "カードをチャージします (Kaado o chaaji shimasu)"
+        ],
+        "correct": "カードが使えません (Kaado ga tsukaemasen)",
+        "feedback": "'使えません (Tsukaemasen)' adalah bentuk potensial negatif yang berarti 'tidak bisa digunakan'.",
+        "image": "kereta2-34.jpg"
+      },
+      {
+        "question": "Untuk bertanya 'Berapa stasiun lagi dari sini?'",
+        "answers": [
+          "ここからいくつ目の駅ですか (Koko kara ikutsume no eki desu ka)",
+          "次の駅は何ですか (Tsugi no eki wa nan desu ka)",
+          "全部で何駅ですか (Zenbu de nan eki desu ka)",
+          "駅は遠いですか (Eki wa tooi desu ka)"
+        ],
+        "correct": "ここからいくつ目の駅ですか (Koko kara ikutsume no eki desu ka)",
+        "feedback": "'いくつ目 (Ikutsume)' berarti 'yang ke berapa'.",
+        "image": "kereta2-35.jpg"
+      },
+      {
+        "question": "Frasa 'Pintu di sisi kiri akan terbuka.'",
+        "answers": [
+          "左側のドアが開きます (Hidarigawa no doa ga akimasu)",
+          "右側のドアが開きます (Migigawa no doa ga akimasu)",
+          "両側のドアが開きます (Ryougawa no doa ga akimasu)",
+          "ドアは開きません (Doa wa akimasen)"
+        ],
+        "correct": "左側のドアが開きます (Hidarigawa no doa ga akimasu)",
+        "feedback": "Perhatikan pengumuman ini agar Anda siap di depan pintu yang benar. '左 (Hidari)' adalah kiri, '右 (Migi)' adalah kanan.",
+        "image": "kereta2-36.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Apakah ada diskon untuk anak-anak?'",
+        "answers": [
+          "子供料金はありますか (Kodomo ryoukin wa arimasu ka)",
+          "大人はいくらですか (Otona wa ikura desu ka)",
+          "子供は無料ですか (Kodomo wa muryou desu ka)",
+          "学生割引はありますか (Gakusei waribiki wa arimasu ka)"
+        ],
+        "correct": "子供料金はありますか (Kodomo ryoukin wa arimasu ka)",
+        "feedback": "Biasanya, tarif anak-anak ('子供料金, kodomo ryoukin') adalah setengah dari tarif dewasa.",
+        "image": "kereta2-37.jpg"
+      },
+      {
+        "question": "Jika Anda merasa tidak enak badan, 'Saya merasa pusing.'",
+        "answers": [
+          "気分が悪いです (Kibun ga warui desu)",
+          "元気です (Genki desu)",
+          "お腹が空きました (Onaka ga sukimashita)",
+          "眠いです (Nemui desu)"
+        ],
+        "correct": "気分が悪いです (Kibun ga warui desu)",
+        "feedback": "Jika Anda merasa tidak sehat di kereta, jangan ragu untuk meminta bantuan penumpang lain atau staf.",
+        "image": "kereta2-38.jpg"
+      },
+      {
+        "question": "Untuk mengatakan 'Saya akan turun di stasiun berikutnya.'",
+        "answers": [
+          "次の駅で降ります (Tsugi no eki de orimasu)",
+          "次の駅に乗ります (Tsugi no eki ni norimasu)",
+          "次の駅は終点です (Tsugi no eki wa shuuten desu)",
+          "次の駅を通過します (Tsugi no eki o tsuuka shimasu)"
+        ],
+        "correct": "次の駅で降ります (Tsugi no eki de orimasu)",
+        "feedback": "Ini adalah cara memberitahu seseorang jika Anda perlu bergerak ke arah pintu.",
+        "image": "kereta2-39.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Stasiun terdekat dari sini yang mana?'",
+        "answers": [
+          "一番近い駅はどこですか (Ichiban chikai eki wa doko desu ka)",
+          "一番遠い駅はどこですか (Ichiban tooi eki wa doko desu ka)",
+          "この駅の名前は何ですか (Kono eki no namae wa nan desu ka)",
+          "駅まで歩けますか (Eki made arukemasu ka)"
+        ],
+        "correct": "一番近い駅はどこですか (Ichiban chikai eki wa doko desu ka)",
+        "feedback": "'一番近い (Ichiban chikai)' berarti 'yang paling dekat'.",
+        "image": "kereta2-40.jpg"
+      },
+      {
+        "question": "Jika Anda ingin memastikan jalur, 'Ini Jalur Chuo, kan?'",
+        "answers": [
+          "これは中央線ですか (Kore wa Chuuou-sen desu ka)",
+          "これは山手線ですか (Kore wa Yamanote-sen desu ka)",
+          "中央線はどこですか (Chuuou-sen wa doko desu ka)",
+          "中央線に乗りたいです (Chuuou-sen ni noritai desu)"
+        ],
+        "correct": "これは中央線ですか (Kore wa Chuuou-sen desu ka)",
+        "feedback": "Anda bisa juga menggunakan '...ですよね (...desu yo ne)' di akhir kalimat untuk meminta konfirmasi.",
+        "image": "kereta2-41.jpg"
+      },
+      {
+        "question": "Untuk bertanya 'Apakah perlu tiket khusus untuk kereta ini?'",
+        "answers": [
+          "この電車は特別料金が必要ですか (Kono densha wa tokubetsu ryoukin ga hitsuyou desu ka)",
+          "この電車は無料ですか (Kono densha wa muryou desu ka)",
+          "普通の切符で乗れますか (Futsuu no kippu de noremasu ka)",
+          "乗車券はどこで買いますか (Joushaken wa doko de kaimasu ka)"
+        ],
+        "correct": "この電車は特別料金が必要ですか (Kono densha wa tokubetsu ryoukin ga hitsuyou desu ka)",
+        "feedback": "Kereta ekspres terbatas ('特急, tokkyuu') dan Shinkansen memerlukan tiket dasar dan tiket khusus ('特急券, tokkyuuken').",
+        "image": "kereta2-42.jpg"
+      },
+      {
+        "question": "Saat turun, 'Terima kasih telah memberi jalan.'",
+        "answers": [
+          "ありがとうございます (Arigatou gozaimasu)",
+          "すみません (Sumimasen)",
+          "ごめんなさい (Gomen nasai)",
+          "失礼します (Shitsurei shimasu)"
+        ],
+        "correct": "すみません (Sumimasen)",
+        "feedback": "Dalam konteks ini, 'すみません (sumimasen)' lebih umum digunakan, yang bisa berarti 'permisi' sekaligus 'terima kasih'.",
+        "image": "kereta2-43.jpg"
+      },
+      {
+        "question": "Bagaimana cara mengatakan 'Tolong setel ponsel ke mode hening.'",
+        "answers": [
+          "マナーモードに設定してください (Manaa moodo ni settei shite kudasai)",
+          "電話の電源を切ってください (Denwa no dengen o kitte kudasai)",
+          "大きな声で話さないでください (Ookina koe de hanasanaide kudasai)",
+          "音楽を聴かないでください (Ongaku o kikanaide kudasai)"
+        ],
+        "correct": "マナーモードに設定してください (Manaa moodo ni settei shite kudasai)",
+        "feedback": "'マナーモード (Manaa moodo)' atau 'manner mode' adalah mode getar atau hening di ponsel.",
+        "image": "kereta2-44.jpg"
+      },
+      {
+        "question": "Jika Anda tidak sengaja menyenggol seseorang, Anda berkata...",
+        "answers": [
+          "すみません (Sumimasen)",
+          "ありがとう (Arigatou)",
+          "こんにちは (Konnichiwa)",
+          "はい (Hai)"
+        ],
+        "correct": "すみません (Sumimasen)",
+        "feedback": "Gunakan 'すみません (Sumimasen)' atau 'ごめんなさい (Gomen nasai)' untuk meminta maaf.",
+        "image": "kereta2-45.jpg"
+      },
+      {
+        "question": "Untuk bertanya 'Apakah kereta ini langsung ke bandara Narita?'",
+        "answers": [
+          "この電車は成田空港まで直通ですか (Kono densha wa Narita Kuukou made chokutsuu desu ka)",
+          "成田空港まで乗り換えが必要ですか (Narita Kuukou made norikae ga hitsuyou desu ka)",
+          "成田エクスプレスはどれですか (Narita Ekusupuresu wa dore desu ka)",
+          "空港までどのくらいですか (Kuukou made dono kurai desu ka)"
+        ],
+        "correct": "この電車は成田空港まで直通ですか (Kono densha wa Narita Kuukou made chokutsuu desu ka)",
+        "feedback": "'直通 (Chokutsuu)' berarti layanan langsung tanpa perlu transfer.",
+        "image": "kereta2-46.jpg"
+      },
+      {
+        "question": "Pengumuman 'Kereta akan segera berangkat.'",
+        "answers": [
+          "まもなく電車が発車します (Mamonaku densha ga hassha shimasu)",
+          "電車が到着します (Densha ga touchaku shimasu)",
+          "電車は遅れています (Densha wa okurete imasu)",
+          "次の電車をご利用ください (Tsugi no densha o go-riyou kudasai)"
+        ],
+        "correct": "まもなく電車が発車します (Mamonaku densha ga hassha shimasu)",
+        "feedback": "'まもなく (Mamonaku)' berarti 'segera'. '発車します (Hassha shimasu)' adalah bentuk sopan dari 'berangkat'.",
+        "image": "kereta2-47.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Di mana saya bisa membeli tiket terusan?'",
+        "answers": [
+          "一日乗車券はどこで買えますか (Ichinichi joushaken wa doko de kaemasu ka)",
+          "これは一日乗車券ですか (Kore wa ichinichi joushaken desu ka)",
+          "一日乗車券はいくらですか (Ichinichi joushaken wa ikura desu ka)",
+          "一日乗車券を使いたいです (Ichinichi joushaken o tsukaitai desu)"
+        ],
+        "correct": "一日乗車券はどこで買えますか (Ichinichi joushaken wa doko de kaemasu ka)",
+        "feedback": "Biasanya bisa dibeli di mesin tiket (券売機, kenbaiki) atau di kantor stasiun (駅の事務所, eki no jimusho).",
+        "image": "kereta2-48.jpg"
+      },
+      {
+        "question": "Untuk mengatakan 'Saya akan mengambil barang dari loker.'",
+        "answers": [
+          "ロッカーから荷物を出します (Rokkaa kara nimotsu o dashimasu)",
+          "ロッカーに荷物を入れます (Rokkaa ni nimotsu o iremasu)",
+          "ロッカーは空いていますか (Rokkaa wa aite imasu ka)",
+          "ロッカーの鍵をなくしました (Rokkaa no kagi o nakushimashita)"
+        ],
+        "correct": "ロッカーから荷物を出します (Rokkaa kara nimotsu o dashimasu)",
+        "feedback": "'出します (Dashimasu)' berarti 'mengeluarkan'.",
+        "image": "kereta2-49.jpg"
+      },
+      {
+        "question": "Frasa 'Silakan berdiri di kedua sisi untuk memberi jalan.'",
+        "answers": [
+          "二列に並んでお待ちください (Ni-retsu ni narande o-machi kudasai)",
+          "ドア付近に溜まらないでください (Doa fukin ni tamaranaide kudasai)",
+          "駆け込み乗車はおやめください (Kakekomi jousha wa o-yame kudasai)",
+          "手すりにおつかまりください (Tesuri ni o-tsukamari kudasai)"
+        ],
+        "correct": "二列に並んでお待ちください (Ni-retsu ni narande o-machi kudasai)",
+        "feedback": "Di peron, penumpang yang menunggu akan membentuk dua baris di samping pintu untuk memudahkan penumpang lain turun.",
+        "image": "kereta2-50.jpg"
+      }
+    ]
+  },
+  "level3": {
+    "Kereta": [
+      {
+        "question": "Bagaimana cara bertanya 'Kereta mana yang paling cepat untuk sampai ke Kyoto?'",
+        "answers": [
+          "京都まで一番速い電車はどれですか (Kyouto made ichiban hayai densha wa dore desu ka)",
+          "京都まで一番安い行き方は何ですか (Kyouto made ichiban yasui ikikata wa nan desu ka)",
+          "京都行きの各駅停車はありますか (Kyouto-yuki no kakueki teisha wa arimasu ka)",
+          "京都まで何時間かかりますか (Kyouto made nan-jikan kakarimasu ka)"
+        ],
+        "correct": "京都まで一番速い電車はどれですか (Kyouto made ichiban hayai densha wa dore desu ka)",
+        "feedback": "Jawabannya hampir pasti Shinkansen. '一番速い (Ichiban hayai)' berarti 'yang paling cepat'.",
+        "image": "kereta3-01.jpg"
+      },
+      {
+        "question": "Kalimat 'Saya ketinggalan kereta terakhir, apakah ada transportasi lain?'",
+        "answers": [
+          "終電に間に合いました、良かったです (Shuuden ni maniaimashita, yokatta desu)",
+          "終電を逃してしまいましたが、他に交通手段はありますか (Shuuden o nogashite shimaimashita ga, hoka ni koutsuu shudan wa arimasu ka)",
+          "始発まで待ちます (Shihatsu made machimasu)",
+          "ここからホテルまで歩けますか (Koko kara hoteru made arukemasu ka)"
+        ],
+        "correct": "終電を逃してしまいましたが、他に交通手段はありますか (Shuuden o nogashite shimaimashita ga, hoka ni koutsuu shudan wa arimasu ka)",
+        "feedback": "'...を逃してしまいました (...o nogashite shimaimashita)' menunjukkan penyesalan karena ketinggalan. '交通手段 (Koutsuu shudan)' berarti 'alat transportasi'.",
+        "image": "kereta3-02.jpg"
+      },
+      {
+        "question": "Bagaimana cara meminta 'Tolong beritahu saya jika sudah sampai di stasiun Yokohama.'",
+        "answers": [
+          "横浜駅に着いたら、教えていただけますか (Yokohama-eki ni tsuitara, oshiete itadakemasu ka)",
+          "横浜駅はまだですか (Yokohama-eki wa mada desu ka)",
+          "横浜駅で乗り換えます (Yokohama-eki de norikaemasu)",
+          "横浜駅の次は何ですか (Yokohama-eki no tsugi wa nan desu ka)"
+        ],
+        "correct": "横浜駅に着いたら、教えていただけますか (Yokohama-eki ni tsuitara, oshiete itadakemasu ka)",
+        "feedback": "Gunakan ini jika Anda khawatir akan melewatkan stasiun tujuan Anda. Anda bisa mengatakannya pada penumpang di sebelah Anda.",
+        "image": "kereta3-03.jpg"
+      },
+      {
+        "question": "'Saya ingin memesan dua kursi bersebelahan di Shinkansen besok.'",
+        "answers": [
+          "明日の新幹線で、隣同士の席を二つ予約したいです (Ashita no shinkansen de, tonari-doushi no seki o futatsu yoyaku shitai desu)",
+          "明日の新幹線は自由席に乗ります (Ashita no shinkansen wa jiyuuseki ni norimasu)",
+          "新幹線の切符を二枚キャンセルします (Shinkansen no kippu o ni-mai kyanseru shimasu)",
+          "明日は新幹線に乗りません (Ashita wa shinkansen ni norimasen)"
+        ],
+        "correct": "明日の新幹線で、隣同士の席を二つ予約したいです (Ashita no shinkansen de, tonari-doushi no seki o futatsu yoyaku shitai desu)",
+        "feedback": "'隣同士 (Tonari-doushi)' berarti 'bersebelahan'. Penting untuk disebutkan saat memesan untuk lebih dari satu orang.",
+        "image": "kereta3-04.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Apakah Japan Rail Pass berlaku untuk kereta ini?'",
+        "answers": [
+          "この電車でジャパンレールパスは使えますか (Kono densha de Japan Reeru Pasu wa tsukaemasu ka)",
+          "ジャパンレールパスはどこで買えますか (Japan Reeru Pasu wa doko de kaemasu ka)",
+          "ジャパンレールパスを見せてください (Japan Reeru Pasu o misete kudasai)",
+          "私のジャパンレールパスは有効ですか (Watashi no Japan Reeru Pasu wa yuukou desu ka)"
+        ],
+        "correct": "この電車でジャパンレールパスは使えますか (Kono densha de Japan Reeru Pasu wa tsukaemasu ka)",
+        "feedback": "Penting diketahui, JR Pass tidak berlaku untuk Shinkansen tipe Nozomi dan Mizuho.",
+        "image": "kereta3-05.jpg"
+      },
+      {
+        "question": "'Kartu IC saya sepertinya tidak berfungsi, bisakah Anda memeriksanya di gerbang?'",
+        "answers": [
+          "ICカードが反応しないようです。改札で確認していただけますか (IC kaado ga hannou shinai you desu. Kaisatsu de kakunin shite itadakemasu ka)",
+          "ICカードにお金がありません (IC kaado ni okane ga arimasen)",
+          "この改札は壊れていますか (Kono kaisatsu wa kowarete imasu ka)",
+          "どうやって改札を通りますか (Douyatte kaisatsu o toorimasu ka)"
+        ],
+        "correct": "ICカードが反応しないようです。改札で確認していただけますか (IC kaado ga hannou shinai you desu. Kaisatsu de kakunin shite itadakemasu ka)",
+        "feedback": "'反応しない (Hannou shinai)' berarti 'tidak merespon'. Staf di kantor gerbang ('駅務室, ekimushitsu') dapat membantu.",
+        "image": "kereta3-06.jpg"
+      },
+      {
+        "question": "'Saya tidak sengaja membeli tiket yang salah, apakah bisa dikembalikan?'",
+        "answers": [
+          "切符を間違えて買ってしまいました。払い戻しはできますか (Kippu o machigaete katte shimaimashita. Haraimodoshi wa dekimasu ka)",
+          "この切符をください (Kono kippu o kudasai)",
+          "切符の買い方が分かりません (Kippu no kaikata ga wakarimasen)",
+          "この切符はもう使いません (Kono kippu wa mou tsukaimasen)"
+        ],
+        "correct": "切符を間違えて買ってしまいました。払い戻しはできますか (Kippu o machigaete katte shimaimashita. Haraimodoshi wa dekimasu ka)",
+        "feedback": "'払い戻し (Haraimodoshi)' berarti 'refund'. Biasanya bisa dilakukan jika tiket belum digunakan, mungkin dengan sedikit biaya administrasi.",
+        "image": "kereta3-07.jpg"
+      },
+      {
+        "question": "'Untuk sampai ke Hakone, apakah lebih baik naik kereta atau bus dari sini?'",
+        "answers": [
+          "ここから箱根へは、電車とバス、どちらが良いですか (Koko kara Hakone e wa, densha to basu, dochira ga yoi desu ka)",
+          "箱根まで歩いて行けますか (Hakone made aruite ikemasu ka)",
+          "箱根の天気はどうですか (Hakone no tenki wa dou desu ka)",
+          "箱根の有名な食べ物は何ですか (Hakone no yuumei na tabemono wa nan desu ka)"
+        ],
+        "correct": "ここから箱根へは、電車とバス、どちらが良いですか (Koko kara Hakone e wa, densha to basu, dochira ga yoi desu ka)",
+        "feedback": "'どちらが良いですか (Dochira ga yoi desu ka)' berarti 'mana yang lebih baik?'. Pertanyaan ini bagus untuk diajukan di pusat informasi.",
+        "image": "kereta3-08.jpg"
+      },
+      {
+        "question": "'Kereta tiba-tiba berhenti, apakah ada masalah?'",
+        "answers": [
+          "急に電車が止まりましたが、何かありましたか (Kyuu ni densha ga tomarimashita ga, nani ka arimashita ka)",
+          "ここで降りたいのですが (Koko de oritai no desu ga)",
+          "電車は時間通りです (Densha wa jikan doori desu)",
+          "次の駅で止まりますか (Tsugi no eki de tomarimasu ka)"
+        ],
+        "correct": "急に電車が止まりましたが、何かありましたか (Kyuu ni densha ga tomarimashita ga, nani ka arimashita ka)",
+        "feedback": "Kereta di Jepang bisa berhenti mendadak karena berbagai alasan keselamatan, seperti gempa bumi atau ada orang di rel. Tunggu pengumuman selanjutnya.",
+        "image": "kereta3-09.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Apakah ada gerbong dengan ruang untuk bagasi besar?'",
+        "answers": [
+          "大きな荷物を置くスペースがある車両はありますか (Ookina nimotsu o oku supeesu ga aru sharyou wa arimasu ka)",
+          "この荷物は網棚に乗せられますか (Kono nimotsu wa amidana ni noseraremasu ka)",
+          "荷物が多いので、手伝ってください (Nimotsu ga ooi node, tetsudatte kudasai)",
+          "ロッカーはどこにありますか (Rokkaa wa doko ni arimasu ka)"
+        ],
+        "correct": "大きな荷物を置くスペースがある車両はありますか (Ookina nimotsu o oku supeesu ga aru sharyou wa arimasu ka)",
+        "feedback": "Beberapa kereta Shinkansen dan ekspres bandara memiliki rak bagasi khusus ('荷物置き場, nimotsu okiba') di ujung gerbong.",
+        "image": "kereta3-10.jpg"
+      },
+      {
+        "question": "'Saya bepergian dengan anak kecil, apakah ada ruang prioritas untuk kereta bayi?'",
+        "answers": [
+          "子供連れなのですが、ベビーカーを置く優先スペースはありますか (Kodomo-zure na no desu ga, bebiikaa o oku yuusen supeesu wa arimasu ka)",
+          "子供料金はいくらですか (Kodomo ryoukin wa ikura desu ka)",
+          "この席は子供用ですか (Kono seki wa kodomo-you desu ka)",
+          "エレベーターはどこですか (Erebeetaa wa doko desu ka)"
+        ],
+        "correct": "子供連れなのですが、ベビーカーを置く優先スペースはありますか (Kodomo-zure na no desu ga, bebiikaa o oku yuusen supeesu wa arimasu ka)",
+        "feedback": "Kereta baru sering memiliki area khusus untuk pengguna kursi roda dan kereta bayi ('ベビーカー, bebiikaa').",
+        "image": "kereta3-11.jpg"
+      },
+      {
+        "question": "'Saya lupa melakukan tap kartu IC saat masuk, apa yang harus saya lakukan di stasiun tujuan?'",
+        "answers": [
+          "入場時にICカードをタッチし忘れました。出口でどうすればいいですか (Nyuujou-ji ni IC kaado o tatchi shi wasuremashita. Deguchi de dou sureba ii desu ka)",
+          "ICカードをなくしました (IC kaado o nakushimashita)",
+          "チャージが足りません (Chaaji ga tarimasen)",
+          "このカードは使えません (Kono kaado wa tsukaemasen)"
+        ],
+        "correct": "入場時にICカードをタッチし忘れました。出口でどうすればいいですか (Nyuujou-ji ni IC kaado o tatchi shi wasuremashita. Deguchi de dou sureba ii desu ka)",
+        "feedback": "Pergilah ke kantor staf di gerbang keluar. Mereka akan menghitung tarif dari stasiun awal Anda dan memprosesnya secara manual.",
+        "image": "kereta3-12.jpg"
+      },
+      {
+        "question": "'Apakah mungkin untuk mengubah waktu reservasi tiket Shinkansen saya?'",
+        "answers": [
+          "新幹線の予約時間を変更することは可能ですか (Shinkansen no yoyaku jikan o henkou suru koto wa kanou desu ka)",
+          "新幹線の予約をキャンセルしたいです (Shinkansen no yoyaku o kyanseru shitai desu)",
+          "もっと早い新幹線に乗りたいです (Motto hayai shinkansen ni noritai desu)",
+          "この新幹線は満席ですか (Kono shinkansen wa manseki desu ka)"
+        ],
+        "correct": "新幹線の予約時間を変更することは可能ですか (Shinkansen no yoyaku jikan o henkou suru koto wa kanou desu ka)",
+        "feedback": "Biasanya Anda dapat mengubahnya satu kali secara gratis sebelum waktu keberangkatan yang tertera di tiket.",
+        "image": "kereta3-13.jpg"
+      },
+      {
+        "question": "'Kereta ini tampaknya berhenti lebih lama dari biasanya, apakah ada pengumuman?'",
+        "answers": [
+          "この電車は長く停車していますが、何かアナウンスがありましたか (Kono densha wa nagaku teisha shite imasu ga, nani ka anaunsu ga arimashita ka)",
+          "ここで少し休憩します (Koko de sukoshi kyuukei shimasu)",
+          "ドアを開けてください (Doa o akete kudasai)",
+          "あとどのくらいで出発しますか (Ato dono kurai de shuppatsu shimasu ka)"
+        ],
+        "correct": "この電車は長く停車していますが、何かアナウンスがありましたか (Kono densha wa nagaku teisha shite imasu ga, nani ka anaunsu ga arimashita ka)",
+        "feedback": "Jika Anda tidak mengerti pengumuman dalam bahasa Jepang, Anda bisa menanyakannya kepada penumpang lain.",
+        "image": "kereta3-14.jpg"
+      },
+      {
+        "question": "'Saya memerlukan sertifikat keterlambatan kereta untuk kantor saya.'",
+        "answers": [
+          "会社に提出するため、遅延証明書をいただけますか (Kaisha ni teishutsu suru tame, chien shoumeisho o itadakemasu ka)",
+          "電車が遅れたので、怒っています (Densha ga okureta node, okotte imasu)",
+          "なぜ電車は遅れたのですか (Naze densha wa okureta no desu ka)",
+          "次の電車は何時ですか (Tsugi no densha wa nanji desu ka)"
+        ],
+        "correct": "会社に提出するため、遅延証明書をいただけますか (Kaisha ni teishutsu suru tame, chien shoumeisho o itadakemasu ka)",
+        "feedback": "'遅延証明書 (Chien shoumeisho)' atau sertifikat keterlambatan bisa didapatkan dari staf stasiun di gerbang keluar.",
+        "image": "kereta3-15.jpg"
+      },
+      {
+        "question": "'Apakah tiket terusan ini juga berlaku untuk bus kota?'",
+        "answers": [
+          "この乗車券は市バスにも使えますか (Kono joushaken wa shi-basu ni mo tsukaemasu ka)",
+          "バス乗り場はどこですか (Basu noriba wa doko desu ka)",
+          "バスの料金はいくらですか (Basu no ryoukin wa ikura desu ka)",
+          "この切符は電車だけですか (Kono kippu wa densha dake desu ka)"
+        ],
+        "correct": "この乗車券は市バスにも使えますか (Kono joushaken wa shi-basu ni mo tsukaemasu ka)",
+        "feedback": "Beberapa tiket terusan regional mencakup berbagai moda transportasi, jadi selalu baik untuk memastikan.",
+        "image": "kereta3-16.jpg"
+      },
+      {
+        "question": "'Jika saya turun di stasiun antara, apakah tiket saya masih berlaku untuk melanjutkan perjalanan?'",
+        "answers": [
+          "途中で下車した場合、この切符はまだ有効ですか (Tochuu de gesha shita baai, kono kippu wa mada yuukou desu ka)",
+          "この切符でどこまで行けますか (Kono kippu de doko made ikemasu ka)",
+          "一度改札を出たいのですが (Ichido kaisatsu o detai no desu ga)",
+          "切符を買い直さないといけませんか (Kippu o kainaosanai to ikemasen ka)"
+        ],
+        "correct": "途中で下車した場合、この切符はまだ有効ですか (Tochuu de gesha shita baai, kono kippu wa mada yuukou desu ka)",
+        "feedback": "Umumnya, tiket sekali jalan menjadi tidak berlaku setelah Anda keluar dari gerbang tiket. Ini disebut '途中下車 (tochuu gesha)'.",
+        "image": "kereta3-17.jpg"
+      },
+      {
+        "question": "'Saya ingin memastikan, kereta ini akan dipisah di stasiun berikutnya, kan?'",
+        "answers": [
+          "この電車は次の駅で切り離し作業がありますよね (Kono densha wa tsugi no eki de kirihanashi sagyou ga arimasu yo ne)",
+          "この電車は連結しますか (Kono densha wa renketsu shimasu ka)",
+          "どの車両に乗ればいいですか (Dono sharyou ni noreba ii desu ka)",
+          "私の目的地は...です (Watashi no mokutekichi wa ... desu)"
+        ],
+        "correct": "この電車は次の駅で切り離し作業がありますよね (Kono densha wa tsugi no eki de kirihanashi sagyou ga arimasu yo ne)",
+        "feedback": "Beberapa kereta jarak jauh melakukan '切り離し (kirihanashi)' atau pemisahan gerbong. Pastikan Anda berada di gerbong yang benar menuju tujuan Anda.",
+        "image": "kereta3-18.jpg"
+      },
+      {
+        "question": "'Apakah ada perbedaan harga antara membeli tiket di mesin dan secara online?'",
+        "answers": [
+          "券売機で買うのとネットで買うのでは、値段に違いはありますか (Kenbaiki de kau no to netto de kau no de wa, nedan ni chigai wa arimasu ka)",
+          "どちらがもっと便利ですか (Dochira ga motto benri desu ka)",
+          "ネット予約の仕方を教えてください (Netto yoyaku no shikata o oshiete kudasai)",
+          "クレジットカードは使えますか (Kurejitto kaado wa tsukaemasu ka)"
+        ],
+        "correct": "券売機で買うのとネットで買うのでは、値段に違いはありますか (Kenbaiki de kau no to netto de kau no de wa, nedan ni chigai wa arimasu ka)",
+        "feedback": "Kadang-kadang ada diskon khusus untuk pembelian online atau melalui aplikasi.",
+        "image": "kereta3-19.jpg"
+      },
+      {
+        "question": "'Saya melihat ada barang mencurigakan di dalam kereta, kepada siapa saya harus melapor?'",
+        "answers": [
+          "車内に不審物がありましたが、誰に報告すればいいですか (Shanai ni fushinbutsu ga arimashita ga, dare ni houkoku sureba ii desu ka)",
+          "あれは誰の荷物ですか (Are wa dare no nimotsu desu ka)",
+          "警察を呼んでください (Keisatsu o yonde kudasai)",
+          "安全のために、ここから離れます (Anzen no tame ni, koko kara hanaremasu)"
+        ],
+        "correct": "車内に不審物がありましたが、誰に報告すればいいですか (Shanai ni fushinbutsu ga arimashita ga, dare ni houkoku sureba ii desu ka)",
+        "feedback": "Jangan menyentuhnya. Segera laporkan kepada kondektur ('車掌, shashou') atau staf stasiun ('駅員, ekiin').",
+        "image": "kereta3-20.jpg"
+      },
+      {
+        "question": "'Apakah saya harus membayar biaya tambahan untuk naik gerbong Green Car?'",
+        "answers": [
+          "グリーン車に乗るには、追加料金が必要ですか (Guriinsha ni noru ni wa, tsuika ryoukin ga hitsuyou desu ka)",
+          "グリーン車はどこですか (Guriinsha wa doko desu ka)",
+          "グリーン車は快適ですか (Guriinsha wa kaiteki desu ka)",
+          "普通車で十分です (Futsuusha de juubun desu)"
+        ],
+        "correct": "グリーン車に乗るには、追加料金が必要ですか (Guriinsha ni noru ni wa, tsuika ryoukin ga hitsuyou desu ka)",
+        "feedback": "Ya, Anda memerlukan tiket khusus yang disebut 'グリーン券 (guriin-ken)' untuk naik Green Car (gerbong kelas eksekutif).",
+        "image": "kereta3-21.jpg"
+      },
+      {
+        "question": "'Saya ingin tahu apakah ada kereta malam langsung dari Tokyo ke Hokkaido.'",
+        "answers": [
+          "東京から北海道まで直通の夜行列車はありますか (Toukyou kara Hokkaidoo made chokutsuu no yakou ressha wa arimasu ka)",
+          "飛行機の方が速いですか (Hikouki no hou ga hayai desu ka)",
+          "北海道新幹線について教えてください (Hokkaidoo shinkansen ni tsuite oshiete kudasai)",
+          "寝台特急はまだ走っていますか (Shindai tokkyuu wa mada hashitte imasu ka)"
+        ],
+        "correct": "東京から北海道まで直通の夜行列車はありますか (Toukyou kara Hokkaidoo made chokutsuu no yakou ressha wa arimasu ka)",
+        "feedback": "Kereta malam ('夜行列車, yakou ressha') kini sudah sangat langka di Jepang, sebagian besar telah digantikan oleh Shinkansen atau bus malam.",
+        "image": "kereta3-22.jpg"
+      },
+      {
+        "question": "'Jika saya membeli tiket terusan, apakah saya tetap harus melewati gerbang tiket setiap kali?'",
+        "answers": [
+          "フリーパスを持っていても、毎回改札を通す必要がありますか (Furii pasu o motte ite mo, maikai kaisatsu o toosu hitsuyou ga arimasu ka)",
+          "このパスは一日中使えますか (Kono pasu wa ichinichijuu tsukaemasu ka)",
+          "改札でパスを見せるだけですか (Kaisatsu de pasu o miseru dake desu ka)",
+          "どうやって使いますか (Douyatte tsukaimasu ka)"
+        ],
+        "correct": "フリーパスを持っていても、毎回改札を通す必要がありますか (Furii pasu o motte ite mo, maikai kaisatsu o toosu hitsuyou ga arimasu ka)",
+        "feedback": "Ya, Anda harus memasukkan tiket ke mesin atau menunjukkannya kepada staf setiap kali masuk dan keluar stasiun.",
+        "image": "kereta3-23.jpg"
+      },
+      {
+        "question": "'Bisakah Anda menjelaskan perbedaan antara kereta Tokkyu, Kyuko, dan Kaisoku?'",
+        "answers": [
+          "特急、急行、快速の違いを説明していただけますか (Tokkyuu, kyuukou, kaisoku no chigai o setsumei shite itadakemasu ka)",
+          "どれが一番速いですか (Dore ga ichiban hayai desu ka)",
+          "料金は同じですか (Ryoukin wa onaji desu ka)",
+          "私は普通電車に乗ります (Watashi wa futsuu densha ni norimasu)"
+        ],
+        "correct": "特急、急行、快速の違いを説明していただけますか (Tokkyuu, kyuukou, kaisoku no chigai o setsumei shite itadakemasu ka)",
+        "feedback": "Secara umum urutan kecepatannya (dari yang paling banyak berhenti): 普通 (Lokal) < 快速 (Cepat) < 急行 (Ekspres) < 特急 (Ekspres Terbatas).",
+        "image": "kereta3-24.jpg"
+      },
+      {
+        "question": "'Apakah ada diskon grup untuk perjalanan kami yang terdiri dari 10 orang?'",
+        "answers": [
+          "私たちは10人グループですが、団体割引はありますか (Watashitachi wa juu-nin guruupu desu ga, dantai waribiki wa arimasu ka)",
+          "チケットを10枚ください (Chiketto o juu-mai kudasai)",
+          "全員でいくらになりますか (Zen'in de ikura ni narimasu ka)",
+          "席を10席予約したいです (Seki o juu-seki yoyaku shitai desu)"
+        ],
+        "correct": "私たちは10人グループですが、団体割引はありますか (Watashitachi wa juu-nin guruupu desu ga, dantai waribiki wa arimasu ka)",
+        "feedback": "'団体割引 (Dantai waribiki)' atau diskon grup biasanya tersedia untuk 8 orang atau lebih dan perlu diurus di kantor tiket.",
+        "image": "kereta3-25.jpg"
+      },
+      {
+        "question": "'Saya sedang hamil, apakah saya berhak duduk di kursi prioritas?'",
+        "answers": [
+          "私は妊娠中ですが、優先席に座ってもよろしいでしょうか (Watashi wa ninshin-chuu desu ga, yuusenseki ni suwatte mo yoroshii deshou ka)",
+          "お腹が大きいです (Onaka ga ookii desu)",
+          "気分が悪いです (Kibun ga warui desu)",
+          "席を譲ってください (Seki o yuzutte kudasai)"
+        ],
+        "correct": "私は妊娠中ですが、優先席に座ってもよろしいでしょうか (Watashi wa ninshin-chuu desu ga, yuusenseki ni suwatte mo yoroshii deshou ka)",
+        "feedback": "Tentu saja. Anda bisa menggunakan tanda kehamilan ('マタニティマーク, matanitiimaaku') agar penumpang lain lebih mudah mengenali.",
+        "image": "kereta3-26.jpg"
+      },
+      {
+        "question": "'Di mana saya bisa melihat pemandangan Gunung Fuji dari Shinkansen ini?'",
+        "answers": [
+          "この新幹線から富士山が見えるのはどの辺りですか (Kono shinkansen kara Fuji-san ga mieru no wa dono atari desu ka)",
+          "右側ですか、左側ですか (Migigawa desu ka, hidarigawa desu ka)",
+          "今日は富士山が見えますか (Kyou wa Fuji-san ga miemasu ka)",
+          "富士山に行きたいです (Fuji-san ni ikitai desu)"
+        ],
+        "correct": "この新幹線から富士山が見えるのはどの辺りですか (Kono shinkansen kara Fuji-san ga mieru no wa dono atari desu ka)",
+        "feedback": "Saat bepergian dari Tokyo ke Osaka, Gunung Fuji akan terlihat di sisi kanan sekitar 40-45 menit setelah berangkat dari Tokyo.",
+        "image": "kereta3-27.jpg"
+      },
+      {
+        "question": "'Apakah makanan dan minuman boleh dibawa dan dikonsumsi di dalam kereta?'",
+        "answers": [
+          "車内で飲食をしても大丈夫ですか (Shanai de inshoku o shite mo daijoubu desu ka)",
+          "駅弁を買いたいです (Ekiben o kaitai desu)",
+          "ゴミは持ち帰ります (Gomi wa mochikaerimasu)",
+          "飲み物だけならいいですか (Nomimono dake nara ii desu ka)"
+        ],
+        "correct": "車内で飲食をしても大丈夫ですか (Shanai de inshoku o shite mo daijoubu desu ka)",
+        "feedback": "Di kereta jarak jauh seperti Shinkansen, makan dan minum ('飲食, inshoku') sangat diperbolehkan. Namun, di kereta komuter jarak pendek, hal ini dianggap kurang sopan.",
+        "image": "kereta3-28.jpg"
+      },
+      {
+        "question": "'Jika saya tertidur dan melewati stasiun tujuan, apa yang harus saya lakukan?'",
+        "answers": [
+          "寝過ごして駅を乗り過ごしてしまいました。どうすればいいですか (Nesugoshite eki o norisugoshite shimaimashita. Dou sureba ii desu ka)",
+          "起こしてくれてありがとう (Okoshite kurete arigatou)",
+          "ここはどこですか (Koko wa doko desu ka)",
+          "反対方向の電車に乗ります (Hantai houkou no densha ni norimasu)"
+        ],
+        "correct": "寝過ごして駅を乗り過ごしてしまいました。どうすればいいですか (Nesugoshite eki o norisugoshite shimaimashita. Dou sureba ii desu ka)",
+        "feedback": "'寝過ごす (Nesugosu)' berarti ketiduran. Turun di stasiun berikutnya dan jelaskan situasinya kepada staf. Biasanya mereka akan mengizinkan Anda kembali tanpa biaya tambahan.",
+        "image": "kereta3-29.jpg"
+      },
+      {
+        "question": "'Bisakah saya mendapatkan pengembalian dana untuk kartu IC saya saat saya meninggalkan Jepang?'",
+        "answers": [
+          "日本を出国する際に、このICカードの払い戻しはできますか (Nihon o shukkoku suru sai ni, kono IC kaado no haraimodoshi wa dekimasu ka)",
+          "このカードは記念に持ち帰ります (Kono kaado wa kinen ni mochikaerimasu)",
+          "デポジットはいくらでしたか (Depojitto wa ikura deshita ka)",
+          "残高を使い切りたいです (Zandaka o tsukaikiritai desu)"
+        ],
+        "correct": "日本を出国する際に、このICカードの払い戻しはできますか (Nihon o shukkoku suru sai ni, kono IC kaado no haraimodoshi wa dekimasu ka)",
+        "feedback": "Ya, Anda bisa mendapatkan sisa saldo dan deposit 500 yen (dikurangi biaya administrasi) di kantor tiket perusahaan kereta yang menerbitkan kartu tersebut.",
+        "image": "kereta3-30.jpg"
+      },
+      {
+        "question": "'Apakah ada perbedaan peron untuk kereta yang sama tetapi dengan tujuan akhir yang berbeda?'",
+        "answers": [
+          "同じ電車でも、最終目的地によってホームは違いますか (Onaji densha demo, saishuu mokutekichi ni yotte hoomu wa chigaimasu ka)",
+          "このホームで合っていますか (Kono hoomu de atte imasu ka)",
+          "電光掲示板を確認します (Denkou keijiban o kakunin shimasu)",
+          "行き先をよく見てください (Yukisaki o yoku mite kudasai)"
+        ],
+        "correct": "同じ電車でも、最終目的地によってホームは違いますか (Onaji densha demo, saishuu mokutekichi ni yotte hoomu wa chigaimasu ka)",
+        "feedback": "Terkadang ya, terutama untuk jalur yang sama dengan layanan lokal dan ekspres. Selalu periksa papan informasi elektronik ('電光掲示板, denkou keijiban').",
+        "image": "kereta3-31.jpg"
+      },
+      {
+        "question": "'Apa yang harus saya lakukan jika terjadi gempa saat saya di dalam kereta?'",
+        "answers": [
+          "電車内で地震が発生した場合、どうすればいいですか (Denshanai de jishin ga hassei shita baai, dou sureba ii desu ka)",
+          "すぐに電車から降りますか (Sugu ni densha kara orimasu ka)",
+          "頭を守ってください (Atama o mamotte kudasai)",
+          "パニックにならないでください (Panikku ni naranaide kudasai)"
+        ],
+        "correct": "電車内で地震が発生した場合、どうすればいいですか (Denshanai de jishin ga hassei shita baai, dou sureba ii desu ka)",
+        "feedback": "Tetap tenang. Kereta akan berhenti secara otomatis. Pegang erat-erat pegangan atau tiang, dan ikuti instruksi dari kru kereta.",
+        "image": "kereta3-32.jpg"
+      },
+      {
+        "question": "'Saya ingin membeli Ekiben (bento stasiun). Di mana saya bisa membelinya?'",
+        "answers": [
+          "駅弁を買いたいのですが、どこで売っていますか (Ekiben o kaitai no desu ga, doko de utte imasu ka)",
+          "おすすめの駅弁は何ですか (Osusume no ekiben wa nan desu ka)",
+          "駅弁は車内でも買えますか (Ekiben wa shanai de mo kaemasu ka)",
+          "この駅は駅弁で有名ですか (Kono eki wa ekiben de yuumei desu ka)"
+        ],
+        "correct": "駅弁を買いたいのですが、どこで売っていますか (Ekiben o kaitai no desu ga, doko de utte imasu ka)",
+        "feedback": "Ekiben dijual di toko-toko di dalam stasiun, terutama di peron Shinkansen. Beberapa Shinkansen juga menjualnya di dalam kereta.",
+        "image": "kereta3-33.jpg"
+      },
+      {
+        "question": "'Jika saya ketinggalan Shinkansen yang sudah saya pesan, apakah tiket saya hangus?'",
+        "answers": [
+          "予約した新幹線に乗り遅れたら、切符は無効になりますか (Yoyaku shita shinkansen ni noriokuretara, kippu wa mukou ni narimasu ka)",
+          "次の新幹線に乗れますか (Tsugi no shinkansen ni noremasu ka)",
+          "払い戻しはできますか (Haraimodoshi wa dekimasu ka)",
+          "駅員に相談します (Ekiin ni soudan shimasu)"
+        ],
+        "correct": "予約した新幹線に乗り遅れたら、切符は無効になりますか (Yoyaku shita shinkansen ni noriokuretara, kippu wa mukou ni narimasu ka)",
+        "feedback": "Tidak hangus. Untuk tiket yang sama pada hari yang sama, Anda diizinkan naik gerbong non-reservasi ('自由席, jiyuuseki') di Shinkansen berikutnya.",
+        "image": "kereta3-34.jpg"
+      },
+      {
+        "question": "'Bisakah Anda menunjukkan di peta ini, di mana posisi kita sekarang?'",
+        "answers": [
+          "この路線図で、今私たちがいる場所を指してもらえますか (Kono rosenzu de, ima watashitachi ga iru basho o yubi sashite moraemasu ka)",
+          "目的地まであと何駅ですか (Mokutekichi made ato nan-eki desu ka)",
+          "この地図の見方が分かりません (Kono chizu no mikata ga wakarimasen)",
+          "私たちはどこに向かっていますか (Watashitachi wa doko ni mukatte imasu ka)"
+        ],
+        "correct": "この路線図で、今私たちがいる場所を指してもらえますか (Kono rosenzu de, ima watashitachi ga iru basho o yubi sashite moraemasu ka)",
+        "feedback": "'指差す (Yubi sasu)' berarti 'menunjuk dengan jari'. Ini cara yang efektif untuk berkomunikasi jika ada kendala bahasa.",
+        "image": "kereta3-35.jpg"
+      },
+      {
+        "question": "'Apakah ada colokan listrik untuk mengisi daya laptop di kursi ini?'",
+        "answers": [
+          "この席にパソコンを充電するコンセントはありますか (Kono seki ni pasokon o juuden suru konsento wa arimasu ka)",
+          "携帯を充電したいです (Keitai o juuden shitai desu)",
+          "ワイファイのパスワードは何ですか (Waifai no pasuwaado wa nan desu ka)",
+          "ここで仕事をしてもいいですか (Koko de shigoto o shite mo ii desu ka)"
+        ],
+        "correct": "この席にパソコンを充電するコンセントはありますか (Kono seki ni pasokon o juuden suru konsento wa arimasu ka)",
+        "feedback": "'コンセント (Konsento)' adalah stopkontak. Sebagian besar Shinkansen dan beberapa kereta ekspres memilikinya di setiap kursi.",
+        "image": "kereta3-36.jpg"
+      },
+      {
+        "question": "'Saya melihat seseorang pingsan. Tolong panggil bantuan staf stasiun!'",
+        "answers": [
+          "誰か倒れました。駅員さんを呼んでください！ (Dareka taoremashita. Ekiin-san o yonde kudasai!)",
+          "救急車を呼んでください (Kyuukyuusha o yonde kudasai)",
+          "大丈夫ですか (Daijoubu desu ka)",
+          "誰か助けてください (Dareka tasukete kudasai)"
+        ],
+        "correct": "誰か倒れました。駅員さんを呼んでください！ (Dareka taoremashita. Ekiin-san o yonde kudasai!)",
+        "feedback": "Dalam keadaan darurat, Anda bisa menekan tombol darurat ('非常ボタン, hijou botan') yang ada di peron atau di dalam kereta.",
+        "image": "kereta3-37.jpg"
+      },
+      {
+        "question": "'Tiket musiman saya akan habis masa berlakunya, di mana saya bisa memperjangnya?'",
+        "answers": [
+          "定期券の期限が切れるので、更新したいのですがどこでできますか (Teikiken no kigen ga kireru node, koushin shitai no desu ga doko de dekimasu ka)",
+          "新しい定期券を買います (Atarashii teikiken o kaimasu)",
+          "定期券をなくしました (Teikiken o nakushimashita)",
+          "期限はいつまでですか (Kigen wa itsu made desu ka)"
+        ],
+        "correct": "定期券の期限が切れるので、更新したいのですがどこでできますか (Teikiken no kigen ga kireru node, koushin shitai no desu ga doko de dekimasu ka)",
+        "feedback": "Anda bisa '更新 (koushin)' atau memperbarui tiket langganan di mesin tiket multifungsi atau di kantor tiket ('みどりの窓口, Midori no Madoguchi').",
+        "image": "kereta3-38.jpg"
+      },
+      {
+        "question": "'Apa perbedaan antara pintu keluar pusat, pintu keluar selatan, dll.?'",
+        "answers": [
+          "中央口や南口など、出口によって何が違いますか (Chuuouguchi ya Minamiguchi nado, deguchi ni yotte nani ga chigaimasu ka)",
+          "どの出口が一番近いですか (Dono deguchi ga ichiban chikai desu ka)",
+          "出口がたくさんあって分かりません (Deguchi ga takusan atte wakarimasen)",
+          "地図を見せてください (Chizu o misete kudasai)"
+        ],
+        "correct": "中央口や南口など、出口によって何が違いますか (Chuuouguchi ya Minamiguchi nado, deguchi ni yotte nani ga chigaimasu ka)",
+        "feedback": "Setiap pintu keluar mengarah ke sisi jalan atau area yang berbeda di sekitar stasiun. Mengetahui pintu keluar yang tepat dapat menghemat banyak waktu.",
+        "image": "kereta3-39.jpg"
+      },
+      {
+        "question": "'Saya ingin mengirim koper saya dari hotel ke bandara. Bisakah saya mengaturnya di stasiun?'",
+        "answers": [
+          "ホテルから空港までスーツケースを送りたいです。駅で手配できますか (Hoteru kara kuukou made suutsukeesu o okuritai desu. Eki de tehai dekimasu ka)",
+          "宅急便のカウンターはどこですか (Takkyuubin no kauntaa wa doko desu ka)",
+          "この荷物は重すぎますか (Kono nimotsu wa omosugimasu ka)",
+          "空港行きのバスはどこですか (Kuukou-yuki no basu wa doko desu ka)"
+        ],
+        "correct": "ホテルから空港までスーツケースを送りたいです。駅で手配できますか (Hoteru kara kuukou made suutsukeesu o okuritai desu. Eki de tehai dekimasu ka)",
+        "feedback": "Beberapa stasiun besar memiliki konter layanan kurir ('宅急便, takkyuubin') yang bisa membantu pengiriman bagasi.",
+        "image": "kereta3-40.jpg"
+      },
+      {
+        "question": "'Kereta ini dihentikan sementara karena angin kencang.'",
+        "answers": [
+          "強風のため、この電車は運転を見合わせています (Kyoufuu no tame, kono densha wa unten o miawasete imasu)",
+          "大雨で遅れています (Ooame de okurete imasu)",
+          "人身事故がありました (Jinshin jiko ga arimashita)",
+          "安全確認を行っています (Anzen kakunin o okonatte imasu)"
+        ],
+        "correct": "強風のため、この電車は運転を見合わせています (Kyoufuu no tame, kono densha wa unten o miawasete imasu)",
+        "feedback": "'運転見合わせ (Unten miawase)' berarti layanan dihentikan sementara. Ini sering terjadi saat cuaca buruk seperti angin topan.",
+        "image": "kereta3-41.jpg"
+      },
+      {
+        "question": "'Jika saya membeli tiket Green Car, apakah saya dijamin mendapat tempat duduk?'",
+        "answers": [
+          "グリーン券を買えば、必ず座れますか (Guriin-ken o kaeba, kanarazu suwaremasu ka)",
+          "グリーン車は指定席ですか (Guriinsha wa shiteiseki desu ka)",
+          "グリーン車は自由席もありますか (Guriinsha wa jiyuuseki mo arimasu ka)",
+          "満席の場合はどうなりますか (Manseki no baai wa dou narimasu ka)"
+        ],
+        "correct": "グリーン券を買えば、必ず座れますか (Guriin-ken o kaeba, kanarazu suwaremasu ka)",
+        "feedback": "Umumnya, tiket Green Car adalah tiket reservasi ('指定席, shiteiseki'), jadi Anda pasti dapat kursi. Namun ada beberapa pengecualian di rute tertentu.",
+        "image": "kereta3-42.jpg"
+      },
+      {
+        "question": "'Apakah ada gerbong observasi atau gerbong restoran di kereta ini?'",
+        "answers": [
+          "この列車に展望車や食堂車は連結されていますか (Kono ressha ni tenbousha ya shokudousha wa renketsu sarete imasu ka)",
+          "食事はできますか (Shokuji wa dekimasu ka)",
+          "景色がいい席はどこですか (Keshiki ga ii seki wa doko desu ka)",
+          "車内販売はありますか (Shanai hanbai wa arimasu ka)"
+        ],
+        "correct": "この列車に展望車や食堂車は連結されていますか (Kono ressha ni tenbousha ya shokudousha wa renketsu sarete imasu ka)",
+        "feedback": "Gerbong observasi ('展望車, tenbousha') dan gerbong makan ('食堂車, shokudousha') sangat langka dan biasanya hanya ada di kereta wisata mewah.",
+        "image": "kereta3-43.jpg"
+      },
+      {
+        "question": "'Saya ingin naik kereta yang pemandangannya indah di sepanjang pantai.'",
+        "answers": [
+          "海岸沿いを走る景色の良い電車に乗りたいです (Kaigan-zoi o hashiru keshiki no yoi densha ni noritai desu)",
+          "海が見える席をお願いします (Umi ga mieru seki o onegai shimasu)",
+          "おすすめのローカル線はありますか (Osusume no rookaru-sen wa arimasu ka)",
+          "観光列車を予約したいです (Kankou ressha o yoyaku shitai desu)"
+        ],
+        "correct": "海岸沿いを走る景色の良い電車に乗りたいです (Kaigan-zoi o hashiru keshiki no yoi densha ni noritai desu)",
+        "feedback": "Jepang memiliki banyak jalur kereta lokal dengan pemandangan menakjubkan yang sering disebut 'scenic train'.",
+        "image": "kereta3-44.jpg"
+      },
+      {
+        "question": "'Apakah ada tempat penitipan anak atau ruang menyusui di stasiun ini?'",
+        "answers": [
+          "この駅に託児所や授乳室はありますか (Kono eki ni takujisho ya junyuushitsu wa arimasu ka)",
+          "ベビーカーで入れますか (Bebiikaa de hairemasu ka)",
+          "子供が遊ぶ場所はありますか (Kodomo ga asobu basho wa arimasu ka)",
+          "おむつを替える台はどこですか (Omutsu o kaeru dai wa doko desu ka)"
+        ],
+        "correct": "この駅に託児所や授乳室はありますか (Kono eki ni takujisho ya junyuushitsu wa arimasu ka)",
+        "feedback": "Stasiun-stasiun besar biasanya memiliki ruang menyusui ('授乳室, junyuushitsu') dan meja ganti popok.",
+        "image": "kereta3-45.jpg"
+      },
+      {
+        "question": "'Saya tidak sengaja meninggalkan tas saya di rak bagasi kereta.'",
+        "answers": [
+          "電車の網棚に鞄を忘れてしまいました (Densha no amidana ni kaban o wasurete shimaimashita)",
+          "忘れ物取扱所はどこですか (Wasuremono toriatsukaijo wa doko desu ka)",
+          "警察に届けます (Keisatsu ni todokemasu)",
+          "鞄を探してください (Kaban o sagashite kudasai)"
+        ],
+        "correct": "電車の網棚に鞄を忘れてしまいました (Densha no amidana ni kaban o wasurete shimaimashita)",
+        "feedback": "Segera laporkan ke staf stasiun ('駅員, ekiin'). Berikan detail tentang kereta yang Anda naiki dan deskripsi barang Anda.",
+        "image": "kereta3-46.jpg"
+      },
+      {
+        "question": "'Berapa saldo yang tersisa di kartu IC saya?'",
+        "answers": [
+          "ICカードの残高はいくらですか (IC kaado no zandaka wa ikura desu ka)",
+          "チャージしてください (Chaaji shite kudasai)",
+          "履歴を印刷できますか (Rireki o insatsu dekimasu ka)",
+          "このカードはまだ使えますか (Kono kaado wa mada tsukaemasu ka)"
+        ],
+        "correct": "ICカードの残高はいくらですか (IC kaado no zandaka wa ikura desu ka)",
+        "feedback": "Anda bisa memeriksa saldo ('残高, zandaka') di mesin tiket atau saat Anda melakukan tap di gerbang tiket.",
+        "image": "kereta3-47.jpg"
+      },
+      {
+        "question": "'Bisakah saya menggunakan loker ini selama beberapa hari?'",
+        "answers": [
+          "このロッカーは数日間利用できますか (Kono rokkaa wa suujitsukan riyou dekimasu ka)",
+          "一日いくらですか (Ichi-nichi ikura desu ka)",
+          "荷物を取りに来ました (Nimotsu o tori ni kimashita)",
+          "鍵の番号を忘れました (Kagi no bangou o wasuremashita)"
+        ],
+        "correct": "このロッカーは数日間利用できますか (Kono rokkaa wa suujitsukan riyou dekimasu ka)",
+        "feedback": "Biasanya loker dapat digunakan hingga 3 hari, tetapi biaya akan ditambahkan untuk setiap hari tambahan.",
+        "image": "kereta3-48.jpg"
+      },
+      {
+        "question": "'Apakah ada jalur kereta langsung dari bandara Haneda ke stasiun Tokyo?'",
+        "answers": [
+          "羽田空港から東京駅まで直通の電車はありますか (Haneda Kuukou kara Toukyou-eki made chokutsuu no densha wa arimasu ka)",
+          "リムジンバスの方が便利ですか (Rimujin basu no hou ga benri desu ka)",
+          "モノレールに乗りますか (Monoreeru ni norimasu ka)",
+          "タクシーはいくらぐらいかかりますか (Takushii wa ikura gurai kakarimasu ka)"
+        ],
+        "correct": "羽田空港から東京駅まで直通の電車はありますか (Haneda Kuukou kara Toukyou-eki made chokutsuu no densha wa arimasu ka)",
+        "feedback": "Ada beberapa pilihan, termasuk Keikyu Line dan Tokyo Monorail (yang memerlukan transfer di Hamamatsucho).",
+        "image": "kereta3-49.jpg"
+      },
+      {
+        "question": "'Saya ingin mengembalikan Japan Rail Pass yang tidak terpakai.'",
+        "answers": [
+          "未使用のジャパンレールパスを払い戻したいのですが (Mishiyou no Japan Reeru Pasu o haraimodoshitai no desu ga)",
+          "このパスはもう有効ではありません (Kono pasu wa mou yuukou dewa arimasen)",
+          "パスを交換してください (Pasu o koukan shite kudasai)",
+          "どこで払い戻しできますか (Doko de haraimodoshi dekimasu ka)"
+        ],
+        "correct": "未使用のジャパンレールパスを払い戻したいのですが (Mishiyou no Japan Reeru Pasu o haraimodoshitai no desu ga)",
+        "feedback": "Pengembalian dana untuk JR Pass yang belum ditukar dengan tiket asli dimungkinkan di agen perjalanan tempat Anda membelinya, dengan biaya pembatalan.",
+        "image": "kereta3-50.jpg"
+      }
+    ]
+  }
+}

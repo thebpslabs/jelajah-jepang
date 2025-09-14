@@ -1,32 +1,11 @@
 // Wait for the DOM to be fully loaded before running the script
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- ACHIEVEMENTS DATA --- //
-    // A central place to define all possible achievements in the game.
-    const ALL_ACHIEVEMENTS = {
-        'FIRST_GAME': { title: 'Langkah Pertama', description: 'Selesaikan game pertamamu.', icon: 'assets/achievements/first_game.png' },
-        'PLAY_10': { title: 'Petualang Junior', description: 'Mainkan 10 game.', icon: 'assets/achievements/play_10.png' },
-        'PLAY_20': { title: 'Petualang Giat', description: 'Mainkan 20 game.', icon: 'assets/achievements/play_20.png' },
-        'PLAY_30': { title: 'Petualang Senior', description: 'Mainkan 30 game.', icon: 'assets/achievements/play_30.png' },
-        'PLAY_50': { title: 'Petualang Veteran', description: 'Mainkan 50 game.', icon: 'assets/achievements/play_50.png' },
-        'PLAY_100': { title: 'Legenda Jepang', description: 'Mainkan 100 game.', icon: 'assets/achievements/play_100.png' },
-        'SCORE_1000': { title: 'Skor Tinggi', description: 'Raih skor lebih dari 1000.', icon: 'assets/achievements/score_1000.png' },
-        'SCORE_1500': { title: 'Skor Fantastis', description: 'Raih skor lebih dari 1500.', icon: 'assets/achievements/score_1500.png' },
-        'SCORE_2000': { title: 'Skor Master', description: 'Raih skor lebih dari 2000.', icon: 'assets/achievements/score_2000.png' },
-        'SCORE_3000': { title: 'Skor Dewa', description: 'Raih skor lebih dari 3000.', icon: 'assets/achievements/score_3000.png' },
-        'PERFECT_L1_Restoran': { title: 'Sempurna: Restoran L1', description: 'Skor sempurna di Restoran Level 1.', icon: 'assets/achievements/perfect.png' },
-        'PERFECT_L1_Minimarket': { title: 'Sempurna: Minimarket L1', description: 'Skor sempurna di Minimarket Level 1.', icon: 'assets/achievements/perfect.png' },
-        'PERFECT_L1_Kereta': { title: 'Sempurna: Kereta L1', description: 'Skor sempurna di Kereta Level 1.', icon: 'assets/achievements/perfect.png' },
-        'PERFECT_L1_Apotek': { title: 'Sempurna: Apotek L1', description: 'Skor sempurna di Apotek Level 1.', icon: 'assets/achievements/perfect.png' },
-        'PERFECT_ALL_L1': { title: 'Master Level 1', description: 'Skor sempurna di semua kategori Level 1.', icon: 'assets/achievements/master_level.png' },
-        // Add more achievements for Level 2 and 3 here...
-    };
-
-
     // --- STATE MANAGEMENT --- //
     const gameState = {
         currentPage: 'main-menu',
         soundEnabled: true,
+        audioInitialized: false, // NEW: Track if audio has been unlocked
         currentLevel: 'level1',
         currentCategory: null,
         questions: [],
@@ -36,10 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
         correctAnswersCount: 0,
         questionTimer: null,
         timeLeft: 0,
-        // MODIFIED: No longer storing multiple users, only the local leaderboard
-        localLeaderboard: [],
-        // NEW: This will hold the single player's data
-        playerData: null, 
+        allUsersData: {},
+        currentUser: 'Petualang',
+        allTimeScores: []
     };
 
     // --- DOM ELEMENT SELECTORS --- //
@@ -51,12 +29,10 @@ document.addEventListener('DOMContentLoaded', () => {
             userDisplayMode: document.getElementById('user-display-mode'),
             userEditMode: document.getElementById('user-edit-mode'),
             currentUserDisplay: document.getElementById('current-username-display'),
-            changeNameBtn: document.getElementById('change-name-btn'), // Changed from change-user-btn
+            changeUserBtn: document.getElementById('change-user-btn'),
+            userSelect: document.getElementById('user-select'),
             newUserInput: document.getElementById('new-username-input'),
             saveUserBtn: document.getElementById('save-user-btn'),
-            levelDisplay: document.getElementById('level-display'),
-            xpBarInner: document.getElementById('xp-bar-inner'),
-            xpText: document.getElementById('xp-text'),
             startBtn: document.getElementById('start-btn'),
             adventureLogBtn: document.getElementById('adventure-log-btn'),
             guidebookBtn: document.getElementById('guidebook-btn'),
@@ -92,9 +68,14 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         jejakPetualanganPage: {
             tabs: document.querySelectorAll('#jejak-petualangan-page .tab-btn'),
-            achievementsGrid: document.getElementById('achievements-grid'), // Changed from statsContent
+            statsContent: document.getElementById('stats'),
             leaderboardContent: document.getElementById('leaderboard'),
             leaderboardBody: document.getElementById('leaderboard-body'),
+            pangkatImage: document.getElementById('pangkat-image'),
+            pangkatText: document.getElementById('pangkat-text'),
+            totalAttempts: document.getElementById('total-attempts'),
+            averageScore: document.getElementById('average-score'),
+            chart: document.getElementById('adventure-chart'),
             backBtn: document.getElementById('back-to-home-from-log')
         },
         guidebookPage: {
@@ -115,16 +96,9 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         confirmationOverlay: {
              overlay: document.getElementById('confirmation-overlay'),
+             usernameText: document.getElementById('confirm-reset-username'),
              confirmBtn: document.getElementById('confirm-reset-btn'),
              cancelBtn: document.getElementById('cancel-reset-btn')
-        },
-        achievementPopup: {
-            overlay: document.getElementById('achievement-unlocked-overlay'),
-            icon: document.getElementById('achievement-popup-icon'),
-            title: document.getElementById('achievement-popup-title'),
-            desc: document.getElementById('achievement-popup-desc'),
-            shareBtn: document.getElementById('achievement-popup-share-btn'),
-            okBtn: document.getElementById('achievement-popup-ok-btn'),
         },
         sounds: {
             click: document.getElementById('click-sound'),
@@ -133,21 +107,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // --- DATA HANDLING & PLAYER PROFILE --- //
+    let adventureChartInstance = null;
 
-    /**
-     * Creates a new, default player data object.
-     * This is used for first-time players.
-     */
-    function createNewPlayerData() {
+    // --- DATA HANDLING & USER PROFILES --- //
+
+    function createNewUserData() {
         return {
-            username: 'Petualang',
-            level: 1,
-            xp: 0,
-            totalGamesPlayed: 0,
-            highScore: 0,
-            achievements: [], // Stores IDs of unlocked achievements
-            perfectScores: {}, // Stores keys like 'level1_Restoran' for tracking perfect games
+            attempts: [],
             unlockedLevels: {
                 'Restoran': 1,
                 'Minimarket': 1,
@@ -157,107 +123,94 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     }
 
-    /**
-     * Loads all game data from localStorage.
-     * Now handles a single player profile and the local leaderboard.
-     */
     function loadGameData() {
-        const savedPlayerData = localStorage.getItem('jepangAdventurePlayerData');
-        if (savedPlayerData) {
-            gameState.playerData = JSON.parse(savedPlayerData);
-            // Data migration for older save files, can be removed later
-            if (!gameState.playerData.perfectScores) gameState.playerData.perfectScores = {};
-            if (!gameState.playerData.unlockedLevels) gameState.playerData.unlockedLevels = createNewPlayerData().unlockedLevels;
-        } else {
-            gameState.playerData = createNewPlayerData();
+        const savedUsers = localStorage.getItem('jepangAdventureUsers');
+        if (savedUsers) {
+            gameState.allUsersData = JSON.parse(savedUsers);
+            Object.values(gameState.allUsersData).forEach(userData => {
+                if (userData.unlockedLevels && userData.unlockedLevels['Rumah Sakit']) {
+                    userData.unlockedLevels['Apotek'] = userData.unlockedLevels['Rumah Sakit'];
+                    delete userData.unlockedLevels['Rumah Sakit'];
+                }
+            });
         }
 
-        const savedLeaderboard = localStorage.getItem('jepangAdventureLeaderboard');
-        if (savedLeaderboard) {
-            gameState.localLeaderboard = JSON.parse(savedLeaderboard);
+        const savedScores = localStorage.getItem('jepangAdventureLeaderboard');
+        if (savedScores) {
+            gameState.allTimeScores = JSON.parse(savedScores);
+        }
+
+        const lastUser = localStorage.getItem('jepangAdventureLastUser');
+        if (lastUser && gameState.allUsersData[lastUser]) {
+            gameState.currentUser = lastUser;
+        } else {
+            gameState.currentUser = 'Petualang';
+        }
+
+        if (!gameState.allUsersData[gameState.currentUser]) {
+            gameState.allUsersData[gameState.currentUser] = createNewUserData();
+        } else {
+            const currentUserData = gameState.allUsersData[gameState.currentUser];
+            if (Array.isArray(currentUserData.unlockedLevels)) {
+                 const newUnlockedLevels = createNewUserData().unlockedLevels;
+                 currentUserData.unlockedLevels = newUnlockedLevels;
+            }
         }
 
         const savedSoundSetting = localStorage.getItem('jepangAdventureSound');
         if (savedSoundSetting !== null) {
             gameState.soundEnabled = JSON.parse(savedSoundSetting);
         }
-        
         updateSoundButtonUI();
-        updateUserUI(); // Update UI with loaded data
+        updateUserUI();
     }
 
-    /**
-     * Saves all game data to localStorage.
-     */
     function saveGameData() {
-        localStorage.setItem('jepangAdventurePlayerData', JSON.stringify(gameState.playerData));
-        localStorage.setItem('jepangAdventureLeaderboard', JSON.stringify(gameState.localLeaderboard));
-        // We no longer need to save the last user
+        localStorage.setItem('jepangAdventureUsers', JSON.stringify(gameState.allUsersData));
+        localStorage.setItem('jepangAdventureLastUser', gameState.currentUser);
+        localStorage.setItem('jepangAdventureLeaderboard', JSON.stringify(gameState.allTimeScores));
     }
-    
-    /**
-     * Resets the current player's data to default values.
-     */
-    function resetCurrentPlayerData() {
-        gameState.playerData = createNewPlayerData();
-        // Also clear the local leaderboard for a full reset
-        gameState.localLeaderboard = []; 
+
+    function resetCurrentUserData() {
+        gameState.allUsersData[gameState.currentUser] = createNewUserData();
+        saveGameData();
+        alert(`Data petualangan untuk ${gameState.currentUser} telah direset!`);
+        updateLevelUnlocks();
+    }
+
+    function switchUser(username) {
+        if (!username || username.trim() === '') return;
+
+        gameState.currentUser = username.trim();
+        if (!gameState.allUsersData[gameState.currentUser]) {
+            gameState.allUsersData[gameState.currentUser] = createNewUserData();
+        }
         saveGameData();
         updateUserUI();
-        alert(`Data petualangan telah direset!`);
     }
 
-    // --- LEVEL & XP SYSTEM --- //
-
-    /**
-     * Calculates the total XP needed to reach the next level.
-     * @param {number} currentLevel - The player's current level.
-     * @returns {number} The XP required for the next level up.
-     */
-    function calculateXpForNextLevel(currentLevel) {
-        const tier = Math.floor((currentLevel - 1) / 10);
-        return (tier + 1) * 100;
+    function updateUserUI() {
+        UIElements.mainMenu.currentUserDisplay.textContent = gameState.currentUser;
+        const userSelect = UIElements.mainMenu.userSelect;
+        userSelect.innerHTML = '';
+        Object.keys(gameState.allUsersData).forEach(name => {
+            const option = document.createElement('option');
+            option.value = name;
+            option.textContent = name;
+            if (name === gameState.currentUser) option.selected = true;
+            userSelect.appendChild(option);
+        });
+        const newOption = document.createElement('option');
+        newOption.value = 'new_user';
+        newOption.textContent = '--- Buat Petualang Baru ---';
+        userSelect.appendChild(newOption);
+        UIElements.mainMenu.newUserInput.style.display = 'none';
+        UIElements.mainMenu.newUserInput.value = '';
     }
-
-    /**
-     * Adds XP to the player's profile and handles leveling up.
-     * @param {number} score - The score from the completed game.
-     */
-    function addXp(score) {
-        const earnedXp = Math.floor(score * 0.01);
-        gameState.playerData.xp += earnedXp;
-
-        let xpNeeded = calculateXpForNextLevel(gameState.playerData.level);
-        
-        // Loop in case a player earns enough XP for multiple levels at once
-        while (gameState.playerData.xp >= xpNeeded) {
-            gameState.playerData.xp -= xpNeeded;
-            gameState.playerData.level++;
-            // Optional: Add a "Level Up!" notification here
-            xpNeeded = calculateXpForNextLevel(gameState.playerData.level);
-        }
-    }
-
 
     // --- UI & NAVIGATION --- //
-    
-    /**
-     * Updates all user-facing UI elements like username, level, and XP bar.
-     */
-    function updateUserUI() {
-        const { username, level, xp } = gameState.playerData;
-        UIElements.mainMenu.currentUserDisplay.textContent = username;
-        UIElements.mainMenu.levelDisplay.textContent = `Level ${level}`;
-        
-        const xpNeeded = calculateXpForNextLevel(level);
-        const xpPercentage = (xp / xpNeeded) * 100;
-        
-        UIElements.mainMenu.xpBarInner.style.width = `${xpPercentage}%`;
-        UIElements.mainMenu.xpText.textContent = `${Math.floor(xp)} / ${xpNeeded} XP`;
-    }
-
     function navigateTo(pageId) {
-        // Sound is handled by the event listener now to ensure it's unlocked
+        playSound(UIElements.sounds.click);
         gameState.currentPage = pageId;
         UIElements.pages.forEach(page => page.classList.remove('active'));
         const targetPage = document.getElementById(pageId);
@@ -265,14 +218,13 @@ document.addEventListener('DOMContentLoaded', () => {
         setRandomBackground();
 
         if (pageId === 'jejak-petualangan-page') {
-            displayAchievements();
+            displayAdventureLog();
             displayLeaderboard();
         } else if (pageId === 'level-page') {
             updateLevelUnlocks();
         }
     }
 
-    // ... (toggleOverlay, setRandomBackground, updateSoundButtonUI functions remain the same)
     function toggleOverlay(overlayId, show) {
         const overlay = document.getElementById(overlayId);
         if (overlay) {
@@ -291,8 +243,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- SOUND --- //
+    // NEW: Function to unlock audio on first user interaction
+    function initAudio() {
+        if (gameState.audioInitialized) return;
+        Object.values(UIElements.sounds).forEach(sound => {
+            sound.play().then(() => sound.pause()).catch(() => {});
+        });
+        gameState.audioInitialized = true;
+    }
+
+    // MODIFIED: Improved playSound function to handle errors
     async function playSound(soundElement) {
-        if (gameState.soundEnabled && soundElement) {
+        if (gameState.soundEnabled && gameState.audioInitialized && soundElement) {
             try {
                 soundElement.currentTime = 0;
                 await soundElement.play();
@@ -303,7 +265,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- QUIZ LOGIC --- //
-    // ... (startQuiz, displayQuestion, startTimer, showScorePopup, handleAnswer, nextQuestion functions largely unchanged)
     async function startQuiz(level, category) {
         gameState.currentLevel = level;
         gameState.currentCategory = category;
@@ -492,65 +453,40 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    /**
-     * The main function called when a quiz round ends.
-     * It now handles updating player stats, adding XP, saving leaderboard scores,
-     * and checking for achievements.
-     */
     function endQuiz() {
-        const { playerData } = gameState;
-        
-        // Update player stats
-        playerData.totalGamesPlayed++;
-        if (gameState.score > playerData.highScore) {
-            playerData.highScore = gameState.score;
-        }
+        const currentUserData = gameState.allUsersData[gameState.currentUser];
+        const attempt = {
+            date: new Date().toISOString().split('T')[0],
+            score: gameState.score,
+            level: gameState.currentLevel,
+            category: gameState.currentCategory,
+            correctCount: gameState.correctAnswersCount
+        };
+        currentUserData.attempts.push(attempt);
 
-        // Add score to local leaderboard, preserving the name at the time of play
-        gameState.localLeaderboard.push({
-            name: playerData.username,
+        gameState.allTimeScores.push({
+            name: gameState.currentUser,
             score: gameState.score,
             category: `${gameState.currentCategory} (Lvl ${gameState.currentLevel.slice(-1)})`,
             date: new Date().toISOString()
         });
 
-        // Add XP and handle level ups
-        addXp(gameState.score);
-
-        // Check for newly unlocked achievements
-        const newlyUnlocked = checkAchievements();
-        
-        // Mark perfect scores
-        if (gameState.correctAnswersCount === 10) {
-            const perfectKey = `${gameState.currentLevel}_${gameState.currentCategory}`;
-            playerData.perfectScores[perfectKey] = true;
-        }
-
-        // Save all data and navigate to results
+        checkAndUnlockLevels();
         saveGameData();
-        updateUserUI(); // Update UI with new level/XP
         displayResults();
         navigateTo('hasil-page');
-
-        // If achievements were unlocked, show the popup after a short delay
-        if (newlyUnlocked.length > 0) {
-            setTimeout(() => {
-                showAchievementPopup(newlyUnlocked[0]);
-            }, 500); // 0.5s delay to allow page transition
-        }
     }
 
-    // --- RESULT, LEADERBOARD, & ACHIEVEMENTS --- //
-
+    // --- RESULT & ADVENTURE LOG --- //
     function displayResults() {
         const correctAnswers = gameState.correctAnswersCount;
         let result = {};
         if (correctAnswers === 10) {
-            result = { text: "SEMPURNA!", subtext: "Kerja bagus, master! Teruslah berlatih!", image: "Success2.jpg" };
+            result = { text: "SEMPURNA! Level Berikutnya Terbuka!", subtext: "Kerja bagus, master! Kamu telah membuka tantangan baru di kategori ini.", image: "Success2.jpg" };
         } else if (correctAnswers >= 7) {
-            result = { text: "Kamu sudah siap ke Jepang!", subtext: "Hampir sempurna! Sedikit lagi!", image: "Success1.jpg" };
+            result = { text: "Kamu sudah siap ke Jepang!", subtext: "Hampir sempurna! Sedikit lagi untuk membuka level berikutnya!", image: "Success1.jpg" };
         } else if (correctAnswers >= 4) {
-            result = { text: "Perlu persiapan sedikit lagi!", subtext: "Jangan menyerah, ayo coba lagi!", image: "Fail2.jpg" };
+            result = { text: "Perlu persiapan sedikit lagi!", subtext: "Jangan menyerah, ayo coba lagi!!", image: "Fail2.jpg" };
         } else {
             result = { text: "Kamu belum siap ke Jepang...", subtext: "Bisa bahasa Jepang jadi lebih tenang. Ayo semangat!", image: "Fail1.jpg" };
         }
@@ -561,43 +497,41 @@ document.addEventListener('DOMContentLoaded', () => {
         UIElements.hasilPage.image.src = `assets/${result.image}`;
     }
 
-    /**
-     * Renders the achievements grid in the "Pencapaian" tab.
-     */
-    function displayAchievements() {
-        const grid = UIElements.jejakPetualanganPage.achievementsGrid;
-        grid.innerHTML = ''; // Clear previous content
+    function displayAdventureLog() {
+        const currentUserData = gameState.allUsersData[gameState.currentUser];
+        const attempts = currentUserData.attempts;
+        const totalAttempts = attempts.length;
+        const totalScore = attempts.reduce((sum, attempt) => sum + attempt.score, 0);
+        const averageScore = totalAttempts > 0 ? Math.round(totalScore / totalAttempts) : 0;
 
-        for (const id in ALL_ACHIEVEMENTS) {
-            const achievement = ALL_ACHIEVEMENTS[id];
-            const isUnlocked = gameState.playerData.achievements.includes(id);
-
-            const item = document.createElement('div');
-            item.className = `achievement-item ${isUnlocked ? 'unlocked' : 'locked'}`;
-            item.title = `${achievement.title}\n${achievement.description}`;
-
-            const icon = document.createElement('img');
-            icon.src = achievement.icon;
-            icon.alt = achievement.title;
-            icon.className = 'achievement-icon';
-
-            const title = document.createElement('p');
-            title.className = 'achievement-title';
-            title.textContent = achievement.title;
-
-            item.appendChild(icon);
-            item.appendChild(title);
-            grid.appendChild(item);
+        if (totalAttempts >= 20) {
+             UIElements.jejakPetualanganPage.pangkatImage.src = 'assets/pangkat3.jpg';
+             UIElements.jejakPetualanganPage.pangkatText.textContent = 'Pemimpin Tur';
+        } else if (totalAttempts >= 10) {
+            UIElements.jejakPetualanganPage.pangkatImage.src = 'assets/pangkat2.jpg';
+            UIElements.jejakPetualanganPage.pangkatText.textContent = 'Turis Mahir';
+        } else {
+            UIElements.jejakPetualanganPage.pangkatImage.src = 'assets/pangkat1.jpg';
+            UIElements.jejakPetualanganPage.pangkatText.textContent = 'Turis Amatir';
         }
+
+        UIElements.jejakPetualanganPage.totalAttempts.textContent = totalAttempts;
+        UIElements.jejakPetualanganPage.averageScore.textContent = averageScore;
+        const last7Days = getLast7Days();
+        const dailyAttempts = last7Days.map(date => attempts.filter(a => a.date === date).length);
+
+        if(adventureChartInstance) adventureChartInstance.destroy();
+        adventureChartInstance = new Chart(UIElements.jejakPetualanganPage.chart.getContext('2d'), {
+            type: 'bar',
+            data: { labels: last7Days.map(d => d.slice(5)), datasets: [{ label: `Petualangan ${gameState.currentUser}`, data: dailyAttempts, backgroundColor: 'rgba(255, 215, 0, 0.8)' }] },
+            options: { responsive: true, maintainAspectRatio: false, scales: { y: { beginAtZero: true, ticks: { stepSize: 1 } } } }
+        });
     }
 
-    /**
-     * Displays the local leaderboard.
-     */
     function displayLeaderboard() {
         const leaderboardBody = UIElements.jejakPetualanganPage.leaderboardBody;
         leaderboardBody.innerHTML = '';
-        const topScores = [...gameState.localLeaderboard].sort((a, b) => b.score - a.score).slice(0, 50); // Show top 50 local scores
+        const topScores = [...gameState.allTimeScores].sort((a, b) => b.score - a.score).slice(0, 10);
 
         if (topScores.length === 0) {
             leaderboardBody.innerHTML = '<tr><td colspan="4">Belum ada skor tercatat. Jadilah yang pertama!</td></tr>';
@@ -609,99 +543,31 @@ document.addEventListener('DOMContentLoaded', () => {
             leaderboardBody.appendChild(row);
         });
     }
-    
-    /**
-     * Checks all achievement conditions against player data.
-     * @returns {Array} An array of newly unlocked achievement IDs.
-     */
-    function checkAchievements() {
-        const { playerData, score } = gameState;
-        const newlyUnlocked = [];
-
-        const hasAchievement = (id) => playerData.achievements.includes(id);
-
-        // Check each achievement
-        if (!hasAchievement('FIRST_GAME') && playerData.totalGamesPlayed >= 1) newlyUnlocked.push('FIRST_GAME');
-        if (!hasAchievement('PLAY_10') && playerData.totalGamesPlayed >= 10) newlyUnlocked.push('PLAY_10');
-        if (!hasAchievement('PLAY_20') && playerData.totalGamesPlayed >= 20) newlyUnlocked.push('PLAY_20');
-        if (!hasAchievement('PLAY_30') && playerData.totalGamesPlayed >= 30) newlyUnlocked.push('PLAY_30');
-        if (!hasAchievement('PLAY_50') && playerData.totalGamesPlayed >= 50) newlyUnlocked.push('PLAY_50');
-        if (!hasAchievement('PLAY_100') && playerData.totalGamesPlayed >= 100) newlyUnlocked.push('PLAY_100');
-        if (!hasAchievement('SCORE_1000') && score > 1000) newlyUnlocked.push('SCORE_1000');
-        if (!hasAchievement('SCORE_1500') && score > 1500) newlyUnlocked.push('SCORE_1500');
-        if (!hasAchievement('SCORE_2000') && score > 2000) newlyUnlocked.push('SCORE_2000');
-        if (!hasAchievement('SCORE_3000') && score > 3000) newlyUnlocked.push('SCORE_3000');
-        
-        // Check for perfect score achievement
-        const perfectKey = `${gameState.currentLevel}_${gameState.currentCategory}`;
-        const perfectId = `PERFECT_${gameState.currentLevel.toUpperCase()}_${gameState.currentCategory}`;
-        if (gameState.correctAnswersCount === 10 && ALL_ACHIEVEMENTS[perfectId] && !hasAchievement(perfectId)) {
-            newlyUnlocked.push(perfectId);
-        }
-
-        // Check for 'Master Level 1'
-        if (!hasAchievement('PERFECT_ALL_L1')) {
-            const l1Categories = ['Restoran', 'Minimarket', 'Kereta', 'Apotek'];
-            const allL1Perfect = l1Categories.every(cat => playerData.perfectScores[`level1_${cat}`]);
-            if (allL1Perfect) {
-                newlyUnlocked.push('PERFECT_ALL_L1');
-            }
-        }
-        
-        // Add new achievements to player data
-        if (newlyUnlocked.length > 0) {
-            playerData.achievements.push(...newlyUnlocked);
-        }
-        
-        return newlyUnlocked;
-    }
-
-    /**
-     * Shows the achievement unlocked popup.
-     * @param {string} achievementId - The ID of the achievement to display.
-     */
-    function showAchievementPopup(achievementId) {
-        const achievement = ALL_ACHIEVEMENTS[achievementId];
-        if (!achievement) return;
-
-        UIElements.achievementPopup.icon.src = achievement.icon;
-        UIElements.achievementPopup.title.textContent = achievement.title;
-        UIElements.achievementPopup.desc.textContent = achievement.description;
-        
-        // Store the achievement info for the share button
-        UIElements.achievementPopup.shareBtn.dataset.achievementTitle = achievement.title;
-
-        toggleOverlay('achievement-unlocked-overlay', true);
-    }
-
 
     // --- LEVEL UNLOCKING --- //
-    // ... (checkAndUnlockLevels, updateLevelUnlocks functions remain the same)
     function checkAndUnlockLevels() {
         if (gameState.correctAnswersCount !== 10) return;
 
-        const perfectKey = `${gameState.currentLevel}_${gameState.currentCategory}`;
-        gameState.playerData.perfectScores[perfectKey] = true;
-
-        // Simplified unlocking logic: perfect in any L1 category unlocks L2, any L2 unlocks L3.
-        const currentUserData = gameState.playerData;
+        const currentUserData = gameState.allUsersData[gameState.currentUser];
         const currentCategory = gameState.currentCategory;
         const currentMaxLevel = currentUserData.unlockedLevels[currentCategory];
 
         if (gameState.currentLevel === 'level1' && currentMaxLevel < 2) {
             currentUserData.unlockedLevels[currentCategory] = 2;
+            console.log(`Unlocked Level 2 for ${currentCategory}!`);
         } else if (gameState.currentLevel === 'level2' && currentMaxLevel < 3) {
             currentUserData.unlockedLevels[currentCategory] = 3;
+            console.log(`Unlocked Level 3 for ${currentCategory}!`);
         }
     }
 
     function updateLevelUnlocks() {
         const selectedLevelNum = parseInt(UIElements.levelPage.difficultySelect.value.replace('level', ''));
-        const unlockedLevels = gameState.playerData.unlockedLevels;
+        const unlockedLevels = gameState.allUsersData[gameState.currentUser].unlockedLevels;
 
         UIElements.levelPage.categoryBtns.forEach(btn => {
             const category = btn.dataset.category;
-            const maxUnlockedForCategory = unlockedLevels[category] || 1;
+            const maxUnlockedForCategory = unlockedLevels[category];
 
             if (maxUnlockedForCategory >= selectedLevelNum) {
                 btn.disabled = false;
@@ -712,7 +578,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- UTILITY FUNCTIONS --- //
-    // ... (shuffleArray, getLast7Days functions remain the same)
     function shuffleArray(array) {
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -728,47 +593,42 @@ document.addEventListener('DOMContentLoaded', () => {
             return d.toISOString().split('T')[0];
         }).reverse();
     }
-    
+
     // --- EVENT LISTENERS --- //
 
-    // MODIFIED: Simplified user profile listeners for single user
-    UIElements.mainMenu.changeNameBtn.addEventListener('click', () => {
+    // Main Menu User Profile
+    UIElements.mainMenu.changeUserBtn.addEventListener('click', () => {
         UIElements.mainMenu.userDisplayMode.style.display = 'none';
-        UIElements.mainMenu.userEditMode.style.display = 'flex';
-        UIElements.mainMenu.newUserInput.value = gameState.playerData.username;
-        UIElements.mainMenu.newUserInput.focus();
+        UIElements.mainMenu.userEditMode.style.display = 'block';
     });
-
+    UIElements.mainMenu.userSelect.addEventListener('change', (e) => {
+        UIElements.mainMenu.newUserInput.style.display = (e.target.value === 'new_user') ? 'block' : 'none';
+        if(e.target.value === 'new_user') UIElements.mainMenu.newUserInput.focus();
+    });
     UIElements.mainMenu.saveUserBtn.addEventListener('click', () => {
-        const newName = UIElements.mainMenu.newUserInput.value.trim();
-        if (newName) {
-            gameState.playerData.username = newName;
-            saveGameData();
-            updateUserUI();
+        let selectedUser = UIElements.mainMenu.userSelect.value;
+        const newUser = UIElements.mainMenu.newUserInput.value.trim();
+        if (selectedUser === 'new_user' && newUser) {
+            switchUser(newUser);
+        } else if (selectedUser !== 'new_user') {
+            switchUser(selectedUser);
         }
-        UIElements.mainMenu.userDisplayMode.style.display = 'flex';
+        UIElements.mainMenu.userDisplayMode.style.display = 'block';
         UIElements.mainMenu.userEditMode.style.display = 'none';
     });
 
     // Main Menu Navigation
+    // MODIFIED: Added call to initAudio() on first user interaction
     UIElements.mainMenu.startBtn.addEventListener('click', () => {
-        playSound(UIElements.sounds.click);
+        initAudio();
         navigateTo('level-page');
     });
-    UIElements.mainMenu.adventureLogBtn.addEventListener('click', () => {
-        playSound(UIElements.sounds.click);
-        navigateTo('jejak-petualangan-page');
-    });
-    UIElements.mainMenu.settingsBtn.addEventListener('click', () => {
-        playSound(UIElements.sounds.click);
-        toggleOverlay('settings-overlay', true);
-    });
-    UIElements.mainMenu.guidebookBtn.addEventListener('click', () => {
-        playSound(UIElements.sounds.click);
-        navigateTo('guidebook-page');
-    });
+    UIElements.mainMenu.adventureLogBtn.addEventListener('click', () => navigateTo('jejak-petualangan-page'));
+    UIElements.mainMenu.settingsBtn.addEventListener('click', () => toggleOverlay('settings-overlay', true));
+    UIElements.mainMenu.guidebookBtn.addEventListener('click', () => navigateTo('guidebook-page'));
 
-    // ... (Other listeners remain largely the same, but with playSound calls)
+    // Level Page
+    UIElements.levelPage.difficultySelect.addEventListener('change', updateLevelUnlocks);
     UIElements.levelPage.categoryBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             playSound(UIElements.sounds.click);
@@ -779,6 +639,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     UIElements.levelPage.backBtn.addEventListener('click', () => navigateTo('main-menu'));
 
+    // Quiz Page
     UIElements.quizPage.exitBtn.addEventListener('click', () => {
         clearInterval(gameState.questionTimer);
         navigateTo('main-menu');
@@ -789,6 +650,7 @@ document.addEventListener('DOMContentLoaded', () => {
         nextQuestion();
     });
 
+    // Hasil Page
     UIElements.hasilPage.homeBtn.addEventListener('click', () => navigateTo('level-page'));
     UIElements.hasilPage.retryBtn.addEventListener('click', () => {
         playSound(UIElements.sounds.click);
@@ -798,6 +660,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const shareText = `I just scored ${gameState.score} in Petualangan di Jepang! Can you beat my score?`;
         const shareUrl = 'https://kuis-bahasa-jepang.pages.dev/';
 
+        // Use the modern Web Share API if available
         if (navigator.share) {
             try {
                 await navigator.share({
@@ -805,19 +668,26 @@ document.addEventListener('DOMContentLoaded', () => {
                     text: shareText,
                     url: shareUrl,
                 });
-            } catch (error) { console.error('Error sharing:', error); }
+                console.log('Content shared successfully!');
+            } catch (error) {
+                console.error('Error sharing content:', error);
+            }
         } else {
+            // Fallback for browsers that do not support the Web Share API
             try {
                 await navigator.clipboard.writeText(`${shareText}\n\n${shareUrl}`);
                 alert('Hasil & link game telah disalin ke clipboard!');
-            } catch (err) { alert('Gagal menyalin.'); }
+            } catch (err) {
+                console.error('Failed to copy text: ', err);
+                alert('Gagal menyalin. Coba lagi.');
+            }
         }
     });
 
+    // Jejak Petualangan Page
     UIElements.jejakPetualanganPage.backBtn.addEventListener('click', () => navigateTo('main-menu'));
     UIElements.jejakPetualanganPage.tabs.forEach(tab => {
         tab.addEventListener('click', () => {
-            playSound(UIElements.sounds.click);
             UIElements.jejakPetualanganPage.tabs.forEach(t => t.classList.remove('active'));
             tab.classList.add('active');
             document.querySelectorAll('#jejak-petualangan-page .tab-content').forEach(c => c.classList.remove('active'));
@@ -825,10 +695,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
+    // Guidebook Page Listeners
     UIElements.guidebookPage.backBtn.addEventListener('click', () => navigateTo('main-menu'));
     UIElements.guidebookPage.tabs.forEach(tab => {
         tab.addEventListener('click', () => {
-            playSound(UIElements.sounds.click);
             UIElements.guidebookPage.tabs.forEach(t => t.classList.remove('active'));
             tab.classList.add('active');
             document.querySelectorAll('#guidebook-page .tab-content').forEach(c => c.classList.remove('active'));
@@ -836,6 +706,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Settings Overlay
     UIElements.settingsOverlay.closeBtn.addEventListener('click', () => toggleOverlay('settings-overlay', false));
     UIElements.settingsOverlay.soundToggleBtn.addEventListener('click', () => {
         gameState.soundEnabled = !gameState.soundEnabled;
@@ -844,42 +715,21 @@ document.addEventListener('DOMContentLoaded', () => {
         playSound(UIElements.sounds.click);
     });
     UIElements.settingsOverlay.resetBtn.addEventListener('click', () => {
+        UIElements.confirmationOverlay.usernameText.textContent = gameState.currentUser;
         toggleOverlay('settings-overlay', false);
         toggleOverlay('confirmation-overlay', true);
     });
 
+    // Confirmation Overlay
     UIElements.confirmationOverlay.confirmBtn.addEventListener('click', () => {
         resetCurrentUserData();
         toggleOverlay('confirmation-overlay', false);
     });
      UIElements.confirmationOverlay.cancelBtn.addEventListener('click', () => toggleOverlay('confirmation-overlay', false));
 
-    // NEW: Achievement Popup Listeners
-    UIElements.achievementPopup.okBtn.addEventListener('click', () => {
-        playSound(UIElements.sounds.click);
-        toggleOverlay('achievement-unlocked-overlay', false);
-    });
-    UIElements.achievementPopup.shareBtn.addEventListener('click', async () => {
-        playSound(UIElements.sounds.click);
-        const title = UIElements.achievementPopup.shareBtn.dataset.achievementTitle;
-        const shareText = `I just unlocked the "${title}" achievement in Petualangan di Jepang!`;
-        const shareUrl = 'https://kuis-bahasa-jepang.pages.dev/';
-
-        if (navigator.share) {
-            try {
-                await navigator.share({ title: 'Achievement Unlocked!', text: shareText, url: shareUrl });
-            } catch (error) { console.error('Error sharing achievement:', error); }
-        } else {
-            try {
-                await navigator.clipboard.writeText(`${shareText}\n\n${shareUrl}`);
-                alert('Pencapaian & link game telah disalin ke clipboard!');
-            } catch (err) { alert('Gagal menyalin.'); }
-        }
-    });
-
     // --- INITIALIZATION --- //
     function init() {
-        console.log('Initializing Japanese Adventure PWA v4...');
+        console.log('Initializing Japanese Adventure PWA v3...');
         loadGameData();
         navigateTo('main-menu');
     }

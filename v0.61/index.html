@@ -20,20 +20,15 @@
                 <p id="main-subtitle" class="fade-in">Dapatkah kamu bertahan hidup?</p>
                 
                 <div class="user-profile-container">
+                    <p>Petualang:</p>
                     <div id="user-display-mode">
                         <span id="current-username-display"></span>
-                        <button id="change-name-btn" class="small-btn">Ganti Nama</button>
+                        <button id="change-user-btn" class="small-btn">Ganti</button>
                     </div>
                     <div id="user-edit-mode" style="display: none;">
-                         <input type="text" id="new-username-input" placeholder="Nama Baru...">
+                         <select id="user-select"></select>
+                         <input type="text" id="new-username-input" placeholder="Nama Petualang Baru...">
                          <button id="save-user-btn" class="small-btn">Simpan</button>
-                    </div>
-                    <div class="level-container">
-                        <span id="level-display">Level 1</span>
-                        <div class="xp-bar-container">
-                            <div id="xp-bar-inner"></div>
-                            <span id="xp-text">0 / 100 XP</span>
-                        </div>
                     </div>
                 </div>
                 
@@ -134,16 +129,25 @@
             <div class="page-content adventure-log-content">
                 <h2>Jejak Petualangan</h2>
                 <div class="tabs">
-                    <button class="tab-btn active" data-tab="achievements">Pencapaian</button>
+                    <button class="tab-btn active" data-tab="stats">Statistik</button>
                     <button class="tab-btn" data-tab="leaderboard">Papan Skor</button>
                 </div>
                 <div class="tab-content-container">
-                    <div id="achievements" class="tab-content active">
-                        <div id="achievements-grid">
-                            </div>
+                    <div id="stats" class="tab-content active">
+                        <div id="pangkat-info">
+                            <img id="pangkat-image" src="assets/pangkat1.jpg" alt="Pangkat">
+                            <p id="pangkat-text">Turis Amatir</p>
+                        </div>
+                        <div class="stats-container">
+                            <p>Total Petualangan: <span id="total-attempts">0</span></p>
+                            <p>Rata-rata Skor: <span id="average-score">0</span></p>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="adventure-chart"></canvas>
+                        </div>
                     </div>
                     <div id="leaderboard" class="tab-content">
-                        <h3>Skor Tertinggi (Lokal)</h3>
+                        <h3>Skor Tertinggi</h3>
                         <div class="leaderboard-container">
                             <table>
                                 <thead>
@@ -192,14 +196,14 @@
         <div class="overlay-content">
             <h2>Settings</h2>
             <button id="sound-toggle-btn">Sounds: ON</button>
-            <button id="reset-adventure-btn">Reset Petualangan</button>
+            <button id="reset-adventure-btn">Reset Petualangan (Petualang Saat Ini)</button>
             <button id="close-settings-btn">Kembali</button>
         </div>
     </div>
     
     <div id="confirmation-overlay" class="overlay">
         <div class="overlay-content">
-            <p>Yakin ingin mereset petualanganmu? Semua progres, level, dan pencapaian akan hilang!</p>
+            <p>Yakin ingin mereset petualangan untuk <strong id="confirm-reset-username"></strong>? Semua progres dan level akan hilang!</p>
             <button id="confirm-reset-btn">Ya</button>
             <button id="cancel-reset-btn">Tidak</button>
         </div>
@@ -210,19 +214,6 @@
             <h2 id="feedback-title"></h2>
             <p id="feedback-text"></p>
             <button id="next-question-btn">Berikutnya</button>
-        </div>
-    </div>
-    
-    <div id="achievement-unlocked-overlay" class="overlay">
-        <div class="overlay-content achievement-popup">
-            <h2>Pencapaian Terbuka!</h2>
-            <img id="achievement-popup-icon" src="" alt="Achievement Icon">
-            <h3 id="achievement-popup-title"></h3>
-            <p id="achievement-popup-desc"></p>
-            <div class="achievement-popup-buttons">
-                <button id="achievement-popup-share-btn">Share</button>
-                <button id="achievement-popup-ok-btn">OK</button>
-            </div>
         </div>
     </div>
 
