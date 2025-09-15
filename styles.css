@@ -85,7 +85,7 @@ h2 {
     animation: fadeIn 3s;
 }
 
-/* MODIFIED: User Profile Styles for Single User & Level System */
+/* User Profile Styles for Single User & Level System */
 .user-profile-container {
     background-color: rgba(255, 255, 255, 0.1);
     padding: 15px;
@@ -501,9 +501,8 @@ h2 {
     display: block;
 }
 
-/* MODIFIED: Removed fixed min-height for better responsiveness */
 .tab-content-container {
-    /* min-height: 440px; */
+    /* min-height removed for responsiveness */
 }
 
 #leaderboard h3 {
@@ -511,7 +510,7 @@ h2 {
 }
 
 .leaderboard-container {
-    height: 380px; /* Fixed height for ~10 entries */
+    height: 380px; 
     overflow-y: auto;
     border: 1px solid #555;
     border-radius: 8px;
@@ -543,9 +542,8 @@ td:nth-child(3), th:nth-child(3) { width: 20%; text-align: right; }
 td:nth-child(4), th:nth-child(4) { width: 30%; }
 
 /* Achievements Page Styles */
-/* NEW: Wrapper to make the achievement grid scrollable */
 .achievements-container {
-    height: 380px; /* Match the leaderboard height for consistency */
+    height: 380px;
     overflow-y: auto;
     border: 1px solid #555;
     border-radius: 8px;
@@ -567,6 +565,12 @@ td:nth-child(4), th:nth-child(4) { width: 30%; }
     background-color: rgba(255, 255, 255, 0.05);
     border-radius: 10px;
     border: 1px solid #444;
+    /* MODIFIED: Added cursor pointer */
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.achievement-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 .achievement-item.unlocked {
     background-color: rgba(255, 215, 0, 0.1);
@@ -656,6 +660,47 @@ td:nth-child(4), th:nth-child(4) { width: 30%; }
 }
 .achievement-popup-buttons button {
     flex: 1;
+}
+
+/* NEW: Journal Popup Styles */
+#journal-content {
+    max-height: 60vh;
+    overflow-y: auto;
+    text-align: left;
+    width: 100%;
+    padding-right: 10px; /* space for scrollbar */
+}
+.journal-item {
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.journal-item p {
+    text-shadow: none;
+}
+.journal-question {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+.journal-answer {
+    padding: 8px;
+    border-radius: 5px;
+    margin: 4px 0;
+    font-size: 0.9em;
+}
+.journal-answer.correct {
+    background-color: #27ae60;
+    color: white;
+}
+.journal-answer.incorrect {
+    background-color: #c0392b;
+    color: white;
+}
+.journal-answer.user-answer::before {
+    content: '▶ ';
+    font-weight: bold;
 }
 
 /* Guidebook Page Specific Styles */
