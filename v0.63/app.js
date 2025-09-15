@@ -38,8 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
         timeLeft: 0,
         localLeaderboard: [],
         playerData: null,
-        gameJournal: [],
-        achievementQueue: [],
+        gameJournal: [], // NEW: To store questions and answers from the last game
+        achievementQueue: [], // NEW: To queue up multiple unlocked achievements
     };
 
     // --- DOM ELEMENT SELECTORS --- //
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
             userDisplayMode: document.getElementById('user-display-mode'),
             userEditMode: document.getElementById('user-edit-mode'),
             currentUserDisplay: document.getElementById('current-username-display'),
-            changeNameBtn: document.getElementById('change-name-btn'),
+            changeNameBtn: document.getElementById('change-name-btn'), // Changed from change-user-btn
             newUserInput: document.getElementById('new-username-input'),
             saveUserBtn: document.getElementById('save-user-btn'),
             levelDisplay: document.getElementById('level-display'),
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
             homeBtn: document.getElementById('home-btn'),
             shareBtn: document.getElementById('share-btn'),
             retryBtn: document.getElementById('retry-btn'),
-            journalBtn: document.getElementById('journal-btn')
+            journalBtn: document.getElementById('journal-btn') // NEW
         },
         jejakPetualanganPage: {
             tabs: document.querySelectorAll('#jejak-petualangan-page .tab-btn'),
@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
             shareBtn: document.getElementById('achievement-popup-share-btn'),
             okBtn: document.getElementById('achievement-popup-ok-btn'),
         },
-        journalOverlay: {
+        journalOverlay: { // NEW
              overlay: document.getElementById('journal-overlay'),
              content: document.getElementById('journal-content'),
              closeBtn: document.getElementById('journal-close-btn')
@@ -141,6 +141,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- DATA HANDLING & PLAYER PROFILE --- //
 
+    /**
+     * Creates a new, default player data object.
+     * This is used for first-time players.
+     */
     function createNewPlayerData() {
         return {
             username: 'Petualang',
@@ -148,8 +152,8 @@ document.addEventListener('DOMContentLoaded', () => {
             xp: 0,
             totalGamesPlayed: 0,
             highScore: 0,
-            achievements: [],
-            perfectScores: {},
+            achievements: [], // Stores IDs of unlocked achievements
+            perfectScores: {}, // Stores keys like 'level1_Restoran' for tracking perfect games
             unlockedLevels: {
                 'Restoran': 1,
                 'Minimarket': 1,
@@ -159,10 +163,15 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     }
 
+    /**
+     * Loads all game data from localStorage.
+     * Now handles a single player profile and the local leaderboard.
+     */
     function loadGameData() {
         const savedPlayerData = localStorage.getItem('jepangAdventurePlayerData');
         if (savedPlayerData) {
             gameState.playerData = JSON.parse(savedPlayerData);
+            // Data migration for older save files, can be removed later
             if (!gameState.playerData.perfectScores) gameState.playerData.perfectScores = {};
             if (!gameState.playerData.unlockedLevels) gameState.playerData.unlockedLevels = createNewPlayerData().unlockedLevels;
         } else {
@@ -180,16 +189,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         updateSoundButtonUI();
-        updateUserUI();
+        updateUserUI(); // Update UI with loaded data
     }
 
+    /**
+     * Saves all game data to localStorage.
+     */
     function saveGameData() {
         localStorage.setItem('jepangAdventurePlayerData', JSON.stringify(gameState.playerData));
         localStorage.setItem('jepangAdventureLeaderboard', JSON.stringify(gameState.localLeaderboard));
     }
     
+    /**
+     * Resets the current player's data to default values.
+     */
     function resetCurrentPlayerData() {
         gameState.playerData = createNewPlayerData();
+        // Also clear the local leaderboard for a full reset
         gameState.localLeaderboard = []; 
         saveGameData();
         updateUserUI();
@@ -198,13 +214,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- LEVEL & XP SYSTEM --- //
 
+    /**
+     * Calculates the total XP needed to reach the next level.
+     * @param {number} currentLevel - The player's current level.
+     * @returns {number} The XP required for the next level up.
+     */
     function calculateXpForNextLevel(currentLevel) {
         const tier = Math.floor((currentLevel - 1) / 10);
         return (tier + 1) * 100;
     }
 
+    /**
+     * Adds XP to the player's profile and handles leveling up.
+     * @param {number} score - The score from the completed game.
+     */
     function addXp(score) {
-        const earnedXp = Math.floor(score * 0.02);
+        const earnedXp = Math.floor(score * 0.01);
         gameState.playerData.xp += earnedXp;
 
         let xpNeeded = calculateXpForNextLevel(gameState.playerData.level);
@@ -219,6 +244,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- UI & NAVIGATION --- //
     
+    /**
+     * Updates all user-facing UI elements like username, level, and XP bar.
+     */
     function updateUserUI() {
         const { username, level, xp } = gameState.playerData;
         UIElements.mainMenu.currentUserDisplay.textContent = username;
@@ -283,7 +311,7 @@ document.addEventListener('DOMContentLoaded', () => {
         gameState.score = 0;
         gameState.comboStreak = 0;
         gameState.correctAnswersCount = 0;
-        gameState.gameJournal = [];
+        gameState.gameJournal = []; // NEW: Reset journal at the start of a quiz
 
         try {
             const categoryToFileMap = {
@@ -413,9 +441,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const question = gameState.questions[gameState.currentQuestionIndex];
         const isCorrect = selectedAnswer === question.correct;
 
+        // NEW: Record the question and answer for the journal
         gameState.gameJournal.push({
             question: question.question,
-            answers: question.answers,
+            answers: question.answers, // Store all possible answers from original data
             correctAnswer: question.correct,
             userAnswer: selectedAnswer
         });
@@ -474,7 +503,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /**
      * The main function called when a quiz round ends.
-     * Handles updating player stats, XP, leaderboard, and achievements.
+     * It now handles updating player stats, adding XP, saving leaderboard scores,
+     * and checking for achievements.
      */
     function endQuiz() {
         const { playerData } = gameState;
@@ -492,23 +522,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         addXp(gameState.score);
-
-        // MODIFIED: Run level unlock and perfect score logic BEFORE checking achievements
-        checkAndUnlockLevels();
-        
-        // NOW check for achievements with the updated data
         const newlyUnlocked = checkAchievements();
         
+        if (gameState.correctAnswersCount === 10) {
+            const perfectKey = `${gameState.currentLevel}_${gameState.currentCategory}`;
+            playerData.perfectScores[perfectKey] = true;
+        }
+
         saveGameData();
         updateUserUI();
         displayResults();
         navigateTo('hasil-page');
 
+        // MODIFIED: Handle multiple achievement popups by queuing them
         if (newlyUnlocked.length > 0) {
             gameState.achievementQueue = newlyUnlocked;
             setTimeout(() => {
                 processAchievementQueue();
-            }, 500);
+            }, 500); // 0.5s delay to allow page transition
         }
     }
 
@@ -533,9 +564,12 @@ document.addEventListener('DOMContentLoaded', () => {
         UIElements.hasilPage.image.src = `assets/${result.image}`;
     }
     
+    /**
+     * NEW: Populates and displays the game journal overlay.
+     */
     function displayJournal() {
         const content = UIElements.journalOverlay.content;
-        content.innerHTML = '';
+        content.innerHTML = ''; // Clear previous journal entries
 
         if (gameState.gameJournal.length === 0) {
             content.innerHTML = '<p>Jurnal tidak tersedia untuk sesi ini.</p>';
@@ -573,6 +607,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
+    /**
+     * Renders the achievements grid in the "Pencapaian" tab.
+     */
     function displayAchievements() {
         const grid = UIElements.jejakPetualanganPage.achievementsGrid;
         grid.innerHTML = '';
@@ -585,6 +622,7 @@ document.addEventListener('DOMContentLoaded', () => {
             item.className = `achievement-item ${isUnlocked ? 'unlocked' : 'locked'}`;
             item.title = `${achievement.title}\n${achievement.description}`;
             
+            // NEW: Make unlocked achievements clickable
             if (isUnlocked) {
                 item.addEventListener('click', () => {
                     playSound(UIElements.sounds.click);
@@ -607,6 +645,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    /**
+     * Displays the local leaderboard.
+     */
     function displayLeaderboard() {
         const leaderboardBody = UIElements.jejakPetualanganPage.leaderboardBody;
         leaderboardBody.innerHTML = '';
@@ -623,6 +664,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
+    /**
+     * Checks all achievement conditions against player data.
+     * @returns {Array} An array of newly unlocked achievement IDs.
+     */
     function checkAchievements() {
         const { playerData, score } = gameState;
         const newlyUnlocked = [];
@@ -640,6 +685,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!hasAchievement('SCORE_2000') && score > 2000) newlyUnlocked.push('SCORE_2000');
         if (!hasAchievement('SCORE_3000') && score > 3000) newlyUnlocked.push('SCORE_3000');
         
+        const perfectKey = `${gameState.currentLevel}_${gameState.currentCategory}`;
         const perfectId = `PERFECT_${gameState.currentLevel.toUpperCase()}_${gameState.currentCategory}`;
         if (gameState.correctAnswersCount === 10 && ALL_ACHIEVEMENTS[perfectId] && !hasAchievement(perfectId)) {
             newlyUnlocked.push(perfectId);
@@ -660,6 +706,10 @@ document.addEventListener('DOMContentLoaded', () => {
         return newlyUnlocked;
     }
 
+    /**
+     * Shows the achievement unlocked popup.
+     * @param {string} achievementId - The ID of the achievement to display.
+     */
     function showAchievementPopup(achievementId) {
         const achievement = ALL_ACHIEVEMENTS[achievementId];
         if (!achievement) return;
@@ -673,9 +723,12 @@ document.addEventListener('DOMContentLoaded', () => {
         toggleOverlay('achievement-unlocked-overlay', true);
     }
     
+    /**
+     * NEW: Processes the achievement queue, showing one popup at a time.
+     */
     function processAchievementQueue() {
         if (gameState.achievementQueue.length > 0) {
-            const achievementId = gameState.achievementQueue.shift();
+            const achievementId = gameState.achievementQueue.shift(); // Get the next achievement
             showAchievementPopup(achievementId);
         }
     }
@@ -683,21 +736,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- LEVEL UNLOCKING --- //
     function checkAndUnlockLevels() {
-        // This function only proceeds if the player got a perfect score.
         if (gameState.correctAnswersCount !== 10) return;
 
-        const { playerData, currentLevel, currentCategory } = gameState;
+        const perfectKey = `${gameState.currentLevel}_${gameState.currentCategory}`;
+        gameState.playerData.perfectScores[perfectKey] = true;
 
-        // Mark this category/level combo as perfected
-        const perfectKey = `${currentLevel}_${currentCategory}`;
-        playerData.perfectScores[perfectKey] = true;
+        const currentUserData = gameState.playerData;
+        const currentCategory = gameState.currentCategory;
+        const currentMaxLevel = currentUserData.unlockedLevels[currentCategory];
 
-        // Unlock the next level for the current category if applicable
-        const currentMaxLevel = playerData.unlockedLevels[currentCategory];
-        if (currentLevel === 'level1' && currentMaxLevel < 2) {
-            playerData.unlockedLevels[currentCategory] = 2;
-        } else if (currentLevel === 'level2' && currentMaxLevel < 3) {
-            playerData.unlockedLevels[currentCategory] = 3;
+        if (gameState.currentLevel === 'level1' && currentMaxLevel < 2) {
+            currentUserData.unlockedLevels[currentCategory] = 2;
+        } else if (gameState.currentLevel === 'level2' && currentMaxLevel < 3) {
+            currentUserData.unlockedLevels[currentCategory] = 3;
         }
     }
 
@@ -709,7 +760,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const category = btn.dataset.category;
             const maxUnlockedForCategory = unlockedLevels[category] || 1;
 
-            btn.disabled = maxUnlockedForCategory < selectedLevelNum;
+            if (maxUnlockedForCategory >= selectedLevelNum) {
+                btn.disabled = false;
+            } else {
+                btn.disabled = true;
+            }
         });
     }
 
@@ -722,6 +777,14 @@ document.addEventListener('DOMContentLoaded', () => {
         return array;
     }
 
+    function getLast7Days() {
+        return Array.from({ length: 7 }, (_, i) => {
+            const d = new Date();
+            d.setDate(d.getDate() - i);
+            return d.toISOString().split('T')[0];
+        }).reverse();
+    }
+    
     // --- EVENT LISTENERS --- //
 
     UIElements.mainMenu.changeNameBtn.addEventListener('click', () => {
@@ -760,8 +823,6 @@ document.addEventListener('DOMContentLoaded', () => {
         navigateTo('guidebook-page');
     });
 
-    // MODIFIED: Added listener for difficulty change
-    UIElements.levelPage.difficultySelect.addEventListener('change', updateLevelUnlocks);
     UIElements.levelPage.categoryBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             playSound(UIElements.sounds.click);
@@ -807,6 +868,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // NEW: Journal Button Listener
     UIElements.hasilPage.journalBtn.addEventListener('click', () => {
         playSound(UIElements.sounds.click);
         displayJournal();
@@ -847,17 +909,17 @@ document.addEventListener('DOMContentLoaded', () => {
         toggleOverlay('confirmation-overlay', true);
     });
 
-    // MODIFIED: Corrected function name typo
     UIElements.confirmationOverlay.confirmBtn.addEventListener('click', () => {
-        resetCurrentPlayerData();
+        resetCurrentUserData();
         toggleOverlay('confirmation-overlay', false);
     });
      UIElements.confirmationOverlay.cancelBtn.addEventListener('click', () => toggleOverlay('confirmation-overlay', false));
 
+    // MODIFIED: Achievement Popup OK button now processes the queue
     UIElements.achievementPopup.okBtn.addEventListener('click', () => {
         playSound(UIElements.sounds.click);
         toggleOverlay('achievement-unlocked-overlay', false);
-        processAchievementQueue();
+        processAchievementQueue(); // Check for more achievements to show
     });
     UIElements.achievementPopup.shareBtn.addEventListener('click', async () => {
         playSound(UIElements.sounds.click);
@@ -877,6 +939,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
     
+    // NEW: Journal Close Button Listener
     UIElements.journalOverlay.closeBtn.addEventListener('click', () => {
         playSound(UIElements.sounds.click);
         toggleOverlay('journal-overlay', false);
@@ -884,7 +947,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- INITIALIZATION --- //
     function init() {
-        console.log('Initializing Japanese Adventure PWA v5...');
+        console.log('Initializing Japanese Adventure PWA v4...');
         loadGameData();
         navigateTo('main-menu');
     }
