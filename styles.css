@@ -45,7 +45,7 @@ body, html {
 }
 
 .page-content {
-    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for readability */
+    background: rgba(0, 0, 0, 0.7); /* Slightly darker for better contrast */
     padding: 20px;
     border-radius: 15px;
     width: 90%;
@@ -283,13 +283,13 @@ h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; /* Allows clicks to go through */
+    pointer-events: none;
     z-index: 200;
 }
 .score-popup {
     position: absolute;
     left: 50%;
-    bottom: 15%; /* Lower the starting point of the bubble */
+    bottom: 15%;
     transform: translateX(-50%);
     color: #FFD700;
     font-size: 1.1em;
@@ -355,12 +355,10 @@ h2 {
     opacity: 0.6;
 }
 
-/* Category-specific button colors */
 .Restoran-btn { background-color: #c0392b; }
 .Minimarket-btn { background-color: #2980b9; }
 .Kereta-btn { background-color: #8e44ad; }
 .Apotek-btn { background-color: #27ae60; }
-
 
 .answer-btn:hover {
     opacity: 0.9;
@@ -375,7 +373,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 15px auto 0; /* Adjusted margin */
+    margin: 15px auto 0;
     border-radius: 5px;
 }
 
@@ -388,9 +386,7 @@ h2 {
     margin-bottom: 5px;
     width: 100%;
 }
-#timer-container span {
-    font-size: 1.5em;
-}
+#timer-container span { font-size: 1.5em; }
 .timer-bar-outer {
     flex-grow: 1;
     height: 10px;
@@ -424,20 +420,12 @@ h2 {
 }
 
 /* Result Page Styles */
+/* MODIFIED: Removed paper theme for a cleaner, adaptive look */
 .result-report {
-    background-color: #fdf5e6; /* Old paper color */
-    color: #4a2c0c; /* Dark brown text */
-    padding: 20px;
-    border-radius: 5px;
     width: 100%;
     max-width: 350px;
     margin-bottom: 20px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.5);
-    border: 10px solid transparent;
-    border-image: url('assets/border.png') 30 round; /* Crumpled paper border */
-}
-.result-report h2, .result-report h3, .result-report p {
-    text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    /* background, color, padding, border, and shadow removed */
 }
 .result-report h2 {
     font-size: 1.5em;
@@ -448,21 +436,18 @@ h2 {
     max-width: 200px;
     border-radius: 10px;
     margin: 10px 0;
-    border: 3px solid #d3c0a5;
+    border: 3px solid #777;
 }
-
 #score-text {
     font-size: 1.3em;
     font-weight: bold;
     margin-bottom: 8px;
 }
-
 #result-text {
     font-size: 1.5em;
     margin-bottom: 5px;
-    color: #8B4513; /* SaddleBrown */
+    color: #FFD700; /* Use gold for emphasis */
 }
-
 #result-subtext {
     font-size: 1em;
 }
@@ -500,7 +485,6 @@ h2 {
 .tab-content.active {
     display: block;
 }
-
 .tab-content-container {
     /* min-height removed for responsiveness */
 }
@@ -565,7 +549,6 @@ td:nth-child(4), th:nth-child(4) { width: 30%; }
     background-color: rgba(255, 255, 255, 0.05);
     border-radius: 10px;
     border: 1px solid #444;
-    /* MODIFIED: Added cursor pointer */
     cursor: pointer;
     transition: background-color 0.2s;
 }
@@ -589,7 +572,6 @@ td:nth-child(4), th:nth-child(4) { width: 30%; }
 .achievement-item.unlocked .achievement-icon {
     filter: none;
     opacity: 1;
-    animation: glow 1.5s infinite alternate;
 }
 .achievement-title {
     font-size: 0.8em;
@@ -608,26 +590,24 @@ td:nth-child(4), th:nth-child(4) { width: 30%; }
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: none; /* Hidden by default */
+    background-color: rgba(0, 0, 0, 0.85);
+    display: none;
     align-items: center;
     justify-content: center;
     z-index: 100;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
-
 .overlay.active {
     display: flex;
     opacity: 1;
 }
-
 .overlay-content {
-    background: #333;
-    padding: 30px;
+    background: #2c2c2c;
+    padding: 20px;
     border-radius: 15px;
     text-align: center;
-    width: 80%;
+    width: 90%;
     max-width: 400px;
     display: flex;
     flex-direction: column;
@@ -662,13 +642,14 @@ td:nth-child(4), th:nth-child(4) { width: 30%; }
     flex: 1;
 }
 
-/* NEW: Journal Popup Styles */
+/* Journal Popup Styles */
 #journal-content {
     max-height: 60vh;
     overflow-y: auto;
     text-align: left;
     width: 100%;
-    padding-right: 10px; /* space for scrollbar */
+    padding-right: 10px;
+    box-sizing: border-box;
 }
 .journal-item {
     background-color: rgba(0,0,0,0.3);
@@ -676,9 +657,7 @@ td:nth-child(4), th:nth-child(4) { width: 30%; }
     padding: 10px;
     margin-bottom: 10px;
 }
-.journal-item p {
-    text-shadow: none;
-}
+.journal-item p { text-shadow: none; }
 .journal-question {
     font-weight: bold;
     margin-bottom: 10px;
@@ -691,11 +670,11 @@ td:nth-child(4), th:nth-child(4) { width: 30%; }
     font-size: 0.9em;
 }
 .journal-answer.correct {
-    background-color: #27ae60;
+    background-color: rgba(39, 174, 96, 0.7);
     color: white;
 }
 .journal-answer.incorrect {
-    background-color: #c0392b;
+    background-color: rgba(192, 57, 43, 0.7);
     color: white;
 }
 .journal-answer.user-answer::before {
@@ -706,7 +685,7 @@ td:nth-child(4), th:nth-child(4) { width: 30%; }
 /* Guidebook Page Specific Styles */
 .guidebook-content .tab-content {
     text-align: left;
-    padding-right: 10px; /* for scrollbar */
+    padding-right: 10px;
 }
 .guidebook-content h4 {
     color: #FFD700;
@@ -726,35 +705,14 @@ td:nth-child(4), th:nth-child(4) { width: 30%; }
     margin-top: 20px;
 }
 
-
 /* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 @keyframes pulse {
     0% { color: #FFD700; text-shadow: 0 0 5px #FFD700; }
     50% { color: #FFF; text-shadow: 0 0 20px #FFF; }
     100% { color: #FFD700; text-shadow: 0 0 5px #FFD700; }
 }
-
 @keyframes floatUp {
-    0% {
-        opacity: 1;
-        transform: translate(-50%, 0);
-    }
-    100% {
-        opacity: 0;
-        transform: translate(-50%, -100px);
-    }
-}
-
-@keyframes glow {
-    from {
-        box-shadow: 0 0 5px #ffd700, 0 0 10px #ffd700;
-    }
-    to {
-        box-shadow: 0 0 20px #ffd700, 0 0 30px #ffc400;
-    }
+    0% { opacity: 1; transform: translate(-50%, 0); }
+    100% { opacity: 0; transform: translate(-50%, -100px); }
 }

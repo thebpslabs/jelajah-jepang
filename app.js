@@ -18,12 +18,11 @@ document.addEventListener('DOMContentLoaded', () => {
         'PERFECT_L1_Kereta': { title: 'Sempurna: Kereta L1', description: 'Skor sempurna di Kereta Level 1.', icon: 'assets/achievements/perfect.png' },
         'PERFECT_L1_Apotek': { title: 'Sempurna: Apotek L1', description: 'Skor sempurna di Apotek Level 1.', icon: 'assets/achievements/perfect.png' },
         'PERFECT_ALL_L1': { title: 'Master Level 1', description: 'Skor sempurna di semua kategori Level 1.', icon: 'assets/achievements/master_level.png' },
-        // Add more achievements for Level 2 and 3 here...
     };
 
 
     // --- STATE MANAGEMENT --- //
-    let achievementPopupQueue = []; // NEW: Queue for showing multiple achievement popups
+    let achievementPopupQueue = []; // Queue for showing multiple achievement popups
     const gameState = {
         currentPage: 'main-menu',
         soundEnabled: true,
@@ -38,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         timeLeft: 0,
         localLeaderboard: [],
         playerData: null,
-        sessionReview: [], // NEW: Stores questions and answers from the last game for the Journal
+        sessionReview: [], // Stores questions and answers from the last game for the Journal
     };
 
     // --- DOM ELEMENT SELECTORS --- //
@@ -46,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
         pages: document.querySelectorAll('.page'),
         appContainer: document.getElementById('app-container'),
         mainMenu: {
-            title: document.getElementById('main-title'),
             userDisplayMode: document.getElementById('user-display-mode'),
             userEditMode: document.getElementById('user-edit-mode'),
             currentUserDisplay: document.getElementById('current-username-display'),
@@ -69,36 +67,24 @@ document.addEventListener('DOMContentLoaded', () => {
         quizPage: {
             exitBtn: document.getElementById('exit-quiz-btn'),
             title: document.getElementById('quiz-title'),
-            imageContainer: document.getElementById('quiz-image-container'),
-            imageLink: document.getElementById('quiz-image-link'),
-            image: document.getElementById('quiz-image'),
-            attribution: document.getElementById('image-attribution'),
             questionText: document.getElementById('question-text'),
             answerButtons: document.getElementById('answer-buttons'),
             progressBar: document.getElementById('progress-bar'),
-            scorePopupContainer: document.getElementById('score-popup-container'),
             currentScoreDisplay: document.getElementById('current-score-display'),
-            timerBar: document.getElementById('timer-bar-inner')
         },
         hasilPage: {
-            image: document.getElementById('result-image'),
-            scoreText: document.getElementById('score-text'),
-            resultText: document.getElementById('result-text'),
-            resultSubtext: document.getElementById('result-subtext'),
-            homeBtn: document.getElementById('home-btn'),
             shareBtn: document.getElementById('share-btn'),
+            journalBtn: document.getElementById('journal-btn'),
             retryBtn: document.getElementById('retry-btn'),
-            journalBtn: document.getElementById('journal-btn'), // NEW
+            homeBtn: document.getElementById('home-btn'),
         },
         jejakPetualanganPage: {
             tabs: document.querySelectorAll('#jejak-petualangan-page .tab-btn'),
             achievementsGrid: document.getElementById('achievements-grid'),
-            leaderboardContent: document.getElementById('leaderboard'),
             leaderboardBody: document.getElementById('leaderboard-body'),
             backBtn: document.getElementById('back-to-home-from-log')
         },
         guidebookPage: {
-            tabs: document.querySelectorAll('#guidebook-page .tab-btn'),
             backBtn: document.getElementById('back-to-home-from-guide')
         },
         settingsOverlay: {
@@ -126,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
             shareBtn: document.getElementById('achievement-popup-share-btn'),
             okBtn: document.getElementById('achievement-popup-ok-btn'),
         },
-        journalPopup: { // NEW
+        journalPopup: {
             overlay: document.getElementById('journal-overlay'),
             content: document.getElementById('journal-content'),
             closeBtn: document.getElementById('journal-close-btn'),
@@ -139,16 +125,11 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // --- DATA HANDLING & PLAYER PROFILE --- //
-    // ... (createNewPlayerData, loadGameData, saveGameData, resetCurrentPlayerData functions are unchanged)
     function createNewPlayerData() {
         return {
-            username: 'Petualang',
-            level: 1,
-            xp: 0,
-            totalGamesPlayed: 0,
-            highScore: 0,
-            achievements: [],
-            perfectScores: {},
+            username: 'Petualang', level: 1, xp: 0,
+            totalGamesPlayed: 0, highScore: 0,
+            achievements: [], perfectScores: {},
             unlockedLevels: { 'Restoran': 1, 'Minimarket': 1, 'Kereta': 1, 'Apotek': 1 }
         };
     }
@@ -181,7 +162,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- LEVEL & XP SYSTEM --- //
-    // ... (calculateXpForNextLevel, addXp functions are unchanged)
     function calculateXpForNextLevel(currentLevel) {
         const tier = Math.floor((currentLevel - 1) / 10);
         return (tier + 1) * 100;
@@ -198,7 +178,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- UI & NAVIGATION --- //
-    // ... (updateUserUI, navigateTo, toggleOverlay, setRandomBackground, updateSoundButtonUI functions are unchanged)
     function updateUserUI() {
         const { username, level, xp } = gameState.playerData;
         UIElements.mainMenu.currentUserDisplay.textContent = username;
@@ -210,10 +189,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     function navigateTo(pageId) {
         playSound(UIElements.sounds.click);
-        gameState.currentPage = pageId;
         UIElements.pages.forEach(page => page.classList.remove('active'));
-        const targetPage = document.getElementById(pageId);
-        if (targetPage) targetPage.classList.add('active');
+        document.getElementById(pageId).classList.add('active');
         setRandomBackground();
         if (pageId === 'jejak-petualangan-page') {
             displayAchievements();
@@ -224,10 +201,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     function toggleOverlay(overlayId, show) {
         const overlay = document.getElementById(overlayId);
-        if (overlay) {
-            if (show) overlay.classList.add('active');
-            else overlay.classList.remove('active');
-        }
+        if (show) overlay.classList.add('active');
+        else overlay.classList.remove('active');
     }
     function setRandomBackground() {
         const bgIndex = Math.floor(Math.random() * 10) + 1;
@@ -248,85 +223,50 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- QUIZ LOGIC --- //
-    
     async function startQuiz(level, category) {
-        gameState.currentLevel = level;
-        gameState.currentCategory = category;
-        gameState.currentQuestionIndex = 0;
-        gameState.score = 0;
-        gameState.comboStreak = 0;
-        gameState.correctAnswersCount = 0;
-        gameState.sessionReview = []; // Clear previous game's journal
+        Object.assign(gameState, {
+            currentLevel: level, currentCategory: category,
+            currentQuestionIndex: 0, score: 0, comboStreak: 0,
+            correctAnswersCount: 0, sessionReview: []
+        });
         
-        // ... (rest of startQuiz is unchanged)
         try {
-            const categoryToFileMap = {
-                'Restoran': 'database_restoran.json', 'Minimarket': 'database_minimarket.json',
-                'Kereta': 'database_kereta.json', 'Apotek': 'database_apotek.json'
-            };
-            const fileName = categoryToFileMap[category];
-            if (!fileName) { alert(`Database untuk kategori "${category}" tidak ditemukan.`); return; }
-            const response = await fetch(fileName);
-            if (!response.ok) throw new Error(`Network response was not ok: ${response.statusText}`);
-            const quizDatabase = await response.json();
-            const questionPool = quizDatabase[level]?.[category];
-            if (!questionPool || questionPool.length === 0) { alert('Soal untuk kategori atau level ini belum tersedia.'); return; }
+            const response = await fetch(`database_${category.toLowerCase()}.json`);
+            const db = await response.json();
+            const questionPool = db[level]?.[category];
             gameState.questions = shuffleArray([...questionPool]).slice(0, 10);
-            if (gameState.questions.length > 0) {
-                navigateTo('quiz-page');
-                displayQuestion();
-            } else {
-                alert('Tidak ada soal yang valid untuk memulai kuis.');
-            }
+            navigateTo('quiz-page');
+            displayQuestion();
         } catch (error) {
-            console.error('Could not load or start quiz:', error);
-            alert(`Gagal memuat data kuis untuk ${category}. Pastikan file database yang benar ada dan coba lagi.`);
+            console.error('Could not load quiz:', error);
+            alert(`Gagal memuat kuis untuk ${category}.`);
         }
     }
     
     function displayQuestion() {
-        // ... (displayQuestion is unchanged)
-        const progress = (gameState.currentQuestionIndex / gameState.questions.length) * 100;
-        UIElements.quizPage.progressBar.style.width = `${progress}%`;
-        UIElements.quizPage.currentScoreDisplay.textContent = `Skor: ${gameState.score}`;
         const question = gameState.questions[gameState.currentQuestionIndex];
-        UIElements.quizPage.title.textContent = `Petualangan di ${gameState.currentCategory}`;
-        UIElements.quizPage.questionText.textContent = question.question;
-        UIElements.quizPage.image.src = `assets/${question.image}`;
-        const attributionPath = `assets/${question.image}`.replace(/\.(jpg|jpeg|png|gif)$/, '.txt');
-        fetch(attributionPath)
-            .then(response => { if (!response.ok) { throw new Error('Attribution file not found.'); } return response.text(); })
-            .then(text => {
-                const [attributionText, rawUrl] = text.split('\n');
-                const url = rawUrl ? rawUrl.replace(/^Profile:\s*/, '').trim() : '';
-                UIElements.quizPage.attribution.textContent = attributionText || '';
-                UIElements.quizPage.attribution.style.display = 'block';
-                if (url) { UIElements.quizPage.imageLink.href = url; UIElements.quizPage.imageLink.style.cursor = 'pointer'; }
-                else { UIElements.quizPage.imageLink.href = '#'; UIElements.quizPage.imageLink.style.cursor = 'default'; }
-            })
-            .catch(error => {
-                console.warn('Could not fetch attribution file:', error.message);
-                UIElements.quizPage.attribution.style.display = 'none';
-                UIElements.quizPage.imageLink.href = '#';
-                UIElements.quizPage.imageLink.style.cursor = 'default';
-            });
-        UIElements.quizPage.answerButtons.innerHTML = '';
-        const shuffledAnswers = shuffleArray([...question.answers]);
-        shuffledAnswers.forEach(answer => {
+        document.getElementById('progress-bar').style.width = `${(gameState.currentQuestionIndex / gameState.questions.length) * 100}%`;
+        document.getElementById('current-score-display').textContent = `Skor: ${gameState.score}`;
+        document.getElementById('quiz-title').textContent = `Petualangan di ${gameState.currentCategory}`;
+        document.getElementById('question-text').textContent = question.question;
+        document.getElementById('quiz-image').src = `assets/${question.image}`;
+
+        const answerButtons = UIElements.quizPage.answerButtons;
+        answerButtons.innerHTML = '';
+        shuffleArray([...question.answers]).forEach(answer => {
             const button = document.createElement('button');
             button.textContent = answer;
-            button.classList.add('answer-btn', `${gameState.currentCategory.replace(' ', '.')}-btn`);
+            button.classList.add('answer-btn', `${gameState.currentCategory}-btn`);
             button.addEventListener('click', () => handleAnswer(answer));
-            UIElements.quizPage.answerButtons.appendChild(button);
+            answerButtons.appendChild(button);
         });
         startTimer();
     }
     
     function startTimer() {
-        // ... (startTimer is unchanged)
         clearInterval(gameState.questionTimer);
         gameState.timeLeft = 10;
-        const timerBar = UIElements.quizPage.timerBar;
+        const timerBar = document.getElementById('timer-bar-inner');
         timerBar.style.transition = 'none';
         timerBar.style.width = '100%';
         void timerBar.offsetWidth;
@@ -334,61 +274,57 @@ document.addEventListener('DOMContentLoaded', () => {
         timerBar.style.width = '0%';
         gameState.questionTimer = setInterval(() => {
             gameState.timeLeft -= 0.1;
-            if (gameState.timeLeft <= 0) { clearInterval(gameState.questionTimer); gameState.timeLeft = 0; }
+            if (gameState.timeLeft <= 0) { clearInterval(gameState.questionTimer); }
         }, 100);
     }
     
-    function showScorePopup(text, type = '') { /* ... unchanged ... */ }
-    
     function handleAnswer(selectedAnswer) {
         clearInterval(gameState.questionTimer);
-        UIElements.quizPage.timerBar.style.transition = 'none';
-        UIElements.quizPage.answerButtons.querySelectorAll('.answer-btn').forEach(btn => btn.classList.add('disabled'));
         const question = gameState.questions[gameState.currentQuestionIndex];
         const isCorrect = selectedAnswer === question.correct;
 
-        // NEW: Record the question and answer for the journal
         gameState.sessionReview.push({
             questionText: question.question,
-            answers: question.answers, // Original order
+            answers: question.answers,
             userAnswer: selectedAnswer,
             correctAnswer: question.correct,
         });
         
-        // ... (rest of handleAnswer logic is unchanged)
         let questionPoints = 0, timerBonus = 0, comboBonus = 0;
         if (isCorrect) {
             playSound(UIElements.sounds.correct);
-            UIElements.feedbackOverlay.title.textContent = 'Benar!';
             gameState.comboStreak++;
             gameState.correctAnswersCount++;
             if (gameState.currentLevel === 'level1') questionPoints = 100;
             else if (gameState.currentLevel === 'level2') questionPoints = 125;
             else if (gameState.currentLevel === 'level3') questionPoints = 150;
-            if (gameState.timeLeft > 0) timerBonus = Math.floor(gameState.timeLeft * 10);
-            if (gameState.comboStreak >= 2) {
-                comboBonus = (gameState.comboStreak - 1) * 10;
-                 showScorePopup(`Combo ${gameState.comboStreak}x! +${comboBonus}`);
-            }
+            timerBonus = Math.floor(gameState.timeLeft * 10);
+            if (gameState.comboStreak >= 2) comboBonus = (gameState.comboStreak - 1) * 10;
         } else {
             playSound(UIElements.sounds.wrong);
-            UIElements.feedbackOverlay.title.textContent = 'Salah!';
             gameState.comboStreak = 0;
         }
-        const totalPoints = questionPoints + timerBonus + comboBonus;
-        gameState.score += totalPoints;
-        setTimeout(() => { if (totalPoints > 0) showScorePopup('+' + totalPoints) }, 300);
-        UIElements.quizPage.currentScoreDisplay.textContent = `Skor: ${gameState.score}`;
+        gameState.score += questionPoints + timerBonus + comboBonus;
+        document.getElementById('current-score-display').textContent = `Skor: ${gameState.score}`;
+        
+        UIElements.feedbackOverlay.title.textContent = isCorrect ? 'Benar!' : 'Salah!';
         UIElements.feedbackOverlay.text.textContent = question.feedback;
         toggleOverlay('feedback-overlay', true);
     }
     
-    function nextQuestion() { /* ... unchanged ... */ }
+    function nextQuestion() {
+        gameState.currentQuestionIndex++;
+        if (gameState.currentQuestionIndex < gameState.questions.length) {
+            displayQuestion();
+        } else {
+            endQuiz();
+        }
+    }
 
     function endQuiz() {
-        const { playerData } = gameState;
+        playerData = gameState.playerData;
         playerData.totalGamesPlayed++;
-        if (gameState.score > playerData.highScore) { playerData.highScore = gameState.score; }
+        if (gameState.score > playerData.highScore) playerData.highScore = gameState.score;
         gameState.localLeaderboard.push({
             name: playerData.username, score: gameState.score,
             category: `${gameState.currentCategory} (Lvl ${gameState.currentLevel.slice(-1)})`,
@@ -399,23 +335,31 @@ document.addEventListener('DOMContentLoaded', () => {
             const perfectKey = `${gameState.currentLevel}_${gameState.currentCategory}`;
             playerData.perfectScores[perfectKey] = true;
         }
-        
-        const newlyUnlocked = checkAchievements(); // Check before saving data
+        const newlyUnlocked = checkAchievements();
         saveGameData();
         updateUserUI();
         displayResults();
         navigateTo('hasil-page');
-
-        // MODIFIED: Add all new achievements to the queue
         if (newlyUnlocked.length > 0) {
             achievementPopupQueue.push(...newlyUnlocked);
-            setTimeout(processAchievementQueue, 500); // Process the first one
+            setTimeout(processAchievementQueue, 500);
         }
     }
 
     // --- RESULT, LEADERBOARD, & ACHIEVEMENTS --- //
-    
-    function displayResults() { /* ... unchanged ... */ }
+    function displayResults() {
+        const correctAnswers = gameState.correctAnswersCount;
+        let result = {};
+        if (correctAnswers === 10) result = { text: "SEMPURNA!", subtext: "Kerja bagus, master!", image: "Success2.jpg" };
+        else if (correctAnswers >= 7) result = { text: "Kamu sudah siap ke Jepang!", subtext: "Hampir sempurna!", image: "Success1.jpg" };
+        else if (correctAnswers >= 4) result = { text: "Perlu persiapan sedikit lagi!", subtext: "Jangan menyerah!", image: "Fail2.jpg" };
+        else result = { text: "Kamu belum siap ke Jepang...", subtext: "Ayo semangat!", image: "Fail1.jpg" };
+        
+        document.getElementById('score-text').textContent = `Skor: ${gameState.score} (${correctAnswers}/10)`;
+        document.getElementById('result-text').textContent = result.text;
+        document.getElementById('result-subtext').textContent = result.subtext;
+        document.getElementById('result-image').src = `assets/${result.image}`;
+    }
 
     function displayAchievements() {
         const grid = UIElements.jejakPetualanganPage.achievementsGrid;
@@ -426,28 +370,55 @@ document.addEventListener('DOMContentLoaded', () => {
             const item = document.createElement('div');
             item.className = `achievement-item ${isUnlocked ? 'unlocked' : 'locked'}`;
             item.title = `${achievement.title}\n${achievement.description}`;
-            
-            // NEW: Add click listener to each achievement item
             item.addEventListener('click', () => {
                 playSound(UIElements.sounds.click);
                 showAchievementPopup(id);
             });
-
-            const icon = document.createElement('img');
-            icon.src = achievement.icon;
-            icon.alt = achievement.title;
-            icon.className = 'achievement-icon';
-            const title = document.createElement('p');
-            title.className = 'achievement-title';
-            title.textContent = achievement.title;
-            item.appendChild(icon);
-            item.appendChild(title);
+            item.innerHTML = `
+                <img src="${achievement.icon}" alt="${achievement.title}" class="achievement-icon">
+                <p class="achievement-title">${achievement.title}</p>`;
             grid.appendChild(item);
         }
     }
     
-    function displayLeaderboard() { /* ... unchanged ... */ }
-    function checkAchievements() { /* ... unchanged ... */ }
+    function displayLeaderboard() {
+        const leaderboardBody = UIElements.jejakPetualanganPage.leaderboardBody;
+        leaderboardBody.innerHTML = '';
+        const topScores = [...gameState.localLeaderboard].sort((a, b) => b.score - a.score).slice(0, 50);
+        if (topScores.length === 0) {
+            leaderboardBody.innerHTML = '<tr><td colspan="4">Belum ada skor.</td></tr>';
+            return;
+        }
+        topScores.forEach((entry, index) => {
+            const row = document.createElement('tr');
+            row.innerHTML = `<td>${index + 1}</td><td>${entry.name}</td><td style="text-align: right;">${entry.score}</td><td>${entry.category}</td>`;
+            leaderboardBody.appendChild(row);
+        });
+    }
+    
+    function checkAchievements() {
+        const { playerData, score } = gameState;
+        const newlyUnlocked = [];
+        const has = (id) => playerData.achievements.includes(id);
+
+        if (!has('FIRST_GAME') && playerData.totalGamesPlayed >= 1) newlyUnlocked.push('FIRST_GAME');
+        if (!has('PLAY_10') && playerData.totalGamesPlayed >= 10) newlyUnlocked.push('PLAY_10');
+        if (!has('PLAY_50') && playerData.totalGamesPlayed >= 50) newlyUnlocked.push('PLAY_50');
+        if (!has('PLAY_100') && playerData.totalGamesPlayed >= 100) newlyUnlocked.push('PLAY_100');
+        if (!has('SCORE_1000') && score > 1000) newlyUnlocked.push('SCORE_1000');
+        if (!has('SCORE_2000') && score > 2000) newlyUnlocked.push('SCORE_2000');
+        if (!has('SCORE_3000') && score > 3000) newlyUnlocked.push('SCORE_3000');
+        
+        const perfectId = `PERFECT_${gameState.currentLevel.toUpperCase()}_${gameState.currentCategory}`;
+        if (gameState.correctAnswersCount === 10 && ALL_ACHIEVEMENTS[perfectId] && !has(perfectId)) newlyUnlocked.push(perfectId);
+        
+        if (!has('PERFECT_ALL_L1')) {
+            const allL1Perfect = ['Restoran', 'Minimarket', 'Kereta', 'Apotek'].every(cat => playerData.perfectScores[`level1_${cat}`]);
+            if (allL1Perfect) newlyUnlocked.push('PERFECT_ALL_L1');
+        }
+        if (newlyUnlocked.length > 0) playerData.achievements.push(...newlyUnlocked);
+        return newlyUnlocked;
+    }
 
     function showAchievementPopup(achievementId) {
         const achievement = ALL_ACHIEVEMENTS[achievementId];
@@ -459,98 +430,83 @@ document.addEventListener('DOMContentLoaded', () => {
         toggleOverlay('achievement-unlocked-overlay', true);
     }
 
-    /**
-     * NEW: Processes the achievement queue to show popups one by one.
-     */
     function processAchievementQueue() {
         if (achievementPopupQueue.length > 0) {
-            const nextAchievementId = achievementPopupQueue.shift(); // Get and remove the next item
-            showAchievementPopup(nextAchievementId);
+            showAchievementPopup(achievementPopupQueue.shift());
         }
     }
 
-    /**
-     * NEW: Displays the post-game journal.
-     */
     function displayJournal() {
         const content = UIElements.journalPopup.content;
-        content.innerHTML = ''; // Clear previous journal
-
+        content.innerHTML = '';
         gameState.sessionReview.forEach((item, index) => {
-            const journalItem = document.createElement('div');
-            journalItem.className = 'journal-item';
-
-            const questionText = document.createElement('p');
-            questionText.className = 'journal-question';
-            questionText.textContent = `${index + 1}. ${item.questionText}`;
-            journalItem.appendChild(questionText);
-
-            item.answers.forEach(answer => {
-                const answerEl = document.createElement('div');
-                answerEl.className = 'journal-answer';
-                answerEl.textContent = answer;
-
-                if (answer === item.correctAnswer) {
-                    answerEl.classList.add('correct');
-                }
-                if (answer === item.userAnswer) {
-                    answerEl.classList.add('user-answer');
-                    if (item.userAnswer !== item.correctAnswer) {
-                        answerEl.classList.add('incorrect');
-                    }
-                }
-                journalItem.appendChild(answerEl);
-            });
-
-            content.appendChild(journalItem);
+            const itemHTML = `
+                <div class="journal-item">
+                    <p class="journal-question">${index + 1}. ${item.questionText}</p>
+                    ${item.answers.map(answer => `
+                        <div class="journal-answer 
+                            ${answer === item.correctAnswer ? 'correct' : ''} 
+                            ${answer === item.userAnswer && item.userAnswer !== item.correctAnswer ? 'incorrect' : ''}
+                            ${answer === item.userAnswer ? 'user-answer' : ''}
+                        ">${answer}</div>
+                    `).join('')}
+                </div>`;
+            content.innerHTML += itemHTML;
         });
-        
         toggleOverlay('journal-overlay', true);
     }
 
-    // --- LEVEL UNLOCKING --- //
-    // ... (unchanged)
-
-    // --- UTILITY FUNCTIONS --- //
-    // ... (unchanged)
-
     // --- EVENT LISTENERS --- //
-
-    // ... (Main Menu, Level Page, Quiz Page listeners are unchanged)
-
-    // Hasil Page Listeners
-    UIElements.hasilPage.homeBtn.addEventListener('click', () => navigateTo('level-page'));
-    UIElements.hasilPage.retryBtn.addEventListener('click', () => { /* ... */ });
-    UIElements.hasilPage.shareBtn.addEventListener('click', async () => { /* ... */ });
-    // NEW: Journal button listener
-    UIElements.hasilPage.journalBtn.addEventListener('click', () => {
-        playSound(UIElements.sounds.click);
-        displayJournal();
+    UIElements.mainMenu.changeNameBtn.addEventListener('click', () => {
+        UIElements.mainMenu.userDisplayMode.style.display = 'none';
+        UIElements.mainMenu.userEditMode.style.display = 'flex';
+        UIElements.mainMenu.newUserInput.value = gameState.playerData.username;
+        UIElements.mainMenu.newUserInput.focus();
     });
-
-    // ... (Jejak Petualangan, Guidebook, Settings, Confirmation listeners are unchanged)
-
-    // Achievement Popup Listeners
+    UIElements.mainMenu.saveUserBtn.addEventListener('click', () => {
+        const newName = UIElements.mainMenu.newUserInput.value.trim();
+        if (newName) {
+            gameState.playerData.username = newName;
+            saveGameData();
+            updateUserUI();
+        }
+        UIElements.mainMenu.userDisplayMode.style.display = 'flex';
+        UIElements.mainMenu.userEditMode.style.display = 'none';
+    });
+    UIElements.mainMenu.startBtn.addEventListener('click', () => navigateTo('level-page'));
+    UIElements.mainMenu.adventureLogBtn.addEventListener('click', () => navigateTo('jejak-petualangan-page'));
+    UIElements.mainMenu.guidebookBtn.addEventListener('click', () => navigateTo('guidebook-page'));
+    UIElements.mainMenu.settingsBtn.addEventListener('click', () => toggleOverlay('settings-overlay', true));
+    
+    UIElements.hasilPage.journalBtn.addEventListener('click', () => displayJournal());
+    UIElements.journalPopup.closeBtn.addEventListener('click', () => toggleOverlay('journal-overlay', false));
+    
     UIElements.achievementPopup.okBtn.addEventListener('click', () => {
-        playSound(UIElements.sounds.click);
         toggleOverlay('achievement-unlocked-overlay', false);
-        // MODIFIED: Process the next achievement in the queue when OK is clicked
-        setTimeout(processAchievementQueue, 300); // Short delay for smoother transition
+        setTimeout(processAchievementQueue, 300);
     });
-    UIElements.achievementPopup.shareBtn.addEventListener('click', async () => { /* ... */ });
 
-    // NEW: Journal Popup Listener
-    UIElements.journalPopup.closeBtn.addEventListener('click', () => {
-        playSound(UIElements.sounds.click);
-        toggleOverlay('journal-overlay', false);
+    UIElements.achievementPopup.shareBtn.addEventListener('click', async () => {
+        const title = UIElements.achievementPopup.shareBtn.dataset.achievementTitle;
+        const text = `I just unlocked the "${title}" achievement in Petualangan di Jepang!`;
+        const url = 'https://kuis-bahasa-jepang.pages.dev/';
+        if (navigator.share) await navigator.share({ title, text, url });
+        else await navigator.clipboard.writeText(`${text}\n\n${url}`), alert('Copied to clipboard!');
     });
+    
+    // Other simple listeners...
+    ['click', 'change', 'submit'].forEach(evt => document.body.addEventListener(evt, () => playSound(UIElements.sounds.click), true));
+    UIElements.feedbackOverlay.nextBtn.addEventListener('click', () => { toggleOverlay('feedback-overlay', false); nextQuestion(); });
+    UIElements.settingsOverlay.closeBtn.addEventListener('click', () => toggleOverlay('settings-overlay', false));
+    UIElements.confirmationOverlay.cancelBtn.addEventListener('click', () => toggleOverlay('confirmation-overlay', false));
+    UIElements.settingsOverlay.resetBtn.addEventListener('click', () => toggleOverlay('confirmation-overlay', true));
+    UIElements.confirmationOverlay.confirmBtn.addEventListener('click', () => { resetCurrentPlayerData(); toggleOverlay('confirmation-overlay', false); });
+    UIElements.levelPage.backBtn.addEventListener('click', () => navigateTo('main-menu'));
+    UIElements.jejakPetualanganPage.backBtn.addEventListener('click', () => navigateTo('main-menu'));
+    UIElements.guidebookPage.backBtn.addEventListener('click', () => navigateTo('main-menu'));
+    UIElements.hasilPage.homeBtn.addEventListener('click', () => navigateTo('level-page'));
+    UIElements.hasilPage.retryBtn.addEventListener('click', () => startQuiz(gameState.currentLevel, gameState.currentCategory));
 
     // --- INITIALIZATION --- //
-    function init() {
-        console.log('Initializing Japanese Adventure v5...');
-        loadGameData();
-        navigateTo('main-menu');
-    }
-
-    init();
+    loadGameData();
 });
