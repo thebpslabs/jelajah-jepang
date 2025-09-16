@@ -122,66 +122,49 @@
                     <p id="result-subtext"></p>
                 </div>
                 <div class="button-container">
+                    <button id="share-btn" class="result-page-btn">Share</button>
                     <button id="journal-btn" class="result-page-btn">Jurnal</button>
                     <button id="retry-btn" class="result-page-btn">Coba Lagi</button>
                     <button id="home-btn" class="result-page-btn">Kategori Lain</button>
-                    <button id="submit-global-btn" class="result-page-btn">Kirim Skor Global</button>
-                    <button id="share-btn" class="result-page-btn">Share</button>
                 </div>
                 <div class="ad-placeholder-center">Ads Placeholder</div>
             </div>
         </div>
 
-<div id="jejak-petualangan-page" class="page">
-    <div class="page-content adventure-log-content">
-        <h2>Jejak Petualangan</h2>
-        <div class="tabs">
-            <button class="tab-btn active" id="achievements-tab" data-tab="achievements-content">Pencapaian</button>
-            <button class="tab-btn" id="leaderboard-tab" data-tab="leaderboard-content">Papan Skor</button>
-            <button class="tab-btn" id="global-leaderboard-tab" data-tab="global-leaderboard-content">Global</button>
-        </div>
-        <div class="tab-content-container">
-            <div id="achievements-content" class="tab-content active">
-                <div class="achievements-container">
-                    <div id="achievements-grid"></div>
+        <div id="jejak-petualangan-page" class="page">
+            <div class="page-content adventure-log-content">
+                <h2>Jejak Petualangan</h2>
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="achievements">Pencapaian</button>
+                    <button class="tab-btn" data-tab="leaderboard">Papan Skor</button>
                 </div>
-            </div>
-            <div id="leaderboard-content" class="tab-content">
-                <h3>Skor Lokal</h3>
-                <div class="leaderboard-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Nama</th>
-                                <th>Skor</th>
-                                <th>Kategori</th>
-                            </tr>
-                        </thead>
-                        <tbody id="leaderboard-body-local"></tbody>
-                    </table>
+                <div class="tab-content-container">
+                    <div id="achievements" class="tab-content active">
+                        <div class="achievements-container">
+                            <div id="achievements-grid">
+                                </div>
+                        </div>
+                    </div>
+                    <div id="leaderboard" class="tab-content">
+                        <h3>Skor Tertinggi (Lokal)</h3>
+                        <div class="leaderboard-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Nama</th>
+                                        <th>Skor</th>
+                                        <th>Kategori</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="leaderboard-body"></tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div id="global-leaderboard-content" class="tab-content">
-                <h3>Skor Global</h3>
-                <div class="leaderboard-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Nama</th>
-                                <th>Skor</th>
-                                <th>Kategori</th>
-                            </tr>
-                        </thead>
-                        <tbody id="leaderboard-body-global"></tbody>
-                    </table>
-                </div>
+                <button id="back-to-home-from-log" class="back-btn">Kembali ke Home</button>
             </div>
         </div>
-        <button id="back-to-home-from-log" class="back-btn">Kembali ke Home</button>
-    </div>
-</div>
 
         <div id="guidebook-page" class="page">
             <div class="page-content guidebook-content">

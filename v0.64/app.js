@@ -1,40 +1,8 @@
 // Wait for the DOM to be fully loaded before running the script
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- FIREBASE IMPORTS AND SETUP --- //
-    import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js';
-    import { getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js';
-    import { getFirestore, collection, getDocs, limit, orderBy, query } from 'https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js';
-    import { getFunctions, httpsCallable } from 'https://www.gstatic.com/firebasejs/10.9.0/firebase-functions.js';
-
-    // Your web app's Firebase configuration
-    // IMPORTANT: Replace with your actual Firebase project configuration
-    const firebaseConfig = {
-        apiKey: "YOUR_API_KEY",
-        authDomain: "YOUR_AUTH_DOMAIN",
-        projectId: "YOUR_PROJECT_ID",
-        storageBucket: "YOUR_STORAGE_BUCKET",
-        messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-        appId: "YOUR_APP_ID"
-    };
-
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
-    const db = getFirestore(app);
-    const functions = getFunctions(app);
-
-    let currentUser = null;
-    onAuthStateChanged(auth, (user) => {
-        currentUser = user;
-        updateUserUI(); // Update UI when auth state changes
-        if (gameState.currentPage === 'hasil-page') {
-            updateResultPageUI(); // Update results page UI for login button
-        }
-    });
-
-
     // --- ACHIEVEMENTS DATA --- //
+    // A central place to define all possible achievements in the game.
     const ALL_ACHIEVEMENTS = {
         'FIRST_GAME': { title: 'Langkah Pertama', description: 'Selesaikan game pertamamu.', icon: 'assets/achievements/first_game.png' },
         'PLAY_10': { title: 'Petualang Junior', description: 'Mainkan 10 game.', icon: 'assets/achievements/play_10.png' },
@@ -69,7 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
         questionTimer: null,
         timeLeft: 0,
         localLeaderboard: [],
-        globalLeaderboard: [], // ADDED: To store the fetched global scores
         playerData: null,
         gameJournal: [],
         achievementQueue: [],
@@ -122,19 +89,14 @@ document.addEventListener('DOMContentLoaded', () => {
             homeBtn: document.getElementById('home-btn'),
             shareBtn: document.getElementById('share-btn'),
             retryBtn: document.getElementById('retry-btn'),
-            journalBtn: document.getElementById('journal-btn'),
-            submitGlobalBtn: document.getElementById('submit-global-btn') // ADDED: New button selector
+            journalBtn: document.getElementById('journal-btn')
         },
         jejakPetualanganPage: {
             tabs: document.querySelectorAll('#jejak-petualangan-page .tab-btn'),
             achievementsGrid: document.getElementById('achievements-grid'),
             leaderboardContent: document.getElementById('leaderboard'),
             leaderboardBody: document.getElementById('leaderboard-body'),
-            backBtn: document.getElementById('back-to-home-from-log'),
-            localLeaderboardTab: document.getElementById('local-leaderboard-tab'),
-            globalLeaderboardTab: document.getElementById('global-leaderboard-tab'),
-            localLeaderboardContent: document.getElementById('local-leaderboard-content'),
-            globalLeaderboardContent: document.getElementById('global-leaderboard-content')
+            backBtn: document.getElementById('back-to-home-from-log')
         },
         guidebookPage: {
             tabs: document.querySelectorAll('#guidebook-page .tab-btn'),
@@ -234,42 +196,6 @@ document.addEventListener('DOMContentLoaded', () => {
         alert(`Data petualangan telah direset!`);
     }
 
-    // --- FIREBASE AUTHENTICATION & LEADERBOARD SUBMISSION --- //
-
-    async function signInWithGoogle() {
-        const provider = new GoogleAuthProvider();
-        await signInWithPopup(auth, provider);
-    }
-    
-    async function submitScoreToGlobalLeaderboard() {
-        if (!currentUser) {
-            console.error("No user is signed in. Score will not be submitted.");
-            return;
-        }
-    
-        // Show loading indicator here if you have one
-    
-        const dataToSend = {
-            quizId: `${gameState.currentCategory.replace(' ', '')}_${gameState.currentLevel.toLowerCase()}`,
-            userAnswers: gameState.gameJournal.map(entry => ({
-                question: entry.question,
-                userAnswer: entry.userAnswer
-            }))
-        };
-        
-        const submitScore = httpsCallable(functions, 'submitScore');
-    
-        try {
-            const result = await submitScore(dataToSend);
-            console.log('Score submitted successfully!', result.data);
-            alert("Skor Anda telah dikirim ke Papan Peringkat Global!");
-        } catch (error) {
-            console.error('Failed to submit score to global leaderboard:', error);
-            alert("Gagal mengirim skor. Coba lagi.");
-        }
-    }
-
-
     // --- LEVEL & XP SYSTEM --- //
 
     function calculateXpForNextLevel(currentLevel) {
@@ -295,16 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     function updateUserUI() {
         const { username, level, xp } = gameState.playerData;
-        
-        // Show Google username if logged in
-        if (currentUser && currentUser.displayName) {
-             UIElements.mainMenu.currentUserDisplay.textContent = currentUser.displayName;
-             UIElements.mainMenu.userDisplayMode.style.display = 'flex';
-             UIElements.mainMenu.userEditMode.style.display = 'none';
-        } else {
-             UIElements.mainMenu.currentUserDisplay.textContent = username;
-        }
-        
+        UIElements.mainMenu.currentUserDisplay.textContent = username;
         UIElements.mainMenu.levelDisplay.textContent = `Level ${level}`;
         
         const xpNeeded = calculateXpForNextLevel(level);
@@ -323,30 +240,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (pageId === 'jejak-petualangan-page') {
             displayAchievements();
-            // Default to local leaderboard view
-            displayLeaderboard('local');
-            UIElements.jejakPetualanganPage.localLeaderboardTab.classList.add('active');
-            UIElements.jejakPetualanganPage.globalLeaderboardTab.classList.remove('active');
-            UIElements.jejakPetualanganPage.localLeaderboardContent.classList.add('active');
-            UIElements.jejakPetualanganPage.globalLeaderboardContent.classList.remove('active');
+            displayLeaderboard();
         } else if (pageId === 'level-page') {
             updateLevelUnlocks();
-        } else if (pageId === 'hasil-page') {
-            updateResultPageUI();
         }
     }
 
-    function updateResultPageUI() {
-        // Show the global submission button if user is logged in
-        if (currentUser) {
-            UIElements.hasilPage.submitGlobalBtn.style.display = 'block';
-            UIElements.hasilPage.submitGlobalBtn.innerHTML = 'Kirim Skor Global';
-        } else {
-             UIElements.hasilPage.submitGlobalBtn.style.display = 'block';
-             UIElements.hasilPage.submitGlobalBtn.innerHTML = `<img src="assets/google-icon.png" alt="Google Icon" class="icon-small"> Masuk & Kirim Skor Global`;
-        }
-    }
-    
     function toggleOverlay(overlayId, show) {
         const overlay = document.getElementById(overlayId);
         if (overlay) {
@@ -452,13 +351,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     UIElements.quizPage.imageLink.href = url;
                     UIElements.quizPage.imageLink.style.cursor = 'pointer';
                 } else {
-                    UIElements.quizPage.image.style.cursor = 'default';
+                    UIElements.quizPage.imageLink.href = '#';
+                    UIElements.quizPage.imageLink.style.cursor = 'default';
                 }
             })
             .catch(error => {
                 console.warn('Could not fetch attribution file:', error.message);
                 UIElements.quizPage.attribution.style.display = 'none';
-                UIElements.quizPage.image.style.cursor = 'default';
+                UIElements.quizPage.imageLink.href = '#';
+                UIElements.quizPage.imageLink.style.cursor = 'default';
             });
 
 
@@ -583,7 +484,6 @@ document.addEventListener('DOMContentLoaded', () => {
             playerData.highScore = gameState.score;
         }
 
-        // --- LOCAL LEADERBOARD LOGIC (KEPT AS IS) ---
         gameState.localLeaderboard.push({
             name: playerData.username,
             score: gameState.score,
@@ -592,16 +492,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         addXp(gameState.score);
+
+        // MODIFIED: Run level unlock and perfect score logic BEFORE checking achievements
         checkAndUnlockLevels();
+        
+        // NOW check for achievements with the updated data
         const newlyUnlocked = checkAchievements();
-        saveGameData(); 
+        
+        saveGameData();
         updateUserUI();
         displayResults();
         navigateTo('hasil-page');
-        
-        // --- NEW: LOGIC TO HANDLE GLOBAL SUBMISSION ---
-        UIElements.hasilPage.submitGlobalBtn.style.display = 'block';
-        updateResultPageUI();
 
         if (newlyUnlocked.length > 0) {
             gameState.achievementQueue = newlyUnlocked;
@@ -610,7 +511,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 500);
         }
     }
-
 
     // --- RESULT, LEADERBOARD, & ACHIEVEMENTS --- //
 
@@ -672,6 +572,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+
     function displayAchievements() {
         const grid = UIElements.jejakPetualanganPage.achievementsGrid;
         grid.innerHTML = '';
@@ -705,19 +606,9 @@ document.addEventListener('DOMContentLoaded', () => {
             grid.appendChild(item);
         }
     }
-    
-    // --- LEADERBOARD DISPLAY LOGIC ---
-    async function displayLeaderboard(type) {
-        if (type === 'local') {
-            displayLocalLeaderboard();
-        } else if (type === 'global') {
-            await fetchGlobalLeaderboard();
-            displayGlobalLeaderboard();
-        }
-    }
-    
-    function displayLocalLeaderboard() {
-        const leaderboardBody = UIElements.jejakPetualanganPage.localLeaderboardContent.querySelector('tbody');
+
+    function displayLeaderboard() {
+        const leaderboardBody = UIElements.jejakPetualanganPage.leaderboardBody;
         leaderboardBody.innerHTML = '';
         const topScores = [...gameState.localLeaderboard].sort((a, b) => b.score - a.score).slice(0, 50);
 
@@ -731,44 +622,7 @@ document.addEventListener('DOMContentLoaded', () => {
             leaderboardBody.appendChild(row);
         });
     }
-
-    async function fetchGlobalLeaderboard() {
-        const globalLeaderboardRef = collection(db, 'globalLeaderboard');
-        const q = query(globalLeaderboardRef, orderBy('score', 'desc'), limit(50));
-        
-        try {
-            const querySnapshot = await getDocs(q);
-            gameState.globalLeaderboard = querySnapshot.docs.map(doc => doc.data());
-        } catch (error) {
-            console.error("Error fetching global leaderboard:", error);
-            gameState.globalLeaderboard = [];
-        }
-    }
     
-    function displayGlobalLeaderboard() {
-        const leaderboardBody = UIElements.jejakPetualanganPage.globalLeaderboardContent.querySelector('tbody');
-        leaderboardBody.innerHTML = '';
-        
-        if (gameState.globalLeaderboard.length === 0) {
-            leaderboardBody.innerHTML = '<tr><td colspan="4">Belum ada skor global tercatat. Kirim skor Anda!</td></tr>';
-            return;
-        }
-        
-        gameState.globalLeaderboard.forEach((entry, index) => {
-            const row = document.createElement('tr');
-            let userName = entry.name || 'Unknown User';
-            
-            // Highlight current user's score
-            if (currentUser && entry.userId === currentUser.uid) {
-                row.classList.add('current-user-row');
-                userName = "Anda"; // Or get their display name
-            }
-
-            row.innerHTML = `<td>${index + 1}</td><td>${userName}</td><td style="text-align: right;">${entry.score}</td><td>${entry.quizId}</td>`;
-            leaderboardBody.appendChild(row);
-        });
-    }
-
     function checkAchievements() {
         const { playerData, score } = gameState;
         const newlyUnlocked = [];
@@ -958,26 +812,6 @@ document.addEventListener('DOMContentLoaded', () => {
         displayJournal();
         toggleOverlay('journal-overlay', true);
     });
-    
-    // --- NEW: GLOBAL LEADERBOARD SUBMISSION LISTENER ---
-    UIElements.hasilPage.submitGlobalBtn.addEventListener('click', async () => {
-        playSound(UIElements.sounds.click);
-        
-        if (currentUser) {
-            await submitScoreToGlobalLeaderboard();
-        } else {
-            // Sign in with Google and then submit the score
-            try {
-                await signInWithGoogle();
-                // onAuthStateChanged listener will handle the UI and then a second click will submit
-                alert("Berhasil masuk! Silakan klik tombol lagi untuk mengirimkan skor.");
-            } catch (error) {
-                console.error("Login gagal:", error);
-                alert("Gagal masuk. Coba lagi.");
-            }
-        }
-    });
-
 
     UIElements.jejakPetualanganPage.backBtn.addEventListener('click', () => navigateTo('main-menu'));
     UIElements.jejakPetualanganPage.tabs.forEach(tab => {
@@ -987,10 +821,6 @@ document.addEventListener('DOMContentLoaded', () => {
             tab.classList.add('active');
             document.querySelectorAll('#jejak-petualangan-page .tab-content').forEach(c => c.classList.remove('active'));
             document.getElementById(tab.dataset.tab).classList.add('active');
-            
-            // NEW: Fetch and display the correct leaderboard based on the tab clicked
-            const leaderboardType = tab.dataset.tab.replace('-content', '');
-            displayLeaderboard(leaderboardType);
         });
     });
     

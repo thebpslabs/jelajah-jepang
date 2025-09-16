@@ -1,4 +1,4 @@
-{
+{"quizAnswers":{
   "kereta_level1": {
     "answers": [
       {
@@ -603,8 +603,8 @@
       }
     ]
   },
-  "level2": {
-    "Kereta": [
+  "kereta_level2": {
+    "answers": [
       {
         "question": "Bagaimana cara bertanya 'Di mana stasiun Shinjuku?'",
         "answers": [
@@ -1207,8 +1207,8 @@
       }
     ]
   },
-  "level3": {
-    "Kereta": [
+  "kereta_level3": {
+    "answers": [
       {
         "question": "Bagaimana cara bertanya 'Kereta mana yang paling cepat untuk sampai ke Kyoto?'",
         "answers": [
@@ -1811,4 +1811,5 @@
       }
     ]
   }
+}
 }

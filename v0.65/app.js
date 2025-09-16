@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // --- ACHIEVEMENTS DATA --- //
+    // A central place to define all possible achievements in the game.
     const ALL_ACHIEVEMENTS = {
         'FIRST_GAME': { title: 'Langkah Pertama', description: 'Selesaikan game pertamamu.', icon: 'assets/achievements/first_game.png' },
         'PLAY_10': { title: 'Petualang Junior', description: 'Mainkan 10 game.', icon: 'assets/achievements/play_10.png' },
@@ -452,13 +453,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     UIElements.quizPage.imageLink.href = url;
                     UIElements.quizPage.imageLink.style.cursor = 'pointer';
                 } else {
-                    UIElements.quizPage.image.style.cursor = 'default';
+                    UIElements.quizPage.imageLink.href = '#';
+                    UIElements.quizPage.imageLink.style.cursor = 'default';
                 }
             })
             .catch(error => {
                 console.warn('Could not fetch attribution file:', error.message);
                 UIElements.quizPage.attribution.style.display = 'none';
-                UIElements.quizPage.image.style.cursor = 'default';
+                UIElements.quizPage.imageLink.href = '#';
+                UIElements.quizPage.imageLink.style.cursor = 'default';
             });
 
 

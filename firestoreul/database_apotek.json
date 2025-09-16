@@ -1,0 +1,1815 @@
+{"quizAnswers":{
+  "apotek_level1": {
+    "answers": [
+      {
+        "question": "Apa bahasa Jepang untuk 'rumah sakit'?",
+        "answers": [
+          "病院 (Byouin)",
+          "薬局 (Yakkyoku)",
+          "学校 (Gakkou)",
+          "駅 (Eki)"
+        ],
+        "correct": "病院 (Byouin)",
+        "feedback": "'病院 (Byouin)' adalah istilah umum untuk rumah sakit. 'Yakkyoku' adalah apotek.",
+        "image": "Apotek1-01.jpg"
+      },
+      {
+        "question": "Bagaimana Anda menyebut 'obat'?",
+        "answers": [
+          "薬 (Kusuri)",
+          "水 (Mizu)",
+          "お茶 (Ocha)",
+          "ご飯 (Gohan)"
+        ],
+        "correct": "薬 (Kusuri)",
+        "feedback": "'薬 (Kusuri)' adalah kata untuk obat. Anda akan melihat kanji ini di apotek.",
+        "image": "Apotek1-02.jpg"
+      },
+      {
+        "question": "Kata untuk 'dokter' dalam bahasa Jepang adalah...",
+        "answers": [
+          "先生 (Sensei)",
+          "医者 (Isha)",
+          "看護師 (Kangoshi)",
+          "患者 (Kanja)"
+        ],
+        "correct": "医者 (Isha)",
+        "feedback": "'医者 (Isha)' adalah kata formal untuk dokter. Saat memanggilnya, Anda akan menggunakan '先生 (Sensei)'.",
+        "image": "Apotek1-03.jpg"
+      },
+      {
+        "question": "Apa sebutan untuk 'apotek'?",
+        "answers": [
+          "薬局 (Yakkyoku)",
+          "本屋 (Hon'ya)",
+          "パン屋 (Pan'ya)",
+          "花屋 (Hanaya)"
+        ],
+        "correct": "薬局 (Yakkyoku)",
+        "feedback": "'薬局 (Yakkyoku)' adalah apotek tempat Anda menebus resep atau membeli obat.",
+        "image": "Apotek1-04.jpg"
+      },
+      {
+        "question": "Bagaimana cara mengatakan 'demam'?",
+        "answers": [
+          "咳 (Seki)",
+          "熱 (Netsu)",
+          "痛み (Itami)",
+          "怪我 (Kega)"
+        ],
+        "correct": "熱 (Netsu)",
+        "feedback": "'熱 (Netsu)' berarti demam. Untuk mengatakan 'Saya demam', Anda bisa bilang '熱があります (Netsu ga arimasu)'.",
+        "image": "Apotek1-05.jpg"
+      },
+      {
+        "question": "Kata untuk 'sakit kepala' adalah...",
+        "answers": [
+          "腹痛 (Fukutsuu)",
+          "歯痛 (Shitsuu)",
+          "頭痛 (Zutsuu)",
+          "腰痛 (Youtsuu)"
+        ],
+        "correct": "頭痛 (Zutsuu)",
+        "feedback": "'頭痛 (Zutsuu)' terdiri dari kanji 'kepala' (頭) dan 'sakit' (痛).",
+        "image": "Apotek1-06.jpg"
+      },
+      {
+        "question": "Apa bahasa Jepang untuk 'resep dokter'?",
+        "answers": [
+          "処方箋 (Shohousen)",
+          "領収書 (Ryoushuusho)",
+          "請求書 (Seikyuusho)",
+          "手紙 (Tegami)"
+        ],
+        "correct": "処方箋 (Shohousen)",
+        "feedback": "'処方箋 (Shohousen)' adalah resep yang Anda dapatkan dari dokter untuk ditebus di apotek.",
+        "image": "Apotek1-07.jpg"
+      },
+      {
+        "question": "Bagaimana Anda menyebut 'perawat'?",
+        "answers": [
+          "医者 (Isha)",
+          "看護師 (Kangoshi)",
+          "先生 (Sensei)",
+          "受付 (Uketsuke)"
+        ],
+        "correct": "看護師 (Kangoshi)",
+        "feedback": "'看護師 (Kangoshi)' adalah perawat. Mereka akan membantu dokter dan merawat pasien.",
+        "image": "Apotek1-08.jpg"
+      },
+      {
+        "question": "Kata untuk 'kartu asuransi kesehatan' adalah...",
+        "answers": [
+          "保険証 (Hokenshou)",
+          "会員証 (Kaiinshou)",
+          "学生証 (Gakuseishou)",
+          "免許証 (Menkyoshou)"
+        ],
+        "correct": "保険証 (Hokenshou)",
+        "feedback": "'保険証 (Hokenshou)' adalah kartu asuransi yang sangat penting untuk ditunjukkan saat berobat di Jepang.",
+        "image": "Apotek1-09.jpg"
+      },
+      {
+        "question": "Apa bahasa Jepang untuk 'batuk'?",
+        "answers": [
+          "くしゃみ (Kushami)",
+          "鼻水 (Hanamizu)",
+          "咳 (Seki)",
+          "熱 (Netsu)"
+        ],
+        "correct": "咳 (Seki)",
+        "feedback": "'咳 (Seki)' berarti batuk. Untuk mengatakan 'Saya batuk', Anda bisa bilang '咳が出ます (Seki ga demasu)'.",
+        "image": "Apotek1-10.jpg"
+      },
+      {
+        "question": "Bagaimana cara mengatakan 'perut'?",
+        "answers": [
+          "頭 (Atama)",
+          "お腹 (Onaka)",
+          "足 (Ashi)",
+          "手 (Te)"
+        ],
+        "correct": "お腹 (Onaka)",
+        "feedback": "'お腹 (Onaka)' adalah perut. Sakit perut disebut '腹痛 (fukutsuu)'.",
+        "image": "Apotek1-11.jpg"
+      },
+      {
+        "question": "Kata untuk 'pasien' adalah...",
+        "answers": [
+          "患者 (Kanja)",
+          "客 (Kyaku)",
+          "医者 (Isha)",
+          "家族 (Kazoku)"
+        ],
+        "correct": "患者 (Kanja)",
+        "feedback": "'患者 (Kanja)' adalah pasien. Anda akan menjadi 'kanja' saat pergi ke rumah sakit.",
+        "image": "Apotek1-12.jpg"
+      },
+      {
+        "question": "Apa sebutan untuk 'suntikan'?",
+        "answers": [
+          "注射 (Chuusha)",
+          "手術 (Shujutsu)",
+          "検査 (Kensa)",
+          "薬 (Kusuri)"
+        ],
+        "correct": "注射 (Chuusha)",
+        "feedback": "'注射 (Chuusha)' adalah suntikan. 'Shujutsu' adalah operasi.",
+        "image": "Apotek1-13.jpg"
+      },
+      {
+        "question": "Bagaimana Anda menyebut 'sakit' atau 'penyakit'?",
+        "answers": [
+          "病気 (Byouki)",
+          "怪我 (Kega)",
+          "元気 (Genki)",
+          "健康 (Kenkou)"
+        ],
+        "correct": "病気 (Byouki)",
+        "feedback": "'病気 (Byouki)' adalah penyakit. '怪我 (Kega)' adalah cedera/luka.",
+        "image": "Apotek1-14.jpg"
+      },
+      {
+        "question": "Kata untuk 'cedera' atau 'luka' adalah...",
+        "answers": [
+          "病気 (Byouki)",
+          "怪我 (Kega)",
+          "痛み (Itami)",
+          "風邪 (Kaze)"
+        ],
+        "correct": "怪我 (Kega)",
+        "feedback": "'怪我 (Kega)' adalah cedera fisik, seperti teriris atau jatuh.",
+        "image": "Kereta1-15.jpg"
+      },
+      {
+        "question": "Apa bahasa Jepang untuk 'kepala'?",
+        "answers": [
+          "顔 (Kao)",
+          "首 (Kubi)",
+          "頭 (Atama)",
+          "髪 (Kami)"
+        ],
+        "correct": "頭 (Atama)",
+        "feedback": "'頭 (Atama)' adalah kepala. 'Kao' adalah wajah.",
+        "image": "Apotek1-16.jpg"
+      },
+      {
+        "question": "Bagaimana cara mengatakan 'mata'?",
+        "answers": [
+          "耳 (Mimi)",
+          "鼻 (Hana)",
+          "口 (Kuchi)",
+          "目 (Me)"
+        ],
+        "correct": "目 (Me)",
+        "feedback": "'目 (Me)' adalah mata. 'Mimi' adalah telinga, 'Hana' adalah hidung, 'Kuchi' adalah mulut.",
+        "image": "Apotek1-17.jpg"
+      },
+      {
+        "question": "Kata untuk 'pilek' atau 'ingus' adalah...",
+        "answers": [
+          "鼻水 (Hanamizu)",
+          "咳 (Seki)",
+          "くしゃみ (Kushami)",
+          "涙 (Namida)"
+        ],
+        "correct": "鼻水 (Hanamizu)",
+        "feedback": "'鼻水 (Hanamizu)' secara harfiah berarti 'air hidung'.",
+        "image": "Apotek1-18.jpg"
+      },
+      {
+        "question": "Apa sebutan untuk 'resepsionis'?",
+        "answers": [
+          "受付 (Uketsuke)",
+          "会計 (Kaikei)",
+          "案内 (Annai)",
+          "入口 (Iriguchi)"
+        ],
+        "correct": "受付 (Uketsuke)",
+        "feedback": "'受付 (Uketsuke)' adalah meja resepsionis tempat Anda mendaftar pertama kali.",
+        "image": "Apotek1-19.jpg"
+      },
+      {
+        "question": "Bagaimana Anda menyebut 'ambulans'?",
+        "answers": [
+          "救急車 (Kyuukyuusha)",
+          "消防車 (Shoubousha)",
+          "パトカー (Patokaa)",
+          "タクシー (Takushii)"
+        ],
+        "correct": "救急車 (Kyuukyuusha)",
+        "feedback": "Nomor telepon untuk memanggil '救急車 (Kyuukyuusha)' adalah 119.",
+        "image": "Apotek1-20.jpg"
+      },
+      {
+        "question": "Kata untuk 'pemeriksaan' medis adalah...",
+        "answers": [
+          "検査 (Kensa)",
+          "質問 (Shitsumon)",
+          "勉強 (Benkyou)",
+          "仕事 (Shigoto)"
+        ],
+        "correct": "検査 (Kensa)",
+        "feedback": "'検査 (Kensa)' bisa berarti tes atau pemeriksaan, seperti tes darah ('血液検査, ketsueki kensa').",
+        "image": "Apotek1-21.jpg"
+      },
+      {
+        "question": "Apa bahasa Jepang untuk 'telinga'?",
+        "answers": [
+          "目 (Me)",
+          "鼻 (Hana)",
+          "耳 (Mimi)",
+          "喉 (Nodo)"
+        ],
+        "correct": "耳 (Mimi)",
+        "feedback": "'耳 (Mimi)' adalah telinga. Dokter spesialis THT disebut '耳鼻科 (jibika)'.",
+        "image": "Apotek1-22.jpg"
+      },
+      {
+        "question": "Bagaimana cara mengatakan 'tenggorokan'?",
+        "answers": [
+          "首 (Kubi)",
+          "肩 (Kata)",
+          "喉 (Nodo)",
+          "胸 (Mune)"
+        ],
+        "correct": "喉 (Nodo)",
+        "feedback": "'喉 (Nodo)' adalah tenggorokan. 'Sakit tenggorokan' adalah '喉が痛い (Nodo ga itai)'.",
+        "image": "Apotek1-23.jpg"
+      },
+      {
+        "question": "Kata untuk 'gigi' adalah...",
+        "answers": [
+          "歯 (Ha)",
+          "骨 (Hone)",
+          "唇 (Kuchibiru)",
+          "舌 (Shita)"
+        ],
+        "correct": "歯 (Ha)",
+        "feedback": "'歯 (Ha)' adalah gigi. Dokter gigi adalah '歯医者 (haisha)'.",
+        "image": "Apotek1-24.jpg"
+      },
+      {
+        "question": "Apa sebutan untuk 'masuk angin'?",
+        "answers": [
+          "風邪 (Kaze)",
+          "病気 (Byouki)",
+          "怪我 (Kega)",
+          "アレルギー (Arerugii)"
+        ],
+        "correct": "風邪 (Kaze)",
+        "feedback": "'風邪 (Kaze)' adalah istilah umum untuk flu atau masuk angin.",
+        "image": "Apotek1-25.jpg"
+      },
+      {
+        "question": "Bahasa Jepang untuk 'apoteker' adalah...",
+        "answers": [
+          "薬剤師 (Yakuzaishi)",
+          "医者 (Isha)",
+          "看護師 (Kangoshi)",
+          "科学者 (Kagakusha)"
+        ],
+        "correct": "薬剤師 (Yakuzaishi)",
+        "feedback": "'薬剤師 (Yakuzaishi)' adalah apoteker yang akan menjelaskan cara minum obat Anda.",
+        "image": "Apotek1-26.jpg"
+      },
+      {
+        "question": "Apa kata untuk 'alergi'?",
+        "answers": [
+          "アレルギー (Arerugii)",
+          "病気 (Byouki)",
+          "ストレス (Sutoresu)",
+          "ワクチン (Wakuchin)"
+        ],
+        "correct": "アレルギー (Arerugii)",
+        "feedback": "'アレルギー (Arerugii)' adalah kata serapan dari 'allergy'.",
+        "image": "Apotek1-27.jpg"
+      },
+      {
+        "question": "Bagaimana Anda menyebut 'suhu badan'?",
+        "answers": [
+          "体温 (Taion)",
+          "気温 (Kion)",
+          "温度 (Ondo)",
+          "湿度 (Shitsudo)"
+        ],
+        "correct": "体温 (Taion)",
+        "feedback": "'体温 (Taion)' adalah suhu tubuh. 'Kion' adalah suhu udara.",
+        "image": "Apotek1-28.jpg"
+      },
+      {
+        "question": "Kata untuk 'plester' adalah...",
+        "answers": [
+          "包帯 (Houtai)",
+          "ガーゼ (Gaaze)",
+          "絆創膏 (Bansoukou)",
+          "テープ (Teepu)"
+        ],
+        "correct": "絆創膏 (Bansoukou)",
+        "feedback": "'絆創膏 (Bansoukou)' adalah plester luka. 'Houtai' adalah perban.",
+        "image": "Apotek1-29.jpg"
+      },
+      {
+        "question": "Apa bahasa Jepang untuk 'vaksinasi'?",
+        "answers": [
+          "予防接種 (Yobou sesshu)",
+          "手術 (Shujutsu)",
+          "治療 (Chiryou)",
+          "診断 (Shindan)"
+        ],
+        "correct": "予防接種 (Yobou sesshu)",
+        "feedback": "'予防接種 (Yobou sesshu)' berarti vaksinasi atau imunisasi.",
+        "image": "Apotek1-30.jpg"
+      },
+      {
+        "question": "'Obat bubuk' dalam bahasa Jepang adalah...",
+        "answers": [
+          "錠剤 (Jouza)",
+          "粉薬 (Konagusuri)",
+          "カプセル (Kapuseru)",
+          "塗り薬 (Nurigusuri)"
+        ],
+        "correct": "粉薬 (Konagusuri)",
+        "feedback": "'粉薬 (Konagusuri)' adalah obat puyer/bubuk. 'Jouza' adalah tablet.",
+        "image": "Apotek1-31.jpg"
+      },
+      {
+        "question": "Bagaimana cara mengatakan 'tablet' (obat)?",
+        "answers": [
+          "錠剤 (Jouzai)",
+          "粉薬 (Konagusuri)",
+          "シロップ (Shiroppu)",
+          "目薬 (Megusuri)"
+        ],
+        "correct": "錠剤 (Jouzai)",
+        "feedback": "'錠剤 (Jouzai)' adalah obat berbentuk tablet atau pil.",
+        "image": "Apotek1-32.jpg"
+      },
+      {
+        "question": "Apa sebutan untuk 'obat oles'?",
+        "answers": [
+          "飲み薬 (Nomigusuri)",
+          "塗り薬 (Nurigusuri)",
+          "貼り薬 (Harigusuri)",
+          "目薬 (Megusuri)"
+        ],
+        "correct": "塗り薬 (Nurigusuri)",
+        "feedback": "'塗り薬 (Nurigusuri)' berasal dari kata kerja '塗る (nuru)' yang berarti mengoleskan.",
+        "image": "Apotek1-33.jpg"
+      },
+      {
+        "question": "'Obat tetes mata' dalam bahasa Jepang adalah...",
+        "answers": [
+          "目薬 (Megusuri)",
+          "鼻薬 (Hanagusuri)",
+          "耳薬 (Mimigusuri)",
+          "風邪薬 (Kazegusuri)"
+        ],
+        "correct": "目薬 (Megusuri)",
+        "feedback": "'目薬 (Megusuri)' gabungan dari kanji 'mata' (目) dan 'obat' (薬).",
+        "image": "Apotek1-34.jpg"
+      },
+      {
+        "question": "Kata untuk 'ruang tunggu' adalah...",
+        "answers": [
+          "待合室 (Machiaishitsu)",
+          "診察室 (Shinsatsushitsu)",
+          "手術室 (Shujutsushitsu)",
+          "病室 (Byoushitsu)"
+        ],
+        "correct": "待合室 (Machiaishitsu)",
+        "feedback": "'待合室 (Machiaishitsu)' adalah tempat pasien menunggu giliran dipanggil.",
+        "image": "Apotek1-35.jpg"
+      },
+      {
+        "question": "Bagaimana Anda menyebut 'ruang periksa'?",
+        "answers": [
+          "待合室 (Machiaishitsu)",
+          "診察室 (Shinsatsushitsu)",
+          "受付 (Uketsuke)",
+          "薬局 (Yakkyoku)"
+        ],
+        "correct": "診察室 (Shinsatsushitsu)",
+        "feedback": "'診察室 (Shinsatsushitsu)' adalah ruangan tempat dokter memeriksa pasien.",
+        "image": "Apotek1-36.jpg"
+      },
+      {
+        "question": "Apa bahasa Jepang untuk 'darah'?",
+        "answers": [
+          "血 (Chi)",
+          "汗 (Ase)",
+          "涙 (Namida)",
+          "骨 (Hone)"
+        ],
+        "correct": "血 (Chi)",
+        "feedback": "'血 (Chi)' berarti darah. Tes darah adalah '血液検査 (ketsueki kensa)'.",
+        "image": "Apotek1-37.jpg"
+      },
+      {
+        "question": "Kata untuk 'tangan' adalah...",
+        "answers": [
+          "足 (Ashi)",
+          "手 (Te)",
+          "腕 (Ude)",
+          "指 (Yubi)"
+        ],
+        "correct": "手 (Te)",
+        "feedback": "'手 (Te)' adalah tangan. 'Ashi' adalah kaki/tungkai.",
+        "image": "Apotek1-38.jpg"
+      },
+      {
+        "question": "Bagaimana cara mengatakan 'kaki'?",
+        "answers": [
+          "手 (Te)",
+          "腕 (Ude)",
+          "肩 (Kata)",
+          "足 (Ashi)"
+        ],
+        "correct": "足 (Ashi)",
+        "feedback": "'足 (Ashi)' bisa berarti tungkai atau telapak kaki.",
+        "image": "Apotek1-39.jpg"
+      },
+      {
+        "question": "'Pusing' dalam bahasa Jepang adalah...",
+        "answers": [
+          "めまい (Memai)",
+          "吐き気 (Hakike)",
+          "寒気 (Samuke)",
+          "だるい (Darui)"
+        ],
+        "correct": "めまい (Memai)",
+        "feedback": "'めまいがします (Memai ga shimasu)' berarti 'Saya merasa pusing'.",
+        "image": "Apotek1-40.jpg"
+      },
+      {
+        "question": "Apa sebutan untuk 'mual'?",
+        "answers": [
+          "吐き気 (Hakike)",
+          "下痢 (Geri)",
+          "便秘 (Benpi)",
+          "食欲不振 (Shokuyoku fushin)"
+        ],
+        "correct": "吐き気 (Hakike)",
+        "feedback": "'吐き気がします (Hakike ga shimasu)' berarti 'Saya merasa mual'.",
+        "image": "Apotek1-41.jpg"
+      },
+      {
+        "question": "Bahasa Jepang untuk 'diare' adalah...",
+        "answers": [
+          "下痢 (Geri)",
+          "便秘 (Benpi)",
+          "腹痛 (Fukutsuu)",
+          "吐き気 (Hakike)"
+        ],
+        "correct": "下痢 (Geri)",
+        "feedback": "'下痢 (Geri)' adalah diare. Kebalikannya adalah '便秘 (benpi)' atau sembelit.",
+        "image": "Apotek1-42.jpg"
+      },
+      {
+        "question": "Kata untuk 'operasi' adalah...",
+        "answers": [
+          "手術 (Shujutsu)",
+          "注射 (Chuusha)",
+          "入院 (Nyuuin)",
+          "退院 (Taiin)"
+        ],
+        "correct": "手術 (Shujutsu)",
+        "feedback": "'手術 (Shujutsu)' adalah operasi bedah.",
+        "image": "Apotek1-43.jpg"
+      },
+      {
+        "question": "Bagaimana cara menyebut 'rawat inap'?",
+        "answers": [
+          "入院 (Nyuuin)",
+          "退院 (Taiin)",
+          "通院 (Tsuuin)",
+          "外来 (Gairai)"
+        ],
+        "correct": "入院 (Nyuuin)",
+        "feedback": "'入院 (Nyuuin)' berarti masuk rumah sakit untuk dirawat. '退院 (Taiin)' berarti keluar dari rumah sakit.",
+        "image": "Apotek1-44.jpg"
+      },
+      {
+        "question": "'Klinik' dalam bahasa Jepang adalah...",
+        "answers": [
+          "クリニック (Kurinikku)",
+          "病院 (Byouin)",
+          "薬局 (Yakkyoku)",
+          "歯科 (Shika)"
+        ],
+        "correct": "クリニック (Kurinikku)",
+        "feedback": "'クリニック (Kurinikku)' adalah kata serapan untuk klinik, biasanya lebih kecil dari rumah sakit.",
+        "image": "Apotek1-45.jpg"
+      },
+      {
+        "question": "Apa kata untuk 'termometer'?",
+        "answers": [
+          "体温計 (Taionkei)",
+          "体重計 (Taijuukei)",
+          "時計 (Tokei)",
+          "血圧計 (Ketsuatsukei)"
+        ],
+        "correct": "体温計 (Taionkei)",
+        "feedback": "'体温計 (Taionkei)' gabungan dari 'suhu badan' (体温) dan 'alat ukur' (計).",
+        "image": "Apotek1-46.jpg"
+      },
+      {
+        "question": "Bagaimana Anda menyebut 'gejala'?",
+        "answers": [
+          "症状 (Shoujou)",
+          "原因 (Gen'in)",
+          "結果 (Kekka)",
+          "状態 (Joutai)"
+        ],
+        "correct": "症状 (Shoujou)",
+        "feedback": "'症状 (Shoujou)' adalah gejala penyakit yang Anda rasakan.",
+        "image": "Apotek1-47.jpg"
+      },
+      {
+        "question": "Kata untuk 'kesehatan' adalah...",
+        "answers": [
+          "健康 (Kenkou)",
+          "病気 (Byouki)",
+          "元気 (Genki)",
+          "気分 (Kibun)"
+        ],
+        "correct": "健康 (Kenkou)",
+        "feedback": "'健康 (Kenkou)' berarti kesehatan. 'Genki' lebih berarti 'sehat/bersemangat'.",
+        "image": "Apotek1-48.jpg"
+      },
+      {
+        "question": "Bahasa Jepang untuk 'hati-hati' adalah...",
+        "answers": [
+          "お大事に (Odaiji ni)",
+          "気をつけて (Ki o tsukete)",
+          "頑張って (Ganbatte)",
+          "お疲れ様 (Otsukaresama)"
+        ],
+        "correct": "気をつけて (Ki o tsukete)",
+        "feedback": "'気をつけて (Ki o tsukete)' berarti 'hati-hati'. 'お大事に (Odaiji ni)' berarti 'semoga lekas sembuh'.",
+        "image": "Apotek1-49.jpg"
+      },
+      {
+        "question": "Apa sebutan untuk 'semoga lekas sembuh'?",
+        "answers": [
+          "お大事に (Odaiji ni)",
+          "さようなら (Sayounara)",
+          "おめでとう (Omedetou)",
+          "すみません (Sumimasen)"
+        ],
+        "correct": "お大事に (Odaiji ni)",
+        "feedback": "'お大事に (Odaiji ni)' adalah ucapan yang diberikan kepada orang yang sakit.",
+        "image": "Apotek1-50.jpg"
+      }
+    ]
+  },
+  "apotek_level2": {
+    "answers": [
+      {
+        "question": "Bagaimana cara mengatakan 'Saya tidak enak badan'?",
+        "answers": [
+          "気分が悪いです (Kibun ga warui desu)",
+          "元気です (Genki desu)",
+          "お腹が空きました (Onaka ga sukimashita)",
+          "大丈夫です (Daijoubu desu)"
+        ],
+        "correct": "気分が悪いです (Kibun ga warui desu)",
+        "feedback": "Ini adalah frasa umum untuk menyatakan Anda merasa tidak sehat secara keseluruhan.",
+        "image": "Apotek2-01.jpg"
+      },
+      {
+        "question": "Untuk mengatakan 'Kepala saya sakit', Anda bilang...",
+        "answers": [
+          "頭が痛いです (Atama ga itai desu)",
+          "お腹が痛いです (Onaka ga itai desu)",
+          "歯が痛いです (Ha ga itai desu)",
+          "喉が痛いです (Nodo ga itai desu)"
+        ],
+        "correct": "頭が痛いです (Atama ga itai desu)",
+        "feedback": "Pola '...が痛いです (...ga itai desu)' digunakan untuk menyatakan rasa sakit pada bagian tubuh.",
+        "image": "Apotek2-02.jpg"
+      },
+      {
+        "question": "Bagaimana cara mengatakan 'Saya demam'?",
+        "answers": [
+          "熱があります (Netsu ga arimasu)",
+          "咳が出ます (Seki ga demasu)",
+          "鼻水が出ます (Hanamizu ga demasu)",
+          "寒気がします (Samuke ga shimasu)"
+        ],
+        "correct": "熱があります (Netsu ga arimasu)",
+        "feedback": "'...があります (...ga arimasu)' berarti 'ada...' atau 'saya punya...'.",
+        "image": "Apotek2-03.jpg"
+      },
+      {
+        "question": "Untuk meminta obat sakit kepala, 'Tolong beri saya obat sakit kepala.'",
+        "answers": [
+          "頭痛薬をください (Zutsuuyaku o kudasai)",
+          "風邪薬をください (Kazegusuri o kudasai)",
+          "胃薬をください (Igusuri o kudasai)",
+          "目薬をください (Megusuri o kudasai)"
+        ],
+        "correct": "頭痛薬をください (Zutsuuyaku o kudasai)",
+        "feedback": "Nama obat seringkali gabungan dari gejala dan kata 'obat' (薬, kusuri/yaku).",
+        "image": "Apotek2-04.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Di mana apotek?'",
+        "answers": [
+          "薬局はどこですか (Yakkyoku wa doko desu ka)",
+          "病院はどこですか (Byouin wa doko desu ka)",
+          "受付はどこですか (Uketsuke wa doko desu ka)",
+          "トイレはどこですか (Toire wa doko desu ka)"
+        ],
+        "correct": "薬局はどこですか (Yakkyoku wa doko desu ka)",
+        "feedback": "'...はどこですか (...wa doko desu ka)' adalah cara bertanya 'Di mana...?'.",
+        "image": "Apotek2-05.jpg"
+      },
+      {
+        "question": "Saat di resepsionis, Anda menyerahkan kartu asuransi sambil berkata...",
+        "answers": [
+          "保険証をお願いします (Hokenshou o onegai shimasu)",
+          "処方箋をお願いします (Shohousen o onegai shimasu)",
+          "予約をしています (Yoyaku o shite imasu)",
+          "初めてです (Hajimete desu)"
+        ],
+        "correct": "保険証をお願いします (Hokenshou o onegai shimasu)",
+        "feedback": "Ini adalah cara sopan untuk menyerahkan kartu asuransi Anda untuk diproses.",
+        "image": "Apotek2-06.jpg"
+      },
+      {
+        "question": "Untuk mengatakan 'Ini pertama kalinya saya ke sini.'",
+        "answers": [
+          "初めてです (Hajimete desu)",
+          "また来ました (Mata kimashita)",
+          "予約があります (Yoyaku ga arimasu)",
+          "紹介状があります (Shoukaijou ga arimasu)"
+        ],
+        "correct": "初めてです (Hajimete desu)",
+        "feedback": "Rumah sakit akan menanyakan ini untuk mengetahui apakah mereka perlu membuatkan kartu pasien baru untuk Anda.",
+        "image": "Apotek2-07.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Kapan saya harus minum obat ini?'",
+        "answers": [
+          "この薬はいつ飲みますか (Kono kusuri wa itsu nomimasu ka)",
+          "この薬は何ですか (Kono kusuri wa nan desu ka)",
+          "この薬はいくらですか (Kono kusuri wa ikura desu ka)",
+          "この薬はどこで買えますか (Kono kusuri wa doko de kaemasu ka)"
+        ],
+        "correct": "この薬はいつ飲みますか (Kono kusuri wa itsu nomimasu ka)",
+        "feedback": "'いつ (Itsu)' adalah kata tanya untuk 'kapan'.",
+        "image": "Apotek2-08.jpg"
+      },
+      {
+        "question": "Apoteker berkata 'Minum setelah makan.'",
+        "answers": [
+          "食後に飲んでください (Shokugo ni nonde kudasai)",
+          "食前に飲んでください (Shokuzen ni nonde kudasai)",
+          "食間に飲んでください (Shokkan ni nonde kudasai)",
+          "寝る前に飲んでください (Neru mae ni nonde kudasai)"
+        ],
+        "correct": "食後に飲んでください (Shokugo ni nonde kudasai)",
+        "feedback": "'食後 (Shokugo)' berarti setelah makan. '食前 (Shokuzen)' berarti sebelum makan.",
+        "image": "Apotek2-09.jpg"
+      },
+      {
+        "question": "Untuk mengatakan 'Saya alergi serbuk bunga.'",
+        "answers": [
+          "花粉症です (Kafunshou desu)",
+          "風邪です (Kaze desu)",
+          "猫アレルギーです (Neko arerugii desu)",
+          "食べ物アレルギーです (Tabemono arerugii desu)"
+        ],
+        "correct": "花粉症です (Kafunshou desu)",
+        "feedback": "'花粉症 (Kafunshou)' atau demam jerami adalah alergi yang sangat umum di Jepang pada musim semi.",
+        "image": "Apotek2-10.jpg"
+      },
+      {
+        "question": "Bagaimana cara meminta 'Tolong panggilkan ambulans'?",
+        "answers": [
+          "救急車を呼んでください (Kyuukyuusha o yonde kudasai)",
+          "警察を呼んでください (Keisatsu o yonde kudasai)",
+          "タクシーを呼んでください (Takushii o yonde kudasai)",
+          "医者を呼んでください (Isha o yonde kudasai)"
+        ],
+        "correct": "救急車を呼んでください (Kyuukyuusha o yonde kudasai)",
+        "feedback": "Ini adalah frasa darurat yang penting. Ucapkan dengan jelas kepada orang di sekitar Anda.",
+        "image": "Apotek2-11.jpg"
+      },
+      {
+        "question": "Untuk mengatakan 'Tenggorokan saya sakit.'",
+        "answers": [
+          "喉が痛いです (Nodo ga itai desu)",
+          "耳が痛いです (Mimi ga itai desu)",
+          "目が痛いです (Me ga itai desu)",
+          "胸が痛いです (Mune ga itai desu)"
+        ],
+        "correct": "喉が痛いです (Nodo ga itai desu)",
+        "feedback": "Gunakan pola 'Bagian tubuh + が痛いです (ga itai desu)'.",
+        "image": "Apotek2-12.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Departemen mana yang harus saya tuju?'",
+        "answers": [
+          "何科に行けばいいですか (Nani-ka ni ikeba ii desu ka)",
+          "内科はどこですか (Naika wa doko desu ka)",
+          "外科はどこですか (Geka wa doko desu ka)",
+          "ここは何科ですか (Koko wa nani-ka desu ka)"
+        ],
+        "correct": "何科に行けばいいですか (Nani-ka ni ikeba ii desu ka)",
+        "feedback": "'何科 (Nani-ka)' berarti 'departemen apa'. '内科 (naika)' adalah penyakit dalam, '外科 (geka)' adalah bedah.",
+        "image": "Apotek2-13.jpg"
+      },
+      {
+        "question": "Untuk menyerahkan resep di apotek, 'Tolong ini resepnya.'",
+        "answers": [
+          "処方箋をお願いします (Shohousen o onegai shimasu)",
+          "保険証をお願いします (Hokenshou o onegai shimasu)",
+          "お薬手帳をお願いします (Okusuri techou o onegai shimasu)",
+          "診察券をお願いします (Shinsatsuken o onegai shimasu)"
+        ],
+        "correct": "処方箋をお願いします (Shohousen o onegai shimasu)",
+        "feedback": "Serahkan resep Anda di konter apotek dengan mengatakan ini.",
+        "image": "Apotek2-14.jpg"
+      },
+      {
+        "question": "Apoteker bertanya, 'Apakah Anda punya buku catatan obat?'",
+        "answers": [
+          "お薬手帳はお持ちですか (Okusuri techou wa omochi desu ka)",
+          "処方箋はありますか (Shohousen wa arimasu ka)",
+          "アレルギーはありますか (Arerugii wa arimasu ka)",
+          "他に薬を飲んでいますか (Hoka ni kusuri o nonde imasu ka)"
+        ],
+        "correct": "お薬手帳はお持ちですか (Okusuri techou wa omochi desu ka)",
+        "feedback": "'お薬手帳 (Okusuri techou)' adalah buku kecil untuk mencatat riwayat obat resep Anda.",
+        "image": "Apotek2-15.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Apakah obat ini harus diminum sebelum makan?'",
+        "answers": [
+          "この薬は食前ですか (Kono kusuri wa shokuzen desu ka)",
+          "この薬は食後ですか (Kono kusuri wa shokugo desu ka)",
+          "この薬は毎日ですか (Kono kusuri wa mainichi desu ka)",
+          "この薬は痛いですか (Kono kusuri wa itai desu ka)"
+        ],
+        "correct": "この薬は食前ですか (Kono kusuri wa shokuzen desu ka)",
+        "feedback": "'食前 (Shokuzen)' berarti sebelum makan. '食後 (Shokugo)' berarti setelah makan.",
+        "image": "Apotek2-16.jpg"
+      },
+      {
+        "question": "Untuk mengatakan 'Saya merasa kedinginan/meriang.'",
+        "answers": [
+          "寒気がします (Samuke ga shimasu)",
+          "汗をかきます (Ase o kakimasu)",
+          "体が熱いです (Karada ga atsui desu)",
+          "眠いです (Nemui desu)"
+        ],
+        "correct": "寒気がします (Samuke ga shimasu)",
+        "feedback": "'寒気がします (Samuke ga shimasu)' adalah gejala umum saat akan demam.",
+        "image": "Apotek2-17.jpg"
+      },
+      {
+        "question": "Bagaimana cara mengatakan 'Saya punya janji jam 3.'",
+        "answers": [
+          "三時に予約があります (San-ji ni yoyaku ga arimasu)",
+          "今三時です (Ima san-ji desu)",
+          "三時間かかりますか (San-jikan kakarimasu ka)",
+          "三時に来てください (San-ji ni kite kudasai)"
+        ],
+        "correct": "三時に予約があります (San-ji ni yoyaku ga arimasu)",
+        "feedback": "Sebutkan ini di resepsionis saat Anda tiba di rumah sakit atau klinik.",
+        "image": "Apotek2-18.jpg"
+      },
+      {
+        "question": "Dokter bertanya, 'Sakitnya di sebelah mana?'",
+        "answers": [
+          "どこが痛いですか (Doko ga itai desu ka)",
+          "いつから痛いですか (Itsu kara itai desu ka)",
+          "どうして痛いですか (Doushite itai desu ka)",
+          "誰が痛いですか (Dare ga itai desu ka)"
+        ],
+        "correct": "どこが痛いですか (Doko ga itai desu ka)",
+        "feedback": "Anda bisa menjawab dengan menunjuk bagian yang sakit dan berkata 'ここです (Koko desu)' yang berarti 'Di sini'.",
+        "image": "Apotek2-19.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Berapa kali sehari saya harus minum ini?'",
+        "answers": [
+          "一日に何回飲みますか (Ichi-nichi ni nan-kai nomimasu ka)",
+          "一日に何錠飲みますか (Ichi-nichi ni nan-jou nomimasu ka)",
+          "何日間飲みますか (Nan-nichi kan nomimasu ka)",
+          "いつまで飲みますか (Itsu made nomimasu ka)"
+        ],
+        "correct": "一日に何回飲みますか (Ichi-nichi ni nan-kai nomimasu ka)",
+        "feedback": "'何回 (Nan-kai)' berarti 'berapa kali'.",
+        "image": "Apotek2-20.jpg"
+      },
+      {
+        "question": "Apoteker mengatakan 'Ini obat untuk 3 hari.'",
+        "answers": [
+          "三日分のお薬です (Mikka-bun no okusuri desu)",
+          "三回分のお薬です (San-kai bun no okusuri desu)",
+          "三錠のお薬です (San-jou no okusuri desu)",
+          "三種類のお薬です (San-shurui no okusuri desu)"
+        ],
+        "correct": "三日分のお薬です (Mikka-bun no okusuri desu)",
+        "feedback": "'...日分 (...nichi-bun)' berarti 'untuk ... hari'.",
+        "image": "Apotek2-21.jpg"
+      },
+      {
+        "question": "Untuk mengatakan 'Badan saya terasa lemas.'",
+        "answers": [
+          "体がだるいです (Karada ga darui desu)",
+          "体が痛いです (Karada ga itai desu)",
+          "体がแข็งです (Karada ga katai desu)",
+          "体が弱いです (Karada ga yowai desu)"
+        ],
+        "correct": "体がだるいです (Karada ga darui desu)",
+        "feedback": "'だるい (Darui)' adalah kata sifat yang menggambarkan rasa lemas atau lesu di seluruh badan.",
+        "image": "Apotek2-22.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Apakah saya perlu datang lagi?'",
+        "answers": [
+          "また来る必要はありますか (Mata kuru hitsuyou wa arimasu ka)",
+          "いつ来ればいいですか (Itsu kureba ii desu ka)",
+          "もう大丈夫ですか (Mou daijoubu desu ka)",
+          "帰ってもいいですか (Kaette mo ii desu ka)"
+        ],
+        "correct": "また来る必要はありますか (Mata kuru hitsuyou wa arimasu ka)",
+        "feedback": "Dokter akan memberitahu Anda jika perlu ada kunjungan kontrol.",
+        "image": "Apotek2-23.jpg"
+      },
+      {
+        "question": "Untuk mengatakan 'Tolong panggilkan penerjemah.'",
+        "answers": [
+          "通訳をお願いします (Tsuuyaku o onegai shimasu)",
+          "英語を話せますか (Eigo o hanasemasu ka)",
+          "日本語が分かりません (Nihongo ga wakarimasen)",
+          "ゆっくり話してください (Yukkuri hanashite kudasai)"
+        ],
+        "correct": "通訳をお願いします (Tsuuyaku o onegai shimasu)",
+        "feedback": "Rumah sakit besar mungkin memiliki layanan '通訳 (tsuuyaku)' atau penerjemah.",
+        "image": "Apotek2-24.jpg"
+      },
+      {
+        "question": "Dokter berkata 'Tolong istirahat yang cukup.'",
+        "answers": [
+          "ゆっくり休んでください (Yukkuri yasunde kudasai)",
+          "たくさん運動してください (Takusan undou shite kudasai)",
+          "薬を飲んでください (Kusuri o nonde kudasai)",
+          "水をたくさん飲んでください (Mizu o takusan nonde kudasai)"
+        ],
+        "correct": "ゆっくり休んでください (Yukkuri yasunde kudasai)",
+        "feedback": "Ini adalah nasihat umum dari dokter untuk pemulihan.",
+        "image": "Apotek2-25.jpg"
+      },
+      {
+        "question": "Bagaimana cara mengatakan 'Saya sedang hamil.'",
+        "answers": [
+          "妊娠しています (Ninshin shite imasu)",
+          "結婚しています (Kekkon shite imasu)",
+          "アレルギーがあります (Arerugii ga arimasu)",
+          "病気です (Byouki desu)"
+        ],
+        "correct": "妊娠しています (Ninshin shite imasu)",
+        "feedback": "Penting untuk memberitahukan hal ini kepada dokter sebelum menerima obat atau perawatan.",
+        "image": "Apotek2-26.jpg"
+      },
+      {
+        "question": "Untuk bertanya 'Apakah pembayaran bisa dengan kartu kredit?'",
+        "answers": [
+          "クレジットカードは使えますか (Kurejitto kaado wa tsukaemasu ka)",
+          "現金で払います (Genkin de haraimasu)",
+          "保険は使えますか (Hoken wa tsukaemasu ka)",
+          "いくらですか (Ikura desu ka)"
+        ],
+        "correct": "クレジットカードは使えますか (Kurejitto kaado wa tsukaemasu ka)",
+        "feedback": "Banyak rumah sakit dan apotek besar menerima kartu kredit, tetapi klinik kecil mungkin hanya menerima uang tunai.",
+        "image": "Apotek2-27.jpg"
+      },
+      {
+        "question": "Dokter bertanya, 'Sakitnya sejak kapan?'",
+        "answers": [
+          "いつから痛いですか (Itsu kara itai desu ka)",
+          "どこが痛いですか (Doko ga itai desu ka)",
+          "どんな痛みですか (Donna itami desu ka)",
+          "薬を飲みましたか (Kusuri o nomimashita ka)"
+        ],
+        "correct": "いつから痛いですか (Itsu kara itai desu ka)",
+        "feedback": "Anda bisa menjawab '昨日からです (Kinou kara desu)' (sejak kemarin) atau '今朝からです (Kesa kara desu)' (sejak pagi ini).",
+        "image": "Apotek2-28.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Apakah ada efek samping?'",
+        "answers": [
+          "副作用はありますか (Fukusayou wa arimasu ka)",
+          "効果はありますか (Kouka wa arimasu ka)",
+          "これは安全ですか (Kore wa anzen desu ka)",
+          "これは何に効きますか (Kore wa nani ni kikimasu ka)"
+        ],
+        "correct": "副作用はありますか (Fukusayou wa arimasu ka)",
+        "feedback": "'副作用 (Fukusayou)' berarti efek samping. Apoteker akan menjelaskannya kepada Anda.",
+        "image": "Apotek2-29.jpg"
+      },
+      {
+        "question": "Untuk mengatakan 'Tolong ukur suhu badan saya.'",
+        "answers": [
+          "体温を測ってください (Taion o hakatte kudasai)",
+          "血圧を測ってください (Ketsuatsu o hakatte kudasai)",
+          "体重を測ってください (Taijuu o hakatte kudasai)",
+          "身長を測ってください (Shinchou o hakatte kudasai)"
+        ],
+        "correct": "体温を測ってください (Taion o hakatte kudasai)",
+        "feedback": "'測ってください (Hakatte kudasai)' berarti 'tolong ukur'.",
+        "image": "Apotek2-30.jpg"
+      },
+      {
+        "question": "Bagaimana cara mengatakan 'Saya batuk dan pilek.'",
+        "answers": [
+          "咳と鼻水が出ます (Seki to hanamizu ga demasu)",
+          "熱と頭痛がします (Netsu to zutsuu ga shimasu)",
+          "めまいと吐き気がします (Memai to hakike ga shimasu)",
+          "下痢と腹痛です (Geri to fukutsuu desu)"
+        ],
+        "correct": "咳と鼻水が出ます (Seki to hanamizu ga demasu)",
+        "feedback": "Gunakan partikel 'と (to)' yang berarti 'dan' untuk menghubungkan beberapa gejala.",
+        "image": "Apotek2-31.jpg"
+      },
+      {
+        "question": "Dokter berkata, 'Tolong buka mulut Anda.'",
+        "answers": [
+          "口を開けてください (Kuchi o akete kudasai)",
+          "目を閉じてください (Me o tojite kudasai)",
+          "息を吸ってください (Iki o sutte kudasai)",
+          "息を止めてください (Iki o tomete kudasai)"
+        ],
+        "correct": "口を開けてください (Kuchi o akete kudasai)",
+        "feedback": "Ini adalah instruksi umum saat dokter akan memeriksa tenggorokan Anda.",
+        "image": "Apotek2-32.jpg"
+      },
+      {
+        "question": "Untuk bertanya 'Apakah saya perlu dirawat di rumah sakit?'",
+        "answers": [
+          "入院は必要ですか (Nyuuin wa hitsuyou desu ka)",
+          "手術は必要ですか (Shujutsu wa hitsuyou desu ka)",
+          "薬は必要ですか (Kusuri wa hitsuyou desu ka)",
+          "安静は必要ですか (Ansei wa hitsuyou desu ka)"
+        ],
+        "correct": "入院は必要ですか (Nyuuin wa hitsuyou desu ka)",
+        "feedback": "'入院 (Nyuuin)' berarti rawat inap.",
+        "image": "Apotek2-33.jpg"
+      },
+      {
+        "question": "Bagaimana cara mengatakan 'Saya alergi terhadap telur.'",
+        "answers": [
+          "卵アレルギーです (Tamago arerugii desu)",
+          "牛乳アレルギーです (Gyuunyuu arerugii desu)",
+          "そばアレルギーです (Soba arerugii desu)",
+          "薬アレルギーです (Kusuri arerugii desu)"
+        ],
+        "correct": "卵アレルギーです (Tamago arerugii desu)",
+        "feedback": "Sebutkan alergen diikuti dengan 'アレルギーです (arerugii desu)'.",
+        "image": "Apotek2-34.jpg"
+      },
+      {
+        "question": "Apoteker berkata, 'Tolong tunggu sampai nama Anda dipanggil.'",
+        "answers": [
+          "お名前が呼ばれるまでお待ちください (O-namae ga yobareru made o-machi kudasai)",
+          "番号札をお取りください (Bangou fuda o o-tori kudasai)",
+          "こちらでお待ちください (Kochira de o-machi kudasai)",
+          "すぐに準備します (Sugu ni junbi shimasu)"
+        ],
+        "correct": "お名前が呼ばれるまでお待ちください (O-namae ga yobareru made o-machi kudasai)",
+        "feedback": "Di apotek, Anda biasanya akan menunggu beberapa saat sampai obat Anda disiapkan.",
+        "image": "Apotek2-35.jpg"
+      },
+      {
+        "question": "Untuk mengatakan 'Saya jatuh dan kaki saya sakit.'",
+        "answers": [
+          "転んで足を痛めました (Koronde ashi o itamemashita)",
+          "階段から落ちました (Kaidan kara ochimashita)",
+          "手を切りました (Te o kirimashita)",
+          "頭を打ちました (Atama o uchimashita)"
+        ],
+        "correct": "転んで足を痛めました (Koronde ashi o itamemashita)",
+        "feedback": "'転んで (Koronde)' berarti 'karena jatuh'. '痛めました (Itamemashita)' berarti 'membuat sakit/mencederai'.",
+        "image": "Apotek2-36.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Klinik gigi terdekat di mana?'",
+        "answers": [
+          "一番近い歯医者はどこですか (Ichiban chikai haisha wa doko desu ka)",
+          "眼科はどこですか (Ganka wa doko desu ka)",
+          "皮膚科はどこですか (Hifuka wa doko desu ka)",
+          "内科はどこですか (Naika wa doko desu ka)"
+        ],
+        "correct": "一番近い歯医者はどこですか (Ichiban chikai haisha wa doko desu ka)",
+        "feedback": "'歯医者 (Haisha)' adalah klinik atau dokter gigi.",
+        "image": "Apotek2-37.jpg"
+      },
+      {
+        "question": "Untuk bertanya 'Apakah obat ini ditanggung asuransi?'",
+        "answers": [
+          "この薬は保険が効きますか (Kono kusuri wa hoken ga kikimasu ka)",
+          "この薬は高いですか (Kono kusuri wa takai desu ka)",
+          "この薬はジェネリックですか (Kono kusuri wa jenerikku desu ka)",
+          "自費ですか (Jihi desu ka)"
+        ],
+        "correct": "この薬は保険が効きますか (Kono kusuri wa hoken ga kikimasu ka)",
+        "feedback": "'保険が効きますか (Hoken ga kikimasu ka)' secara harfiah berarti 'Apakah asuransinya bekerja/berlaku?'.",
+        "image": "Apotek2-38.jpg"
+      },
+      {
+        "question": "Apoteker berkata, 'Ini obat penurun demam.'",
+        "answers": [
+          "解熱剤です (Genetsuzai desu)",
+          "痛み止めです (Itamidome desu)",
+          "咳止めです (Sekidome desu)",
+          "胃薬です (Igusuri desu)"
+        ],
+        "correct": "解熱剤です (Genetsuzai desu)",
+        "feedback": "'解熱剤 (Genetsuzai)' adalah penurun demam. '痛み止め (Itamidome)' adalah pereda nyeri.",
+        "image": "Apotek2-39.jpg"
+      },
+      {
+        "question": "Bagaimana cara mengatakan 'Tolong beri saya obat yang tidak membuat mengantuk.'",
+        "answers": [
+          "眠くならない薬をください (Nemuku naranai kusuri o kudasai)",
+          "よく効く薬をください (Yoku kiku kusuri o kudasai)",
+          "安い薬をください (Yasui kusuri o kudasai)",
+          "子供用の薬をください (Kodomo-you no kusuri o kudasai)"
+        ],
+        "correct": "眠くならない薬をください (Nemuku naranai kusuri o kudasai)",
+        "feedback": "'眠くならない (Nemuku naranai)' berarti 'yang tidak membuat mengantuk'.",
+        "image": "Apotek2-40.jpg"
+      },
+      {
+        "question": "Untuk mengatakan 'Saya tidak punya nafsu makan.'",
+        "answers": [
+          "食欲がありません (Shokuyoku ga arimasen)",
+          "お腹が空きました (Onaka ga sukimashita)",
+          "たくさん食べました (Takusan tabemashita)",
+          "喉が渇きました (Nodo ga kawakimashita)"
+        ],
+        "correct": "食欲がありません (Shokuyoku ga arimasen)",
+        "feedback": "'食欲 (Shokuyoku)' berarti nafsu makan.",
+        "image": "Apotek2-41.jpg"
+      },
+      {
+        "question": "Dokter berkata, 'Mari kita lakukan rontgen.'",
+        "answers": [
+          "レントゲンを撮りましょう (Rentogen o torimashou)",
+          "血液検査をしましょう (Ketsueki kensa o shimashou)",
+          "注射をしましょう (Chuusha o shimashou)",
+          "薬を出します (Kusuri o dashimasu)"
+        ],
+        "correct": "レントゲンを撮りましょう (Rentogen o torimashou)",
+        "feedback": "'レントゲン (Rentogen)' adalah kata serapan untuk rontgen atau X-ray.",
+        "image": "Apotek2-42.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Kapan hasil tesnya keluar?'",
+        "answers": [
+          "検査の結果はいつ出ますか (Kensa no kekka wa itsu demasu ka)",
+          "検査は痛いですか (Kensa wa itai desu ka)",
+          "何の検査ですか (Nan no kensa desu ka)",
+          "検査は終わりましたか (Kensa wa owarimashita ka)"
+        ],
+        "correct": "検査の結果はいつ出ますか (Kensa no kekka wa itsu demasu ka)",
+        "feedback": "'結果 (Kekka)' berarti 'hasil'.",
+        "image": "Apotek2-43.jpg"
+      },
+      {
+        "question": "Untuk mengatakan 'Mata saya merah dan gatal.'",
+        "answers": [
+          "目が赤くて、かゆいです (Me ga akakute, kayui desu)",
+          "目が痛いです (Me ga itai desu)",
+          "目がよく見えません (Me ga yoku miemasen)",
+          "涙が出ます (Namida ga demasu)"
+        ],
+        "correct": "目が赤くて、かゆいです (Me ga akakute, kayui desu)",
+        "feedback": "'赤くて (Akakute)' adalah bentuk -te dari 'merah'. 'かゆい (Kayui)' berarti gatal.",
+        "image": "Apotek2-44.jpg"
+      },
+      {
+        "question": "Apoteker berkata, 'Kocok dahulu sebelum digunakan.'",
+        "answers": [
+          "よく振ってから使ってください (Yoku futte kara tsukatte kudasai)",
+          "冷蔵庫で保管してください (Reizouko de hokan shite kudasai)",
+          "子供の手に届かない場所に置いてください (Kodomo no te ni todokanai basho ni oite kudasai)",
+          "これは一回使い切りです (Kore wa ikkai tsukaikiri desu)"
+        ],
+        "correct": "よく振ってから使ってください (Yoku futte kara tsukatte kudasai)",
+        "feedback": "Ini adalah instruksi umum untuk obat sirup atau suspensi.",
+        "image": "Apotek2-45.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Apakah saya perlu membuat janji?'",
+        "answers": [
+          "予約は必要ですか (Yoyaku wa hitsuyou desu ka)",
+          "予約はできますか (Yoyaku wa dekimasu ka)",
+          "予約がいっぱいです (Yoyaku ga ippai desu)",
+          "予約をキャンセルします (Yoyaku o kyanseru shimasu)"
+        ],
+        "correct": "予約は必要ですか (Yoyaku wa hitsuyou desu ka)",
+        "feedback": "Sebagian besar klinik dan rumah sakit memerlukan '予約 (yoyaku)' atau janji temu.",
+        "image": "Apotek2-46.jpg"
+      },
+      {
+        "question": "Untuk mengatakan 'Tekanan darah saya tinggi.'",
+        "answers": [
+          "血圧が高いです (Ketsuatsu ga takai desu)",
+          "血圧が低いです (Ketsuatsu ga hikui desu)",
+          "血糖値が高いです (Kettouchi ga takai desu)",
+          "コレステロールが高いです (Koresuterooru ga takai desu)"
+        ],
+        "correct": "血圧が高いです (Ketsuatsu ga takai desu)",
+        "feedback": "'血圧 (Ketsuatsu)' adalah tekanan darah.",
+        "image": "Apotek2-47.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Apakah ada dokter yang bisa berbahasa Inggris?'",
+        "answers": [
+          "英語が話せる先生はいますか (Eigo ga hanaseru sensei wa imasu ka)",
+          "日本語しか話せません (Nihongo shika hanasemasen)",
+          "通訳はいますか (Tsuuyaku wa imasu ka)",
+          "英語の問診票はありますか (Eigo no monshinhyou wa arimasu ka)"
+        ],
+        "correct": "英語が話せる先生はいますか (Eigo ga hanaseru sensei wa imasu ka)",
+        "feedback": "Menanyakan ini dapat sangat membantu jika Anda tidak yakin dengan kemampuan bahasa Jepang Anda.",
+        "image": "Apotek2-48.jpg"
+      },
+      {
+        "question": "Untuk mengatakan 'Saya butuh surat keterangan dokter.'",
+        "answers": [
+          "診断書が必要です (Shindansho ga hitsuyou desu)",
+          "処方箋が必要です (Shohousen ga hitsuyou desu)",
+          "領収書が必要です (Ryoushuusho ga hitsuyou desu)",
+          "紹介状が必要です (Shoukaijou ga hitsuyou desu)"
+        ],
+        "correct": "診断書が必要です (Shindansho ga hitsuyou desu)",
+        "feedback": "'診断書 (Shindansho)' adalah surat keterangan dokter, yang mungkin diperlukan untuk kantor atau sekolah.",
+        "image": "Apotek2-49.jpg"
+      },
+      {
+        "question": "Setelah diperiksa, dokter akan berkata 'Semoga lekas sembuh.'",
+        "answers": [
+          "お大事に (Odaiji ni)",
+          "お疲れ様でした (Otsukaresama deshita)",
+          "ありがとうございました (Arigatou gozaimashita)",
+          "またどうぞ (Mata douzo)"
+        ],
+        "correct": "お大事に (Odaiji ni)",
+        "feedback": "Ini adalah ucapan standar untuk mengakhiri konsultasi medis.",
+        "image": "Apotek2-50.jpg"
+      }
+    ]
+  },
+  "apotek_level3": {
+    "answers": [
+      {
+        "question": "Bagaimana cara menjelaskan 'Sakitnya seperti ditusuk-tusuk di perut bagian kanan.'?",
+        "answers": [
+          "右のお腹がズキズキ痛みます (Migi no onaka ga zukizuki itamimasu)",
+          "右のお腹がチクチク痛みます (Migi no onaka ga chikuchiku itamimasu)",
+          "お腹全体が重いです (Onaka zentai ga omoi desu)",
+          "お腹の調子が悪いです (Onaka no choushi ga warui desu)"
+        ],
+        "correct": "右のお腹がチクチク痛みます (Migi no onaka ga chikuchiku itamimasu)",
+        "feedback": "Bahasa Jepang memiliki banyak onomatope untuk menggambarkan rasa sakit. 'チクチク (chikuchiku)' seperti ditusuk jarum, 'ズキズキ (zukizuki)' seperti berdenyut.",
+        "image": "Apotek3-01.jpg"
+      },
+      {
+        "question": "Kalimat 'Saya alergi penisilin, jadi tolong jangan resepkan obat itu.'",
+        "answers": [
+          "ペニシリンのアレルギーがあるので、その薬は出さないでください (Penishirin no arerugii ga aru node, sono kusuri wa dasanaide kudasai)",
+          "ペニシリンを飲んでも大丈夫です (Penishirin o nonde mo daijoubu desu)",
+          "ペニシリンはよく効きますか (Penishirin wa yoku kikimasu ka)",
+          "アレルギーはありませんが、ペニシリンは嫌いです (Arerugii wa arimasen ga, penishirin wa kirai desu)"
+        ],
+        "correct": "ペニシリンのアレルギーがあるので、その薬は出さないでください (Penishirin no arerugii ga aru node, sono kusuri wa dasanaide kudasai)",
+        "feedback": "Menyampaikan informasi alergi obat sangatlah penting untuk keselamatan Anda.",
+        "image": "Apotek3-02.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Apakah obat generik yang lebih murah tersedia untuk resep ini?'",
+        "answers": [
+          "この処方で、もっと安いジェネリック医薬品はありますか (Kono shohou de, motto yasui jenerikku iyakuhin wa arimasu ka)",
+          "この薬は高いですか、安いですか (Kono kusuri wa takai desu ka, yasui desu ka)",
+          "ジェネリックは効きませんか (Jenerikku wa kikimasen ka)",
+          "先発医薬品をください (Senpatsu iyakuhin o kudasai)"
+        ],
+        "correct": "この処方で、もっと安いジェネリック医薬品はありますか (Kono shohou de, motto yasui jenerikku iyakuhin wa arimasu ka)",
+        "feedback": "'ジェネリック医薬品 (Jenerikku iyakuhin)' adalah obat generik, yang memiliki bahan aktif sama dengan obat paten ('先発医薬品, senpatsu iyakuhin') tetapi lebih murah.",
+        "image": "Apotek3-03.jpg"
+      },
+      {
+        "question": "'Saya minum obat tekanan darah tinggi setiap hari. Apakah tidak apa-apa minum obat flu ini bersamaan?'",
+        "answers": [
+          "毎日高血圧の薬を飲んでいますが、この風邪薬と一緒に飲んでも大丈夫ですか (Mainichi kouketsuatsu no kusuri o nonde imasu ga, kono kazegusuri to issho ni nonde mo daijoubu desu ka)",
+          "薬の飲み合わせは気にしません (Kusuri no nomiawase wa ki ni shimasen)",
+          "高血圧の薬は今日休みます (Kouketsuatsu no kusuri wa kyou yasumimasu)",
+          "風邪薬は要りません (Kazegusuri wa irimasen)"
+        ],
+        "correct": "毎日高血圧の薬を飲んでいますが、この風邪薬と一緒に飲んでも大丈夫ですか (Mainichi kouketsuatsu no kusuri o nonde imasu ga, kono kazegusuri to issho ni nonde mo daijoubu desu ka)",
+        "feedback": "Interaksi obat ('飲み合わせ, nomiawase') adalah hal yang penting untuk ditanyakan kepada dokter atau apoteker.",
+        "image": "Apotek3-04.jpg"
+      },
+      {
+        "question": "Bagaimana cara mengatakan 'Saya perlu surat rujukan untuk ke rumah sakit universitas.'?",
+        "answers": [
+          "大学病院へ行くための紹介状が必要です (Daigaku byouin e iku tame no shoukaijou ga hitsuyou desu)",
+          "大学病院に予約しました (Daigaku byouin ni yoyaku shimashita)",
+          "紹介状は要りません (Shoukaijou wa irimasen)",
+          "近くのクリニックに行きます (Chikaku no kurinikku ni ikimasu)"
+        ],
+        "correct": "大学病院へ行くための紹介状が必要です (Daigaku byouin e iku tame no shoukaijou ga hitsuyou desu)",
+        "feedback": "Untuk berobat di rumah sakit besar, Anda seringkali memerlukan '紹介状 (shoukaijou)' atau surat rujukan dari klinik kecil untuk menghindari biaya tambahan.",
+        "image": "Apotek3-05.jpg"
+      },
+      {
+        "question": "'Bisakah Anda memberikan saya obat yang sama dengan yang saya terima sebelumnya?'",
+        "answers": [
+          "前回と同じ薬を出してもらえますか (Zenkai to onaji kusuri o dashite moraemasu ka)",
+          "新しい薬を試したいです (Atarashii kusuri o tameshitai desu)",
+          "薬はもう要りません (Kusuri wa mou irimasen)",
+          "前回の薬は効きませんでした (Zenkai no kusuri wa kikimasen deshita)"
+        ],
+        "correct": "前回と同じ薬を出してもらえますか (Zenkai to onaji kusuri o dashite moraemasu ka)",
+        "feedback": "'前回 (Zenkai)' berarti 'terakhir kali'. Ini berguna jika Anda cocok dengan obat sebelumnya.",
+        "image": "Apotek3-06.jpg"
+      },
+      {
+        "question": "'Gejalanya membaik, haruskah saya tetap menghabiskan antibiotik ini?'",
+        "answers": [
+          "症状は良くなりましたが、この抗生物質は最後まで飲むべきですか (Shoujou wa yoku narimashita ga, kono kouseibusshitsu wa saigo made nomu beki desu ka)",
+          "良くなったので、薬をやめます (Yoku natta node, kusuri o yamemasu)",
+          "抗生物質は嫌いです (Kouseibusshitsu wa kirai desu)",
+          "もっと強い薬をください (Motto tsuyoi kusuri o kudasai)"
+        ],
+        "correct": "症状は良くなりましたが、この抗生物質は最後まで飲むべきですか (Shoujou wa yoku narimashita ga, kono kouseibusshitsu wa saigo made nomu beki desu ka)",
+        "feedback": "Sangat penting untuk menghabiskan '抗生物質 (kouseibusshitsu)' atau antibiotik sesuai resep, bahkan jika gejalanya sudah membaik.",
+        "image": "Apotek3-07.jpg"
+      },
+      {
+        "question": "'Saya akan bepergian selama 2 minggu, bisakah saya mendapatkan resep untuk periode tersebut?'",
+        "answers": [
+          "二週間旅行に行くので、その分の薬を処方していただけますか (Ni-shuukan ryokou ni iku node, sono bun no kusuri o shohou shite itadakemasu ka)",
+          "旅行中は薬を飲みません (Ryokou-chuu wa kusuri o nomimasen)",
+          "薬が足りなくなります (Kusuri ga tarinaku narimasu)",
+          "海外で薬を買います (Kaigai de kusuri o kaimasu)"
+        ],
+        "correct": "二週間旅行に行くので、その分の薬を処方していただけますか (Ni-shuukan ryokou ni iku node, sono bun no kusuri o shohou shite itadakemasu ka)",
+        "feedback": "Jelaskan situasi Anda kepada dokter. Biasanya mereka bisa meresepkan obat untuk jangka waktu yang lebih lama jika diperlukan.",
+        "image": "Apotek3-08.jpg"
+      },
+      {
+        "question": "'Tolong jelaskan cara menggunakan inhaler ini.'",
+        "answers": [
+          "この吸入器の使い方を説明してください (Kono kyuunyuuki no tsukaikata o setsumei shite kudasai)",
+          "これは何のための薬ですか (Kore wa nan no tame no kusuri desu ka)",
+          "一日何回吸いますか (Ichi-nichi nan-kai suimasu ka)",
+          "これは初めて使います (Kore wa hajimete tsukaimasu)"
+        ],
+        "correct": "この吸入器の使い方を説明してください (Kono kyuunyuuki no tsukaikata o setsumei shite kudasai)",
+        "feedback": "'吸入器 (Kyuunyuuki)' adalah inhaler. Jangan ragu meminta apoteker untuk mendemonstrasikan cara pakainya.",
+        "image": "Apotek3-09.jpg"
+      },
+      {
+        "question": "Bagaimana cara bertanya 'Apakah saya bisa mendapatkan salinan hasil tes darah saya?'",
+        "answers": [
+          "血液検査の結果のコピーをもらえますか (Ketsueki kensa no kekka no kopii o moraemasu ka)",
+          "検査結果はいつ分かりますか (Kensa kekka wa itsu wakarimasu ka)",
+          "結果は正常でしたか (Kekka wa seijou deshita ka)",
+          "もう一度検査してください (Mou ichido kensa shite kudasai)"
+        ],
+        "correct": "血液検査の結果のコピーをもらえますか (Ketsueki kensa no kekka no kopii o moraemasu ka)",
+        "feedback": "Anda berhak meminta salinan data medis Anda untuk catatan pribadi.",
+        "image": "Apotek3-10.jpg"
+      },
+      {
+        "question": "'Saya dijadwalkan untuk operasi kecil minggu depan, apa saja yang perlu saya persiapkan?'",
+        "answers": [
+          "来週簡単な手術の予定ですが、何か準備は必要ですか (Raishuu kantan na shujutsu no yotei desu ga, nani ka junbi wa hitsuyou desu ka)",
+          "手術は怖いです (Shujutsu wa kowai desu)",
+          "手術をキャンセルしたいです (Shujutsu o kyanseru shitai desu)",
+          "手術後、いつ退院できますか (Shujutsugo, itsu taiin dekimasu ka)"
+        ],
+        "correct": "来週簡単な手術の予定ですが、何か準備は必要ですか (Raishuu kantan na shujutsu no yotei desu ga, nani ka junbi wa hitsuyou desu ka)",
+        "feedback": "Rumah sakit akan memberikan daftar persiapan, seperti puasa atau barang-barang yang perlu dibawa.",
+        "image": "Apotek3-11.jpg"
+      },
+      {
+        "question": "'Bisakah Anda menuliskan nama penyakit saya dalam bahasa Jepang dan Inggris?'",
+        "answers": [
+          "私の病名を日本語と英語で書いていただけますか (Watashi no byoumei o nihongo to eigo de kaite itadakemasu ka)",
+          "私の病気は重いですか (Watashi no byouki wa omoi desu ka)",
+          "この病気は治りますか (Kono byouki wa naorimasu ka)",
+          "病名を教えてください (Byoumei o oshiete kudasai)"
+        ],
+        "correct": "私の病名を日本語と英語で書いていただけますか (Watashi no byoumei o nihongo to eigo de kaite itadakemasu ka)",
+        "feedback": "Ini sangat berguna untuk keperluan asuransi perjalanan atau jika Anda perlu berobat lagi di negara asal.",
+        "image": "Apotek3-12.jpg"
+      },
+      {
+        "question": "'Setelah minum obat ini, saya merasa sangat mengantuk. Apakah ini normal?'",
+        "answers": [
+          "この薬を飲んだ後、とても眠くなります。これは普通ですか (Kono kusuri o nonda ato, totemo nemuku narimasu. Kore wa futsuu desu ka)",
+          "この薬は効いていません (Kono kusuri wa kiite imasen)",
+          "薬の量を減らしてもいいですか (Kusuri no ryou o herashite mo ii desu ka)",
+          "この薬は飲みたくないです (Kono kusuri wa nomitakunai desu)"
+        ],
+        "correct": "この薬を飲んだ後、とても眠くなります。これは普通ですか (Kono kusuri o nonda ato, totemo nemuku narimasu. Kore wa futsuu desu ka)",
+        "feedback": "Mengantuk adalah efek samping umum dari banyak obat. Jika sangat mengganggu, konsultasikan dengan apoteker.",
+        "image": "Apotek3-13.jpg"
+      },
+      {
+        "question": "'Saya ingin membuat janji untuk pemeriksaan kesehatan tahunan (medical check-up).'",
+        "answers": [
+          "健康診断の予約をしたいのですが (Kenkou shindan no yoyaku o shitai no desu ga)",
+          "人間ドックを受けたいです (Ningen dokku o uketai desu)",
+          "体の調子が悪いです (Karada no choushi ga warui desu)",
+          "会社の健康診断はいつですか (Kaisha no kenkou shindan wa itsu desu ka)"
+        ],
+        "correct": "健康診断の予約をしたいのですが (Kenkou shindan no yoyaku o shitai no desu ga)",
+        "feedback": "'健康診断 (Kenkou shindan)' adalah medical check-up standar. '人間ドック (Ningen dokku)' adalah pemeriksaan yang lebih komprehensif.",
+        "image": "Apotek3-14.jpg"
+      },
+      {
+        "question": "'Apakah ada batasan makanan atau aktivitas setelah menerima vaksin ini?'",
+        "answers": [
+          "このワクチンを接種した後、食事や運動に制限はありますか (Kono wakuchin o sesshu shita ato, shokuji ya undou ni seigen wa arimasu ka)",
+          "お風呂に入ってもいいですか (Ofuro ni haitte mo ii desu ka)",
+          "お酒を飲んでもいいですか (Osake o nonde mo ii desu ka)",
+          "副作用はありますか (Fukusayou wa arimasu ka)"
+        ],
+        "correct": "このワクチンを接種した後、食事や運動に制限はありますか (Kono wakuchin o sesshu shita ato, shokuji ya undou ni seigen wa arimasu ka)",
+        "feedback": "Biasanya disarankan untuk menghindari aktivitas berat dan alkohol pada hari vaksinasi.",
+        "image": "Apotek3-15.jpg"
+      },
+      {
+        "question": "'Bisakah Anda memberikan perban tahan air untuk luka ini?'",
+        "answers": [
+          "この傷用に、防水の絆創膏をいただけますか (Kono kizu you ni, bousui no bansoukou o itadakemasu ka)",
+          "普通の絆創膏でいいです (Futsuu no bansoukou de ii desu)",
+          "傷が深いです (Kizu ga fukai desu)",
+          "消毒液はありますか (Shoudokueki wa arimasu ka)"
+        ],
+        "correct": "この傷用に、防水の絆創膏をいただけますか (Kono kizu you ni, bousui no bansoukou o itadakemasu ka)",
+        "feedback": "'防水 (Bousui)' berarti 'tahan air'. Ini berguna agar luka tidak basah saat mandi.",
+        "image": "Apotek3-16.jpg"
+      },
+      {
+        "question": "'Saya lupa minum obat pagi ini, haruskah saya minum dosis ganda sekarang?'",
+        "answers": [
+          "今朝薬を飲み忘れました。今、二回分飲んだほうがいいですか (Kesa kusuri o nomiwasuremashita. Ima, ni-kai bun nonda hou ga ii desu ka)",
+          "薬を飲む時間を間違えました (Kusuri o nomu jikan o machigaemashita)",
+          "一日一回でいいですか (Ichi-nichi ikkai de ii desu ka)",
+          "この薬はもう飲みません (Kono kusuri wa mou nomimasen)"
+        ],
+        "correct": "今朝薬を飲み忘れました。今、二回分飲んだほうがいいですか (Kesa kusuri o nomiwasuremashita. Ima, ni-kai bun nonda hou ga ii desu ka)",
+        "feedback": "JANGAN PERNAH minum dosis ganda. Hubungi apotek untuk instruksi yang benar. '飲み忘れる (Nomiwasureru)' berarti 'lupa minum'.",
+        "image": "Apotek3-17.jpg"
+      },
+      {
+        "question": "'Apa yang harus saya lakukan jika saya mengalami reaksi alergi terhadap obat ini?'",
+        "answers": [
+          "もしこの薬でアレルギー反応が出たら、どうすればいいですか (Moshi kono kusuri de arerugii hannou ga detara, dou sureba ii desu ka)",
+          "すぐに飲むのをやめて、病院に連絡してください (Sugu ni nomu no o yamete, byouin ni renraku shite kudasai)",
+          "アレルギーは出ないと思います (Arerugii wa denai to omoimasu)",
+          "かゆみ止めをください (Kayumidome o kudasai)"
+        ],
+        "correct": "もしこの薬でアレルギー反応が出たら、どうすればいいですか (Moshi kono kusuri de arerugii hannou ga detara, dou sureba ii desu ka)",
+        "feedback": "Apoteker akan memberitahu Anda untuk segera berhenti minum obat dan menghubungi dokter atau rumah sakit.",
+        "image": "Apotek3-18.jpg"
+      },
+      {
+        "question": "'Dokumen ini adalah formulir persetujuan untuk prosedur medis.'",
+        "answers": [
+          "これは治療の同意書です (Kore wa chiryou no douisho desu)",
+          "これは請求書です (Kore wa seikyuusho desu)",
+          "これは診断書です (Kore wa shindansho desu)",
+          "これは保険の書類です (Kore wa hoken no shorui desu)"
+        ],
+        "correct": "これは治療の同意書です (Kore wa chiryou no douisho desu)",
+        "feedback": "'同意書 (Douisho)' adalah formulir persetujuan (informed consent) yang harus Anda tandatangani sebelum prosedur tertentu.",
+        "image": "Apotek3-19.jpg"
+      },
+      {
+        "question": "'Bisakah Anda menjelaskan hasil rontgen saya secara sederhana?'",
+        "answers": [
+          "私のレントゲンの結果を、簡単に説明していただけますか (Watashi no rentogen no kekka o, kantan ni setsumei shite itadakemasu ka)",
+          "骨は折れていますか (Hone wa orete imasu ka)",
+          "何か問題はありましたか (Nani ka mondai wa arimashita ka)",
+          "この影は何ですか (Kono kage wa nan desu ka)"
+        ],
+        "correct": "私のレントゲンの結果を、簡単に説明していただけますか (Watashi no rentogen no kekka o, kantan ni setsumei shite itadakemasu ka)",
+        "feedback": "Meminta penjelasan sederhana ('簡単に説明, kantan ni setsumei') dapat membantu Anda memahami istilah medis yang rumit.",
+        "image": "Apotek3-20.jpg"
+      },
+      {
+        "question": "'Saya ingin janji temu dengan dokter spesialis kulit.'",
+        "answers": [
+          "皮膚科の先生を予約したいです (Hifuka no sensei o yoyaku shitai desu)",
+          "内科の先生を予約したいです (Naika no sensei o yoyaku shitai desu)",
+          "眼科の先生を予約したいです (Ganka no sensei o yoyaku shitai desu)",
+          "歯科の先生を予約したいです (Shika no sensei o yoyaku shitai desu)"
+        ],
+        "correct": "皮膚科の先生を予約したいです (Hifuka no sensei o yoyaku shitai desu)",
+        "feedback": "'皮膚科 (Hifuka)' adalah dermatologi. 'Ganka' adalah oftalmologi (mata).",
+        "image": "Apotek3-21.jpg"
+      },
+      {
+        "question": "'Apakah obat ini perlu disimpan di dalam kulkas?'",
+        "answers": [
+          "この薬は冷蔵庫で保管する必要はありますか (Kono kusuri wa reizouko de hokan suru hitsuyou wa arimasu ka)",
+          "常温で大丈夫ですか (Jouon de daijoubu desu ka)",
+          "直射日光を避けてください (Chokusha nikkou o sakete kudasai)",
+          "いつまで保管できますか (Itsu made hokan dekimasu ka)"
+        ],
+        "correct": "この薬は冷蔵庫で保管する必要はありますか (Kono kusuri wa reizouko de hokan suru hitsuyou wa arimasu ka)",
+        "feedback": "Beberapa obat seperti insulin atau sirup antibiotik tertentu memerlukan penyimpanan di '冷蔵庫 (reizouko)' atau kulkas.",
+        "image": "Apotek3-22.jpg"
+      },
+      {
+        "question": "'Saya merasa cemas tentang kondisi saya, bisakah dokter menjelaskannya lagi?'",
+        "answers": [
+          "自分の病状が心配なので、もう一度説明していただけますか (Jibun no byoujou ga shinpai na node, mou ichido setsumei shite itadakemasu ka)",
+          "大丈夫です、理解しました (Daijoubu desu, rikai shimashita)",
+          "家族に説明してください (Kazoku ni setsumei shite kudasai)",
+          "インターネットで調べます (Intaanetto de shirabemasu)"
+        ],
+        "correct": "自分の病状が心配なので、もう一度説明していただけますか (Jibun no byoujou ga shinpai na node, mou ichido setsumei shite itadakemasu ka)",
+        "feedback": "Jangan ragu untuk meminta penjelasan ulang jika Anda merasa khawatir atau tidak mengerti.",
+        "image": "Apotek3-23.jpg"
+      },
+      {
+        "question": "'Apakah ada pamflet tentang penyakit ini dalam bahasa Inggris?'",
+        "answers": [
+          "この病気に関する英語のパンフレットはありますか (Kono byouki ni kansuru eigo no panfuretto wa arimasu ka)",
+          "ウェブサイトのアドレスを教えてください (Webusaito no adoresu o oshiete kudasai)",
+          "この漢字が読めません (Kono kanji ga yomemasen)",
+          "これを翻訳してください (Kore o hon'yaku shite kudasai)"
+        ],
+        "correct": "この病気に関する英語のパンフレットはありますか (Kono byouki ni kansuru eigo no panfuretto wa arimasu ka)",
+        "feedback": "Rumah sakit besar sering menyediakan materi informasi dalam berbagai bahasa.",
+        "image": "Apotek3-24.jpg"
+      },
+      {
+        "question": "'Mohon isi kuesioner medis ini sebelum konsultasi.'",
+        "answers": [
+          "診察の前に、この問診票にご記入ください (Shinsatsu no mae ni, kono monshinhyou ni go-kinyuu kudasai)",
+          "お名前と住所を書いてください (O-namae to juusho o kaite kudasai)",
+          "質問があれば聞いてください (Shitsumon ga areba kiite kudasai)",
+          "これは何ですか (Kore wa nan desu ka)"
+        ],
+        "correct": "診察の前に、この問診票にご記入ください (Shinsatsu no mae ni, kono monshinhyou ni go-kinyuu kudasai)",
+        "feedback": "'問診票 (Monshinhyou)' adalah kuesioner tentang riwayat medis dan gejala Anda saat ini.",
+        "image": "Apotek3-25.jpg"
+      },
+      {
+        "question": "'Saya mengalami insomnia akhir-akhir ini. Bisakah saya mendapatkan obat tidur?'",
+        "answers": [
+          "最近不眠症なのですが、睡眠薬をもらえますか (Saikin fuminshou na no desu ga, suiminyaku o moraemasu ka)",
+          "よく眠れます (Yoku nemuremasu)",
+          "疲れやすいです (Tsukare yasui desu)",
+          "ストレスが多いです (Sutoresu ga ooi desu)"
+        ],
+        "correct": "最近不眠症なのですが、睡眠薬をもらえますか (Saikin fuminshou na no desu ga, suiminyaku o moraemasu ka)",
+        "feedback": "'不眠症 (Fuminshou)' adalah insomnia. '睡眠薬 (Suiminyaku)' adalah obat tidur yang memerlukan resep dokter.",
+        "image": "Apotek3-26.jpg"
+      },
+      {
+        "question": "'Untuk pembayaran, apakah saya bisa meminta kuitansi dengan rincian biaya?'",
+        "answers": [
+          "会計の際、費用の明細が載った領収書をお願いできますか (Kaikei no sai, hiyou no meisai ga notta ryoushuusho o onegai dekimasu ka)",
+          "領収書だけでいいです (Ryoushuusho dake de ii desu)",
+          "保険の請求に使います (Hoken no seikyuu ni tsukaimasu)",
+          "これは何の費用ですか (Kore wa nan no hiyou desu ka)"
+        ],
+        "correct": "会計の際、費用の明細が載った領収書をお願いできますか (Kaikei no sai, hiyou no meisai ga notta ryoushuusho o onegai dekimasu ka)",
+        "feedback": "Kuitansi dengan rincian ('明細, meisai') penting untuk klaim asuransi perjalanan.",
+        "image": "Apotek3-27.jpg"
+      },
+      {
+        "question": "'Kapan jam besuk untuk pasien rawat inap?'",
+        "answers": [
+          "入院患者のお見舞い時間は何時から何時までですか (Nyuuin kanja no o-mimai jikan wa nanji kara nanji made desu ka)",
+          "面会謝絶ですか (Menkai shazetsu desu ka)",
+          "お見舞いに行ってもいいですか (O-mimai ni itte mo ii desu ka)",
+          "病室は何号室ですか (Byoushitsu wa nan-gou shitsu desu ka)"
+        ],
+        "correct": "入院患者のお見舞い時間は何時から何時までですか (Nyuuin kanja no o-mimai jikan wa nanji kara nanji made desu ka)",
+        "feedback": "Setiap rumah sakit memiliki jam besuk ('お見舞い時間, o-mimai jikan') yang berbeda.",
+        "image": "Apotek3-28.jpg"
+      },
+      {
+        "question": "'Saya ingin tahu lebih lanjut tentang pilihan perawatan yang tersedia untuk kondisi saya.'",
+        "answers": [
+          "私の病状で利用できる治療の選択肢について、もっと詳しく知りたいです (Watashi no byoujou de riyou dekiru chiryou no sentakushi ni tsuite, motto kuwashiku shiritai desu)",
+          "先生のおすすめは何ですか (Sensei no osusume wa nan desu ka)",
+          "手術はしたくないです (Shujutsu wa shitakunai desu)",
+          "セカンドオピニオンを聞きたいです (Sekando opionion o kikitai desu)"
+        ],
+        "correct": "私の病状で利用できる治療の選択肢について、もっと詳しく知りたいです (Watashi no byoujou de riyou dekiru chiryou no sentakushi ni tsuite, motto kuwashiku shiritai desu)",
+        "feedback": "Sebagai pasien, Anda berhak mengetahui semua pilihan perawatan ('治療の選択肢, chiryou no sentakushi') yang ada.",
+        "image": "Apotek3-29.jpg"
+      },
+      {
+        "question": "'Apakah ada biaya tambahan jika saya meminta kamar pribadi?'",
+        "answers": [
+          "個室を希望する場合、追加料金はかかりますか (Koshitsu o kibou suru baai, tsuika ryoukin wa kakarimasu ka)",
+          "大部屋でいいです (Oobeya de ii desu)",
+          "個室は空いていますか (Koshitsu wa aite imasu ka)",
+          "差額ベッド代はいくらですか (Sagaku beddo-dai wa ikura desu ka)"
+        ],
+        "correct": "個室を希望する場合、追加料金はかかりますか (Koshitsu o kibou suru baai, tsuika ryoukin wa kakarimasu ka)",
+        "feedback": "Kamar pribadi ('個室, koshitsu') tidak ditanggung oleh asuransi kesehatan nasional dan memerlukan biaya tambahan ('差額ベッド代, sagaku beddo-dai').",
+        "image": "Apotek3-30.jpg"
+      },
+      {
+        "question": "'Tolong panggilkan dokter yang bertugas, saya merasa kondisi saya memburuk.'",
+        "answers": [
+          "容態が悪化したようなので、担当の先生を呼んでください (Youdai ga akka shita you na node, tantou no sensei o yonde kudasai)",
+          "ナースコールを押します (Naasu kooru o oshimasu)",
+          "痛みが強くなりました (Itami ga tsuyoku narimashita)",
+          "少し休めば大丈夫です (Sukoshi yasumeba daijoubu desu)"
+        ],
+        "correct": "容態が悪化したようなので、担当の先生を呼んでください (Youdai ga akka shita you na node, tantou no sensei o yonde kudasai)",
+        "feedback": "Jangan ragu untuk menggunakan bel perawat ('ナースコール, naasu kooru') jika kondisi ('容態, youdai') Anda berubah.",
+        "image": "Apotek3-31.jpg"
+      },
+      {
+        "question": "'Bisakah saya mendapatkan resep untuk obat yang sama tanpa harus konsultasi lagi?'",
+        "answers": [
+          "再診なしで、同じ薬の処方箋だけもらうことはできますか (Saishin nashi de, onaji kusuri no shohousen dake morau koto wa dekimasu ka)",
+          "薬がもうすぐなくなります (Kusuri ga mousugu naku narimasu)",
+          "予約が必要です (Yoyaku ga hitsuyou desu)",
+          "電話でお願いできますか (Denwa de onegai dekimasu ka)"
+        ],
+        "correct": "再診なしで、同じ薬の処方箋だけもらうことはできますか (Saishin nashi de, onaji kusuri no shohousen dake morau koto wa dekimasu ka)",
+        "feedback": "Untuk beberapa penyakit kronis yang stabil, hal ini mungkin bisa dilakukan, tetapi sebagian besar memerlukan konsultasi ulang ('再診, saishin').",
+        "image": "Apotek3-32.jpg"
+      },
+      {
+        "question": "'Apakah ada program rehabilitasi setelah saya keluar dari rumah sakit?'",
+        "answers": [
+          "退院後にリハビリのプログラムはありますか (Taiin-go ni rihabiri no puroguramu wa arimasu ka)",
+          "理学療法士は誰ですか (Rigaku ryouhoushi wa dare desu ka)",
+          "家で何をすればいいですか (Ie de nani o sureba ii desu ka)",
+          "早く仕事に復帰したいです (Hayaku shigoto ni fukki shitai desu)"
+        ],
+        "correct": "退院後にリハビリのプログラムはありますか (Taiin-go ni rihabiri no puroguramu wa arimasu ka)",
+        "feedback": "Dokter mungkin akan merujuk Anda ke program rehabilitasi ('リハビリ, rihabiri') untuk mempercepat pemulihan.",
+        "image": "Apotek3-33.jpg"
+      },
+      {
+        "question": "'Saya ingin mendapatkan opini kedua dari dokter lain mengenai diagnosis ini.'",
+        "answers": [
+          "この診断について、他の先生のセカンドオピニオンを聞きたいです (Kono shindan ni tsuite, hoka no sensei no sekando opionion o kikitai desu)",
+          "先生の言うことを信じます (Sensei no iu koto o shinjimasu)",
+          "他の病院を紹介してください (Hoka no byouin o shoukai shite kudasai)",
+          "検査データをもらえますか (Kensa deeta o moraemasu ka)"
+        ],
+        "correct": "この診断について、他の先生のセカンドオピニオンを聞きたいです (Kono shindan ni tsuite, hoka no sensei no sekando opionion o kikitai desu)",
+        "feedback": "Meminta 'セカンドオピニオン (second opinion)' adalah hak pasien untuk mendapatkan pandangan lain mengenai kondisinya.",
+        "image": "Apotek3-34.jpg"
+      },
+      {
+        "question": "'Bagaimana cara membuang jarum suntik bekas ini dengan aman?'",
+        "answers": [
+          "この使用済みの注射針は、どうやって安全に捨てればいいですか (Kono shiyouzumi no chuushabari wa, douyatte anzen ni sutereba ii desu ka)",
+          "ゴミ箱に捨ててもいいですか (Gomibako ni sutete mo ii desu ka)",
+          "病院に返却しますか (Byouin ni henkyaku shimasu ka)",
+          "これは危ないです (Kore wa abunai desu)"
+        ],
+        "correct": "この使用済みの注射針は、どうやって安全に捨てればいいですか (Kono shiyouzumi no chuushabari wa, douyatte anzen ni sutereba ii desu ka)",
+        "feedback": "Limbah medis seperti jarum suntik ('注射針, chuushabari') tidak boleh dibuang di sampah biasa. Apotek atau rumah sakit akan memberitahu cara pembuangan yang benar.",
+        "image": "Apotek3-35.jpg"
+      },
+      {
+        "question": "'Obat ini menyebabkan mulut saya kering. Apakah ada cara untuk mengatasinya?'",
+        "answers": [
+          "この薬で口が渇きます。何か対処法はありますか (Kono kusuri de kuchi ga kawakimasu. Nani ka taishohou wa arimasu ka)",
+          "水をたくさん飲みます (Mizu o takusan nomimasu)",
+          "副作用ですか (Fukusayou desu ka)",
+          "薬を変えてください (Kusuri o kaete kudasai)"
+        ],
+        "correct": "この薬で口が渇きます。何か対処法はありますか (Kono kusuri de kuchi ga kawakimasu. Nani ka taishohou wa arimasu ka)",
+        "feedback": "Apoteker bisa menyarankan permen karet bebas gula atau obat kumur untuk mengatasi '対処法 (taishohou)' atau cara mengatasi masalah ini.",
+        "image": "Apotek3-36.jpg"
+      },
+      {
+        "question": "'Apakah ada dukungan psikologis atau konseling yang tersedia di rumah sakit ini?'",
+        "answers": [
+          "この病院で、心理的なサポートやカウンセリングは受けられますか (Kono byouin de, shinri-teki na sapooto ya kaunseringu wa ukeraremasu ka)",
+          "精神科はどこですか (Seishinka wa doko desu ka)",
+          "誰かに話を聞いてほしいです (Dareka ni hanashi o kiite hoshii desu)",
+          "ストレスで眠れません (Sutoresu de nemuremasen)"
+        ],
+        "correct": "この病院で、心理的なサポートやカウンセリングは受けられますか (Kono byouin de, shinri-teki na sapooto ya kaunseringu wa ukeraremasu ka)",
+        "feedback": "Banyak rumah sakit besar memiliki layanan konseling ('カウンセリング, kaunseringu') untuk membantu pasien dan keluarga.",
+        "image": "Apotek3-37.jpg"
+      },
+      {
+        "question": "'Saya ingin mengajukan permohonan untuk bantuan biaya medis yang tinggi.'",
+        "answers": [
+          "高額療養費制度の申請をしたいのですが (Kougaku ryouyouhi seido no shinsei o shitai no desu ga)",
+          "医療費が高いです (Iryouhi ga takai desu)",
+          "分割払いはできますか (Bunkatsu barai wa dekimasu ka)",
+          "市役所はどこですか (Shiyakusho wa doko desu ka)"
+        ],
+        "correct": "高額療養費制度の申請をしたいのですが (Kougaku ryouyouhi seido no shinsei o shitai no desu ga)",
+        "feedback": "Jepang memiliki sistem ('高額療養費制度, Kougaku Ryouyouhi Seido') yang membatasi jumlah biaya medis yang harus Anda bayar dalam sebulan.",
+        "image": "Apotek3-38.jpg"
+      },
+      {
+        "question": "'Apakah ada apotek 24 jam di dekat sini untuk keadaan darurat?'",
+        "answers": [
+          "この近くに、夜間でもやっている薬局はありますか (Kono chikaku ni, yakan demo yatte iru yakkyoku wa arimasu ka)",
+          "救急病院はどこですか (Kyuukyuu byouin wa doko desu ka)",
+          "薬が急に必要になりました (Kusuri ga kyuu ni hitsuyou ni narimashita)",
+          "明日の朝まで待てません (Ashita no asa made matemasen)"
+        ],
+        "correct": "この近くに、夜間でもやっている薬局はありますか (Kono chikaku ni, yakan demo yatte iru yakkyoku wa arimasu ka)",
+        "feedback": "Apotek 24 jam ('夜間薬局, yakan yakkyoku') tidak umum, tetapi biasanya ada apotek yang buka bergiliran saat malam atau hari libur.",
+        "image": "Apotek3-39.jpg"
+      },
+      {
+        "question": "'Bisakah saya meminta agar resep ini dikirimkan ke rumah saya?'",
+        "answers": [
+          "この処方箋の薬を、自宅に配送してもらうことは可能ですか (Kono shohousen no kusuri o, jitaku ni haisou shite morau koto wa kanou desu ka)",
+          "薬局に行く時間がありません (Yakkyoku ni iku jikan ga arimasen)",
+          "オンラインで薬をもらえますか (Onrain de kusuri o moraemasu ka)",
+          "送料はかかりますか (Souryou wa kakarimasu ka)"
+        ],
+        "correct": "この処方箋の薬を、自宅に配送してもらうことは可能ですか (Kono shohousen no kusuri o, jitaku ni haisou shite morau koto wa kanou desu ka)",
+        "feedback": "Beberapa apotek menawarkan layanan pengiriman ('配送, haisou') ke rumah, terutama untuk pasien lansia atau yang sulit bepergian.",
+        "image": "Apotek3-40.jpg"
+      },
+      {
+        "question": "'Mohon jangan beritahu perusahaan saya mengenai diagnosis penyakit ini.'",
+        "answers": [
+          "この病名については、会社には伝えないでいただけますか (Kono byoumei ni tsuite wa, kaisha ni wa tsutaenaide itadakemasu ka)",
+          "プライバシーを守ってください (Puraibashii o mamotte kudasai)",
+          "これは個人情報です (Kore wa kojin jouhou desu)",
+          "診断書は自分で提出します (Shindansho wa jibun de teishutsu shimasu)"
+        ],
+        "correct": "この病名については、会社には伝えないでいただけますか (Kono byoumei ni tsuite wa, kaisha ni wa tsutaenaide itadakemasu ka)",
+        "feedback": "Informasi medis Anda bersifat rahasia. Anda memiliki hak untuk mengontrol siapa yang boleh mengetahuinya.",
+        "image": "Apotek3-41.jpg"
+      },
+      {
+        "question": "'Saya butuh bantuan untuk mengisi formulir ini karena saya tidak bisa membaca kanji.'",
+        "answers": [
+          "漢字が読めないので、この書類の記入を手伝っていただけますか (Kanji ga yomenai node, kono shorui no kinyuu o tetsudatte itadakemasu ka)",
+          "代筆をお願いします (Daihitsuo o onegai shimasu)",
+          "ふりがなを振ってください (Furigana o futte kudasai)",
+          "英語のフォームはありますか (Eigo no foomu wa arimasu ka)"
+        ],
+        "correct": "漢字が読めないので、この書類の記入を手伝っていただけますか (Kanji ga yomenai node, kono shorui no kinyuu o tetsudatte itadakemasu ka)",
+        "feedback": "Staf rumah sakit biasanya akan dengan senang hati membantu Anda mengisi formulir.",
+        "image": "Apotek3-42.jpg"
+      },
+      {
+        "question": "'Apakah ada alternatif pengobatan selain operasi untuk kondisi saya?'",
+        "answers": [
+          "私の症状に対して、手術以外の治療法はありますか (Watashi no shoujou ni taishite, shujutsu igai no chiryouhou wa arimasu ka)",
+          "薬で治せますか (Kusuri de naosemasu ka)",
+          "保存的治療とは何ですか (Hozon-teki chiryou to wa nan desu ka)",
+          "リスクとベネフィットを教えてください (Risuku to benefitto o oshiete kudasai)"
+        ],
+        "correct": "私の症状に対して、手術以外の治療法はありますか (Watashi no shoujou ni taishite, shujutsu igai no chiryouhou wa arimasu ka)",
+        "feedback": "Menanyakan '治療法 (chiryouhou)' atau metode pengobatan alternatif penting untuk membuat keputusan yang tepat.",
+        "image": "Apotek3-43.jpg"
+      },
+      {
+        "question": "'Jika nomor saya dipanggil saat saya di toilet, apa yang harus saya lakukan?'",
+        "answers": [
+          "トイレに行っている間に番号が呼ばれたら、どうすればいいですか (Toire ni itte iru aida ni bangou ga yobaretara, dou sureba ii desu ka)",
+          "受付に声をかけてください (Uketsuke ni koe o kakete kudasai)",
+          "順番を飛ばされますか (Junban o tobasaremasu ka)",
+          "もう一度待たないといけませんか (Mou ichido matanai to ikemasen ka)"
+        ],
+        "correct": "トイレに行っている間に番号が呼ばれたら、どうすればいいですか (Toire ni itte iru aida ni bangou ga yobaretara, dou sureba ii desu ka)",
+        "feedback": "Biasanya, Anda cukup melapor ke resepsionis setelah kembali, dan mereka akan memasukkan Anda ke urutan berikutnya.",
+        "image": "Apotek3-44.jpg"
+      },
+      {
+        "question": "'Apakah saya bisa mendapatkan resep obat untuk dibawa ke luar negeri?'",
+        "answers": [
+          "海外に持って行くための薬を処方してもらえますか (Kaigai ni motte iku tame no kusuri o shohou shite moraemasu ka)",
+          "英文の診断書はもらえますか (Eibun no shindansho wa moraemasu ka)",
+          "税関で問題になりますか (Zeikan de mondai ni narimasu ka)",
+          "旅行保険に入っています (Ryokou hoken ni haitte imasu)"
+        ],
+        "correct": "海外に持って行くための薬を処方してもらえますか (Kaigai ni motte iku tame no kusuri o shohou shite moraemasu ka)",
+        "feedback": "Anda mungkin juga memerlukan surat keterangan dokter dalam bahasa Inggris ('英文の診断書, eibun no shindansho') untuk obat-obatan tertentu.",
+        "image": "Apotek3-45.jpg"
+      },
+      {
+        "question": "'Obat ini nampaknya berbeda dari yang biasa saya terima, bisakah Anda periksa ulang?'",
+        "answers": [
+          "いつももらっている薬と違うようですが、もう一度確認していただけますか (Itsumo moratte iru kusuri to chigau you desu ga, mou ichido kakunin shite itadakemasu ka)",
+          "薬の種類が変わりましたか (Kusuri no shurui ga kawarimashita ka)",
+          "ジェネリック医薬品ですか (Jenerikku iyakuhin desu ka)",
+          "これは本当に私の薬ですか (Kore wa hontou ni watashi no kusuri desu ka)"
+        ],
+        "correct": "いつももらっている薬と違うようですが、もう一度確認していただけますか (Itsumo moratte iru kusuri to chigau you desu ga, mou ichido kakunin shite itadakemasu ka)",
+        "feedback": "Selalu baik untuk memeriksa ulang jika ada keraguan. Mungkin apotek memberikan obat generik dengan merek yang berbeda.",
+        "image": "Apotek3-46.jpg"
+      },
+      {
+        "question": "'Kapan perkiraan waktu tunggu untuk bertemu dokter?'",
+        "answers": [
+          "診察までの待ち時間は、およそどのくらいですか (Shinsatsu made no machi jikan wa, oyoso dono kurai desu ka)",
+          "予約時間通りに呼ばれますか (Yoyaku jikan doori ni yobaremasu ka)",
+          "あと何人待ちですか (Ato nan-nin machi desu ka)",
+          "今日は混んでいますか (Kyou wa konde imasu ka)"
+        ],
+        "correct": "診察までの待ち時間は、およそどのくらいですか (Shinsatsu made no machi jikan wa, oyoso dono kurai desu ka)",
+        "feedback": "Meskipun punya janji, menunggu adalah hal yang biasa di rumah sakit Jepang. 'およそ (Oyoso)' berarti 'kira-kira'.",
+        "image": "Apotek3-47.jpg"
+      },
+      {
+        "question": "'Saya ingin melakukan tes alergi untuk mengetahui penyebab gatal-gatal ini.'",
+        "answers": [
+          "このかゆみの原因を調べるため、アレルギー検査を受けたいです (Kono kayumi no gen'in o shiraberu tame, arerugii kensa o uketai desu)",
+          "何のアレルギーか分かりません (Nan no arerugii ka wakarimasen)",
+          "塗り薬をください (Nurigusuri o kudasai)",
+          "最近何か変わったものを食べましたか (Saikin nani ka kawatta mono o tabemashita ka)"
+        ],
+        "correct": "このかゆみの原因を調べるため、アレルギー検査を受けたいです (Kono kayumi no gen'in o shiraberu tame, arerugii kensa o uketai desu)",
+        "feedback": "'アレルギー検査 (Arerugii kensa)' atau tes alergi dapat membantu mengidentifikasi penyebab reaksi Anda.",
+        "image": "Apotek3-48.jpg"
+      },
+      {
+        "question": "'Bisakah Anda memberikan saya masker dan pembersih tangan?'",
+        "answers": [
+          "マスクと手指消毒液をいただけますか (Masuku to shushi shoudokueki o itadakemasu ka)",
+          "ここで手を洗いたいです (Koko de te o araitai desu)",
+          "感染対策はしていますか (Kansen taisaku wa shite imasu ka)",
+          "風邪をうつされたくないです (Kaze o utsusaretakunai desu)"
+        ],
+        "correct": "マスクと手指消毒液をいただけますか (Masuku to shushi shoudokueki o itadakemasu ka)",
+        "feedback": "Rumah sakit biasanya menyediakan 'マスク (masuku)' dan '手指消毒液 (shushi shoudokueki)' atau hand sanitizer di pintu masuk.",
+        "image": "Apotek3-49.jpg"
+      },
+      {
+        "question": "'Terima kasih banyak atas perawatan Anda selama saya di sini.'",
+        "answers": [
+          "入院中、大変お世話になりました (Nyuuin-chuu, taihen o-sewa ni narimashita)",
+          "ありがとうございました (Arigatou gozaimashita)",
+          "もう大丈夫です (Mou daijoubu desu)",
+          "退院します (Taiin shimasu)"
+        ],
+        "correct": "入院中、大変お世話になりました (Nyuuin-chuu, taihen o-sewa ni narimashita)",
+        "feedback": "Ini adalah ucapan terima kasih yang sangat sopan dan umum diucapkan kepada dokter dan perawat saat Anda akan keluar dari rumah sakit.",
+        "image": "Apotek3-50.jpg"
+      }
+    ]
+  }
+}
+}
