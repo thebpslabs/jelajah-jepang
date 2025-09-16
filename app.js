@@ -10,12 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Your web app's Firebase configuration
     // IMPORTANT: Replace with your actual Firebase project configuration
     const firebaseConfig = {
-        apiKey: "YOUR_API_KEY",
-        authDomain: "YOUR_AUTH_DOMAIN",
-        projectId: "YOUR_PROJECT_ID",
-        storageBucket: "YOUR_STORAGE_BUCKET",
-        messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-        appId: "YOUR_APP_ID"
+         apiKey: "AIzaSyD6Rb8BNuWnn_AgWp89ZerQXN-84Fya6vo",
+         authDomain: "jelajah-jepang.firebaseapp.com",
+         projectId: "jelajah-jepang",
+         storageBucket: "jelajah-jepang.firebasestorage.app",
+         messagingSenderId: "815232620004",
+         appId: "1:815232620004:web:10b5e9a348fb5f186ce3f1"
     };
 
     // Initialize Firebase
