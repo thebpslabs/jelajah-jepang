@@ -1,0 +1,22 @@
+{
+  "short_name": "Jepang",
+  "name": "Petualangan di Jepang",
+  "description": "Kuis petualangan untuk belajar bertahan hidup di Jepang.",
+  "icons": [
+    {
+      "src": "assets/icons/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "assets/icons/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#FFD700",
+  "background_color": "#2c2c2c"
+}

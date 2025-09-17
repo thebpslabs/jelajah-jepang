@@ -1,11 +1,11 @@
+// --- FIREBASE IMPORTS AND SETUP (MOVED TO TOP LEVEL) --- //
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js';
+import { getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js';
+import { getFirestore, collection, getDocs, limit, orderBy, query } from 'https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js';
+import { getFunctions, httpsCallable } from 'https://www.gstatic.com/firebasejs/10.9.0/firebase-functions.js';
+
 // Wait for the DOM to be fully loaded before running the script
 document.addEventListener('DOMContentLoaded', () => {
-
-    // --- FIREBASE IMPORTS AND SETUP --- //
-    import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js';
-    import { getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js';
-    import { getFirestore, collection, getDocs, limit, orderBy, query } from 'https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js';
-    import { getFunctions, httpsCallable } from 'https://www.gstatic.com/firebasejs/10.9.0/firebase-functions.js';
 
     // Your web app's Firebase configuration
     // IMPORTANT: Replace with your actual Firebase project configuration
