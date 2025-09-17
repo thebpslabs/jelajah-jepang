@@ -244,6 +244,8 @@ document.addEventListener('DOMContentLoaded', () => {
     async function submitScoreToGlobalLeaderboard() {
         if (!currentUser) {
             console.error("No user is signed in. Score will not be submitted.");
+            // Optionally, prompt the user to log in again if something went wrong
+            alert("Sesi masuk tidak ditemukan. Silakan coba lagi.");
             return;
         }
     
@@ -959,7 +961,7 @@ document.addEventListener('DOMContentLoaded', () => {
         toggleOverlay('journal-overlay', true);
     });
     
-    // --- NEW: GLOBAL LEADERBOARD SUBMISSION LISTENER ---
+    // --- CORRECTED: GLOBAL LEADERBOARD SUBMISSION LISTENER ---
     UIElements.hasilPage.submitGlobalBtn.addEventListener('click', async () => {
         playSound(UIElements.sounds.click);
         
@@ -969,8 +971,8 @@ document.addEventListener('DOMContentLoaded', () => {
             // Sign in with Google and then submit the score
             try {
                 await signInWithGoogle();
-                // onAuthStateChanged listener will handle the UI and then a second click will submit
-                alert("Berhasil masuk! Silakan klik tombol lagi untuk mengirimkan skor.");
+                // FIX: Immediately call the submission function after a successful login.
+                await submitScoreToGlobalLeaderboard(); 
             } catch (error) {
                 console.error("Login gagal:", error);
                 alert("Gagal masuk. Coba lagi.");
