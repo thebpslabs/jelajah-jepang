@@ -772,3 +772,8 @@ td:nth-child(4), th:nth-child(4) { width: 30%; }
     background-color: rgba(255, 215, 0, 0.2);
     font-weight: bold;
 }
+
+/* FIX: Force centering on the results page content */
+#hasil-page .page-content {
+    margin: auto;
+}
