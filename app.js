@@ -1,14 +1,14 @@
 // --- FIREBASE IMPORTS AND SETUP (MOVED TO TOP LEVEL) --- //
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js';
 import { getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js';
-import { getFirestore, collection, getDocs, limit, orderBy, query } from 'https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js';
+// MODIFIED: Import doc and getDoc to fetch specific documents from Firestore
+import { getFirestore, collection, getDocs, limit, orderBy, query, doc, getDoc } from 'https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js';
 import { getFunctions, httpsCallable } from 'https://www.gstatic.com/firebasejs/10.9.0/firebase-functions.js';
 
 // Wait for the DOM to be fully loaded before running the script
 document.addEventListener('DOMContentLoaded', () => {
 
     // Your web app's Firebase configuration
-    // IMPORTANT: Replace with your actual Firebase project configuration
     const firebaseConfig = {
          apiKey: "AIzaSyD6Rb8BNuWnn_AgWp89ZerQXN-84Fya6vo",
          authDomain: "jelajah-jepang.firebaseapp.com",
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
         questionTimer: null,
         timeLeft: 0,
         localLeaderboard: [],
-        globalLeaderboard: [], // ADDED: To store the fetched global scores
+        globalLeaderboard: [],
         playerData: null,
         gameJournal: [],
         achievementQueue: [],
@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
             shareBtn: document.getElementById('share-btn'),
             retryBtn: document.getElementById('retry-btn'),
             journalBtn: document.getElementById('journal-btn'),
-            submitGlobalBtn: document.getElementById('submit-global-btn') // ADDED: New button selector
+            submitGlobalBtn: document.getElementById('submit-global-btn')
         },
         jejakPetualanganPage: {
             tabs: document.querySelectorAll('#jejak-petualangan-page .tab-btn'),
@@ -244,12 +244,9 @@ document.addEventListener('DOMContentLoaded', () => {
     async function submitScoreToGlobalLeaderboard() {
         if (!currentUser) {
             console.error("No user is signed in. Score will not be submitted.");
-            // Optionally, prompt the user to log in again if something went wrong
             alert("Sesi masuk tidak ditemukan. Silakan coba lagi.");
             return;
         }
-    
-        // Show loading indicator here if you have one
     
         const dataToSend = {
             quizId: `${gameState.currentCategory.replace(' ', '')}_${gameState.currentLevel.toLowerCase()}`,
@@ -298,7 +295,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateUserUI() {
         const { username, level, xp } = gameState.playerData;
         
-        // Show Google username if logged in
         if (currentUser && currentUser.displayName) {
              UIElements.mainMenu.currentUserDisplay.textContent = currentUser.displayName;
              UIElements.mainMenu.userDisplayMode.style.display = 'flex';
@@ -325,7 +321,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (pageId === 'jejak-petualangan-page') {
             displayAchievements();
-            // Default to local leaderboard view
             displayLeaderboard('local');
             UIElements.jejakPetualanganPage.localLeaderboardTab.classList.add('active');
             UIElements.jejakPetualanganPage.globalLeaderboardTab.classList.remove('active');
@@ -339,7 +334,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function updateResultPageUI() {
-        // Show the global submission button if user is logged in
         if (currentUser) {
             UIElements.hasilPage.submitGlobalBtn.style.display = 'block';
             UIElements.hasilPage.submitGlobalBtn.innerHTML = 'Kirim Skor Global';
@@ -379,6 +373,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- QUIZ LOGIC --- //
+    // MODIFIED: This function now fetches questions from Firestore instead of local files.
     async function startQuiz(level, category) {
         gameState.currentLevel = level;
         gameState.currentCategory = category;
@@ -389,29 +384,24 @@ document.addEventListener('DOMContentLoaded', () => {
         gameState.gameJournal = [];
 
         try {
-            const categoryToFileMap = {
-                'Restoran': 'database_restoran.json',
-                'Minimarket': 'database_minimarket.json',
-                'Kereta': 'database_kereta.json',
-                'Apotek': 'database_apotek.json'
-            };
+            // Construct the document ID from the category and level (e.g., 'apotek_level1')
+            const docId = `${category.toLowerCase()}_${level}`;
+            const docRef = doc(db, "quizAnswers", docId);
+            const docSnap = await getDoc(docRef);
 
-            const fileName = categoryToFileMap[category];
-            if (!fileName) {
-                alert(`Database untuk kategori "${category}" tidak ditemukan.`);
-                return;
+            let questionPool = [];
+            if (docSnap.exists()) {
+                // If the document exists, get the 'answers' array from it.
+                questionPool = docSnap.data().answers;
             }
-
-            const response = await fetch(fileName);
-            if (!response.ok) throw new Error(`Network response was not ok: ${response.statusText}`);
-            const quizDatabase = await response.json();
-            const questionPool = quizDatabase[level]?.[category];
 
             if (!questionPool || questionPool.length === 0) {
                  alert('Soal untuk kategori atau level ini belum tersedia.');
                  return;
             }
+            
             gameState.questions = shuffleArray([...questionPool]).slice(0, 10);
+
             if (gameState.questions.length > 0) {
                 navigateTo('quiz-page');
                 displayQuestion();
@@ -419,8 +409,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 alert('Tidak ada soal yang valid untuk memulai kuis.');
             }
         } catch (error) {
-            console.error('Could not load or start quiz:', error);
-            alert(`Gagal memuat data kuis untuk ${category}. Pastikan file database yang benar ada dan coba lagi.`);
+            console.error('Could not load quiz from Firestore:', error);
+            alert(`Gagal memuat data kuis. Periksa koneksi internet dan coba lagi.`);
         }
     }
 
@@ -573,10 +563,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    /**
-     * The main function called when a quiz round ends.
-     * Handles updating player stats, XP, leaderboard, and achievements.
-     */
     function endQuiz() {
         const { playerData } = gameState;
         
@@ -585,7 +571,6 @@ document.addEventListener('DOMContentLoaded', () => {
             playerData.highScore = gameState.score;
         }
 
-        // --- LOCAL LEADERBOARD LOGIC (KEPT AS IS) ---
         gameState.localLeaderboard.push({
             name: playerData.username,
             score: gameState.score,
@@ -601,7 +586,6 @@ document.addEventListener('DOMContentLoaded', () => {
         displayResults();
         navigateTo('hasil-page');
         
-        // --- NEW: LOGIC TO HANDLE GLOBAL SUBMISSION ---
         UIElements.hasilPage.submitGlobalBtn.style.display = 'block';
         updateResultPageUI();
 
@@ -708,7 +692,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     
-    // --- LEADERBOARD DISPLAY LOGIC ---
     async function displayLeaderboard(type) {
         if (type === 'local') {
             displayLocalLeaderboard();
@@ -760,10 +743,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const row = document.createElement('tr');
             let userName = entry.name || 'Unknown User';
             
-            // Highlight current user's score
             if (currentUser && entry.userId === currentUser.uid) {
                 row.classList.add('current-user-row');
-                userName = "Anda"; // Or get their display name
+                userName = "Anda";
             }
 
             row.innerHTML = `<td>${index + 1}</td><td>${userName}</td><td style="text-align: right;">${entry.score}</td><td>${entry.quizId}</td>`;
@@ -831,16 +813,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- LEVEL UNLOCKING --- //
     function checkAndUnlockLevels() {
-        // This function only proceeds if the player got a perfect score.
         if (gameState.correctAnswersCount !== 10) return;
 
         const { playerData, currentLevel, currentCategory } = gameState;
 
-        // Mark this category/level combo as perfected
         const perfectKey = `${currentLevel}_${currentCategory}`;
         playerData.perfectScores[perfectKey] = true;
 
-        // Unlock the next level for the current category if applicable
         const currentMaxLevel = playerData.unlockedLevels[currentCategory];
         if (currentLevel === 'level1' && currentMaxLevel < 2) {
             playerData.unlockedLevels[currentCategory] = 2;
@@ -890,7 +869,6 @@ document.addEventListener('DOMContentLoaded', () => {
         UIElements.mainMenu.userEditMode.style.display = 'none';
     });
 
-    // Main Menu Navigation
     UIElements.mainMenu.startBtn.addEventListener('click', () => {
         playSound(UIElements.sounds.click);
         navigateTo('level-page');
@@ -908,7 +886,6 @@ document.addEventListener('DOMContentLoaded', () => {
         navigateTo('guidebook-page');
     });
 
-    // MODIFIED: Added listener for difficulty change
     UIElements.levelPage.difficultySelect.addEventListener('change', updateLevelUnlocks);
     UIElements.levelPage.categoryBtns.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -961,17 +938,14 @@ document.addEventListener('DOMContentLoaded', () => {
         toggleOverlay('journal-overlay', true);
     });
     
-    // --- CORRECTED: GLOBAL LEADERBOARD SUBMISSION LISTENER ---
     UIElements.hasilPage.submitGlobalBtn.addEventListener('click', async () => {
         playSound(UIElements.sounds.click);
         
         if (currentUser) {
             await submitScoreToGlobalLeaderboard();
         } else {
-            // Sign in with Google and then submit the score
             try {
                 await signInWithGoogle();
-                // FIX: Immediately call the submission function after a successful login.
                 await submitScoreToGlobalLeaderboard(); 
             } catch (error) {
                 console.error("Login gagal:", error);
@@ -990,7 +964,6 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelectorAll('#jejak-petualangan-page .tab-content').forEach(c => c.classList.remove('active'));
             document.getElementById(tab.dataset.tab).classList.add('active');
             
-            // NEW: Fetch and display the correct leaderboard based on the tab clicked
             const leaderboardType = tab.dataset.tab.replace('-content', '');
             displayLeaderboard(leaderboardType);
         });
@@ -1019,7 +992,6 @@ document.addEventListener('DOMContentLoaded', () => {
         toggleOverlay('confirmation-overlay', true);
     });
 
-    // MODIFIED: Corrected function name typo
     UIElements.confirmationOverlay.confirmBtn.addEventListener('click', () => {
         resetCurrentPlayerData();
         toggleOverlay('confirmation-overlay', false);
@@ -1056,7 +1028,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- INITIALIZATION --- //
     function init() {
-        console.log('Initializing Japanese Adventure PWA v5...');
+        console.log('Initializing Japanese Adventure PWA v6 - Firestore Edition...');
         loadGameData();
         navigateTo('main-menu');
     }
