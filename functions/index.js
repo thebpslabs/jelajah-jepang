@@ -1,32 +1,83 @@
-/**
- * Import function triggers from their respective submodules:
- *
- * const {onCall} = require("firebase-functions/v2/https");
- * const {onDocumentWritten} = require("firebase-functions/v2/firestore");
- *
- * See a full list of supported triggers at https://firebase.google.com/docs/functions
- */
+const functions = require("firebase-functions");
+const admin = require("firebase-admin");
 
-const {setGlobalOptions} = require("firebase-functions");
-const {onRequest} = require("firebase-functions/https");
-const logger = require("firebase-functions/logger");
+admin.initializeApp();
 
-// For cost control, you can set the maximum number of containers that can be
-// running at the same time. This helps mitigate the impact of unexpected
-// traffic spikes by instead downgrading performance. This limit is a
-// per-function limit. You can override the limit for each function using the
-// `maxInstances` option in the function's options, e.g.
-// `onRequest({ maxInstances: 5 }, (req, res) => { ... })`.
-// NOTE: setGlobalOptions does not apply to functions using the v1 API. V1
-// functions should each use functions.runWith({ maxInstances: 10 }) instead.
-// In the v1 API, each function can only serve one request per container, so
-// this will be the maximum concurrent request count.
-setGlobalOptions({ maxInstances: 10 });
+exports.submitScore = functions.https.onCall(async (data, context) => {
+  // 1. Check if the user is authenticated.
+  if (!context.auth) {
+    // DITERJEMAHKAN: Pesan error jika pengguna tidak login
+    throw new functions.https.HttpsError(
+      "unauthenticated",
+      "Anda harus login untuk mengirimkan skor."
+    );
+  }
 
-// Create and deploy your first functions
-// https://firebase.google.com/docs/functions/get-started
+  const { quizId, userAnswers } = data;
+  const userId = context.auth.uid;
+  // DITERJEMAHKAN: Nama default jika tidak ada
+  const userName = context.auth.token.name || "Anonim";
 
-// exports.helloWorld = onRequest((request, response) => {
-//   logger.info("Hello logs!", {structuredData: true});
-//   response.send("Hello from Firebase!");
-// });
+  // 2. Get the correct answers from Firestore to prevent cheating.
+  const quizDocRef = admin.firestore().collection("quizAnswers").doc(quizId);
+  const quizDoc = await quizDocRef.get();
+
+  if (!quizDoc.exists) {
+    // DITERJEMAHKAN: Pesan error jika kuis tidak ditemukan
+    throw new functions.https.HttpsError(
+      "not-found",
+      "Kuis yang dipilih tidak ditemukan."
+    );
+  }
+
+  const correctAnswersData = quizDoc.data().answers;
+  const correctAnswersMap = new Map(
+    correctAnswersData.map((q) => [q.question, q.correct])
+  );
+
+  // 3. Recalculate the score securely on the server.
+  let score = 0;
+  let correctAnswersCount = 0;
+  let comboStreak = 0;
+
+  // Determine points based on level from quizId (e.g., 'restoran_level1')
+  const level = quizId.split('_')[1];
+  let basePoints = 100;
+  if (level === 'level2') {
+    basePoints = 125;
+  } else if (level === 'level3') {
+    basePoints = 150;
+  }
+
+  userAnswers.forEach((userAnswer) => {
+    const correctAnswer = correctAnswersMap.get(userAnswer.question);
+    if (userAnswer.userAnswer === correctAnswer) {
+      correctAnswersCount++;
+      comboStreak++;
+      
+      let comboBonus = 0;
+      if (comboStreak >= 2) {
+          comboBonus = (comboStreak - 1) * 10;
+      }
+      
+      score += basePoints + comboBonus;
+    } else {
+      comboStreak = 0;
+    }
+  });
+
+  // 4. Save the new, verified score to the global leaderboard.
+  const leaderboardRef = admin.firestore().collection("globalLeaderboard");
+
+  await leaderboardRef.add({
+    userId: userId,
+    name: userName,
+    score: score,
+    quizId: quizId,
+    correctAnswers: correctAnswersCount,
+    timestamp: admin.firestore.FieldValue.serverTimestamp(),
+  });
+
+  // DITERJEMAHKAN: Pesan sukses
+  return { status: "sukses", message: "Skor berhasil dikirim!", score };
+});

@@ -249,7 +249,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     
         const dataToSend = {
-            quizId: `${gameState.currentCategory.replace(' ', '')}_${gameState.currentLevel.toLowerCase()}`,
+            quizId: `${gameState.currentCategory.replace(' ', '').toLowerCase()}_${gameState.currentLevel.toLowerCase()}_${gameState.currentLevel.toLowerCase()}`,
             userAnswers: gameState.gameJournal.map(entry => ({
                 question: entry.question,
                 userAnswer: entry.userAnswer
