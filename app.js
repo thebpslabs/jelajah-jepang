@@ -21,7 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
     const db = getFirestore(app);
-    const functions = getFunctions(app);
+    // THE FIX IS HERE: Explicitly set the region for the functions service
+    const functions = getFunctions(app, 'us-central1');
 
     let currentUser = null;
     onAuthStateChanged(auth, (user) => {
@@ -262,7 +263,6 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Score submitted successfully!', result.data);
             alert("Skor Anda telah dikirim ke Papan Peringkat Global!");
         } catch (error) {
-            // MODIFIED: This block now provides a detailed error alert for debugging.
             console.error('--- DETAILED SCORE SUBMISSION ERROR ---');
             console.error('Error Code:', error.code);
             console.error('Error Message:', error.message);
@@ -1028,7 +1028,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- INITIALIZATION --- //
     function init() {
-        console.log('Initializing Japanese Adventure PWA v6 - Firestore Edition...');
+        console.log('Initializing Japanese Adventure PWA v7 - Final Diagnostic...');
         loadGameData();
         navigateTo('main-menu');
     }
