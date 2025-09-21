@@ -4,43 +4,52 @@ const admin = require("firebase-admin");
 admin.initializeApp();
 
 exports.submitScore = functions.https.onCall(async (data, context) => {
-  // 1. Check if the user is authenticated.
+  // Checkpoint 1: Authentication
   if (!context.auth) {
-    // DITERJEMAHKAN: Pesan error jika pengguna tidak login
     throw new functions.https.HttpsError(
       "unauthenticated",
-      "Anda harus login untuk mengirimkan skor."
+      "[DIAGNOSTIC] Error: User is not authenticated."
     );
   }
 
   const { quizId, userAnswers } = data;
   const userId = context.auth.uid;
-  // DITERJEMAHKAN: Nama default jika tidak ada
   const userName = context.auth.token.name || "Anonim";
 
-  // 2. Get the correct answers from Firestore to prevent cheating.
-  const quizDocRef = admin.firestore().collection("quizAnswers").doc(quizId);
-  const quizDoc = await quizDocRef.get();
+  if (!quizId) {
+      throw new functions.https.HttpsError("invalid-argument", "[DIAGNOSTIC] Error: quizId was not sent from the app.");
+  }
 
+  let quizDoc;
+  try {
+    // Checkpoint 2: Reading from Firestore
+    const quizDocRef = admin.firestore().collection("quizAnswers").doc(quizId);
+    quizDoc = await quizDocRef.get();
+  } catch (error) {
+    throw new functions.https.HttpsError("internal", `[DIAGNOSTIC] Error reading from Firestore: ${error.message}`);
+  }
+
+  // Checkpoint 3: Document Existence
   if (!quizDoc.exists) {
-    // DITERJEMAHKAN: Pesan error jika kuis tidak ditemukan
     throw new functions.https.HttpsError(
       "not-found",
-      "Kuis yang dipilih tidak ditemukan."
+      `[DIAGNOSTIC] Error: Document with ID '${quizId}' was not found in the 'quizAnswers' collection.`
     );
   }
 
   const correctAnswersData = quizDoc.data().answers;
-  const correctAnswersMap = new Map(
-    correctAnswersData.map((q) => [q.question, q.correct])
-  );
 
-  // 3. Recalculate the score securely on the server.
+  // Checkpoint 4: Data format inside the document
+  if (!correctAnswersData || !Array.isArray(correctAnswersData)) {
+      throw new functions.https.HttpsError("internal", "[DIAGNOSTIC] Error: Document exists, but the 'answers' field is missing or is not an array.");
+  }
+
+
+  // Recalculate the score securely on the server.
   let score = 0;
   let correctAnswersCount = 0;
   let comboStreak = 0;
-
-  // Determine points based on level from quizId (e.g., 'restoran_level1')
+  
   const level = quizId.split('_')[1];
   let basePoints = 100;
   if (level === 'level2') {
@@ -49,35 +58,36 @@ exports.submitScore = functions.https.onCall(async (data, context) => {
     basePoints = 150;
   }
 
+  const correctAnswersMap = new Map(
+    correctAnswersData.map((q) => [q.question, q.correct])
+  );
+
   userAnswers.forEach((userAnswer) => {
     const correctAnswer = correctAnswersMap.get(userAnswer.question);
     if (userAnswer.userAnswer === correctAnswer) {
       correctAnswersCount++;
       comboStreak++;
-      
-      let comboBonus = 0;
-      if (comboStreak >= 2) {
-          comboBonus = (comboStreak - 1) * 10;
-      }
-      
+      let comboBonus = (comboStreak >= 2) ? (comboStreak - 1) * 10 : 0;
       score += basePoints + comboBonus;
     } else {
       comboStreak = 0;
     }
   });
 
-  // 4. Save the new, verified score to the global leaderboard.
-  const leaderboardRef = admin.firestore().collection("globalLeaderboard");
+  // Checkpoint 5: Writing to the leaderboard
+  try {
+    const leaderboardRef = admin.firestore().collection("globalLeaderboard");
+    await leaderboardRef.add({
+      userId: userId,
+      name: userName,
+      score: score,
+      quizId: quizId,
+      correctAnswers: correctAnswersCount,
+      timestamp: admin.firestore.FieldValue.serverTimestamp(),
+    });
+  } catch(error) {
+      throw new functions.https.HttpsError("internal", `[DIAGNOSTIC] Error writing to the leaderboard: ${error.message}`);
+  }
 
-  await leaderboardRef.add({
-    userId: userId,
-    name: userName,
-    score: score,
-    quizId: quizId,
-    correctAnswers: correctAnswersCount,
-    timestamp: admin.firestore.FieldValue.serverTimestamp(),
-  });
-
-  // DITERJEMAHKAN: Pesan sukses
   return { status: "sukses", message: "Skor berhasil dikirim!", score };
 });

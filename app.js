@@ -1,7 +1,6 @@
 // --- FIREBASE IMPORTS AND SETUP (MOVED TO TOP LEVEL) --- //
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js';
 import { getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js';
-// MODIFIED: Import doc and getDoc to fetch specific documents from Firestore
 import { getFirestore, collection, getDocs, limit, orderBy, query, doc, getDoc } from 'https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js';
 import { getFunctions, httpsCallable } from 'https://www.gstatic.com/firebasejs/10.9.0/firebase-functions.js';
 
@@ -249,7 +248,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     
         const dataToSend = {
-            quizId: `${gameState.currentCategory.replace(' ', '').toLowerCase()}_${gameState.currentLevel.toLowerCase()}_${gameState.currentLevel.toLowerCase()}`,
+            quizId: `${gameState.currentCategory.replace(' ', '').toLowerCase()}_${gameState.currentLevel.toLowerCase()}`,
             userAnswers: gameState.gameJournal.map(entry => ({
                 question: entry.question,
                 userAnswer: entry.userAnswer
@@ -263,8 +262,12 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Score submitted successfully!', result.data);
             alert("Skor Anda telah dikirim ke Papan Peringkat Global!");
         } catch (error) {
-            console.error('Failed to submit score to global leaderboard:', error);
-            alert("Gagal mengirim skor. Coba lagi.");
+            // MODIFIED: This block now provides a detailed error alert for debugging.
+            console.error('--- DETAILED SCORE SUBMISSION ERROR ---');
+            console.error('Error Code:', error.code);
+            console.error('Error Message:', error.message);
+            console.error('Full Error Object:', error);
+            alert(`Gagal mengirim skor. Error: ${error.message}`);
         }
     }
 
@@ -373,7 +376,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- QUIZ LOGIC --- //
-    // MODIFIED: This function now fetches questions from Firestore instead of local files.
     async function startQuiz(level, category) {
         gameState.currentLevel = level;
         gameState.currentCategory = category;
@@ -384,14 +386,12 @@ document.addEventListener('DOMContentLoaded', () => {
         gameState.gameJournal = [];
 
         try {
-            // Construct the document ID from the category and level (e.g., 'apotek_level1')
             const docId = `${category.toLowerCase()}_${level}`;
             const docRef = doc(db, "quizAnswers", docId);
             const docSnap = await getDoc(docRef);
 
             let questionPool = [];
             if (docSnap.exists()) {
-                // If the document exists, get the 'answers' array from it.
                 questionPool = docSnap.data().answers;
             }
 
